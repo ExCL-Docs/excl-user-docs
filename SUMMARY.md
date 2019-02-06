@@ -11,6 +11,7 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 - [Support](SUPPORT.md)
   - [EcCl Team](MEMBERS.md)
   - [ExCL Acknowledgement](acknowledge.md)
+- [Contributing](CONTRIBUTING.md)
 - [Glossary & Acronyms](GLOSSARY_.md)
 - [Requesing Access](access-info.md)
 
