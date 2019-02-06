@@ -12,7 +12,7 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
   - [EcCl Team](MEMBERS.md)
   - [ExCL Acknowledgement](acknowledge.md)
 - [Glossary & Acronyms](GLOSSARY_.md)
-- [Requesing Access - non-ORNL users](external-access-ucams.md)
+- [Requesing Access](access-info.md)
 
 ## Quick-Start Guides
   - [Power9 DevOps](quick-starts/power9-devops-quick-start.md)
