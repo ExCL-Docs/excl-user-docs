@@ -10,6 +10,8 @@ ORNL provides two GitLab servers https://code.ornl.gov and https://code-int.ornl
 
 Project owners control access to GitLab repositories. You may log in and create your projects and repositories, and share them with others.
 
+![image](screenshots/git-workflow-steps.png)
+
 <a target="_new" href="screenshots/git-workflow-steps.png"><img src="screenshots/git-workflow-steps.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:650px;" /></a><!-- o_ -->
 
 _Jump to a Section:_   
@@ -44,7 +46,8 @@ Atom has several packages which enhance the user experience and some of them you
   * linter (aids in code validation, will also need linter package for each language)
   * minimap (displays thumbnail version of document along with your location within it)
   * todo-show (provides visuals for _TODO_ and _FIXME_ tags)
-- Navigate to the GitLab repository in your web browser. For this example, we'll use the `user-documentation` repository. Copy the SSH address to your machine's clipboard.   
+- Navigate to the GitLab repository in your web browser. For this example, we'll use the `user-documentation` repository. Copy the SSH address to your machine's clipboard.
+![image](screenshots/git-repo-ssh-address.png)
 <a target="_new" href="screenshots/git-repo-ssh-address.png"><img src="screenshots/git-repo-ssh-address.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 - _(Optional)_ Consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:   
   - Click on your user image in the top-right of the GitLab window.
@@ -119,13 +122,17 @@ At this point, you likely either want to create a new branch and add your contri
 We need the name of the remote branch we wish to work on
 
 1. The GitLab project page displays a droplist with the name of available branches.   
+![image](screenshots/git-show-branches.png)
 <a target="_new" href="screenshots/git-show-branches.png"><img src="screenshots/git-show-branches.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 -  Open the Atom command palette (`cmd`+`shift`+`p` or `ctrl`+`shift`+`p`) and search for `git checkout checkout` (requires Git checkout plugin having been installed).   
+![image](screenshots/git-checkout-checkout-search.png)
 <a target="_new" href="screenshots/git-checkout-checkout-search.png"><img src="screenshots/git-checkout-checkout-search.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 You may also open the checkout dialog directly using the hotkeys `ctrl`+`alt`+`shift`+`c` (or `ctrl`+`opt`+`shift`+`c` on Mac).   
     * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitLab.   
+    ![image](screenshots/git-checkout-provide-branch.png)
     <a target="_new" href="screenshots/git-checkout-provide-branch.png"><img src="screenshots/git-checkout-provide-branch.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
     * A notice will display if the checkout was successful. You may then switch between branches using the branch selector in the bottom-right toolbar.   
+    ![image](screenshots/git-atom-switch-branch.png)
     <a target="_new" href="screenshots/git-atom-switch-branch.png"><img src="screenshots/git-atom-switch-branch.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 
 &#128221; **Note:**  If checking out a remote branch within Atom using the 'git checkout' plugin, ensure you read the directions carefully. Do **_not_** click on the 'custom' branch, use the arrow keys and press `Enter`, then supply the name of the remote branch you wish to checkout. Lastly, if you make a mistake while typing in the branch name, you will end up creating a new branch with the typo. Be sure to type the branch name correctly.
