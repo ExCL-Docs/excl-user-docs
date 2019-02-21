@@ -1,12 +1,12 @@
-[CADES](http://cades.ornl.gov/) &rarr; [User Documentation](../README.md)  &rarr; [Contribute](../CONTRIBUTING.md)  &rarr; [Authoring Guide](authoring-guide.md)
+[ExCl](https://docs.excl.ornl.gov) &rarr; [User Documentation](../README.md)  &rarr; [Contribute](../CONTRIBUTING.md)  &rarr; [Authoring Guide](authoring-guide.md)
 
-# Authoring Guide for CADES
+# Authoring Guide for ExCl
 
-Perhaps you've got some how-to documents tucked away in folders that you'd like to share with the CADES community. Or maybe you've discovered a way of doing things that would benefit other users.
+Perhaps you've got some how-to documents tucked away in folders that you'd like to share with the community. Or maybe you've discovered a way of doing things that would benefit other users.
 
-You can submit your user guides for publication within the [CADES documentation site](http://support.cades.ornl.gov/user-documentation/_book/)! See the [contributing](../CONTRIBUTE.md) page for instructions.
+You can submit your user guides for publication within the [ExCl documentation site](https://docs.excl.ornl.gov)! See the [contributing](../CONTRIBUTE.md) page for instructions.
 
-We've assembled here the fundamental authoring guidelines for CADES user documentation.
+We've assembled here the fundamental authoring guidelines for ExCl user documentation.
 
 ## Document and Content Preferences
 
@@ -36,12 +36,12 @@ Screenshots and images cannot be resized using markdown. Therefore, we embed `.h
 - Have you removed information that is protected by copyright?
 - Are you using a specific version of your software and have you included in the documentation?
 
-## CADES Brand Guide
+## ExCL Brand Guide
 
-The CADES brand helps define our resources and team culture. A portion of the guide is provided here to assist you in choosing a color scheme for your media and documentation.
+The ExCL brand helps define our resources and team culture. A portion of the guide is provided here to assist you in choosing a color scheme for your media and documentation.
 
-<a href="CADES-Brand-Guide.pdf" target="_blank">Download CADES Abridged Brand Guide</a>    
-    <a href="CADES-Brand-Guide.pdf" target="_blank"><img src="./screenshots/CADES-Brand-Guide.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:200px;" /></a>   
+<a href="ExCl-Brand-Guide.pdf" target="_blank">Download ExCl Abridged Brand Guide</a>    
+    <a href="ExCl-Brand-Guide.pdf" target="_blank"><img src="./screenshots/ExCl-Brand-Guide.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:200px;" /></a>   
 
 <!--  o_  -->
 
