@@ -109,6 +109,9 @@ At this point, you likely either want to create a new branch and add your contri
 #### _Create a New Branch_
 
 1. Create a Git branch by clicking on the `master` button on the bottom-right of the Atom window. Name the branch something descriptive.   
+
+![image](screenshots/git-new_branch_atom.png)
+
 <a target="_new" href="screenshots/git-new_branch_atom.png"><img src="screenshots/git-new_branch_atom.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 
 #### _Checkout an Existing Branch_

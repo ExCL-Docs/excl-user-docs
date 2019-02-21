@@ -13,5 +13,4 @@ Would you like to make things better? There are a few ways you can contribute to
 2. Join our community on Slack! It's friendly. [link]
 
 3. Want to change things? Feeling adventurous? Comfortable with git?<br>
-  See [instructions for our Git workflow](./contributing/git-workflow.md) to branch our documentation repository and hack away. You got this.
-
+  See [instructions for our Git workflow](contributing/git-workflow.md) to branch our documentation repository and hack away. You got this.
