@@ -203,8 +203,4 @@ You can create a merge request using the GitHub GUI.
 
 ## Previewing Changes
 
-When you push a branch, your changes are built in a "Review Environment" at http://user-documentation-stf011.granite.ccs.ornl.gov/_review/ and allows you to click on the name of your branch.
-
-A link to this review environment is avaiHuble on the Merge Request page that is created for your branch. This allows reviewers to take a quick glance at changes before we merge them into production.
-
-&#128221; **Note:** Preview sites are a prototype in the workflow. This feature may not always work and is offered as an unsupported convenience.
+When you push a branch, your changes are built in a "Review Environment" in a separate gitbook, which syncs all branches. This allows branches to be previewed before being merged to master, and published in the primary gitbook site.
