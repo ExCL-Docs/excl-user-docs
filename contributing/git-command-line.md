@@ -15,7 +15,7 @@ _Jump to a Section:_
 - [Push](#push)
 - [Merge](#merge)
 
-This guide is adapted from [GitLab's documentation](https://docs.gitlab.com/ee/gitlab-basics/start-using-git.html).
+This guide is adapted from [GitHub's documentation](https://docs.gitHub.com/ee/gitHub-basics/start-using-git.html).
 
 It is assumed that users of this guide understand basic Git/version control principles. To learn more about Git basics with our basic Git tutorial, visit [this page](git-basics.md).
 
@@ -53,7 +53,7 @@ It is assumed that users of this guide understand basic Git/version control prin
 
     - Windows: download [Git for Windows](https://gitforwindows.org/) and install it.
 
-- Setup Git with your access credentials to GitLab with the following commands:
+- Setup Git with your access credentials to GitHub with the following commands:
 
   ```bash
   git config --global user.name "your_username"
@@ -62,14 +62,14 @@ It is assumed that users of this guide understand basic Git/version control prin
 
   - You can review the information that you entered during set-up: `git config --global --list`
 
-- _(Optional)_ Consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:
+- _(Optional)_ Consider adding your SSH key to your GitHub profile so you are not prompted for credentials after every commit. To add your public SSH key to GitHub:
 
-  - Click on your user image in the top-right of the GitLab window.
+  - Click on your user image in the top-right of the GitHub window.
   - Select `Settings`.
   - On the left, click `ssh keys`.
   - Paste your _**public**_ ssh key in the box, provide a title, and save by clicking `Add key`.
 
-- Clone an existing repository. In GitLab, this information is found on the "Overview" page of the repository.
+- Clone an existing repository. In GitHub, this information is found on the "Overview" page of the repository.
 
   ```bash
   git clone git@code-int.ornl.gov:ex-cl/user-documentation.git
@@ -113,7 +113,7 @@ It is assumed that users of this guide understand basic Git/version control prin
 
 ## Push
 
-- After committing the edits, push the changes to GitLab. If the following produces an error, see below the code snippet for common solutions. The structure of this command is `git push <remote> <branch>`.
+- After committing the edits, push the changes to GitHub. If the following produces an error, see below the code snippet for common solutions. The structure of this command is `git push <remote> <branch>`.
 
   ```bash
   git push
@@ -123,11 +123,11 @@ It is assumed that users of this guide understand basic Git/version control prin
 
 ## Merge
 
-At this time, GitLab does not natively support submissions for merge requests via the command line.
+At this time, GitHub does not natively support submissions for merge requests via the command line.
 
-You can send a merge request using the GitLab GUI.
+You can send a merge request using the GitHub GUI.
 
-1. From the left menu panel in Gitlab (when viewing the repository), select `Merge Request` then the green `New merge request` button.
+1. From the left menu panel in GitHub (when viewing the repository), select `Merge Request` then the green `New merge request` button.
 2. Select your branch on the "Source Branch" side.
 
   - Target branch is _master_.

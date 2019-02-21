@@ -2,13 +2,11 @@
 
 # ExCl Recommended Workflow<br>_Using Git and Atom_
 
-### GitLab Houses our Documentation
+### GitHub Houses our Documentation
 
-GitLab is a popular platform to share code, store software solutions, and host documentation.
+GitHub is a popular platform to share code, store software solutions, and host documentation.
 
-ORNL provides two GitLab servers https://code.ornl.gov and https://code-int.ornl.gov, the latter being accessible only inside of ORNL.
-
-Project owners control access to GitLab repositories. You may log in and create your projects and repositories, and share them with others.
+Project owners control access to GitHub repositories. You may log in and create your projects and repositories, and share them with others.
 
 ![image](screenshots/git-workflow-steps.png)
 
@@ -33,7 +31,7 @@ This section covers the setup procedures for Atom and Git.
 
 #### _Atom Text Editor Setup_
 
-While there are many text editors to choose from, Atom is recommended due to its ability to be customized and integrated with GitLab/Git.
+While there are many text editors to choose from, Atom is recommended due to its ability to be customized and integrated with GitHub/Git.
 
 > Install Atom: [https://atom.io/](https://atom.io/)
 
@@ -46,11 +44,11 @@ Atom has several packages which enhance the user experience and some of them you
   * linter (aids in code validation, will also need linter package for each language)
   * minimap (displays thumbnail version of document along with your location within it)
   * todo-show (provides visuals for _TODO_ and _FIXME_ tags)
-- Navigate to the GitLab repository in your web browser. For this example, we'll use the `user-documentation` repository. Copy the SSH address to your machine's clipboard.
+- Navigate to the GitHub repository in your web browser. For this example, we'll use the `user-documentation` repository. Copy the SSH address to your machine's clipboard.
 ![image](screenshots/git-repo-ssh-address.png)
 <a target="_new" href="screenshots/git-repo-ssh-address.png"><img src="screenshots/git-repo-ssh-address.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
-- _(Optional)_ Consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:   
-  - Click on your user image in the top-right of the GitLab window.
+- _(Optional)_ Consider adding your SSH key to your GitHub profile so you are not prompted for credentials after every commit. To add your public SSH key to GitHub:   
+  - Click on your user image in the top-right of the GitHub window.
   - Select `Settings`.
   - On the left, click `SSH keys`.
   - Paste your _**public**_ SSH key in the box, provide a title, and save by clicking `Add key`.
@@ -94,7 +92,7 @@ Atom has several packages which enhance the user experience and some of them you
 
     - Windows: download [Git for Windows](https://gitforwindows.org/) and install it.
 
-- Set up Git with your access credentials to GitLab with the following commands:
+- Set up Git with your access credentials to GitHub with the following commands:
 
   ```bash
   git config --global user.name "your_username"
@@ -121,14 +119,14 @@ At this point, you likely either want to create a new branch and add your contri
 
 We need the name of the remote branch we wish to work on
 
-1. The GitLab project page displays a droplist with the name of available branches.   
+1. The GitHub project page displays a droplist with the name of avaiHuble branches.   
 ![image](screenshots/git-show-branches.png)
 <a target="_new" href="screenshots/git-show-branches.png"><img src="screenshots/git-show-branches.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 -  Open the Atom command palette (`cmd`+`shift`+`p` or `ctrl`+`shift`+`p`) and search for `git checkout checkout` (requires Git checkout plugin having been installed).   
 ![image](screenshots/git-checkout-checkout-search.png)
 <a target="_new" href="screenshots/git-checkout-checkout-search.png"><img src="screenshots/git-checkout-checkout-search.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
 You may also open the checkout dialog directly using the hotkeys `ctrl`+`alt`+`shift`+`c` (or `ctrl`+`opt`+`shift`+`c` on Mac).   
-    * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitLab.   
+    * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitHub.   
     ![image](screenshots/git-checkout-provide-branch.png)
     <a target="_new" href="screenshots/git-checkout-provide-branch.png"><img src="screenshots/git-checkout-provide-branch.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a><!-- o_ -->   
     * A notice will display if the checkout was successful. You may then switch between branches using the branch selector in the bottom-right toolbar.   
@@ -163,9 +161,9 @@ Checkout a remote branch from the command line.
 
 Once you clone a repository, it opens automatically in Atom. However, if you need to open the repository again, click on `File` &rarr; `Add Project Folder` and select your repository. Select files from the directory tree on the left of the Atom screen. Make your edits and save your changes. Saving your changes allows the next steps to be performed.
 
-#### _GitLab GUI Editing_
+#### _GitHub GUI Editing_
 
-You do not have to use Atom for editing. You can click the `edit` button in GitLab, edit directly from the webpage, and preview before committing. Note that only repository owners can edit this way - otherwise, you can create a branch and edit your branch.
+You do not have to use Atom for editing. You can click the `edit` button in GitHub, edit directly from the webpage, and preview before committing. Note that only repository owners can edit this way - otherwise, you can create a branch and edit your branch.
 
 ## Add
 
@@ -182,17 +180,17 @@ You do not have to use Atom for editing. You can click the `edit` button in GitL
 
 ## Push
 
--  Push changes to GitLab by typing `git push` in the command palette (`cmd`+`shift`+`p` or `ctrl`+`shift`+`p`), or using Atom's up/down Git arrows located on the bottom-right of the window.
+-  Push changes to GitHub by typing `git push` in the command palette (`cmd`+`shift`+`p` or `ctrl`+`shift`+`p`), or using Atom's up/down Git arrows located on the bottom-right of the window.
 
 &#128221; **Note:** If you get an error after typing `git push` that says "No upstream branch", open your terminal and navigate to the local copy of the repository. Then type `git push --set-upstream origin name_of_branch`. From then on you should be able to use the command palette to type `git push` or use the up/down (Push/Pull) arrows on the bottom-right of the window.
 
 ## Merge
 
-At this time, GitLab does not natively support submissions for merge requests via the command line.
+At this time, GitHub does not natively support submissions for merge requests via the command line.
 
-You can create a merge request using the GitLab GUI.
+You can create a merge request using the GitHub GUI.
 
-1. From the left menu panel in Gitlab (when viewing the repository), select `Merge Request` then the green `New merge request` button.
+1. From the left menu panel in GitHub (when viewing the repository), select `Merge Request` then the green `New merge request` button.
 2. Select your branch on the "Source Branch" side.
 
   - Target branch is _master_.
@@ -207,6 +205,6 @@ You can create a merge request using the GitLab GUI.
 
 When you push a branch, your changes are built in a "Review Environment" at http://user-documentation-stf011.granite.ccs.ornl.gov/_review/ and allows you to click on the name of your branch.
 
-A link to this review environment is available on the Merge Request page that is created for your branch. This allows reviewers to take a quick glance at changes before we merge them into production.
+A link to this review environment is avaiHuble on the Merge Request page that is created for your branch. This allows reviewers to take a quick glance at changes before we merge them into production.
 
 &#128221; **Note:** Preview sites are a prototype in the workflow. This feature may not always work and is offered as an unsupported convenience.
