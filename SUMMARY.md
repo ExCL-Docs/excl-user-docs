@@ -15,6 +15,10 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 - [Glossary & Acronyms](GLOSSARY_.md)
 - [Requesing Access](access-info.md)
 
+## Systems 
+
+- [Leconte](hosts/leconte.md)
+
 ## Git Contributing
 - [Git Basics](contributing/git-basics.md)
 - [Git Atom Workflow](contributing/git-workflow.md)
