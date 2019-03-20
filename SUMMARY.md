@@ -13,7 +13,7 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
   - [ExCL Acknowledgement](acknowledge.md)
 - [Contributing](CONTRIBUTING.md)
 - [Glossary & Acronyms](GLOSSARY_.md)
-- [Requesing Access](access-info.md)
+- [Requesting Access](access-info.md)
 
 ## Systems 
 
