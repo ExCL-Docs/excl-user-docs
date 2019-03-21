@@ -2,7 +2,7 @@
 
 ## Description
 
-This system is generally identical to the nodes
+This system is generally identical to the nodes (ac922)
 in the ORNL OLCF Summit system.  This system consists of
 
 *  2 POWER9 (2.2 pvr 004e 1202) cpus, each with 22 cores and 
