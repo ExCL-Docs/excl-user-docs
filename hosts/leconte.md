@@ -2,7 +2,7 @@
 
 ## Description
 
-This system is generally identical to the nodes (ac922)
+This system is generally identical to the nodes (AC922 model 8335_GTW)
 in the ORNL OLCF Summit system.  This system consists of
 
 *  2 POWER9 (2.2 pvr 004e 1202) cpus, each with 22 cores and 
@@ -31,7 +31,7 @@ is to provision a system that is as similar in all respects to
 Summit, but some progress is required to get there.  This is to
 be considered an early access machine.
 
-Please send software requests to excl-admin@ornl.gov.
+Please send assistance requests to excl-admin@ornl.gov.
 
 ## GPU Performance
 
@@ -54,3 +54,7 @@ GPU performance information can be viewed at
 https://graphite.ornl.gov:3000/d/000000058/leconte-gpu-statistics?refresh=30s&orgId=1
 
 Request access by emailing excl-admin@ornl.gov.   This site still uses a self-signed certificate; a fix for that is in the works.
+
+## Other Resources
+
+* IBM 8335-GTW documentation: https://www.ibm.com/support/knowledgecenter/en/POWER9/p9hdx/8335_gtw_landing.htm
