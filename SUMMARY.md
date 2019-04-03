@@ -18,12 +18,13 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 ## Systems 
 
 - [Leconte](hosts/leconte.md)
+- [Emu](hosts/emu.md)
 
 ## Git Contributing
 - [Git Basics](contributing/git-basics.md)
-- [Git Atom Workflow](contributing/git-workflow.md)
-- [Git Command Line](contributing/git-command-line.md)
-- [Git Scenarios](contributing/git-scenarios.md)
+ - [Git Atom Workflow](contributing/git-workflow.md)
+ - [Git Command Line](contributing/git-command-line.md)
+ - [Git Scenarios](contributing/git-scenarios.md)
 - [Authoring Guide](contributing/authoring-guide.md)
 
 ## Quick-Start Guides (stubs)
