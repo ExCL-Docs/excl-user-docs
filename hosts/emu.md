@@ -29,3 +29,7 @@ Please send assistance requests to excl-help@ornl.gov.
 
 ## Other Resources
 
+This document will be updated with dditional documentation references 
+and user information as it becomes available.
+will 
+
