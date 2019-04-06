@@ -2,15 +2,25 @@
 
 ## Description
 
-This system...
+EMU-Chick System is composed of 8x nodes that are connected via RapidIO Interconnect.
 
-*  Migratory Thread Development System
+Each node has:
+* 8x nodelets, array of DRAMs
+* A stationary core (SC)
+* Migration engine, PCI-Express interfaces, and an SSD. 
+* 64-byte channel 64GB of DRAM, divided into eight 8-byte narrow-channel-DRAMs (NC-DRAM
 
-*  GiB memory
+Each nodelet has: 
+* 2x Gosamer cores (GC)
+* 64 concurrent in-order, single-issue hardware threads
+
+
+![Alt text](images/emu1.jpg?raw=true "Title")
 
 
 ## Contact
 * excl-help@ornl.gov
+
 
 ## Usage
 
