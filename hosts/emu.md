@@ -17,7 +17,7 @@ Each nodelet has:
 
 
 ## Access
-`login.excl.ornl.gov` ⇒ `emu-gw` ⇒ `emu` ⇒ {`n0`-`n7`}
+* The path to access to each individual EMU node is: `login.excl.ornl.gov` ⇒ `emu-gw` ⇒ `emu` ⇒ {`n0`-`n7`}
 
 * `emu-gw` is an x86-based gateway node. 
 
@@ -38,9 +38,6 @@ Each nodelet has:
 
 This document will be updated with dditional documentation references 
 and user information as it becomes available.
-will 
-
-
 
 ## Contact
 Please send assistance requests to excl-help@ornl.gov.
