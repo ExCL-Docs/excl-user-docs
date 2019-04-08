@@ -16,25 +16,21 @@ Each nodelet has:
 * 64 concurrent in-order, single-issue hardware threads
 
 
-
-
-## Contact
-* excl-help@ornl.gov
-
-
-## Usage
+## Access
 
 Key-based ssh login from login.excl.ornl.gov.   If you can't log in
 you do not have access.  If you should have access please contact
 excl-help@ornl.gov.
 
-The development environment is on emu-gw; please log in there to build 
-your applications.   emu and emu-gw mount home directories, so you should
+## Development Workflow
+
+* The development environment is on emu-gw, which is an x86 based system. Please log in there to build 
+your applications. 
+
+* emu and emu-gw mount home directories, so you should
 have no difficulty accessing your projects.   Please use `$HOME` (or `${HOME}`)
 as your home directory in scripts, as the mount location of 
 your home directory may change.
-
-Please send assistance requests to excl-help@ornl.gov.
 
 
 ## Other Resources
@@ -42,4 +38,9 @@ Please send assistance requests to excl-help@ornl.gov.
 This document will be updated with dditional documentation references 
 and user information as it becomes available.
 will 
+
+
+
+## Contact
+Please send assistance requests to excl-help@ornl.gov.
 
