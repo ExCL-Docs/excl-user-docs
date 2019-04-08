@@ -17,10 +17,14 @@ Each nodelet has:
 
 
 ## Access
+login.excl.ornl.gov ==> emu-gw ==> emu ==> {n0-n7}
 
-Key-based ssh login from login.excl.ornl.gov.   If you can't log in
-you do not have access.  If you should have access please contact
-excl-help@ornl.gov.
+* emu-gw is an x86-based gateway node. 
+
+* The host emu is the system board controller (sbc) and individual nodes are to be access
+
+* Connections to emu from the emu-gw are via preset ssh keys that are created during account creation. If you can't log in
+your user account/project do not have access to EMU systems.
 
 ## Development Workflow
 
