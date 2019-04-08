@@ -1,7 +1,7 @@
 # emu.ftpn.ornl.gov - EMU Chick
 
 ## Description
-![Emu System Overview](images/emu-overview.png?raw=true "Emu System Overview")
+![Emu System Overview](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/emu-overview.png?raw=true "Emu System Overview")
 
 EMU-Chick System is composed of 8x nodes that are connected via RapidIO Interconnect.
 
