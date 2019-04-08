@@ -1,6 +1,7 @@
 # emu.ftpn.ornl.gov - EMU Chick
 
 ## Description
+![Emu System Overview](images/emu-overview.png?raw=true "Emu System Overview")
 
 EMU-Chick System is composed of 8x nodes that are connected via RapidIO Interconnect.
 
@@ -15,7 +16,6 @@ Each nodelet has:
 * 64 concurrent in-order, single-issue hardware threads
 
 
-![Alt text](images/emu1.jpg?raw=true "Title")
 
 
 ## Contact
