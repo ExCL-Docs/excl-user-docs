@@ -17,24 +17,21 @@ Each nodelet has:
 
 
 ## Access
-login.excl.ornl.gov ==> emu-gw ==> emu ==> {n0-n7}
+`login.excl.ornl.gov` ⇒ `emu-gw` ⇒ `emu` ⇒ {`n0`-`n7`}
 
-* emu-gw is an x86-based gateway node. 
+* `emu-gw` is an x86-based gateway node. 
 
-* The host emu is the system board controller (sbc) and individual nodes are to be access
+* The `emu` is the system board controller (sbc) and individual nodes are accessed only via this host.
 
-* Connections to emu from the emu-gw are via preset ssh keys that are created during account creation. If you can't log in
-your user account/project do not have access to EMU systems.
+* Connections to `emu` from the `emu-gw` are via preset ssh keys that are created during account creation. If you can't log in, your user account/project do not have access to EMU systems.
 
 ## Development Workflow
 
-* The development environment is on emu-gw, which is an x86 based system. Please log in there to build 
-your applications. 
+* The EMU software development kit (SDK) is installed under /usr/local/emu on emu-gw, which is an x86 based system. Compilation and simulation should be performed on this machine.
 
-* emu and emu-gw mount home directories, so you should
-have no difficulty accessing your projects.   Please use `$HOME` (or `${HOME}`)
-as your home directory in scripts, as the mount location of 
-your home directory may change.
+* The official EMU programming guide is located under /usr/docs. 
+
+* emu and emu-gw mount home directories, so you should have no difficulty accessing your projects.   Please use `$HOME` (or `${HOME}`) as your home directory in scripts, as the mount location of your home directory may change.
 
 
 ## Other Resources
