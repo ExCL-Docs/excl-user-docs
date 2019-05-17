@@ -20,6 +20,10 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 - [Leconte](hosts/leconte.md)
 - [Emu](hosts/emu.md)
 
+## Software
+
+- [Compilers](software/compilers.md)
+
 ## Git Contributing
 - [Git Basics](contributing/git-basics.md)
  - [Git Atom Workflow](contributing/git-workflow.md)
