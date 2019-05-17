@@ -5,7 +5,7 @@
 This system is generally identical to the nodes (AC922 model 8335_GTW)
 in the ORNL OLCF Summit system.  This system consists of
 
-*  2 POWER9 (2.2 pvr 004e 1202) cpus, each with 22 cores and 
+*  2 POWER9 (2.2 pvr 004e 1202) cpus, each with 22 cores and
    4 threads per core.
 
 *  6 Tesla V100-SXM2-16GB GPUs
@@ -20,8 +20,8 @@ in the ORNL OLCF Summit system.  This system consists of
 
 ## Usage
 
-As currently configured this system is usable using conventional 
-ssh logins (from login.excl.ornl.gov), with automounted home 
+As currently configured this system is usable using conventional
+ssh logins (from login.excl.ornl.gov), with automounted home
 directories.  GPU access is currently cooperative; a scheduling
 mechanism and scheduled access is in design.
 
@@ -33,6 +33,10 @@ be considered an early access machine.
 
 Please send assistance requests to excl-admin@ornl.gov.
 
+## Installed Compilers
+
+Please see [Compilers](software/compilers.md)
+
 ## GPU Performance
 
 This system is still being refined with respect to cooling.
@@ -40,16 +44,16 @@ As of today, rather than running at the fully capable 300 watts
 per GPU, GPU usage has been limited to 250 watts to prevent
 overheating.   As cooling is improved, this will be changed back
 to 300 watts with dynamic power reduction (with notification) as
-required to protect the equipment. 
+required to protect the equipment.
 
 It is worth noting that this system had to be pushed quite hard
-(six independent nbody problems, plus CPU stressors on all but 
-8 threads) to trigger high temperature conditions.  These limits 
+(six independent nbody problems, plus CPU stressors on all but
+8 threads) to trigger high temperature conditions.  These limits
 may not be encountered in actual use.
 
 ### Performance Information
 
-GPU performance information can be viewed at 
+GPU performance information can be viewed at
 
 https://graphite.ornl.gov:3000/d/000000058/leconte-gpu-statistics?refresh=30s&orgId=1
 
