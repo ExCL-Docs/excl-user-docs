@@ -18,8 +18,9 @@ There is not currently special access permissions.   System is available
 to ExCL users.  This may change as needed.
 
 ## Images
+![Emu System Overview](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/emu-overview.png "Emu System Overview")
 
-[image1](https://github.com/RelativePrime/excl-user-docs/blob/master/hosts/images/20190607_123402.jpg)
+![mage1](https://github.com/RelativePrime/excl-user-docs/blob/master/hosts/images/20190607_123402.jpg "an image")
 
 
 ## Contact
