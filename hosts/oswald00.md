@@ -20,7 +20,6 @@ to ExCL users.  This may change as needed.
 ## Images
 
 ![fpga detail](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_153254.jpg "fpga detail")
-![board detail](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_153304.jpg "board detail")
 ![system layout ](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_153632.jpg "system layout")
 ![backplane identification](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_153642.jpg "backplane identification")
 

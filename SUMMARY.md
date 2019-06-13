@@ -20,6 +20,9 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 - [Leconte](hosts/leconte.md)
 - [Emu](hosts/emu.md)
 - [Oswald00](hosts/oswald00.md)
+- [Oswald01](hosts/oswald01.md)
+- [Oswald02](hosts/oswald02.md)
+- [Oswald03](hosts/oswald03.md)
 
 ## Software
 
