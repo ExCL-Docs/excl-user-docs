@@ -10,7 +10,8 @@ The system is
 *  Gigabyte motherboard MD90-FS0-ZB
 *  256 GB memory
 *  Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
-* Centos
+*  Centosa
+*  Micron 9100 NVM 2.4TB MTFDHAX214MCF
 
 ## Access
 
