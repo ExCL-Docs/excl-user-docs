@@ -23,7 +23,7 @@ to ExCL users.  This may change as needed.
 ![fpga detail](images/20190607_154604.jpg "fpga detail")
 ![left daughterboard detail](images/20190607_154621.jpg "left daughterboard detail")
 ![right daughterboard gpu removed ](images/20190607_155804.jpg "right daughterboard gpu removed")
-![gpu identification detail](images/20190607_153811.jpg "gpu identification detail")
+![gpu identification detail](images/20190607_155811.jpg "gpu identification detail")
 
 
 ## Contact
