@@ -19,8 +19,8 @@ to ExCL users.  This may change as needed.
 
 ## Images
 
-![fpga detail](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_162750.jpg "fpga detail")
-![left daughterboard detail](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_162758.jpg "left daughterboard detail")
+![fpga detail](images/20190607_162750.jpg "fpga detail")
+![left daughterboard detail](images/20190607_162758.jpg "left daughterboard detail")
 
 
 ## Contact

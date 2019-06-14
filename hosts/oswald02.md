@@ -19,8 +19,8 @@ to ExCL users.  This may change as needed.
 
 ## Images
 
-![fpga detail](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_161747.jpg "fpga detail")
-![SAS card detail](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/20190607_161844.jpg "SAS card detail")
+![fpga detail](images/20190607_161747.jpg "fpga detail")
+![SAS card detail](images/20190607_161844.jpg "SAS card detail")
 
 
 ## Contact
