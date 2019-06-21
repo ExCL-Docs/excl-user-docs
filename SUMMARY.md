@@ -23,6 +23,7 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 - [Oswald01](hosts/oswald01.md)
 - [Oswald02](hosts/oswald02.md)
 - [Oswald03](hosts/oswald03.md)
+- [pcie](hosts/pcie.md)
 
 ## Software
 
