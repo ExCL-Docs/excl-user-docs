@@ -6,6 +6,17 @@
 
 Forthcoming user documentation for the [Experimental Computing Lab](https://excl.ornl.gov/)
 
+Test drive github -> gitbook documentation workflow for FTG.
+
+For pages to be rendered in gitbook the must be added to summary.md
+
+Master will be visible in the public gitbook.
+
+Branches will be visible only in another (private) gitbook instance.
+
+Much things to come.
+
+
 ## ExCl Support
 
 - [Support](SUPPORT.md)
@@ -15,7 +26,7 @@ Forthcoming user documentation for the [Experimental Computing Lab](https://excl
 - [Glossary & Acronyms](GLOSSARY_.md)
 - [Requesting Access](access-info.md)
 
-## Systems 
+## Systems
 
 - [Leconte](hosts/leconte.md)
 - [Emu](hosts/emu.md)

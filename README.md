@@ -1,9 +1,22 @@
-Test drive github -> gitbook documentation workflow for FTG. 
+## Experimental Computing Laboratory documentation
 
-For pages to be rendered in gitbook the must be added to summary.md 
+This is the user documentation repository for the Experimental Computing
+Laboratory of the Future Technologies Group at Oak Ridge National Laboratory.
 
-Master will be visible in the public gitbook. 
+This site is undergoing development; systems and processes will be documented
+here as the documentation is created.
 
-Branches will be visible only in another (private) gitbook instance. 
 
-Much things to come. 
+## Periodic Maintenance Outages
+
+ExCL reserves the first Tuesday of every month for systems maintenance.  This may result in complete inaccessibility during business hours.  Every effort will be made to minimize the scope, duration, and effect of maintenance activities.
+
+If an outage will affect urgent projects (i.e., with impending deadlines) please email excl-help#ornl.gov as soon as possible.
+
+### Scheduled Outage Tuesday July 2, 2019
+
+On Tuesday July 2, the following maintenance activies are planned:
+
+*  The system hosting VM services for ExCL will be updated, rebooted, and some delayed maintenance will take place.  This will result in all ExCL systems being inaccessible during this period. Best effort will be made to restore these systems by noon.
+*  The ExCL file server will be updated and rebooted.
+* All other systems will be rebooted to apply already performed updates (primarily kernel updates that are pending reboot).
