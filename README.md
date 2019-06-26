@@ -6,7 +6,7 @@ Laboratory of the Future Technologies Group at Oak Ridge National Laboratory.
 This site is undergoing development; systems and processes will be documented
 here as the documentation is created.
 
-## Emergency maintenance outage for leconte on July 27 and 28.
+## Emergency maintenance outage for leconte on June 27 and 28.
 
 Leconte will be down all day Thursday June 27 and Friday June 28 for cooling system maintenance.   We will make this system available as soon as is possible.
 
