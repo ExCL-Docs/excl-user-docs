@@ -6,6 +6,10 @@ Laboratory of the Future Technologies Group at Oak Ridge National Laboratory.
 This site is undergoing development; systems and processes will be documented
 here as the documentation is created.
 
+## Emergency maintenance outage for leconte on July 27 and 28.
+
+Leconte will be down all day Thursday June 27 and Friday June 28 for cooling system maintenance.   We will make this system available as soon as is possible.
+
 
 ## Periodic Maintenance Outages
 
@@ -15,7 +19,7 @@ If an outage will affect urgent projects (i.e., with impending deadlines) please
 
 ### Scheduled Outage Tuesday July 2, 2019
 
-On Tuesday July 2, the following maintenance activies are planned:
+On Tuesday July 2, the following maintenance activities are planned:
 
 *  The system hosting VM services for ExCL will be updated, rebooted, and some delayed maintenance will take place.  This will result in all ExCL systems being inaccessible during this period. Best effort will be made to restore these systems by noon.
 *  The ExCL file server will be updated and rebooted.
