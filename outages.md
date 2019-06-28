@@ -1,11 +1,3 @@
-## Experimental Computing Laboratory documentation
-
-This is the user documentation repository for the Experimental Computing
-Laboratory of the Future Technologies Group at Oak Ridge National Laboratory.
-
-This site is undergoing development; systems and processes will be documented
-here as the documentation is created.
-
 ## Periodic Maintenance Outages
 
 ExCL reserves the first Tuesday of every month for systems maintenance.  This may result in complete inaccessibility during business hours.  Every effort will be made to minimize the scope, duration, and effect of maintenance activities.
