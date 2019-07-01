@@ -11,6 +11,7 @@ On Tuesday July 2, the following maintenance activities are planned:
 *  The system hosting VM services for ExCL will be updated, rebooted, and some delayed maintenance will take place.  This will result in all ExCL systems being inaccessible during this period. Best effort will be made to restore these systems by noon.
 *  The ExCL file server will be updated and rebooted.
 * All other systems will be rebooted to apply already performed updates (primarily kernel updates that are pending reboot).
+* Worthy of note: equinox (DG workstation) will be updated at this time.
 
 ### Outage Reservation Thursday August 6, 2019
 
