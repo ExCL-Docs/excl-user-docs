@@ -4,15 +4,9 @@ ExCL reserves the first Tuesday of every month for systems maintenance.  This ma
 
 If an outage will affect urgent projects (i.e., with impending deadlines) please email excl-help@ornl.gov as soon as possible.
 
-### Scheduled Outage Tuesday July 2, 2019
-
-On Tuesday July 2, the following maintenance activities are planned:
-
-*  The system hosting VM services for ExCL will be updated, rebooted, and some delayed maintenance will take place.  This will result in all ExCL systems being inaccessible during this period. Best effort will be made to restore these systems by noon.
-*  The ExCL file server will be updated and rebooted.
-* All other systems will be rebooted to apply already performed updates (primarily kernel updates that are pending reboot).
-* Worthy of note: equinox (DG workstation) will be updated at this time.
-
 ### Outage Reservation Thursday August 6, 2019
 
-No outage is anticipated for this date.
+There will be a brief period where the file server is not available.
+This should not require any logouts or reboots.
+This outage will be to move fs00 from a single 10gb interface to a bonded
+10g interface, for both performance and reliability.
