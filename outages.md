@@ -4,7 +4,7 @@ ExCL reserves the first Tuesday of every month for systems maintenance.  This ma
 
 If an outage will affect urgent projects (i.e., with impending deadlines) please email excl-help@ornl.gov as soon as possible.
 
-### Outage Reservation Thursday August 6, 2019
+### Outage Reservation Tuesday August 6, 2019
 
 There will be a brief period where the file server is not available.
 This should not require any logouts or reboots.
