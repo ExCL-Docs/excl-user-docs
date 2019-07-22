@@ -22,6 +22,7 @@ Much things to come.
 - [Support](SUPPORT.md)
   - [ExCl Team](MEMBERS.md)
   - [ExCL Acknowledgement](acknowledge.md)
+- [Access to ExCL](access.md)
 - [Contributing](CONTRIBUTING.md)
 - [Glossary & Acronyms](GLOSSARY_.md)
 - [Requesting Access](access-info.md)
