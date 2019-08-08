@@ -37,6 +37,7 @@ Much things to come.
 - [Oswald02](hosts/oswald02.md)
 - [Oswald03](hosts/oswald03.md)
 - [pcie](hosts/pcie.md)
+- [Snapdragon](hosts/snapdragon.md)
 
 ## Software
 
