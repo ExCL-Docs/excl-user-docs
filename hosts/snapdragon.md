@@ -31,15 +31,3 @@ resource).
 ## Images
 
 ![Laboratory Setup](images/snapdragon1.jpg "Laboratory Setup")
-![fpga detail](images/20190607_154604.jpg "fpga detail")
-*fpga detail*
-![left daughterboard detail](images/20190607_154621.jpg "left daughterboard detail")
-*left daughterboard detail*
-![right daughterboard gpu removed ](images/20190607_155804.jpg "right daughterboard gpu removed")
-*right daughterboard detail gpu removed*
-![gpu identification detail](images/20190607_155811.jpg "gpu identification detail")
-*gpu identification detail*
-
-
-## Contact
-Please send assistance requests to excl-help@ornl.gov.
