@@ -10,8 +10,9 @@ No outage, no work to be performed
 
 ### Maintenenace Outage Tuesday October 1, 2019
 
-There will be a brief maintenance outage at 10:00 as user files are
-moved to a volume with snapshots.  This improves the ability to recover
+There will be a brief file server maintenance outage at 10:00 as 
+the move of user files to a volume with snapshots is completed. 
+This improves the ability to recover
 user files after accidental deletion or overwriting.
 
 leconte will be updated at this time (necessitating a reboot).
@@ -24,7 +25,13 @@ Power will be removed from affected systems starting at 5:30 PM Thursday night.
 
 Only the following systems will be affected: 
 
-  oswald, oswald0[0-3], DGX Workstation, Emu, Kold[0-3], amundsen, mcmurdo
+  * oswald
+  * oswald0[0-3]
+  * DGX Workstation
+  * Emu
+  * Kold[0-3]
+  * amundsen
+  * mcmurdo
 
 No core services (other than centralized logging) will be affected.
 
