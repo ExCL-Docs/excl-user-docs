@@ -1,4 +1,4 @@
-## Periodic Maintenance Outages
+
 
 ExCL reserves the first Tuesday of every month for systems maintenance.  This may result in complete inaccessibility during business hours.  Every effort will be made to minimize the scope, duration, and effect of maintenance activities.
 
@@ -27,9 +27,9 @@ Only the following systems will be affected:
 
   * oswald
   * oswald0[0-3]
-  * DGX Workstation
-  * Emu
-  * Kold[0-3]
+  * DGX Workstation (equinox)
+  * emu
+  * kold[0-3]
   * amundsen
   * mcmurdo
 
