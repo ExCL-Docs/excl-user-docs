@@ -4,18 +4,19 @@ ExCL reserves the first Tuesday of every month for systems maintenance.  This ma
 
 If an outage will affect urgent projects (i.e., with impending deadlines) please email excl-help@ornl.gov as soon as possible.
 
-### Maintenance Outage Tuesday September 3, 2019
-
-No outage, no work to be performed
-
 ### Maintenenace Outage Tuesday October 1, 2019
 
-There will be a brief file server maintenance outage at 10:00 as 
-the move of user files to a volume with snapshots is completed. 
-This improves the ability to recover
-user files after accidental deletion or overwriting.
+On Tuesday October 1, there will be a short ExCL outage at 10 AM.  At this
+time the following work will be done:
 
-leconte will be updated at this time (necessitating a reboot).
+ *  File services (fs00) will be halted.   The home directories will have a final rsync to a partition with snapshots turned on.   When done file services will be reexported.  During this time any access to home directory trees is likely to hang or fail.
+
+ *  Update all infrastructure systems to CentOS 7.7  (mostly done, will just need reboots).  This includes login.excl.ornl.gov (so login/thinlinc sessions will be terminated).
+
+ *  leconte will be updated at this time (necessitating a reboot)
+
+It is anticipated that all work will be competed by 11 AM.
+
 
 ### JICS 116 Computer Room Power Outage Friday October 18, 2019
 
