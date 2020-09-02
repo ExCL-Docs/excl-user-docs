@@ -2,6 +2,15 @@
 
 This documents system configurations changes and other things that might affect ExCL users on a day to day basis.
 
+# September 2, 2020
+
+- Overnight had spotty accessibility to home directories on login; fielded two reports.   Problem appears to be timing of snapshot maintenance, and duration of time it takes to delete monthly snapshots.
+
+-- Removed a few older snapshots
+
+-- Began duplicating (rsync) home directores to a non-snapshotted file system.  When this completes, will have a short outage to home directores to transition to new file system.  This will not be for some days.
+
+
 # September 1, 2020
 
 - fs00 (home directory and infrastructure fileserver) networking changed from single 10gb to four bonded 10gb interfaces.   Four is excessive, but the interfaces weren't getting used, so why not.    Type 4 Bonding (802.3ad).  https://www.interserver.net/tips/kb/network-bonding-types-network-bonding/
