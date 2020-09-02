@@ -1,5 +1,9 @@
 ## ExCL Operations Log
 
+<!---
+https://www.markdownguide.org/extended-syntax
+-->
+
 This documents system configurations changes and other things that might affect ExCL users on a day to day basis.
 
 # Currrent Status
@@ -10,7 +14,7 @@ This documents system configurations changes and other things that might affect 
 
 # September 2, 2020
 
-- Overnight had spotty accessibility to home directories on login; fielded two reports.   Problem appears to be timing of snapshot maintenance, and duration of time it takes to delete monthly snapshots.
+- Overnight: had spotty accessibility to home directories on login; fielded two reports.   Problem appears to be timing of snapshot maintenance, and duration of time it takes to delete monthly snapshots.
 
     - Removed a few older snapshots
 
