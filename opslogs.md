@@ -6,9 +6,9 @@ This documents system configurations changes and other things that might affect 
 
 - Overnight had spotty accessibility to home directories on login; fielded two reports.   Problem appears to be timing of snapshot maintenance, and duration of time it takes to delete monthly snapshots.
 
--- Removed a few older snapshots
+ - Removed a few older snapshots
 
--- Began duplicating (rsync) home directores to a non-snapshotted file system.  When this completes, will have a short outage to home directores to transition to new file system.  This will not be for some days.
+ - Began duplicating (rsync) home directores to a non-snapshotted file system.  When this completes, will have a short outage to home directores to transition to new file system.  This will not be for some days.
 
 
 # September 1, 2020
