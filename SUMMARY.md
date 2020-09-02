@@ -27,7 +27,7 @@ Much things to come.
 - [Glossary & Acronyms](GLOSSARY_.md)
 - [Requesting Access](access-info.md)
 - [Outages and Maintenance Policy](outages.md)
-- [Operations Log](opslog.md)
+- [Operations Log](opslogs.md)
 
 ## Systems
 
