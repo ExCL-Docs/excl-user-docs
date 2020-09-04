@@ -12,6 +12,10 @@ This documents system configurations changes and other things that might affect 
 
 - thunderx offline for Centos 8 installation and authentication configuration. 
 
+# September 4, 2020
+
+-  quad00 exhibited misbehaviour (refusing root logins, even).  Rebooted at remote console, seems ok now.  Most likely cause is NFS stack issues having to do with the fs00 issue on 9/1 (based on syslog output).
+
 # September 2, 2020
 
 - Overnight: had spotty accessibility to home directories on login; fielded two reports.   Problem appears to be timing of snapshot maintenance, and duration of time it takes to delete monthly snapshots.
