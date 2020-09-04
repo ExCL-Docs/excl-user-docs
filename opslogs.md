@@ -8,13 +8,14 @@ This documents system configurations changes and other things that might affect 
 
 # Currrent Status
 
-- quad02 offline for UEFI investigation (part of the makeItSo initiative).
 
 - thunderx offline for Centos 8 installation and authentication configuration. 
 
 # September 4, 2020
 
--  quad00 exhibited misbehaviour (refusing root logins, even).  Rebooted at remote console, seems ok now.  Most likely cause is NFS stack issues having to do with the fs00 issue on 9/1 (based on syslog output).
+- quad00 exhibited misbehaviour (refusing root logins, even).  Rebooted at remote console, seems ok now.  Most likely cause is NFS stack issues having to do with the fs00 issue on 9/1 (based on syslog output).
+
+- quad02 returned to service -- will not be working on UEFI boot today.
 
 # September 2, 2020
 
