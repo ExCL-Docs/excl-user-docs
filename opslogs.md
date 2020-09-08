@@ -6,10 +6,11 @@ https://www.markdownguide.org/extended-syntax
 
 This documents system configurations changes and other things that might affect ExCL users on a day to day basis.
 
-# Currrent Status
+# Current Status
 
 
 - thunderx offline for Centos 8 installation and authentication configuration. 
+- quad02 allocated for deployment research; not available for computation
 
 # September 4, 2020
 
