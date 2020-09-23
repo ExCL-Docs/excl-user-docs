@@ -8,9 +8,12 @@ This documents system configurations changes and other things that might affect 
 
 # Current Status
 
-
-- thunderx offline for Centos 8 installation and authentication configuration. 
 - quad02 allocated for deployment research; not available for computation
+
+# September 22, 2020
+
+- Alveo 250 FPGA card deployed, with all attendant software.
+- thunderx returned to service.  Let excl-help@ornl.gov know of any issues.
 
 # September 4, 2020
 
