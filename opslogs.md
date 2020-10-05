@@ -10,6 +10,15 @@ This documents system configurations changes and other things that might affect 
 
 - quad02 allocated for deployment research; not available for computation
 
+# October 5, 2020
+- radeon.ftpn.ornl.gov updated to Ubuntu 20.04 LTS.   
+   -  important note: users must be in the "render" group or 
+      codes will segfault.
+
+# October 2, 2020
+- rocm reinstalled on radeon.ftpn.ornl.gov and explorer.ftpn.ornl.gov, tested
+ using matrix test program <<<https://github.com/ROCm-Developer-Tools/HIP/tree/master/samples/2_Cookbook/0_MatrixTranspose>>>
+
 # September 22, 2020
 
 - Alveo 250 FPGA card deployed, with all attendant software.
