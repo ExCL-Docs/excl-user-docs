@@ -10,6 +10,12 @@ This documents system configurations changes and other things that might affect 
 
 - quad02 allocated for deployment research; not available for computation
 
+# November 10, 2020
+
+Thunderx (Cavium ThunderX2 ARM system) restored to service.   Configuration continuing 
+due to problems encountered with Centos 8 and ARM combination (particularly with respect
+to available software).
+
 # October 5, 2020
 - radeon.ftpn.ornl.gov updated to Ubuntu 20.04 LTS.   
    -  important note: users must be in the "render" group or 
