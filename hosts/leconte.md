@@ -31,7 +31,7 @@ is to provision a system that is as similar in all respects to
 Summit, but some progress is required to get there.  This is to
 be considered an early access machine.
 
-Please send assistance requests to excl-admin@ornl.gov.
+Please send assistance requests to excl-help@ornl.gov.
 
 ## Installed Compilers
 
@@ -57,7 +57,7 @@ GPU performance information can be viewed at
 
 https://graphite.ornl.gov:3000/d/000000058/leconte-gpu-statistics?refresh=30s&orgId=1
 
-Request access by emailing excl-admin@ornl.gov.   This site still uses a self-signed certificate; a fix for that is in the works.
+Request access by emailing excl-help@ornl.gov.   This site still uses a self-signed certificate; a fix for that is in the works.
 
 ## Other Resources
 
