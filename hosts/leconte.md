@@ -57,7 +57,7 @@ GPU performance information can be viewed at
 
 https://graphite.ornl.gov:3000/d/000000058/leconte-gpu-statistics?refresh=30s&orgId=1
 
-Request access by emailing excl-help@ornl.gov.   This site still uses a self-signed certificate; a fix for that is in the works.
+Request access by emailing excl-help@ornl.gov. 
 
 ## Other Resources
 
