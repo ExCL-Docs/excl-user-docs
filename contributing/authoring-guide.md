@@ -4,7 +4,7 @@
 
 Perhaps you've got some how-to documents tucked away in folders that you'd like to share with the community. Or maybe you've discovered a way of doing things that would benefit other users.
 
-You can submit your user guides for publication within the [ExCl documentation site](https://docs.excl.ornl.gov)! See the [contributing](../CONTRIBUTE.md) page for instructions.
+You can submit your user guides for publication within the [ExCl documentation site](https://docs.excl.ornl.gov)! See the [contributing](../CONTRIBUTING.md) page for instructions.
 
 We've assembled here the fundamental authoring guidelines for ExCl user documentation.
 
