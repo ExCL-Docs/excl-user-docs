@@ -16,7 +16,6 @@ Branches will be visible only in another (private) gitbook instance.
 
 Much things to come.
 
-
 ## ExCl Support
 
 - [Support](SUPPORT.md)
@@ -45,13 +44,16 @@ Much things to come.
 - [Compilers](software/compilers.md)
 
 ## Git Contributing
+
 - [Git Basics](contributing/git-basics.md)
- - [Git Atom Workflow](contributing/git-workflow.md)
- - [Git Command Line](contributing/git-command-line.md)
- - [Git Scenarios](contributing/git-scenarios.md)
+  - [Git Atom Workflow](contributing/git-workflow.md)
+  - [Git Command Line](contributing/git-command-line.md)
+  - [Git Scenarios](contributing/git-scenarios.md)
 - [Authoring Guide](contributing/authoring-guide.md)
 
 ## Quick-Start Guides (stubs)
-  - [Power9 DevOps](quick-starts/power9-devops-quick-start.md)
-  - [EMU hatchings](quick-starts/emu-quick-start.md)
-  - [FPGA bootstrap](quick-starts/fpga-quick-start.md)
+
+- [Power9 DevOps](quick-starts/power9-devops-quick-start.md)
+- [EMU hatchings](quick-starts/emu-quick-start.md)
+- [FPGA bootstrap](quick-starts/fpga-quick-start.md)
+- [Jupyter Notebook](quick-starts/jupyter-quick-start.md)
