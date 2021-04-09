@@ -60,7 +60,7 @@ These instructions go over how to access a jupyter notebook running on the quad0
 2. Make sure you have the Remote - SSH extension installed.
 ![SSH Extension VS Code](assets/visual-code-ssh-extension.png)
 
-3. Setup .ssh
+3. Setup .ssh  
 ![Navigate to the remote explorer settings.](assets/visual-code-ssh-setup1.png)  
 Navigate to the remote explorer settings.  
 ![Chose the user .ssh config.](assets/visual-code-ssh-setup2.png)  
