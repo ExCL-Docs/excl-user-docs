@@ -30,13 +30,13 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
 1. From your local machine connect to login.excl.ornl.gov using MobaXterm.
 ![MobaXTerm SSH](assets/mobaxterm-ssh.png)
 
-2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888.
+2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888.  
 ![Click on MobaSSHTunnel](assets/mobaxterm-ssh.png)  
-Click on MobaSSHTunnel
+Click on MobaSSHTunnel  
 ![Click on New SSH Tunnel](assets/mobaxterm-new-tunnel.png)  
-Click on New SSH Tunnel
+Click on New SSH Tunnel  
 ![Local port forward 8888](assets/mobaxterm-port-forward.png)  
-Local port forward 8888
+Local port forward 8888  
 ![Click the play button to start port forwarding](assets/mobaxterm-play.png)  
 Click the play button to start port forwarding
 
@@ -62,9 +62,9 @@ These instructions go over how to access a jupyter notebook running on the quad0
 
 3. Setup .ssh
 ![Navigate to the remote explorer settings.](assets/visual-code-ssh-setup1.png)  
-Navigate to the remote explorer settings.
+Navigate to the remote explorer settings.  
 ![Chose the user .ssh config.](assets/visual-code-ssh-setup2.png)  
-Chose the user .ssh config.
+Chose the user .ssh config.  
 ![Add the remote systems to connect to with the proxy command to connect through the login node.](assets/visual-code-ssh-setup3.png)  
 Add the remote systems to connect to with the proxy command to connect through the login node.
 
@@ -73,10 +73,10 @@ Add the remote systems to connect to with the proxy command to connect through t
 ![Open Folder](assets/visual-code-connect2.png)  
 Open Folder
 
-5. Run the Jupyter notebook using the built in terminal.
+5. Run the Jupyter notebook using the built in terminal.  
 ![Run Jupyter](assets/visual-code-run.png)
 
-6. Open the automatically forwarded port.
+6. Open the automatically forwarded port.  
 ![Open Port](assets/visual-code-open.png)
 
 ## Installing Jupyter Notebook with Anaconda
