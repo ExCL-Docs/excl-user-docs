@@ -3,6 +3,7 @@
 # Vitis Development Tools
 
 This page covers how to access the Vitis development tools availible in ExCL. The availible FPGAs are listed in section [FPGAs](#fpgas). The availible systems with the Vitis toolchain installed are listed in section [Systems with the Vitis Toolchain](#systems-with-the-vitis-toolchain). See [Quickstart](#quickstart) to get started.
+The [virtual systems](#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. See section [Accessing ThinLinc](#accessing-thinlinc) to get started.
 
 ## FPGAs
 | FPGA                                                                          | Host System |
