@@ -55,5 +55,5 @@ Much things to come.
 
 - [Power9 DevOps](quick-starts/power9-devops-quick-start.md)
 - [EMU hatchings](quick-starts/emu-quick-start.md)
-- [FPGA bootstrap](quick-starts/fpga-quick-start.md)
+- [Vitis FPGA Development](quick-starts/vitis.md)
 - [Jupyter Notebook](quick-starts/jupyter-quick-start.md)
