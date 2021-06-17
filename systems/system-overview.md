@@ -7,7 +7,6 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | AMD Radeon VII GPU | radeon | Intel W-2123 CPU @3.6 GHz 1x AMD Vega20 GPU [More info](https://docs.excl.ornl.gov/systems/radeon) |
 | AMD MI50 GPU | explorer | AMD 7702 64-core CPU  2x AMD MI50 GPUs [More info](https://docs.excl.ornl.gov/systems/explorer) |
 | AMD MI100 GPU | cousteau | AMD 7272 12-core CPU 2x AMD MI100 GPUs [More info](https://docs.excl.ornl.gov/systems/cousteau) |
-| Nvidia RTX2080 GPU | oswald03 | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x GeForce RTX2080 GPU [More info](https://docs.excl.ornl.gov/systems/oswald03) |
 | Nvidia M2090 GPU | kold00 | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia M2090 GPUs [More info](https://docs.excl.ornl.gov/systems/kold00) |
 | Nvidia M2090 GPU | kold01 | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia M2090 GPUs [More info](https://docs.excl.ornl.gov/systems/kold01) |
 | Nvidia K20m GPU | kold02 | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia K20m GPUs  [More info](https://docs.excl.ornl.gov/systems/kold02) |
@@ -15,6 +14,7 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | Nvidia P100 GPU | oswald00 | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x Nvidia P100 GPU \(12GB\) [More info](https://docs.excl.ornl.gov/systems/oswald00) |
 | Nvidia P100 GPU | oswald01 | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x Nvidia P100 GPU \(12GB\) [More info](https://docs.excl.ornl.gov/systems/oswald01) |
 | Nvidia P100 GPU | oswald02 | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x Nvidia P100 GPU \(12GB\) [More info](https://docs.excl.ornl.gov/systems/oswald02) |
+| Nvidia RTX2080 GPU | oswald03 | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x GeForce RTX2080 GPU [More info](https://docs.excl.ornl.gov/systems/oswald03) |
 | Nvidia P100 GPU | pcie | Intel Xeon Gold 6130 CPU @ 2.1 GHz 1x Nvidia P100 GPU \(12GB\) [More info](https://docs.excl.ornl.gov/systems/pcie) |
 | Nvidia V100 GPU | leconte | IBM POWER9 CPU 6x Nvidia V100 SXM2 GPU \(16GB\) [More info](https://docs.excl.ornl.gov/systems/leconte) |
 | Nvidia V100 GPU | equinox | Intel Xeon E5-2698 v4 CPU @ 2.20 GHz 4x Nvidia V100 DGXS GPU \(32GB\) [More info](https://docs.excl.ornl.gov/systems/equinox) |
