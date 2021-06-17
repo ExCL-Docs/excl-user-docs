@@ -10,3 +10,16 @@ This site is undergoing development; systems and processes will be documented he
 
 See the index on the left of this page for further detail.
 
+## Useful URLs
+
+* [login.excl.ornl.gov](https://login.excl.ornl.gov:300) 
+* [excl.ornl.gov](https://excl.ornl.gov/)
+* [excl.ornl.gov/systems](https://excl.ornl.gov/excl-systems/)
+
+## How to Login
+
+* `ssh login.excl.ornl.gov`
+* [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
+
+
+
