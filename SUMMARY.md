@@ -39,7 +39,6 @@
 * [apachepass](systems/apachepass.md)
 * [quad\[00-03\]](systems/quad-00-03.md)
 * [thunderx](systems/thunderx.md)
-* [Untitled](systems/untitled.md)
 
 ## Software
 
