@@ -10,7 +10,7 @@ This site is undergoing development; systems and processes will be documented he
 
 See the index on the left of this page for further detail.
 
-Please acknowledge in your publications the role the Experimental Computing Laboratory (ExCL) facility played in your research. Alerting us when a paper is accepted is also appreciated. See [Acknowledgement][./acknowledgment.md] for details.
+Please acknowledge in your publications the role the Experimental Computing Laboratory \(ExCL\) facility played in your research. Alerting us when a paper is accepted is also appreciated. See [Acknowledgment](acknowledgment.md) for details.
 
 ## Useful URLs
 
