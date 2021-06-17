@@ -6,5 +6,3 @@ This site is undergoing development; systems and processes will be documented he
 
 See the index on the left of this page for further detail.
 
-Edit from Aaron's Gitbook Space.
-
