@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Acknowledgement](acknowledgement.md)
+* [Acknowledgment](acknowledgment.md)
 
 ## ExCl Support
 
