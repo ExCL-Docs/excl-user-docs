@@ -2,7 +2,7 @@
 
 [ExCl](https://excl.ornl.gov/) → [User Documentation](../) → [Contributing](contributing.md)
 
-### About ExCl User Documentation
+## About ExCl User Documentation
 
 Documentation published to ExCL users is available in our GitHub [repo](https://github.com/ORNL-ExCL/excl-user-docs). Users are encouraged to contribute by improving the material or providing user-created tutorials to share with the community.
 
