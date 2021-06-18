@@ -14,7 +14,7 @@ We've assembled here the fundamental authoring guidelines for ExCl user document
 
 * Documents should be created using [markdown](https://docs.gitlab.com/ee/user/markdown.html) using the [commonmark](https://docs.gitlab.com/ee/user/markdown.html#transitioning-to-commonmark) syntax.
 * Oak Ridge National Laboratory \(ORNL\) uses the [_Chicago Manual of Style_](http://www.chicagomanualofstyle.org/home.html) \(_CMOS_\) as a basic style guide.
-* Define the first instance of every acronym in each document. Ensure that the long form is not repeated after it is defined.
+* Define the first instance of every acronym in each document. Ensure that the long-form is not repeated after it is defined.
 * Buttons and links that the user should "click" should go in `code`. For example, "Next, click the `Manage Rules` button."
 * Put `&#128221;` in front of NOTES. Renders: 📝
 * Use `&#9662;` for those "carrot" drop-down menus. Renders: ▾
@@ -24,12 +24,12 @@ We've assembled here the fundamental authoring guidelines for ExCl user document
 
 Screenshots and images cannot be resized using markdown. Therefore, we embed `.html` that is rendered when we publish the tutorial to the documentation site.
 
-* Images and screenshots should be stored in a folder `./screenshots/`.
+* Images and screenshots should be stored in a folder`.gitbook/assets`.
 * Files should be named descriptively. For example, use names such as `adding-IP-address.png` instead of `image03.png`.
 * To remain consistent with other images in tutorials, please use the following `.html` code to resize, add a border, and open in a new browser tab when clicked. Note that you'll need to change the file name twice in the following code.
 
   ```text
-  <a target="_new" href="screenshots/ssh_import_pub_key.png"><img src="screenshots/ssh_import_pub_key.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a>
+  <a target="_new" href="/.gitbook/assets/ssh_import_pub_key.png"><img src="screenshots/ssh_import_pub_key.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a>
   ```
 
 ### Other Considerations
