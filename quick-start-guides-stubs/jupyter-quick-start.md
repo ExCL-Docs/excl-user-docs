@@ -6,7 +6,7 @@
 
 A Jupyter notebook server running on ExCL can be accessed via a local web browser through port forwarding the Jupyter notebook's port. By default this is port 8888 \(or the next available port\). This port might be in use if someone else is using running a notebook. You can specify the port with the --port flag when launching the jupyter notebook. To use a different port just replace 8888 with the desired port number. In order to port forward from an internal node, you have to port forward twice, once from your machine to login.excl.ornl.gov and once again from the login node to the internal node \(i.e. pcie\).
 
-### Detailed instructions for Linux/Mac:
+### Detailed instructions for Linux/Mac
 
 These instructions go over how to access a jupyter notebook running on the pcie node in the ExCL Cluster.
 
@@ -34,8 +34,8 @@ These instructions go over how to access a jupyter notebook running on the pcie 
 
 These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster.
 
-1. From your local machine connect to login.excl.ornl.gov using MobaXterm. ![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh%20%282%29.png)
-2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888. ![Click on MobaSSHTunnel](../.gitbook/assets/mobaxterm-ssh.png) Click on MobaSSHTunnel ![Click on New SSH Tunnel](../.gitbook/assets/mobaxterm-new-tunnel.png) Click on New SSH Tunnel ![Local port forward 8888](../.gitbook/assets/mobaxterm-port-forward.png) Local port forward 8888 ![Click the play button to start port forwarding](../.gitbook/assets/mobaxterm-play.png) Click the play button to start port forwarding
+1. From your local machine connect to login.excl.ornl.gov using MobaXterm. ![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh.png)
+2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888. ![Click on MobaSSHTunnel](../.gitbook/assets/mobaxterm-ssh-tunnel.png) Click on MobaSSHTunnel ![Click on New SSH Tunnel](../.gitbook/assets/mobaxterm-new-tunnel.png) Click on New SSH Tunnel ![Local port forward 8888](../.gitbook/assets/mobaxterm-port-forward.png) Local port forward 8888 ![Click the play button to start port forwarding](../.gitbook/assets/mobaxterm-play.png) Click the play button to start port forwarding
 3. From the login node connect to pcie and local port forward port 8888
 
    ```text
@@ -82,4 +82,3 @@ This section is a quick start to installing an anaconda python environment with 
    ```text
     $ conda install -c conda-forge notebook
    ```
-

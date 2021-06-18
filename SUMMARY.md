@@ -58,4 +58,3 @@
 * [EMU hatchings](quick-start-guides-stubs/emu-hatchings.md)
 * [Vitis FPGA Development](quick-start-guides-stubs/vitis.md)
 * [Jupyter Notebook](quick-start-guides-stubs/jupyter-quick-start.md)
-

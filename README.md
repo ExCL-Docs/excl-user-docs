@@ -14,7 +14,7 @@ Please acknowledge in your publications the role the Experimental Computing Labo
 
 ## Useful URLs
 
-* [login.excl.ornl.gov](https://login.excl.ornl.gov:300) 
+* [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
 * [excl.ornl.gov](https://excl.ornl.gov/)
 * [excl.ornl.gov/systems](https://excl.ornl.gov/excl-systems/)
 
@@ -24,4 +24,3 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 * `ssh login.excl.ornl.gov`
 * [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
-
