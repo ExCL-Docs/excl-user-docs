@@ -38,13 +38,6 @@ Screenshots and images cannot be resized using markdown. Therefore, we embed `.h
 * Have you removed information that is protected by copyright?
 * Are you using a specific version of your software and have you included in the documentation?
 
-### ExCL Brand Guide
-
-The ExCL brand helps define our resources and team culture. A portion of the guide is provided here to assist you in choosing a color scheme for your media and documentation.
-
-[Download ExCl Abridged Brand Guide](https://github.com/ORNL-ExCL/excl-user-docs/tree/5b0a2bac08c6595857ffaa414e0a315a8fdfa27c/contributing/ExCl-Brand-Guide.pdf)  
-
-
 ### Related Topics
 
 * Using a [Git Workflow](git-basics/git-workflow.md) for creating user content.
