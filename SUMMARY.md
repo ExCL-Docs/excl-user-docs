@@ -55,10 +55,10 @@
   * [Git Scenarios](git-contributing/git-basics/git-scenarios.md)
 * [Authoring Guide](git-contributing/authoring-guide.md)
 
-## Quick-Start Guides \(stubs\)
+## Quick-Start Guides
 
-* [Power9 DevOps](quick-start-guides-stubs/power9-devops.md)
-* [EMU hatchings](quick-start-guides-stubs/emu-hatchings.md)
-* [Vitis FPGA Development](quick-start-guides-stubs/vitis.md)
-* [Jupyter Notebook](quick-start-guides-stubs/jupyter-quick-start.md)
+* [Power9 DevOps](quick-start-guides/power9-devops.md)
+* [EMU hatchings](quick-start-guides/emu-hatchings.md)
+* [Vitis FPGA Development](quick-start-guides/vitis.md)
+* [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
 
