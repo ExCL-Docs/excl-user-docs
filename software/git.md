@@ -24,6 +24,7 @@ through the ExCL proxy server, which has outgoing read only access on port 9418.
 To configure your environemnt to make this work:
 
 1) Put the following file somewhere in your executable path:  
+
     $ cat git-proxy  
 
     ```bash
