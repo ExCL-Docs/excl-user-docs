@@ -1,2 +1,0 @@
-# Power9 DevOps
-
