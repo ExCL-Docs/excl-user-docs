@@ -1,4 +1,8 @@
 # Glossary & Acronyms
 
-ExCL : Experimental Computing Lab
+
+
+| Acronym | Meaning |
+| :--- | :--- |
+| ExCL | Experimental Computing Lab |
 
