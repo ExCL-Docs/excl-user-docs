@@ -82,3 +82,4 @@ This section is a quick start to installing an anaconda python environment with 
    ```text
     $ conda install -c conda-forge notebook
    ```
+
