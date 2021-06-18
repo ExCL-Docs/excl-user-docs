@@ -44,6 +44,8 @@
 
 * [Compilers](software/compilers.md)
 * [Git](software/git.md)
+* [Spack](software/spack.md)
+* [Conda](software/conda.md)
 
 ## Git Contributing
 
