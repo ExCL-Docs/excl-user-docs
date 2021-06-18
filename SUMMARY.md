@@ -43,6 +43,7 @@
 ## Software
 
 * [Compilers](software/compilers.md)
+* [Git](software/git.md)
 
 ## Git Contributing
 

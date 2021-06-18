@@ -1,11 +1,11 @@
-##  GIT access in ExCL
+# GIT access in ExCL
 
 Git (code revision management system) is installed on all ExCL systems on which
 it makes sense.   Git operates as expected, except for external access.
 
 If you require access to external git resources, you need to do a little more.
 
-# http or https access
+## http or https access
 
 For http or https access, make sure you have the following environment variables 
 (they should be set by default, but may not be if you have altered your environment
@@ -17,7 +17,7 @@ https_proxy=http://proxy.ftpn.ornl.gov:3128
 
 The proxy server has access to the full Oak Ridge network (open research only).
 
-# git protocol access
+## git protocol access
 
 Some projects require git protocol access.  This is done by proxying git requests
 through the ExCL proxy server, which has outgoing read only access on port 9418.
@@ -76,3 +76,9 @@ hsm@atlanta:~$ cat .gitconfig
 sshuttle is also an option.
 -->
 
+## Git Config to convert Git SSH URLS to HTTPS
+
+An alternative to setting up a proxy is to configure Git to convert Git URLS to HTTPS URLS by changing your global git config with the following commands.
+
+    $ git config --global url."https://bitbucket.org/".insteadOf git@bitbucket.org:
+    $ git config --global url."https://github.com/".insteadOf git@github.com:
