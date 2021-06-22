@@ -25,7 +25,7 @@
 * [oswald02](systems/oswald02.md)
 * [oswald03](systems/oswald03.md)
 * [pcie](systems/pcie.md)
-* [Snapdragon](systems/snapdragon.md)
+* [Snapdragon \(amundsen/mcmurdo\)](systems/snapdragon.md)
 * [radeon](systems/radeon.md)
 * [explorer](systems/explorer.md)
 * [cousteau](systems/cousteau.md)

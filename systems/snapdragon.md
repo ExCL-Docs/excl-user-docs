@@ -1,4 +1,11 @@
-# Snapdragon
+---
+description: >-
+  This document describes how to access Snapdragon 855 HDK boards through
+  mcmurdo and amundsen excl computing machines. The Snapdragon 855 HDK board is
+  connected to Ubuntu linux machines through ADB.
+---
+
+# Snapdragon \(amundsen/mcmurdo\)
 
 ## Description
 
