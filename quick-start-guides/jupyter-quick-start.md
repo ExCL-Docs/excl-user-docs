@@ -35,16 +35,27 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
 These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster.
 
 1. From your local machine connect to login.excl.ornl.gov using MobaXterm.  
-![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh.png)
+
+   ![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh.png)
+
 2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888.  
-![Click on MobaSSHTunnel](../.gitbook/assets/mobaxterm-ssh-tunnel.png)  
-Click on MobaSSHTunnel  
-![Click on New SSH Tunnel](../.gitbook/assets/mobaxterm-new-tunnel.png)  
-Click on New SSH Tunnel  
-![Local port forward 8888](../.gitbook/assets/mobaxterm-port-forward.png)  
-Local port forward 8888  
-![Click the play button to start port forwarding](../.gitbook/assets/mobaxterm-play.png)  
-Click the play button to start port forwarding
+
+   ![Click on MobaSSHTunnel](../.gitbook/assets/mobaxterm-ssh-tunnel.png)  
+
+   Click on MobaSSHTunnel  
+
+   ![Click on New SSH Tunnel](../.gitbook/assets/mobaxterm-new-tunnel.png)  
+
+   Click on New SSH Tunnel  
+
+   ![Local port forward 8888](../.gitbook/assets/mobaxterm-port-forward.png)  
+
+   Local port forward 8888  
+
+   ![Click the play button to start port forwarding](../.gitbook/assets/mobaxterm-play.png)  
+
+   Click the play button to start port forwarding
+
 3. From the login node connect to pcie and local port forward port 8888
 
    ```text
@@ -65,22 +76,38 @@ These instructions go over how to access a Jupyter notebook running on the quad0
 
 1. Open Visual Studio Code
 2. Make sure you have the Remote - SSH extension installed.  
-![SSH Extension VS Code](../.gitbook/assets/visual-code-ssh-extension.png)
+
+   ![SSH Extension VS Code](../.gitbook/assets/visual-code-ssh-extension.png)
+
 3. Setup .ssh  
-![Navigate to the remote explorer settings.](../.gitbook/assets/visual-code-ssh-setup1.png)  
-Navigate to the remote explorer settings.  
-![Chose the user .ssh config.](../.gitbook/assets/visual-code-ssh-setup2.png)  
-Chose the user .ssh config.  
-![Add the remote systems to connect to with the proxy command to connect through the login node.](../.gitbook/assets/visual-code-ssh-setup3.png)  
-Add the remote systems to connect to with the proxy command to connect through the login node.
+
+   ![Navigate to the remote explorer settings.](../.gitbook/assets/visual-code-ssh-setup1.png)  
+
+   Navigate to the remote explorer settings.  
+
+   ![Chose the user .ssh config.](../.gitbook/assets/visual-code-ssh-setup2.png)  
+
+   Chose the user .ssh config.  
+
+   ![Add the remote systems to connect to with the proxy command to connect through the login node.](../.gitbook/assets/visual-code-ssh-setup3.png)  
+
+   Add the remote systems to connect to with the proxy command to connect through the login node.
+
 4. Connect to the remote system and open the Jupyter folder.  
-![Connect step 1](../.gitbook/assets/visual-code-connect1.png)  
-![Open Folder](../.gitbook/assets/visual-code-connect2.png)
-Open Folder
+
+   ![Connect step 1](../.gitbook/assets/visual-code-connect1.png)  
+
+   ![Open Folder](../.gitbook/assets/visual-code-connect2.png)
+
+   Open Folder
+
 5. Run the Jupyter notebook using the built-in terminal.  
-![Run Jupyter](../.gitbook/assets/visual-code-run.png)
+
+   ![Run Jupyter](../.gitbook/assets/visual-code-run.png)
+
 6. Open the automatically forwarded port.  
-![Open Port](../.gitbook/assets/visual-code-open.png)
+
+   ![Open Port](../.gitbook/assets/visual-code-open.png)
 
 ### Installing Jupyter Notebook with Anaconda
 
@@ -103,3 +130,4 @@ This section is a quick start to installing an anaconda python environment with 
    ```text
     $ conda install -c conda-forge notebook
    ```
+
