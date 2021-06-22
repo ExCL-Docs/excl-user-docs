@@ -56,10 +56,10 @@ These instructions go over how to access a Jupyter notebook running on the quad0
 
 1. Open Visual Studio Code
 2. Make sure you have the Remote - SSH extension installed. ![SSH Extension VS Code](../.gitbook/assets/visual-code-ssh-extension.png)
-3. Setup .ssh  ![Navigate to the remote explorer settings.](../.gitbook/assets/visual-code-ssh-setup1.png)  Navigate to the remote explorer settings.  ![Chose the user .ssh config.](../.gitbook/assets/visual-code-ssh-setup2.png)  Chose the user .ssh config.  ![Add the remote systems to connect to with the proxy command to connect through the login node.](../.gitbook/assets/visual-code-ssh-setup3.png)  Add the remote systems to connect to with the proxy command to connect through the login node.
-4. Connect to the remote system and open the Jupyter folder. ![Connect step 1](../.gitbook/assets/visual-code-connect1.png)  ![Open Folder](../.gitbook/assets/visual-code-connect2.png)  Open Folder
-5. Run the Jupyter notebook using the built-in terminal.  ![Run Jupyter](../.gitbook/assets/visual-code-run.png)
-6. Open the automatically forwarded port.  ![Open Port](../.gitbook/assets/visual-code-open.png)
+3. Setup .ssh   ![Navigate to the remote explorer settings.](../.gitbook/assets/visual-code-ssh-setup1.png)   Navigate to the remote explorer settings.   ![Chose the user .ssh config.](../.gitbook/assets/visual-code-ssh-setup2.png)   Chose the user .ssh config.   ![Add the remote systems to connect to with the proxy command to connect through the login node.](../.gitbook/assets/visual-code-ssh-setup3.png)   Add the remote systems to connect to with the proxy command to connect through the login node.
+4. Connect to the remote system and open the Jupyter folder. ![Connect step 1](../.gitbook/assets/visual-code-connect1.png)   ![Open Folder](../.gitbook/assets/visual-code-connect2.png)   Open Folder
+5. Run the Jupyter notebook using the built-in terminal.   ![Run Jupyter](../.gitbook/assets/visual-code-run.png)
+6. Open the automatically forwarded port.   ![Open Port](../.gitbook/assets/visual-code-open.png)
 
 ### Installing Jupyter Notebook with Anaconda
 
