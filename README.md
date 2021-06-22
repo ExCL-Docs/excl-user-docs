@@ -33,3 +33,7 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 ![](.gitbook/assets/excl-cheat-sheet.png)
 
+{% embed url="https://excl-docs.github.io/excl-user-docs/excl-cheat-sheet.pdf" %}
+
+
+
