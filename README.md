@@ -31,7 +31,4 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 {% file src=".gitbook/assets/excl-cheat-sheet.pdf" caption="ExCL Cheat Sheet" %}
 
-{% embed src=".gitbook/assets/excl-cheat-sheet.pdf" %}
-
-
-
+![Cheat Sheet](../.gitbook/assets/excl-cheat-sheet.png)
