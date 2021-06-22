@@ -1,5 +1,5 @@
 ---
-description: Landing Page for getting started with ExCL Systems
+description: Landing page for getting started with ExCL Systems
 ---
 
 # Introduction
@@ -29,6 +29,7 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 ## ExCL Cheat Sheet
 
-[Download ExCL Cheat Sheet](.gitbook/assets/ExCL-Cheat-Sheet.pdf)
+[Download ExCL Cheat Sheet](https://github.com/ExCL-Docs/excl-user-docs/tree/53e73fcdf63d23808aaf2c082791f19974d8874c/.gitbook/assets/ExCL-Cheat-Sheet.pdf)
 
-<object data='https://github.com/ExCL-Docs/excl-user-docs/raw/e7910c66e06fb21d9adcfde944207437a6a2bac1/.gitbook/assets/ExCL-Cheat-Sheet.pdf' type='application/pdf' width='560' height='700'><p>It appears that you don't have a PDF plugin for this browser. You can <a href='.gitbook/assets/ExCL-Cheat-Sheet.pdf'>click here to download the PDF file.</a></p></object>
+It appears that you don't have a PDF plugin for this browser. You can [click here to download the PDF file.](https://github.com/ExCL-Docs/excl-user-docs/tree/53e73fcdf63d23808aaf2c082791f19974d8874c/.gitbook/assets/ExCL-Cheat-Sheet.pdf)
+
