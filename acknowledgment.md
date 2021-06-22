@@ -4,7 +4,7 @@ Please acknowledge in your publications the role the Experimental Computing Labo
 
 Sample acknowledgment:
 
-> This research used resources of the Experimental Computing Laboratory \(ExCL\) at the Oak Ridge National Laboratory, which is supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC05-00OR22725"
+> This research used resources of the Experimental Computing Laboratory \(ExCL\) at the Oak Ridge National Laboratory, which is supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC05-00OR22725
 
 You may use any variation on this theme, calling out specific simulations or portions of the research that used ExCL resources, or citing specific resources used.
 

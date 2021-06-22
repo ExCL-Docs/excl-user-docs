@@ -34,7 +34,7 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
 
 These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster.
 
-1. From your local machine connect to login.excl.ornl.gov using MobaXterm. ![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh.png)
+1. From your local machine connect to login.excl.ornl.gov using MobaXterm. ![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh%20%282%29.png)
 2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888. ![Click on MobaSSHTunnel](../.gitbook/assets/mobaxterm-ssh-tunnel.png) Click on MobaSSHTunnel ![Click on New SSH Tunnel](../.gitbook/assets/mobaxterm-new-tunnel.png) Click on New SSH Tunnel ![Local port forward 8888](../.gitbook/assets/mobaxterm-port-forward.png) Local port forward 8888 ![Click the play button to start port forwarding](../.gitbook/assets/mobaxterm-play.png) Click the play button to start port forwarding
 3. From the login node connect to pcie and local port forward port 8888
 
