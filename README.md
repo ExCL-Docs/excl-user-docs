@@ -27,3 +27,8 @@ See [Access to ExCL](excl-support/access.md) for more details.
 * `ssh login.excl.ornl.gov`
 * [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
 
+## ExCL Cheat Sheet
+
+[Download ExCL Cheat Sheet](cheatsheet/ExCL-Cheat-Sheet.pdf)
+
+<object data='cheatsheet/ExCL-Cheat-Sheet.pdf' type='application/pdf' width='560' height='700'><p>It appears that you don't have a PDF plugin for this browser. You can <a href='{% link /assets/ayoung48_cv.pdf %}'>click here to download the PDF file.</a></p></object>
