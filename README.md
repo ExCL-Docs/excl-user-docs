@@ -31,4 +31,4 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 [Download ExCL Cheat Sheet](.gitbook/assets/ExCL-Cheat-Sheet.pdf)
 
-<object data='.gitbook/assets/ExCL-Cheat-Sheet.pdf' type='application/pdf' width='560' height='700'><p>It appears that you don't have a PDF plugin for this browser. You can <a href='.gitbook/assets/ExCL-Cheat-Sheet.pdf'>click here to download the PDF file.</a></p></object>
+<object data='.gitbook/assets/ExCL-Cheat-Sheet.pdf' type='application/pdf' width='560' height='700'><p>It appears that you don't have a PDF plugin for this browser. You can <a href='https://github.com/ExCL-Docs/excl-user-docs/raw/e7910c66e06fb21d9adcfde944207437a6a2bac1/.gitbook/assets/ExCL-Cheat-Sheet.pdf'>click here to download the PDF file.</a></p></object>
