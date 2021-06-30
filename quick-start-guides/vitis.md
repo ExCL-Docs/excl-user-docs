@@ -25,6 +25,7 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 | Name | Tool Chain | Host | Source File | Platform Name |
 | :--- | :--- | :--- | :--- | :--- |
 | tardis | Vitis 2020.1 | pcie | ~7ry/vitis-tardis.source | xilinx\_u250\_xdma\_201830\_2 |
+| torchwood | Vitis 2020.1 | justify | ~7ry/vitis-tardis.source | xilinx\_u250\_xdma\_201830\_2 |
 | firefly | Vitis 2020.2 | pcie | ~7ry/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | serenity | Vitis 2020.2 | justify | ~7ry/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 
