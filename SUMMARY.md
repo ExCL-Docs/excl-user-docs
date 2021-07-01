@@ -46,8 +46,6 @@
 * [Compilers](software/compilers.md)
 * [Git](software/git.md)
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
-* [Spack](software/spack.md)
-* [Conda](software/conda.md)
 
 ## Git Contributing
 
