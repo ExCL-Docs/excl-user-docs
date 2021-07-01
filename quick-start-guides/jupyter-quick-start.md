@@ -113,19 +113,8 @@ These instructions go over how to access a Jupyter notebook running on the quad0
 
 This section is a quick start to installing an anaconda python environment with Jupyter notebook.
 
-1. Download Anaconda installer.
-
-   ```text
-   $ wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
-   ```
-
-2. Run the installer
-
-   ```text
-   $ bash Anaconda3-2020.11-Linux-x86_64.sh
-   ```
-
-3. Install Jupyter.
+1. Follow [Conda and Spack Installation](conda-and-spack-installation.md#installing-conda) to install Conda.
+2. Install Jupyter Notebook.
 
    ```text
     $ conda install -c conda-forge notebook
