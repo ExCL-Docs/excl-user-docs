@@ -6,7 +6,7 @@ description: The recommended way to install Conda and Spack.
 
 This guide goes over the recommended way to install [Conda ](https://docs.conda.io/en/latest/)and [Spack ](https://spack-tutorial.readthedocs.io/en/latest/)in ExCL. If you are already familiar with the Conda and Spack installation process, then the main takeaway is to install both packages in `/noback/<userid>` since the installations can become quite large \(&gt;50GB\) and they typically do not need to be backed up. Another recommendation is to store the `environment.yml` and `spack.yaml` files in your git repositories to make it easy to recreate the Conda and Spack environments required for that project. The remainder of this page goes over the installation in more detail.
 
-### Installing Conda
+## Installing Conda
 
 See the [Conda Docs](https://docs.conda.io/en/latest/miniconda.html#linux-installers) for the latest installation instructions. I install Miniconda instead of Anaconda since I do not require the 3GB of included packages that come with Anaconda and I will be installing my own packages anyways.
 
@@ -20,7 +20,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 Follow the prompts on the installer screens. Accept the license agreements. **Specify `/noback/$USER/conda` as the installation location.** Choose if you want the installer to initialize Miniconda.
 
-### Installing Spack
+## Installing Spack
 
 ```bash
 # Install spack by checking out the right branch to /noback

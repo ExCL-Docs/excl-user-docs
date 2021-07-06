@@ -17,14 +17,14 @@
 
 ## Systems
 
-* [System Overview](systems/system-overview.md)
+* [System Overview](systems/system-overview/README.md)
+  * [leconte](systems/system-overview/leconte.md)
+  * [oswald03](systems/system-overview/oswald03.md)
+  * [oswald02](systems/system-overview/oswald02.md)
+  * [oswald01](systems/system-overview/oswald01.md)
+  * [oswald00](systems/system-overview/oswald00.md)
+  * [emu](systems/system-overview/emu.md)
 * [Test System Overview](systems/test-system-overview.md)
-* [leconte](systems/leconte.md)
-* [emu](systems/emu.md)
-* [oswald00](systems/oswald00.md)
-* [oswald01](systems/oswald01.md)
-* [oswald02](systems/oswald02.md)
-* [oswald03](systems/oswald03.md)
 * [pcie](systems/pcie.md)
 * [Snapdragon \(amundsen/mcmurdo\)](systems/snapdragon.md)
 * [radeon](systems/radeon.md)

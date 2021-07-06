@@ -49,7 +49,7 @@ Atom has several packages which enhance the user experience and some of them you
 
   ![image](../../.gitbook/assets/git-repo-ssh-address.png)
 
-* _\(Optional\)_ Consider adding your SSH key to your GitHub profile so you are not prompted for credentials after every commit. To add your public SSH key to GitHub:   
+* _\(Optional\)_ Consider adding your SSH key to your GitHub profile so you are not prompted for credentials after every commit. To add your public SSH key to GitHub:
   * Click on your user image in the top-right of the GitHub window.
   * Select `Settings`.
   * On the left, click `SSH keys`.
@@ -118,21 +118,21 @@ At this point, you likely either want to create a new branch and add your contri
 
 We need the name of the remote branch we wish to work on
 
-1. The GitHub project page displays a droplist with the name of avaiHuble branches.   
+1. The GitHub project page displays a droplist with the name of avaiHuble branches.
 
    ![image](../../.gitbook/assets/git-show-branches.png)
 
-2. Open the Atom command palette \(`cmd`+`shift`+`p` or `ctrl`+`shift`+`p`\) and search for `git checkout checkout` \(requires Git checkout plugin having been installed\).   
+2. Open the Atom command palette \(`cmd`+`shift`+`p` or `ctrl`+`shift`+`p`\) and search for `git checkout checkout` \(requires Git checkout plugin having been installed\).
 
    ![image](../../.gitbook/assets/git-checkout-checkout-search.png)
 
-   You may also open the checkout dialog directly using the hotkeys `ctrl`+`alt`+`shift`+`c` \(or `ctrl`+`opt`+`shift`+`c` on Mac\).   
+   You may also open the checkout dialog directly using the hotkeys `ctrl`+`alt`+`shift`+`c` \(or `ctrl`+`opt`+`shift`+`c` on Mac\).
 
-   * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitHub.   
+   * The checkout dialog is a list of branches to checkout or switch to. Using the arrow keys, highlight the `custom` entry and hit enter. Now type in the name of the remote branch name. You may find this in GitHub.
 
      ![image](../../.gitbook/assets/git-checkout-provide-branch.png)
 
-   * A notice will display if the checkout was successful. You may then switch between branches using the branch selector in the bottom-right toolbar.   
+   * A notice will display if the checkout was successful. You may then switch between branches using the branch selector in the bottom-right toolbar.
 
      ![image](../../.gitbook/assets/git-atom-switch-branch.png)
 
