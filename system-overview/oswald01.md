@@ -19,7 +19,7 @@ There is not currently special access permissions. System is available to ExCL u
 
 ## Images
 
-![fpga detail](../../.gitbook/assets/20190607_154604.jpg) _fpga detail_ ![left daughterboard detail](../../.gitbook/assets/20190607_154621.jpg) _left daughterboard detail_ ![right daughterboard gpu removed](../../.gitbook/assets/20190607_155804.jpg) _right daughterboard detail gpu removed_ ![gpu identification detail](../../.gitbook/assets/20190607_155811.jpg) _gpu identification detail_
+![fpga detail](../.gitbook/assets/20190607_154604.jpg) _fpga detail_ ![left daughterboard detail](../.gitbook/assets/20190607_154621.jpg) _left daughterboard detail_ ![right daughterboard gpu removed](../.gitbook/assets/20190607_155804.jpg) _right daughterboard detail gpu removed_ ![gpu identification detail](../.gitbook/assets/20190607_155811.jpg) _gpu identification detail_
 
 ## Contact
 

@@ -23,7 +23,7 @@ Please send assistance requests to excl-help@ornl.gov.
 
 ## Installed Compilers
 
-Please see [Compilers](../../software/compilers.md)
+Please see [Compilers](../software/compilers.md)
 
 ## GPU Performance
 

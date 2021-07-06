@@ -1,4 +1,4 @@
-# oswald00
+# oswald02
 
 ## Description
 
@@ -18,7 +18,7 @@ There is not currently special access permissions. System is available to ExCL u
 
 ## Images
 
-![fpga detail](../../.gitbook/assets/20190607_153254.jpg) ![system layout](../../.gitbook/assets/20190607_153632.jpg) ![backplane identification](../../.gitbook/assets/20190607_153642.jpg)
+![fpga detail](../.gitbook/assets/20190607_161747.jpg) ![SAS card detail](../.gitbook/assets/20190607_161844.jpg)
 
 ## Contact
 

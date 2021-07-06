@@ -2,6 +2,28 @@
 
 * [Introduction](README.md)
 * [Acknowledgment](acknowledgment.md)
+* [System Overview](system-overview/README.md)
+  * [thunderx](system-overview/thunderx.md)
+  * [quad\[00-03\]](system-overview/quad-00-03.md)
+  * [apachepass](system-overview/apachepass.md)
+  * [newark](system-overview/newark.md)
+  * [xavier](system-overview/xavier.md)
+  * [equinox](system-overview/equinox.md)
+  * [kold03](system-overview/kold03.md)
+  * [kold02](system-overview/kold02.md)
+  * [kold01](system-overview/kold01.md)
+  * [kold00](system-overview/kold00.md)
+  * [Snapdragon \(amundsen/mcmurdo\)](system-overview/snapdragon.md)
+  * [cousteau](system-overview/cousteau.md)
+  * [explorer](system-overview/explorer.md)
+  * [radeon](system-overview/radeon.md)
+  * [pcie](system-overview/pcie.md)
+  * [leconte](system-overview/leconte.md)
+  * [emu](system-overview/emu.md)
+  * [oswald00](system-overview/oswald00.md)
+  * [oswald01](system-overview/oswald01.md)
+  * [oswald02](system-overview/oswald02.md)
+  * [oswald03](system-overview/oswald03.md)
 
 ## ExCl Support
 
@@ -15,31 +37,11 @@
 * [Outages and Maintenance Policy](excl-support/outages.md)
 * [Operations Log](excl-support/opslogs.md)
 
-## Systems
+## Quick-Start Guides
 
-* [System Overview](systems/system-overview/README.md)
-  * [leconte](systems/system-overview/leconte.md)
-  * [oswald03](systems/system-overview/oswald03.md)
-  * [oswald02](systems/system-overview/oswald02.md)
-  * [oswald01](systems/system-overview/oswald01.md)
-  * [oswald00](systems/system-overview/oswald00.md)
-  * [emu](systems/system-overview/emu.md)
-* [Test System Overview](systems/test-system-overview.md)
-* [pcie](systems/pcie.md)
-* [Snapdragon \(amundsen/mcmurdo\)](systems/snapdragon.md)
-* [radeon](systems/radeon.md)
-* [explorer](systems/explorer.md)
-* [cousteau](systems/cousteau.md)
-* [kold00](systems/kold00.md)
-* [kold01](systems/kold01.md)
-* [kold02](systems/kold02.md)
-* [kold03](systems/kold03.md)
-* [equinox](systems/equinox.md)
-* [xavier](systems/xavier.md)
-* [newark](systems/newark.md)
-* [apachepass](systems/apachepass.md)
-* [quad\[00-03\]](systems/quad-00-03.md)
-* [thunderx](systems/thunderx.md)
+* [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
+* [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
+* [Vitis FPGA Development](quick-start-guides/vitis.md)
 
 ## Software
 
@@ -54,10 +56,4 @@
   * [Git Command Line](git-contributing/git-basics/git-command-line.md)
   * [Git Scenarios](git-contributing/git-basics/git-scenarios.md)
 * [Authoring Guide](git-contributing/authoring-guide.md)
-
-## Quick-Start Guides
-
-* [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
-* [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
-* [Vitis FPGA Development](quick-start-guides/vitis.md)
 
