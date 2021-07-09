@@ -67,3 +67,67 @@ This approach is not as recommended as you can't forward 22 if you are running a
 2. Launch the ThinLinc Client.
 3. Connect to the server with "Connect".
 
+
+### Using Vitis with the [Fish Shell](https://fishshell.com/)
+
+To use the Vitis toolchain with the fish shell, create the file `~/.config/fish/functions/vitis_init.fish` with the following content. Then to initialize Vitis, you run the `vitis_init` function. This function will find the latest Vitis version installed on the system and setup its environment. (Note: systems should only have one Vitis version installed.)
+
+```fish
+function vitis_init --description 'Setup Vitis paths'
+
+   # Find the latest installed Vitis version as a default.
+   if test -e /tools/Xilinx/Vitis
+      set xilinx_version (ls /tools/Xilinx/Vitis | sort -r | head -n 1)
+      set base tools
+   else if test -e /opt/Xilinx/Vitis
+      set xilinx_version (ls /opt/Xilinx/Vitis | sort -r | head -n 1)
+      set base opt
+   else
+      echo "Could not find vitis installation"
+      return 1
+   end
+
+   # Try to override Vitis version
+   if test (count $argv) -eq 1
+      set xilinx_version $argv[1]
+   end
+
+   echo "Initializing Vivado $xilinx_version in base /$base"
+
+   # SDK
+   # set -gx PATH /opt/Xilinx/SDK/$xilinx_version/bin /opt/Xilinx/SDK/$xilinx_version/gnu/microblaze/lin/bin /opt/Xilinx/SDK/$xilinx_version/gnu/arm/lin/bin /opt/Xilinx/SDK/$xilinx_version/gnu/microblaze/linux_toolchain/lin64_be/bin /opt/Xilinx/SDK/$xilinx_version/gnu/microblaze/linux_toolchain/lin64_le/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch32/lin/gcc-arm-none-eabi/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch64/lin/aarch64-linux/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch64/lin/aarch64-none/bin /opt/Xilinx/SDK/$xilinx_version/gnu/armr5/lin/gcc-arm-none-eabi/bin /opt/Xilinx/SDK/$xilinx_version/tps/lnx64/cmake-3.3.2/bin $PATH
+
+   # XRT
+   set -gx XILINX_XRT /opt/xilinx/xrt
+   set -gx LD_LIBRARY_PATH $XILINX_XRT/lib $LD_LIBRARY_PATH
+   set -gx PATH $XILINX_XRT/bin $PATH
+   set -gx PYTHONPATH $XILINX_XRT/python $PYTHONPATH
+
+   # DocNav
+   set -gx PATH /$base/Xilinx/DocNav $PATH
+
+   # Vitis_HLS
+   set -gx XILINX_HLS /$base/Xilinx/Vitis_HLS/$xilinx_version
+   set -gx PATH /$base/Xilinx/Vitis_HLS/$xilinx_version/bin $PATH
+
+   # Vivado
+   set -gx PATH /$base/Xilinx/Vivado/$xilinx_version/bin $PATH
+
+   # Vitis
+   set -gx XILINX_VITIS /$base/Xilinx/Vitis/$xilinx_version
+   set -gx PATH /$base/Xilinx/Vitis/$xilinx_version/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/microblaze/lin/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/arm/lin/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/microblaze/linux_toolchain/lin64_le/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch32/lin/gcc-arm-none-eabi/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch64/lin/aarch64-linux/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch64/lin/aarch64-none/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/armr5/lin/gcc-arm-none-eabi/bin /$base/Xilinx/Vitis/$xilinx_version/tps/lnx64/cmake-3.3.2/bin /$base/Xilinx/Vitis/$xilinx_version/aietools/bin $PATH
+
+   # Model_Composer
+   set -gx PATH /$base/Xilinx/Model_Composer/2020.2/bin $PATH
+
+   # Set Platform Repo Paths
+   if test -e /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/
+      set -gx PLATFORM_REPO_PATHS /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/
+   else if test -e /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/
+      set -gx PLATFORM_REPO_PATHS /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/
+   end
+
+   # Set Library Paths
+   export LD_LIBRARY_PATH=/$base/Xilinx/Vitis/$xilinx_version/lib/lnx64.o:$LD_LIBRARY_PATH
+end
+```
