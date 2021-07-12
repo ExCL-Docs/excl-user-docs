@@ -1,6 +1,6 @@
 # Vitis FPGA Development
 
-[ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
+particularly[ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
 
 ## Vitis Development Tools
 
@@ -234,6 +234,10 @@ The process, as outlined above, has two steps:
 
 {% hint style="info" %}
 TIP: The `v++` command can be used from the command line, in scripts, or a build system like `make`, and can also be used through the Vitis IDE as discussed in [Using the Vitis IDE](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/won1553474198838.html).
+{% endhint %}
+
+{% hint style="info" %}
+TIP: The output directories of `v++` can be changed. See [Vitis Documentation](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/rol1532064542594.html). This is particularly helpful when you want to build multiple versions of the kernel in the same file structure. The [makefile example](vitis.md#example-makefile) shows an example of how to do this.
 {% endhint %}
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#tvy1528754367816) **for more information.**
