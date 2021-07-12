@@ -241,7 +241,7 @@ The process, as outlined above, has two steps:
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#tvy1528754367816) **for more information.**
 
-### Compiling Kernels with the Vitis Compiler <a id="ariaid-title2"></a>
+#### Compiling Kernels with the Vitis Compiler
 
 {% hint style="danger" %}
 **Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
@@ -264,6 +264,36 @@ The various arguments used are described below. Note that some of the arguments 
 * `<source_file>`: Specify source files for the kernel. Multiple source files can be specified. Required.
 
 The above list is a sample of the extensive options available. Refer to [Vitis Compiler Command](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/vitiscommandcompiler.html#wrj1504034328013) for details of the various command-line options. Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/rol1532064542594.html) to get an understanding of the location of various output files.
+
+#### Linking the Kernels
+
+{% hint style="danger" %}
+**Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
+{% endhint %}
+
+The kernel compilation process results in a Xilinx object \(XO\) file whether the kernel is written in C/C++, OpenCL C, or RTL. During the linking stage, XO files from different kernels are linked with the platform to create the FPGA binary container file \(.xclbin\) used by the host program.
+
+Similar to compiling, linking requires several options. The following is an example command line to link the `vadd` kernel binary:
+
+```text
+v++ -t sw_emu --platform xilinx_u200_xdma_201830_2 --link vadd.sw_emu.xo \
+-o'vadd.sw_emu.xclbin' --config ./connectivity.cfg
+```
+
+This command contains the following arguments:
+
+* `-t <arg>`: Specifies the build target. Software emulation \(`sw_emu`\) is used as an example. When linking, you must use the same `-t` and `--platform` arguments as specified when the input \(XO\) file was compiled.
+* `--platform <arg>`: Specifies the platform to link the kernels with. To link the kernels for an embedded processor application, you simply specify an embedded processor platform: `--platform $PLATFORM_REPO_PATHS/zcu102_base/zcu102_base.xpfm`
+* `--link`: Link the kernels and platform into an FPGA binary file \(xclbin\).
+* `<input>.xo`: Input object file. Multiple object files can be specified to build into the .xclbin.
+* `-o'<output>.xclbin'`: Specify the output file name. The output file in the link stage will be an .xclbin file. The default output name is a.xclbin
+* `--config ./connectivity.cfg`: Specify a configuration file that is used to provide `v++` command options for a variety of uses. Refer to [Vitis Compiler Command](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/vitiscommandcompiler.html#wrj1504034328013) for more information on the `--config` option.
+
+{% hint style="info" %}
+**TIP:** Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/rol1532064542594.html) to get an understanding of the location of various output files.
+{% endhint %}
+
+Beyond simply linking the Xilinx object \(XO\) files, the linking process is also where important architectural details are determined. In particular, this is where the number of compute unit \(CUs\) to instantiate into hardware is specified, connections from kernel ports to global memory are assigned, and CUs are assigned to SLRs. The following sections discuss some of these build options.
 
 ### **Analyzing the Build Results**
 
