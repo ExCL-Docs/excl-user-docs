@@ -20,7 +20,13 @@ There is not currently special access permissions. System is available to ExCL u
 
 ## Images
 
-![system layout](../.gitbook/assets/20190621_151129.jpg) ![pci detail](../.gitbook/assets/20190621_151211.jpg) ![device wiring detail](../.gitbook/assets/20190621_151218.jpg) ![disks/fans/cpu](../.gitbook/assets/20190621_151227.jpg)
+![system layout](../.gitbook/assets/20190621_151129.jpg)
+
+![pci detail](../.gitbook/assets/20190621_151211.jpg)
+
+![device wiring detail](../.gitbook/assets/20190621_151218.jpg)
+
+![disks/fans/cpu](../.gitbook/assets/20190621_151227.jpg)
 
 ## Contact
 

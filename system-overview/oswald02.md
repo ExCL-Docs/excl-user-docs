@@ -1,4 +1,4 @@
-# oswald03
+# oswald02
 
 ## Description
 
@@ -14,11 +14,15 @@ The system is
 
 ## Access
 
-There is not currently special access permissions. System is available to ExCL users. This may change as needed.
+There is not currently special access permissions. The system is available to ExCL users. This may change as needed.
 
 ## Images
 
-![fpga detail](../.gitbook/assets/20190607_162750.jpg) ![left daughterboard detail](../.gitbook/assets/20190607_162758.jpg)
+ 
+
+![fpga detail](../.gitbook/assets/20190607_161747.jpg)
+
+![SAS card detail](../.gitbook/assets/20190607_161844.jpg)
 
 ## Contact
 

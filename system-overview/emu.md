@@ -2,7 +2,7 @@
 
 ## Description
 
-![Emu System Overview](https://github.com/RelativePrime/excl-user-docs/raw/master/hosts/images/emu-overview.png)
+![](../.gitbook/assets/emu-overview.png)
 
 EMU-Chick System is composed of 8x nodes that are connected via RapidIO Interconnect.
 
@@ -29,11 +29,11 @@ Each nodelet has:
 
 * The EMU software development kit \(SDK\) is installed under /usr/local/emu on emu-gw, which is an x86 based system. Compilation and simulation should be performed on this machine.
 * The official EMU programming guide is located under /usr/docs.
-* emu and emu-gw mount home directories, so you should have no difficulty accessing your projects. Please use `$HOME` \(or `${HOME}`\) as your home directory in scripts, as the mount location of your home directory may change.
+* emu and emu-gw mount home directories, so you should have no difficulty accessing your projects. Please use `$HOME` \(or `${HOME}`\) as your home directory in scripts, as the mount location of your home directory, may change.
 
 ## Other Resources
 
-This document will be updated with dditional documentation references and user information as it becomes available.
+This document will be updated with additional documentation references and user information as it becomes available.
 
 ## Contact
 

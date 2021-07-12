@@ -95,8 +95,8 @@ ORNL provides two GitLab servers [https://code.ornl.gov](https://code.ornl.gov) 
 * The next three steps consist of `adding`, `committing`, and `pushing` from your local machine to GitLab.
 
   > **Add** - includes the added files in the content that you want to save  
-  >  **Commit** - creates a "snapshot" of the repository at that moment and uses the changes from the "added" files  
-  >  **Push** - moves/uploads the local changes \(or snapshot\) to the remote GitLab repository
+  > **Commit** - creates a "snapshot" of the repository at that moment and uses the changes from the "added" files  
+  > **Push** - moves/uploads the local changes \(or snapshot\) to the remote GitLab repository
 
   ```bash
   git add README.md
@@ -111,7 +111,7 @@ ORNL provides two GitLab servers [https://code.ornl.gov](https://code.ornl.gov) 
 **Branches** are created as a way to separate content that is still under development. One way to think about a branch is as a copy of the content of a repository at a point in time. You'll then make your changes on the _copy_ before then integrating the changes back into the original. For example, if you were using your GitLab repo to host a website, you probably would not want incomplete content shown to those who would visit your site. Instead, you can create a branch, make edits to the files there, then **merge** your development branch back into the `master` branch, which is the default branch. Additionally, branches are commonly used when multiple individuals work out of a single repository.
 
 > **Branch** - a version of the repository that splits from the primary version  
->  **Merge** - using the changes from one branch and adding them to another
+> **Merge** - using the changes from one branch and adding them to another
 
 * A branch **checkout** enables you to make changes to files without changing the content of the `master` branch. To create and checkout a branch called "adding-readme":
 
