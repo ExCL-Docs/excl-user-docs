@@ -20,8 +20,6 @@ There is not currently special access permissions. The system is available to Ex
 
 ![fpga detail](../.gitbook/assets/20190607_162750.jpg)
 
- 
-
 ![left daughterboard detail](../.gitbook/assets/20190607_162758.jpg)
 
 ## Contact

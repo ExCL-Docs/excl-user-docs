@@ -19,19 +19,11 @@ There is not currently special access permissions. The system is available to Ex
 
 ## Images
 
- 
-
 ![fpga detail](../.gitbook/assets/20190607_154604.jpg)
-
-  
 
 ![left daughterboard detail](../.gitbook/assets/20190607_154621.jpg)
 
-  
-
 ![right daughterboard gpu removed](../.gitbook/assets/20190607_155804.jpg)
-
-  
 
 ![gpu identification detail](../.gitbook/assets/20190607_155811.jpg)
 

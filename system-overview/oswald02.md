@@ -18,8 +18,6 @@ There is not currently special access permissions. The system is available to Ex
 
 ## Images
 
- 
-
 ![fpga detail](../.gitbook/assets/20190607_161747.jpg)
 
 ![SAS card detail](../.gitbook/assets/20190607_161844.jpg)

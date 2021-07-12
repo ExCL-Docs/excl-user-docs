@@ -35,6 +35,12 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 2. Source the `Source File` in the system table to load the correct Vitis toolchain environment variables. For example `$ source ~7ry/vitis-2020.1.source`.
 3. To run on hardware, contact Aaron Young.
 
+### First Steps
+
+1. Follow the [quickstart ](vitis.md#quickstart)to set up the [Vitis Environment](vitis.md#setting-up-the-vitis-environment).
+2. Go through the [Vitis Getting Started Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Getting_Started).
+3. Go through the [Vitis Hardware Accelerators Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware_Accelerators).
+
 ### Accessing ThinLinc
 
 The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses port 3000 and the ThinLinc client uses port 22.
@@ -67,12 +73,11 @@ This approach is not as recommended as you can't forward 22 if you are running a
 2. Launch the ThinLinc Client.
 3. Connect to the server with "Connect".
 
-
 ### Using Vitis with the [Fish Shell](https://fishshell.com/)
 
-To use the Vitis toolchain with the fish shell, create the file `~/.config/fish/functions/vitis_init.fish` with the following content. Then to initialize Vitis, you run the `vitis_init` function. This function will find the latest Vitis version installed on the system and setup its environment. (Note: systems should only have one Vitis version installed.)
+To use the Vitis toolchain with the fish shell, create the file `~/.config/fish/functions/vitis_init.fish` with the following content. Then to initialize Vitis, you run the `vitis_init` function. This function will find the latest Vitis version installed on the system and setup its environment. \(Note: systems should only have one Vitis version installed.\)
 
-```fish
+```text
 function vitis_init --description 'Setup Vitis paths'
 
    # Find the latest installed Vitis version as a default.
@@ -131,3 +136,170 @@ function vitis_init --description 'Setup Vitis paths'
    export LD_LIBRARY_PATH=/$base/Xilinx/Vitis/$xilinx_version/lib/lnx64.o:$LD_LIBRARY_PATH
 end
 ```
+
+## Building and Running FPGA Applications
+
+Xilinx FPGA projects can be built using the [Vitis Compiler](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#ariaid-title2), the Vitis GUI, [Vitis HLS](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#xkj1541628747515), or [Vivado](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#ariaid-title6).
+
+In general, I recommend using the Vitis compiler via the command line and scripts, because the workflow is easy to document, store in git, and run with GitLab CI. I recommend using Vitis HLS when trying to optimize kernel since it provides many profiling tools. See [Vitis HLS Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting_Started/Vitis_HLS/synth_and_analysis.md).
+
+[Tutorials are available to learn how to use Vitis.](https://github.com/Xilinx/Vitis-Tutorials)
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/xia1553473418160.html) **for more details on building and running FPGA applications.**
+
+### Setting up the Vitis Environment
+
+Vitis source scripts are provided for ExCL which are set up for the particular machine. Source corresponding `Source File` in the system table to load the correct Vitis toolchain environment variables. For example using the Bash:
+
+```bash
+source ~7ry/vitis-2020.2.source
+```
+
+If you want to use fish instead of bash, then see [Vitis FPGA Development](vitis.md#using-vitis-with-the-fish-shell).
+
+  
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/settingupvitisenvironment.html#zks1565446519267) **for more details on setting up the Vitis Environment.**
+
+### Build Targets
+
+There are three build targets available when building an FPGA kernel with Vitis tools. 
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildtargets1.html#rst1525720251890) **for more information.**
+
+| Software Emulation | Hardware Emulation | Hardware Execution |
+| :--- | :--- | :--- |
+| Host application runs with a C/C++ or OpenCL™ model of the kernels. | Host application runs with a simulated RTL model of the kernels. | Host application runs with actual hardware implementation of the kernels. |
+| Used to confirm functional correctness of the system. | Test the host / kernel integration, get performance estimates. | Confirm that the system runs correctly and with desired performance. |
+| Fastest build time supports quick design iterations. | Best debug capabilities, moderate compilation time with increased visibility of the kernels. | Final FPGA implementation, long build time with accurate \(actual\) performance results. |
+
+The designed build target is specified with the `-t` flag with `v++`.
+
+### Building the Host Program
+
+The host program can be written using either the native XRT API or OpenCL API calls, and it is compiled using the GNU C++ compiler \(`g++`\). Each source file is compiled to an object file \(`.o`\) and linked with the Xilinx runtime \(XRT\) shared library to create the executable which runs on the host CPU. 
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildinghostprogram.html#asy1528754332783) **for more information.**
+
+#### Compiling and Linking for x86
+
+{% hint style="info" %}
+TIP: Set up the command shell or window as described in [Vitis FPGA Development](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
+{% endhint %}
+
+Each source file of the host application is compiled into an object file \(.o\) using the `g++` compiler.
+
+```bash
+g++ ... -c <source_file1> <source_file2> ... <source_fileN>
+```
+
+The generated object files \(.o\) are linked with the Xilinx Runtime \(XRT\) shared library to create the executable host program. Linking is performed using the `-l` option.
+
+```bash
+g++ ... -l <object_file1.o> ... <object_fileN.o>
+```
+
+Compiling and linking for x86 follows the standard `g++` flow. The only requirement is to include the XRT header files and link the XRT shared libraries.
+
+When compiling the source code, the following `g++` options are required:
+
+* `-I$XILINX_XRT/include/`: XRT include directory.
+* `-I$XILINX_VIVADO/include`: Vivado tools include directory.
+* `-std=c++11`: Define the C++ language standard.
+
+When linking the executable, the following g++ options are required:
+
+* `-L$XILINX_XRT/lib/`: Look in XRT library.
+* `-lOpenCL`: Search the named library during linking.
+* `-lpthread`: Search the named library during linking.
+* `-lrt`: Search the named library during linking.
+* `-lstdc++`: Search the named library during linking.
+
+{% hint style="info" %}
+Note: In the [Vitis Examples](https://github.com/Xilinx/Vitis_Accel_Examples) you may see the addition of xcl2.cpp source file, and the `-I../libs/xcl2` include statement. These additions to the host program and `g++` command provide access to helper utilities used by the example code, but are generally not required for your own code.
+{% endhint %}
+
+### Building the Device Binary
+
+The kernel code is written in C, C++, OpenCL™ C, or RTL, and is built by compiling the kernel code into a Xilinx® object \(XO\) file, and linking the XO files into a device binary \(XCLBIN\) file, as shown in the following figure.
+
+![Vitis Build Process](../.gitbook/assets/vitis-build-process.png)
+
+The process, as outlined above, has two steps:
+
+1. Build the Xilinx object files from the kernel source code.
+   * For C, C++, or OpenCL kernels, the `v++ -c` command compiles the source code into Xilinx object \(XO\) files. Multiple kernels are compiled into separate XO files.
+   * For RTL kernels, the `package_xo` command produces the XO file to be used for linking. Refer to [RTL Kernels](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/devrtlkernel.html#qnk1504034323350) for more information.
+   * You can also create kernel object \(XO\) files working directly in the Vitis™ HLS tool. Refer to [Compiling Kernels with the Vitis HLS](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#yzy1565965133810) for more information.
+2. After compilation, the `v++ -l` command links one or multiple kernel objects \(XO\), together with the hardware platform XSA file, to produce the device binary XCLBIN file.
+
+{% hint style="info" %}
+TIP: The `v++` command can be used from the command line, in scripts, or a build system like `make`, and can also be used through the Vitis IDE as discussed in [Using the Vitis IDE](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/won1553474198838.html).
+{% endhint %}
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#tvy1528754367816) **for more information.**
+
+### **Analyzing the Build Results**
+
+ The Vitis™ analyzer is a graphical utility that allows you to view and analyze the reports generated while building and running the application. It is intended to let you review reports generated by both the Vitis compiler when the application is built, and the Xilinx® Runtime \(XRT\) library when the application is run. The Vitis analyzer can be used to view reports from both the `v++` command line flow, and the Vitis integrated design environment \(IDE\). You will launch the tool using the `vitis_analyzer` command \(see [Vitis FPGA Development](vitis.md#setting-up-the-vitis-environment)\).
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/jfn1567005096685.html) **for more information.**
+
+### Example Makefile
+
+A simple example Vitis project is available at [https://code.ornl.gov/7ry/add\_test](https://code.ornl.gov/7ry/add_test). This project can be used to test the Vitis compile chain and [Vitis HLS](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/gnq1597858079367.html)
+
+The [makefile](https://code.ornl.gov/7ry/add_test/-/blob/main/Makefile) used by this project is an example of how to create a makefile to build an FPGA accelerated application.
+
+```bash
+HW_TARGET ?= sw_emu # [sw_emu, hw_emu, hw]
+LANGUAGE ?= opencl # [opencl, xilinx]
+VERSION ?= 1 # [1, 2, 3]
+
+#HWC stands for hardware compiler
+HWC = v++
+TMP_DIR = _x/$(HW_TARGET)/$(LANGUAGE)/$(VERSION)
+src_files = main_xilinx.cpp cv_opencl.cpp double_add.cpp
+hpp_files = cv_opencl.hpp double_add.hpp
+KERNEL_SRC = kernels/add_kernel_v$(VERSION).cl
+COMPUTE_ADD_XO = $(HW_TARGET)/$(LANGUAGE)/xo/add_kernel_v$(VERSION).xo
+XCLBIN_FILE = $(HW_TARGET)/$(LANGUAGE)/add_kernel_v$(VERSION).xclbin
+
+ifeq ($(LANGUAGE), opencl)
+	KERNEL_SRC = kernels/add_kernel_v$(VERSION).cl
+else
+	KERNEL_SRC = kernels/add_kernel_v$(VERSION).cpp
+endif
+
+.PHONY: all kernel
+all: double_add emconfig.json $(XCLBIN_FILE)
+build: $(COMPUTE_ADD_XO)
+kernel: $(XCLBIN_FILE)
+
+double_add: $(src_files) $(hpp_files)
+	g++ -Wall -g -std=c++11 $(src_files) -o $@ -I../common_xlx/ \
+	-I${XILINX_XRD}/include/ -L${XILINX_XRT}/lib/ -L../common_xlx -lOpenCL \
+	-lpthread -lrt -lstdc++
+
+emconfig.json:
+	emconfigutil --platform xilinx_u250_gen3x16_xdma_3_1_202020_1 --nd 1
+
+$(COMPUTE_ADD_XO): $(KERNEL_SRC)
+	$(HWC) -c -t $(HW_TARGET) --kernel double_add --temp_dir $(TMP_DIR) \
+	--config design.cfg -Ikernels -I. $< -o $@
+
+$(XCLBIN_FILE): $(COMPUTE_ADD_XO)
+	$(HWC) -l -t $(HW_TARGET) --temp_dir $(TMP_DIR) --config design.cfg \
+	--connectivity.nk=double_add:1:csq_1 \
+	$^ -I. -o $@
+
+.PHONY: clean
+clean:
+	rm -rf double_add emconfig.json xo/ built/ sw_emu/ hw_emu/ hw/ _x *.log .Xil/
+```
+
+
+
+
+
+
+
