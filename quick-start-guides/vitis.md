@@ -157,12 +157,11 @@ source ~7ry/vitis-2020.2.source
 
 If you want to use fish instead of bash, then see [Vitis FPGA Development](vitis.md#using-vitis-with-the-fish-shell).
 
-  
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/settingupvitisenvironment.html#zks1565446519267) **for more details on setting up the Vitis Environment.**
 
 ### Build Targets
 
-There are three build targets available when building an FPGA kernel with Vitis tools. 
+There are three build targets available when building an FPGA kernel with Vitis tools.
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildtargets1.html#rst1525720251890) **for more information.**
 
@@ -176,14 +175,14 @@ The designed build target is specified with the `-t` flag with `v++`.
 
 ### Building the Host Program
 
-The host program can be written using either the native XRT API or OpenCL API calls, and it is compiled using the GNU C++ compiler \(`g++`\). Each source file is compiled to an object file \(`.o`\) and linked with the Xilinx runtime \(XRT\) shared library to create the executable which runs on the host CPU. 
+The host program can be written using either the native XRT API or OpenCL API calls, and it is compiled using the GNU C++ compiler \(`g++`\). Each source file is compiled to an object file \(`.o`\) and linked with the Xilinx runtime \(XRT\) shared library to create the executable which runs on the host CPU.
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildinghostprogram.html#asy1528754332783) **for more information.**
 
 #### Compiling and Linking for x86
 
-{% hint style="info" %}
-TIP: Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
+{% hint style="danger" %}
+**Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
 {% endhint %}
 
 Each source file of the host application is compiled into an object file \(.o\) using the `g++` compiler.
@@ -215,7 +214,7 @@ When linking the executable, the following g++ options are required:
 * `-lstdc++`: Search the named library during linking.
 
 {% hint style="info" %}
-Note: In the [Vitis Examples](https://github.com/Xilinx/Vitis_Accel_Examples) you may see the addition of xcl2.cpp source file, and the `-I../libs/xcl2` include statement. These additions to the host program and `g++` command provide access to helper utilities used by the example code, but are generally not required for your own code.
+**Note:** In the [Vitis Examples](https://github.com/Xilinx/Vitis_Accel_Examples) you may see the addition of xcl2.cpp source file, and the `-I../libs/xcl2` include statement. These additions to the host program and `g++` command provide access to helper utilities used by the example code, but are generally not required for your own code.
 {% endhint %}
 
 ### Building the Device Binary
@@ -233,20 +232,147 @@ The process, as outlined above, has two steps:
 2. After compilation, the `v++ -l` command links one or multiple kernel objects \(XO\), together with the hardware platform XSA file, to produce the device binary XCLBIN file.
 
 {% hint style="info" %}
-TIP: The `v++` command can be used from the command line, in scripts, or a build system like `make`, and can also be used through the Vitis IDE as discussed in [Using the Vitis IDE](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/won1553474198838.html).
+**TIP:** The `v++` command can be used from the command line, in scripts, or a build system like `make`, and can also be used through the Vitis IDE as discussed in [Using the Vitis IDE](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/won1553474198838.html).
 {% endhint %}
 
 {% hint style="info" %}
-TIP: The output directories of `v++` can be changed. See [Vitis Documentation](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/rol1532064542594.html). This is particularly helpful when you want to build multiple versions of the kernel in the same file structure. The [makefile example](vitis.md#example-makefile) shows an example of how to do this.
+**TIP:** The output directories of `v++` can be changed. See [Vitis Documentation](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/rol1532064542594.html). This is particularly helpful when you want to build multiple versions of the kernel in the same file structure. The [makefile example](vitis.md#example-makefile) shows an example of how to do this.
 {% endhint %}
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildingdevicebinary.html#tvy1528754367816) **for more information.**
 
+### Compiling Kernels with the Vitis Compiler <a id="ariaid-title2"></a>
+
+{% hint style="danger" %}
+**Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
+{% endhint %}
+
+The first stage in building the xclbin file is to compile the kernel code using the Xilinx Vitis compiler. There are multiple `v++` options that need to be used to correctly compile your kernel. The following is an example command line to compile the `vadd` kernel:
+
+```text
+v++ -t sw_emu --platform xilinx_u200_xdma_201830_2 -c -k vadd \
+-I'./src' -o'vadd.sw_emu.xo' ./src/vadd.cpp
+```
+
+The various arguments used are described below. Note that some of the arguments are required.
+
+* `-t <arg>`: Specifies the build target, as discussed in [Build Targets](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/buildtargets1.html#rst1525720251890). Software emulation \(`sw_emu`\) is used as an example. Optional. The default is hw.
+* `--platform <arg>`: Specifies the accelerator platform for the build. This is required because runtime features, and the target platform are linked as part of the FPGA binary. To compile a kernel for an embedded processor application, specify an embedded processor platform: `--platform $PLATFORM_REPO_PATHS/zcu102_base/zcu102_base.xpfm`.
+* `-c`: Compile the kernel. Required. The kernel must be compiled \(`-c`\) and linked \(`-l`\) in two separate steps.
+* `-k <arg>`: Name of the kernel associated with the source files.
+* `-o'<output>.xo'`: Specify the shared object file output by the compiler. Optional.
+* `<source_file>`: Specify source files for the kernel. Multiple source files can be specified. Required.
+
+The above list is a sample of the extensive options available. Refer to [Vitis Compiler Command](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/vitiscommandcompiler.html#wrj1504034328013) for details of the various command-line options. Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/rol1532064542594.html) to get an understanding of the location of various output files.
+
 ### **Analyzing the Build Results**
 
- The Vitis™ analyzer is a graphical utility that allows you to view and analyze the reports generated while building and running the application. It is intended to let you review reports generated by both the Vitis compiler when the application is built, and the Xilinx® Runtime \(XRT\) library when the application is run. The Vitis analyzer can be used to view reports from both the `v++` command line flow, and the Vitis integrated design environment \(IDE\). You will launch the tool using the `vitis_analyzer` command \(see [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment)\).
+The Vitis™ analyzer is a graphical utility that allows you to view and analyze the reports generated while building and running the application. It is intended to let you review reports generated by both the Vitis compiler when the application is built, and the Xilinx® Runtime \(XRT\) library when the application is run. The Vitis analyzer can be used to view reports from both the `v++` command line flow, and the Vitis integrated design environment \(IDE\). You will launch the tool using the `vitis_analyzer` command \(see [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment)\).
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/jfn1567005096685.html) **for more information.**
+
+### **Running Emulation**
+
+TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION_MODE` to `sw_emu` or `hw_emu` before executing the host program. The device binary also has to be built for the corresponding target.
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/runemulation1.html#btg1600442263101) **for more information.**
+
+#### Running Emulation on Data Center Accelerator Cards
+
+{% hint style="danger" %}
+**Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
+{% endhint %}
+
+1. Set the desired runtime settings in the xrt.ini file. This step is optional.  
+
+
+   As described in [xrt.ini File](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run.   
+  
+   **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.  
+
+2. Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/nrj1570599837825.html). This is required for running hardware or software emulation.  
+
+
+   The emulation configuration file, `emconfig.json`, is generated from the specified platform using the `emconfigutil` command, and provides information used by the XRT library during emulation. The following example creates the `emconfig.json` file for the specified target platform:
+
+   ```text
+   emconfigutil --platform xilinx_u200_xdma_201830_2
+   ```
+
+   In emulation mode, the runtime looks for the emconfig.json file in the same directory as the host executable, and reads in the target configuration for the emulation runs.  
+  
+   **TIP:** It is mandatory to have an up-to-date JSON file for running emulation on your target platform.  
+
+3. Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` \(software emulation\) or `hw_emu` \(hardware emulation\) as appropriate. This changes the application execution to emulation mode.  
+
+
+   Use the following syntax to set the environment variable for C shell \(csh\):
+
+   ```text
+   setenv XCL_EMULATION_MODE sw_emu
+   ```
+
+   Bash shell:
+
+   ```text
+   export  XCL_EMULATION_MODE=sw_emu
+   ```
+
+   **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.  
+
+4. Run the application.  
+
+
+   With the runtime initialization file \(xrt.ini\), emulation configuration file \(emconfig.json\), and the `XCL_EMULATION_MODE` environment set, run the host executable with the desired command line argument.  
+  
+   **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.  
+
+
+   For example:
+
+   ```text
+   ./host.exe kernel.xclbin
+   ```
+
+   **TIP:** This command line assumes that the host program is written to take the name of the xclbin file as an argument, as most Vitis examples and tutorials do. However, your application may have the name of the xclbin file hard-coded into the host program, or may require a different approach to running the application.
+
+### Running the Application Hardware Build
+
+TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardware attached.
+
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/lwu1600468728254.html) **for more information.**
+
+{% hint style="info" %}
+**TIP:** To use the accelerator card, you must have it installed as described in Getting Started with Alveo Data Center Accelerator Cards \([UG1301](https://www.xilinx.com/cgi-bin/docs/bkdoc?v=latest;k=accelerator-cards;d=ug1301-getting-started-guide-alveo-accelerator-cards.pdf)\).
+{% endhint %}
+
+1. Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/obl1532064985142.html).  
+   ****
+
+   This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/debuggingapplicationskernels.html#hsr1538574456889).  
+  
+   **TIP:** Ensure to use the `v++ -g` option when compiling your kernel code for debugging.  
+
+2. Unset the `XCL_EMULATION_MODE` environment variable.  **IMPORTANT:** The hardware build will not run if the `XCL_EMULATION_MODE` environment variable is set to an emulation target. 
+3. For embedded platforms, boot the SD card.  
+  
+   **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.  
+
+
+   For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.  
+
+4. Run your application.  
+
+
+   The specific command line to run the application will depend on your host code. A common implementation used in Xilinx tutorials and examples is as follows:
+
+   ```text
+   ./host.exe kernel.xclbin
+   ```
+
+{% hint style="info" %}
+**TIP:** This command line assumes that the host program is written to take the name of the xclbin file as an argument, as most Vitis examples and tutorials do. However, your application can have the name of the xclbin file hard-coded into the host program, or can require a different approach to running the application.
+{% endhint %}
 
 ### Example Makefile
 
@@ -269,9 +395,9 @@ COMPUTE_ADD_XO = $(HW_TARGET)/$(LANGUAGE)/xo/add_kernel_v$(VERSION).xo
 XCLBIN_FILE = $(HW_TARGET)/$(LANGUAGE)/add_kernel_v$(VERSION).xclbin
 
 ifeq ($(LANGUAGE), opencl)
-	KERNEL_SRC = kernels/add_kernel_v$(VERSION).cl
+    KERNEL_SRC = kernels/add_kernel_v$(VERSION).cl
 else
-	KERNEL_SRC = kernels/add_kernel_v$(VERSION).cpp
+    KERNEL_SRC = kernels/add_kernel_v$(VERSION).cpp
 endif
 
 .PHONY: all kernel
@@ -280,30 +406,24 @@ build: $(COMPUTE_ADD_XO)
 kernel: $(XCLBIN_FILE)
 
 double_add: $(src_files) $(hpp_files)
-	g++ -Wall -g -std=c++11 $(src_files) -o $@ -I../common_xlx/ \
-	-I${XILINX_XRD}/include/ -L${XILINX_XRT}/lib/ -L../common_xlx -lOpenCL \
-	-lpthread -lrt -lstdc++
+    g++ -Wall -g -std=c++11 $(src_files) -o $@ -I../common_xlx/ \
+    -I${XILINX_XRD}/include/ -L${XILINX_XRT}/lib/ -L../common_xlx -lOpenCL \
+    -lpthread -lrt -lstdc++
 
 emconfig.json:
-	emconfigutil --platform xilinx_u250_gen3x16_xdma_3_1_202020_1 --nd 1
+    emconfigutil --platform xilinx_u250_gen3x16_xdma_3_1_202020_1 --nd 1
 
 $(COMPUTE_ADD_XO): $(KERNEL_SRC)
-	$(HWC) -c -t $(HW_TARGET) --kernel double_add --temp_dir $(TMP_DIR) \
-	--config design.cfg -Ikernels -I. $< -o $@
+    $(HWC) -c -t $(HW_TARGET) --kernel double_add --temp_dir $(TMP_DIR) \
+    --config design.cfg -Ikernels -I. $< -o $@
 
 $(XCLBIN_FILE): $(COMPUTE_ADD_XO)
-	$(HWC) -l -t $(HW_TARGET) --temp_dir $(TMP_DIR) --config design.cfg \
-	--connectivity.nk=double_add:1:csq_1 \
-	$^ -I. -o $@
+    $(HWC) -l -t $(HW_TARGET) --temp_dir $(TMP_DIR) --config design.cfg \
+    --connectivity.nk=double_add:1:csq_1 \
+    $^ -I. -o $@
 
 .PHONY: clean
 clean:
-	rm -rf double_add emconfig.json xo/ built/ sw_emu/ hw_emu/ hw/ _x *.log .Xil/
+    rm -rf double_add emconfig.json xo/ built/ sw_emu/ hw_emu/ hw/ _x *.log .Xil/
 ```
-
-
-
-
-
-
 
