@@ -143,7 +143,7 @@ Xilinx FPGA projects can be built using the [Vitis Compiler](https://www.xilinx.
 
 In general, I recommend using the Vitis compiler via the command line and scripts, because the workflow is easy to document, store in git, and run with GitLab CI. I recommend using Vitis HLS when trying to optimize kernel since it provides many profiling tools. See [Vitis HLS Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting_Started/Vitis_HLS/synth_and_analysis.md).
 
-[Tutorials are available to learn how to use Vitis.](https://github.com/Xilinx/Vitis-Tutorials)
+[Tutorials are available to learn how to use Vitis.](https://github.com/Xilinx/Vitis-Tutorials) In particular, this [Getting started with Vitis Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting_Started/Vitis/Part4.md) goes over the building and running of an example application.
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/xia1553473418160.html) **for more details on building and running FPGA applications.**
 
