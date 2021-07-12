@@ -2,7 +2,7 @@
 
 ## Description
 
-![](../.gitbook/assets/emu-overview.png)
+![](../.gitbook/assets/emu-overview%20%281%29.png)
 
 EMU-Chick System is composed of 8x nodes that are connected via RapidIO Interconnect.
 

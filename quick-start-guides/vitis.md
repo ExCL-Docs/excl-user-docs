@@ -67,12 +67,11 @@ This approach is not as recommended as you can't forward 22 if you are running a
 2. Launch the ThinLinc Client.
 3. Connect to the server with "Connect".
 
-
 ### Using Vitis with the [Fish Shell](https://fishshell.com/)
 
-To use the Vitis toolchain with the fish shell, create the file `~/.config/fish/functions/vitis_init.fish` with the following content. Then to initialize Vitis, you run the `vitis_init` function. This function will find the latest Vitis version installed on the system and setup its environment. (Note: systems should only have one Vitis version installed.)
+To use the Vitis toolchain with the fish shell, create the file `~/.config/fish/functions/vitis_init.fish` with the following content. Then to initialize Vitis, you run the `vitis_init` function. This function will find the latest Vitis version installed on the system and setup its environment. \(Note: systems should only have one Vitis version installed.\)
 
-```fish
+```text
 function vitis_init --description 'Setup Vitis paths'
 
    # Find the latest installed Vitis version as a default.
@@ -131,3 +130,4 @@ function vitis_init --description 'Setup Vitis paths'
    export LD_LIBRARY_PATH=/$base/Xilinx/Vitis/$xilinx_version/lib/lnx64.o:$LD_LIBRARY_PATH
 end
 ```
+
