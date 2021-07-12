@@ -1,6 +1,6 @@
 # Vitis FPGA Development
 
-particularly[ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
+[ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
 
 ## Vitis Development Tools
 
