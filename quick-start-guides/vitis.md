@@ -42,6 +42,43 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 3. Go through the [Vitis Hardware Accelerators Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware_Accelerators).
 4. Go through the [Vitis Accel Examples](https://github.com/Xilinx/Vitis_Accel_Examples).
 
+### Getting specific FPGA information from the Platform.
+
+Use `platforminfo` to query additional information about an FPGA platform. See the example command below.
+
+```bash
+$ platforminfo --platform xilinx_u250_gen3x16_xdma_3_1_202020_1
+==========================
+Basic Platform Information
+==========================
+Platform:           gen3x16_xdma_3_1
+File:               /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/xilinx_u250_gen3x16_xdma_3_1_202020_1.xpfm
+Description:
+    This platform targets the Alveo U250 Data Center Accelerator Card. This high-performance acceleration platform features up to four channels of DDR4-2400 SDRAM which are instantiated as required by
+the user kernels for high fabric resource availability, and Xilinx DMA Subsystem for PCI Express with PCIe Gen3 x16 connectivity.
+
+
+=====================================
+Hardware Platform (Shell) Information
+=====================================
+Vendor:                           xilinx
+Board:                            U250 (gen3x16_xdma_3_1)
+Name:                             gen3x16_xdma_3_1
+Version:                          202020.1
+Generated Version:                2020.2
+Hardware:                         1
+Software Emulation:               1
+Hardware Emulation:               1
+Hardware Emulation Platform:      0
+FPGA Family:                      virtexuplus
+FPGA Device:                      xcu250
+Board Vendor:                     xilinx.com
+Board Name:                       xilinx.com:au250:1.2
+Board Part:                       xcu250-figd2104-2L-e
+
+...
+```
+
 ### Accessing ThinLinc
 
 The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses port 3000 and the ThinLinc client uses port 22.
