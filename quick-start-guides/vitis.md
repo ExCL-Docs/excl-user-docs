@@ -501,6 +501,7 @@ clean:
 * [Vivado Design Suite User Guide \(UG892\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_2/ug892-vivado-design-flows-overview.pdf)
 * [Xilinx Vivado Design Suite Quick Reference Guide \(UG975\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2013_2/ug975-vivado-quick-reference.pdf)
 * [Vivado Design Suite Tcl Command Reference Guide \(UG835\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_2/ug835-vivado-tcl-commands.pdf)
+* [Vivado Design Suite User Guide Implementation \(UG904\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug904-vivado-implementation.pdf)
 
 
 
