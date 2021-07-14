@@ -458,3 +458,12 @@ clean:
     rm -rf double_add emconfig.json xo/ built/ sw_emu/ hw_emu/ hw/ _x *.log .Xil/
 ```
 
+## Useful References
+
+* [Vitis Unified Software Development Platform 2020.2 Documentation](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/index.html)
+* [Vivado Design Suite User Guide \(UG892\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018_2/ug892-vivado-design-flows-overview.pdf)
+* [Xilinx Vivado Design Suite Quick Reference Guide \(UG975\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2013_2/ug975-vivado-quick-reference.pdf)
+* [Vivado Design Suite Tcl Command Reference Guide \(UG835\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_2/ug835-vivado-tcl-commands.pdf)
+
+
+
