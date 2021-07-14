@@ -44,7 +44,7 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 
 ### Getting specific FPGA information from the Platform.
 
-Use `platforminfo` to query additional information about an FPGA platform. See the example command below.
+Use [`platforminfo`](https://www.xilinx.com/html_docs/xilinx2019_1/sdaccel_doc/wfa1542666187253.html) to query additional information about an FPGA platform. See the example command below.
 
 ```bash
 $ platforminfo --platform xilinx_u250_gen3x16_xdma_3_1_202020_1
