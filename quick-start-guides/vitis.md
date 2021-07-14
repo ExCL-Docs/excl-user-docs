@@ -40,6 +40,7 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 1. Follow the [quickstart](vitis.md#quickstart) to set up the [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment).
 2. Go through the [Vitis Getting Started Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Getting_Started).
 3. Go through the [Vitis Hardware Accelerators Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware_Accelerators).
+4. Go through the [Vitis Accel Examples](https://github.com/Xilinx/Vitis_Accel_Examples).
 
 ### Accessing ThinLinc
 
