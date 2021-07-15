@@ -155,6 +155,7 @@ function vitis_init --description 'Setup Vitis paths'
 
    # Vivado
    set -gx PATH /$base/Xilinx/Vivado/$xilinx_version/bin $PATH
+   set -gx XILINX_VIVADO /$base/Xilinx/Vivado/$xilinx_version
 
    # Vitis
    set -gx XILINX_VITIS /$base/Xilinx/Vitis/$xilinx_version
