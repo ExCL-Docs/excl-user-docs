@@ -496,6 +496,26 @@ clean:
     rm -rf double_add emconfig.json xo/ built/ sw_emu/ hw_emu/ hw/ _x *.log .Xil/
 ```
 
+### Performance Considerations
+
+Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation \(UG904\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags. 
+
+Here is an example snippet from the [Xilinx Buttom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware_Accelerators/Design_Tutorials/05-bottom_up_rtl_kernel/krnl_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
+
+```bash
+NCPUS := $(shell grep -c ^processor /proc/cpuinfo)
+JOBS := $(shell expr $(NCPUS) - 1)
+
+XOCCFLAGS := --platform $(PLATFORM) -t $(TARGET)  -s -g
+XOCCLFLAGS := --link --optimize 3 --vivado.synth.jobs $(JOBS) --vivado.impl.jobs $(JOBS)
+# You could uncomment following line and modify the options for hardware debug/profiling
+#DEBUG_OPT := --debug.chipscope krnl_aes_1 --debug.chipscope krnl_cbc_1 --debug.protocol all --profile_kernel data:all:all:all:all
+
+build_hw:
+	v++ $(XOCCLFLAGS) $(XOCCFLAGS) $(DEBUG_OPT) --config krnl_cbc_test.cfg -o krnl_cbc_test_$(TARGET).xclbin krnl_cbc.xo ../krnl_aes/krnl_aes.xo
+
+```
+
 ## Useful References
 
 * [Vitis Unified Software Development Platform 2020.2 Documentation](https://www.xilinx.com/html_docs/xilinx2020_2/vitis_doc/index.html)
