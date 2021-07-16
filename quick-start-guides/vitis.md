@@ -504,5 +504,15 @@ clean:
 * [Vivado Design Suite Tcl Command Reference Guide \(UG835\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019_2/ug835-vivado-tcl-commands.pdf)
 * [Vivado Design Suite User Guide Implementation \(UG904\)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020_2/ug904-vivado-implementation.pdf)
 
+## Useful Commands
 
+```bash
+xbutil validate  # Validate installation of the card.
+xbutil scan      # Scan for availible FPGAs.
+xbutil query     # Query detailed information from the FPGA.
+xbutil program   # Download the accelerator program. Good for testing bitfile load.
+xbutil reset     # Reset the FPGA, used when kernel is unresponsive.
+
+platforminfo --platform <platform_file> # Get specific FPGA information from the Platform.
+```
 
