@@ -26,14 +26,86 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 | :--- | :--- | :--- | :--- | :--- |
 | tardis | Vitis 2020.1 | pcie | ~7ry/vitis-tardis.source | xilinx\_u250\_xdma\_201830\_2 |
 | torchwood | Vitis 2020.1 | justify | ~7ry/vitis-tardis.source | xilinx\_u250\_xdma\_201830\_2 |
-| firefly | Vitis 2020.2 | pcie | ~7ry/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
-| serenity | Vitis 2020.2 | justify | ~7ry/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
+| firefly | Vitis 2020.2 | pcie | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
+| serenity | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
+
+### Vitis with Slurm \(Recommended Method to use Tools\)
+
+The Virtual Machines with Vitis installed are also set up with Slurm. Slurm is used as a resource manager to allocate compute resources as well as hardware resources. The use of Slurm is required to allocate FPGA hardware on Firefly and reserve build resources on Serenity. It is also recommended to reserve resources when running test builds on firefly. The best practice is to launch builds on serenity with Slurm, then launch bitfile tests on Firefly with Slurm. The use of Slurm is required to effectively share the FPGA, and to share build resources with automated CI Runs, and other automated build and test scripts. The rest of this section details how to use Slurm. See the [Cheat Sheet](../#excl-cheat-sheet) for commonly used Slurm commands. See the [Slurm Quick Start User Guide](https://slurm.schedmd.com/quickstart.html) to learn the basics of using Slurm.
+
+#### Interactive Use: Vitis Build
+
+Allocate a build instance for 1 Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly. 
+
+```bash
+srun -J interactive_build -p fpgabuild -c 8 --pty bash
+```
+
+> Where:  
+>   -J, --job-name=&lt;jobname&gt;  
+>   -p, --partition=&lt;partition names&gt;  
+>   -c, --cpus-per-task=&lt;ncpus&gt;
+
+{% hint style="info" %}
+**Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
+{% endhint %}
+
+{% hint style="info" %}
+**Recommended:** `sbatch` can be used with a script to queue the job and store the resulting output to a file. `sbatch` is better than `srun` for long-running builds. 
+{% endhint %}
+
+#### Interactive Use: Allocate FPGA
+
+Allocate the U250 FPGA to run hardware jobs. Please release the FPGA when you are done so that other jobs can use the FPGA.
+
+```bash
+srun -J interactive_fpga -p fpgarun --gres="fpga:U250:1" --pty bash
+```
+
+> Where:  
+>   -J, --job-name=&lt;jobname&gt;  
+>   -p, --partition=&lt;partition names&gt;  
+>   --`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
+
+{% hint style="info" %}
+**Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
+{% endhint %}
+
+#### Non-interactive Use: Vitis Build
+
+```bash
+sbatch -J batch_build -p fpgabuild -c 8 build.sh
+```
+
+> Where:  
+>   -J, --job-name=&lt;jobname&gt;  
+>   -p, --partition=&lt;partition names&gt;  
+>   -c, --cpus-per-task=&lt;ncpus&gt;  
+>   build.sh is a script to launch the build.
+
+{% hint style="info" %}
+**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH &lt;parameter&gt;.
+{% endhint %}
+
+#### Non-interactive Use: Vitis Run
+
+```bash
+sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
+```
+
+> Where:  
+>   -J, --job-name=&lt;jobname&gt;  
+>   -p, --partition=&lt;partition names&gt;  
+>   --`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.  
+>   run.sh is a script to launch the run.
+
+{% hint style="info" %}
+**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH &lt;parameter&gt;.
+{% endhint %}
 
 ### Quickstart
 
-1. Log in to a system with the Vitis toolchain from the login node. See [Systems](vitis.md#systems-with-the-vitis-toolchain). For example `ssh pcie`.
-2. Source the `Source File` in the system table to load the correct Vitis toolchain environment variables. For example `$ source ~7ry/vitis-2020.1.source`.
-3. To run on hardware, contact Aaron Young.
+1. From the login node run `srun -J interactive_build -p fpgabuild -c 8 --pty bash` to start a bash shell with Vitis ready to go.
 
 ### First Steps
 
