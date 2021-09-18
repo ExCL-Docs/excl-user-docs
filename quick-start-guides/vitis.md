@@ -20,7 +20,19 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 | :--- | :--- | :--- | :--- |
 | pcie | Vitis 2020.1 | ~7ry/vitis-2020.1.source | xilinx\_u250\_xdma\_201830\_2 |
 
-#### Virtual Systems
+#### Spack based Xilinx build environment on ExCL CentOS systems
+
+All CentOS systems in ExCL cluster are capable to build \(only\) Xilinx application with Vitis toolchain using Spack environment. Below are the instructions to enable Xilinx development environment in CentOS systems. It is very easy to do this. It enables very fast design space exploration with Slurm support. 
+
+```bash
+$ source  /home/nqx/spack_centos_vitis.source 
+```
+
+It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00,02-03\], justify, kold\[00-03\], megatron, newark, oswald, oswald\[00-03\], pcie, pharoah, quad\[00-02\], secretariat
+
+
+
+#### Virtual Systems for Xilinx build and SW and HW emulation run
 
 | Name | Tool Chain | Host | Source File | Platform Name |
 | :--- | :--- | :--- | :--- | :--- |
