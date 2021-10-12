@@ -62,17 +62,17 @@ Changes to be committed:
     renamed:    README.md -> read-me
 ```
 
-📝 **Note:** Before using the above commands to reverse your changes, be sure you do not want to keep them. After the commands are run, the file\(s\) will be overwritten and any uncommitted changes will not be recoverable.
+📝 **Note:** Before using the above commands to reverse your changes, be sure you do not want to keep them. After the commands are run, the file(s) will be overwritten and any uncommitted changes will not be recoverable.
 
 **Reverting to a previous commit**
 
-If you are working on a new feature and after a commit you realize that you have introduced a catastrophic bug, you can use `git reset ac6bc6a2` \(each commit has a unique identification number\). This command will change where the `HEAD` pointer is located. For example, if you are on the `master` branch and have submitted three new commits, the `HEAD` points to your most recent commit. Using the `git reset ---` command will keep the information in the recent commits, but `HEAD` will be moved to the specified commit.
+If you are working on a new feature and after a commit you realize that you have introduced a catastrophic bug, you can use `git reset ac6bc6a2` (each commit has a unique identification number). This command will change where the `HEAD` pointer is located. For example, if you are on the `master` branch and have submitted three new commits, the `HEAD` points to your most recent commit. Using the `git reset ---` command will keep the information in the recent commits, but `HEAD` will be moved to the specified commit.
 
 To find the unique identification number of the commits in your branch, type `git log --pretty=format:"%h %s" --graph` to provide a list of recent commits as well as a visual graph of changes.
 
 **Amending a commit**
 
-Let's say that you have just completed several changes, staged \(added\), and committed them. As you look at one file, you see a typo. You could simply fix the typo, add, and commit again, or you could use the `--amend` tag so that the new changes \(your typo fix\) can be included in your previous commit. Using this can keep your commit history uncluttered by removing commit messages such as "forgot to add a file" or "fixed a typo." Here is an example of a forgotten file amended commit:
+Let's say that you have just completed several changes, staged (added), and committed them. As you look at one file, you see a typo. You could simply fix the typo, add, and commit again, or you could use the `--amend` tag so that the new changes (your typo fix) can be included in your previous commit. Using this can keep your commit history uncluttered by removing commit messages such as "forgot to add a file" or "fixed a typo." Here is an example of a forgotten file amended commit:
 
 ```bash
 git commit -m 'initial commit'
@@ -121,5 +121,4 @@ doc/**/*.pdf
 
 #### Works Cited
 
-* Chacon, Scott, and Ben Straub. _Pro Git: Everything You Need to Know About Git._ Apress, 2nd Edition \(2014\).
-
+* Chacon, Scott, and Ben Straub. _Pro Git: Everything You Need to Know About Git._ Apress, 2nd Edition (2014).

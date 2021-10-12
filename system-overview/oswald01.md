@@ -9,7 +9,7 @@ The system is
 * Penguin Computing Relion 2903GT
 * Gigabyte motherboard MD90-FS0-ZB
 * 256 GB memory
-* Intel\(R\) Xeon\(R\) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
+* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
 * Centosa
 * Micron 9100 NVM 2.4TB MTFDHAX214MCF
 
@@ -19,15 +19,14 @@ There is not currently special access permissions. The system is available to Ex
 
 ## Images
 
-![fpga detail](../.gitbook/assets/20190607_154604.jpg)
+![fpga detail](../.gitbook/assets/20190607\_154604.jpg)
 
-![left daughterboard detail](../.gitbook/assets/20190607_154621.jpg)
+![left daughterboard detail](../.gitbook/assets/20190607\_154621.jpg)
 
-![right daughterboard gpu removed](../.gitbook/assets/20190607_155804.jpg)
+![right daughterboard gpu removed](../.gitbook/assets/20190607\_155804.jpg)
 
-![gpu identification detail](../.gitbook/assets/20190607_155811.jpg)
+![gpu identification detail](../.gitbook/assets/20190607\_155811.jpg)
 
 ## Contact
 
 Please send assistance requests to excl-help@ornl.gov.
-

@@ -9,7 +9,7 @@ The system is
 * Penguin Computing Relion 2903GT
 * Gigabyte motherboard MD90-FS0-ZB
 * 256 GB memory
-* Intel\(R\) Xeon\(R\) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
+* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
 * Centos
 
 ## Access
@@ -18,11 +18,10 @@ There is not currently special access permissions. The system is available to Ex
 
 ## Images
 
-![fpga detail](../.gitbook/assets/20190607_162750.jpg)
+![fpga detail](../.gitbook/assets/20190607\_162750.jpg)
 
-![left daughterboard detail](../.gitbook/assets/20190607_162758.jpg)
+![left daughterboard detail](../.gitbook/assets/20190607\_162758.jpg)
 
 ## Contact
 
 Please send assistance requests to excl-help@ornl.gov.
-

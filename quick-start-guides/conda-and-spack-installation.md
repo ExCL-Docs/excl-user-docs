@@ -4,7 +4,7 @@ description: The recommended way to install Conda and Spack.
 
 # Conda and Spack Installation
 
-This guide goes over the recommended way to install [Conda ](https://docs.conda.io/en/latest/)and [Spack ](https://spack-tutorial.readthedocs.io/en/latest/)in ExCL. If you are already familiar with the Conda and Spack installation process, then the main takeaway is to install both packages in `/noback/<userid>` since the installations can become quite large \(&gt;50GB\) and they typically do not need to be backed up. Another recommendation is to store the `environment.yml` and `spack.yaml` files in your git repositories to make it easy to recreate the Conda and Spack environments required for that project. The remainder of this page goes over the installation in more detail.
+This guide goes over the recommended way to install [Conda ](https://docs.conda.io/en/latest/)and [Spack ](https://spack-tutorial.readthedocs.io/en/latest/)in ExCL. If you are already familiar with the Conda and Spack installation process, then the main takeaway is to install both packages in `/noback/<userid>` since the installations can become quite large (>50GB) and they typically do not need to be backed up. Another recommendation is to store the `environment.yml` and `spack.yaml` files in your git repositories to make it easy to recreate the Conda and Spack environments required for that project. The remainder of this page goes over the installation in more detail.
 
 ## Installing Conda
 
@@ -40,4 +40,3 @@ if [ -f "/noback/$USER/spack/share/spack/setup-env.sh" ]; then
 fi
 EOL
 ```
-

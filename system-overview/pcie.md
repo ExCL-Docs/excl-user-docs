@@ -11,7 +11,7 @@ The system is
 * Atipa 
 * Tyan Motherboard S7119GMR-06
 * 192 GB memory
-* Intel\(R\) Xeon\(R\) Gold 6130 CPU @ 2.10GHzIntel\(R\) Xeon\(R\) Gold 6130 CPU @ 2.10GHz 2x16 cores no hyperthreading
+* Intel(R) Xeon(R) Gold 6130 CPU @ 2.10GHzIntel(R) Xeon(R) Gold 6130 CPU @ 2.10GHz 2x16 cores no hyperthreading
 * Centos
 
 ## Access
@@ -20,15 +20,14 @@ There is not currently special access permissions. System is available to ExCL u
 
 ## Images
 
-![system layout](../.gitbook/assets/20190621_151129.jpg)
+![system layout](../.gitbook/assets/20190621\_151129.jpg)
 
-![pci detail](../.gitbook/assets/20190621_151211.jpg)
+![pci detail](../.gitbook/assets/20190621\_151211.jpg)
 
-![device wiring detail](../.gitbook/assets/20190621_151218.jpg)
+![device wiring detail](../.gitbook/assets/20190621\_151218.jpg)
 
-![disks/fans/cpu](../.gitbook/assets/20190621_151227.jpg)
+![disks/fans/cpu](../.gitbook/assets/20190621\_151227.jpg)
 
 ## Contact
 
 Please send assistance requests to excl-help@ornl.gov.
-
