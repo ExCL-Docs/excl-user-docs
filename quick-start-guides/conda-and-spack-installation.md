@@ -8,6 +8,10 @@ This guide goes over the recommended way to install [Conda ](https://docs.conda.
 
 ## Installing Conda
 
+{% hint style="info" %}
+Instead of installing Anaconda yourself, you can use the anaconda already installed as a module. To load the module, use `module load anaconda3` .
+{% endhint %}
+
 See the [Conda Docs](https://docs.conda.io/en/latest/miniconda.html#linux-installers) for the latest installation instructions. I install Miniconda instead of Anaconda since I do not require the 3GB of included packages that come with Anaconda and I will be installing my own packages anyways.
 
 ```bash
