@@ -32,7 +32,7 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
     ```
     jupyter notebook --port $REMOTE_PORT
     ```
-5. Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:8888/?token=<token>`. You can also configure jupyter to use a password with `jupyter notebook password` if you don't want to use the access tokens.
+5. Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:<local_port>/?token=<token>`. You can also configure jupyter to use a password with `jupyter notebook password` if you don't want to use the access tokens.
 
 If you ssh client is too old for proxyjump to work, you can always break up the process into anouther step.
 
@@ -51,7 +51,7 @@ If you ssh client is too old for proxyjump to work, you can always break up the 
     ```
      $ jupyter notebook
     ```
-4.  Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:<local_port>/?token=<token>`
+4.  Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:8888/?token=<token>`
 
 ### Detailed instructions for Windows with MobaXterm
 
