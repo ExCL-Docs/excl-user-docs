@@ -8,7 +8,33 @@ A Jupyter notebook server running on ExCL can be accessed via a local web browse
 
 ### Detailed instructions for Linux/Mac
 
-These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster.
+These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster. If you want to access a different system, then replace `pcie` with the system you want to access.
+
+1.  Specify the ports that you want to use. Choose a different number from the default so that you don't conflict with other users.
+
+    ```
+    export REMOTE_PORT=8888
+    export LOCAL_PORT=8888
+    ```
+2.  From your local machine connect to pcie using login.excl.ornl.gov as a proxy and local forward the jupyter port.
+
+    ```
+    ssh -L $LOCAL_PORT:localhost:$REMOTE_PORT -J $USER@login.excl.ornl.gov $USER@pcie
+    ```
+
+3.  (Optional) Load the anaconda module if you don't have jupyter notebook installed locally.
+
+    ```
+    module load anaconda3
+    ```
+4.  Launch the Jupyter server on pcie
+
+    ```
+    jupyter notebook --port $REMOTE_PORT
+    ```
+5. Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:8888/?token=<token>`. You can also configure jupyter to use a password with `jupyter notebook password` if you don't want to use the access tokens.
+
+If you ssh client is too old for proxyjump to work, you can always break up the process into anouther step.
 
 1.  From your local machine connect to login.excl.ornl.gov and local port forward port 8888.
 
@@ -25,7 +51,7 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
     ```
      $ jupyter notebook
     ```
-4. Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:8888/?token=<token>`
+4.  Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:<local_port>/?token=<token>`
 
 ### Detailed instructions for Windows with MobaXterm
 
