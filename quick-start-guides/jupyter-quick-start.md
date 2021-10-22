@@ -30,6 +30,7 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
 4.  Launch the Jupyter server on pcie
 
     ```
+    export REMOTE_PORT=8888
     jupyter notebook --port $REMOTE_PORT
     ```
 5. Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:<local_port>/?token=<token>`. You can also configure jupyter to use a password with `jupyter notebook password` if you don't want to use the access tokens.
