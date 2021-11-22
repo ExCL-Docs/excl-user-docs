@@ -10,7 +10,7 @@
   * [oswald02](system-overview/oswald02.md)
   * [oswald03](system-overview/oswald03.md)
   * [pcie](system-overview/pcie.md)
-  * [Snapdragon \(amundsen/mcmurdo\)](system-overview/snapdragon.md)
+  * [Snapdragon (amundsen/mcmurdo)](system-overview/snapdragon.md)
   * [radeon](system-overview/radeon.md)
   * [explorer](system-overview/explorer.md)
   * [cousteau](system-overview/cousteau.md)
@@ -36,6 +36,7 @@
 * [Requesting Access](excl-support/access-info.md)
 * [Outages and Maintenance Policy](excl-support/outages.md)
 * [Operations Log](excl-support/opslogs.md)
+* [Backup](excl-support/backup.md)
 
 ## Quick-Start Guides
 
@@ -56,4 +57,3 @@
   * [Git Command Line](git-contributing/git-basics/git-command-line.md)
   * [Git Scenarios](git-contributing/git-basics/git-scenarios.md)
 * [Authoring Guide](git-contributing/authoring-guide.md)
-
