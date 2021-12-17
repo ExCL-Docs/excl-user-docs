@@ -16,13 +16,13 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 
 #### Physical Systems
 
-| Name | Tool Chain   | Source File               | Platform Name                |
-| ---- | ------------ | ------------------------- | ---------------------------- |
-| pcie | Vitis 2020.1 | \~7ry/vitis-2020.1.source | xilinx_u250\_xdma\_201830\_2 |
+| Name | Tool Chain   | Source File               | Platform Name                 |
+| ---- | ------------ | ------------------------- | ----------------------------- |
+| pcie | Vitis 2020.1 | \~7ry/vitis-2020.1.source | xilinx\_u250\_xdma\_201830\_2 |
 
 #### Spack based Xilinx build environment on ExCL CentOS systems
 
-All CentOS systems in ExCL cluster are capable to build (only) Xilinx application with Vitis toolchain using Spack environment. Below are the instructions to enable Xilinx development environment in CentOS systems. It is very easy to do this. It enables very fast design space exploration with Slurm support. 
+All CentOS systems in ExCL cluster are capable to build (only) Xilinx application with Vitis toolchain using Spack environment. Below are the instructions to enable Xilinx development environment in CentOS systems. It is very easy to do this. It enables very fast design space exploration with Slurm support.&#x20;
 
 ```bash
 $ source  /home/nqx/spack_centos_vitis.source 
@@ -34,12 +34,12 @@ It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00
 
 #### Virtual Systems for Xilinx build and SW and HW emulation run
 
-| Name      | Tool Chain   | Host    | Source File                              | Platform Name                               |
-| --------- | ------------ | ------- | ---------------------------------------- | ------------------------------------------- |
-| tardis    | Vitis 2020.1 | pcie    | \~7ry/vitis-tardis.source                | xilinx_u250\_xdma\_201830\_2                |
-| torchwood | Vitis 2020.1 | justify | \~7ry/vitis-tardis.source                | xilinx_u250\_xdma\_201830\_2                |
-| firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
-| serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
+| Name      | Tool Chain   | Host    | Source File                              | Platform Name                                |
+| --------- | ------------ | ------- | ---------------------------------------- | -------------------------------------------- |
+| tardis    | Vitis 2020.1 | pcie    | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
+| torchwood | Vitis 2020.1 | justify | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
+| firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
+| serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 
 ### Vitis with Slurm (Recommended Method to use Tools)
 
@@ -47,23 +47,23 @@ The Virtual Machines with Vitis installed are also set up with Slurm. Slurm is u
 
 #### Interactive Use: Vitis Build
 
-Allocate a build instance for 1 Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly. 
+Allocate a build instance for 1 Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly.&#x20;
 
 ```bash
 srun -J interactive_build -p fpgabuild -c 8 --pty bash
 ```
 
 > Where:\
->   \-J, --job-name=\<jobname>\
->   \-p, --partition=\<partition names>\
->   \-c, --cpus-per-task=\<ncpus>
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \-c, --cpus-per-task=\<ncpus>
 
 {% hint style="info" %}
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
 {% endhint %}
 
 {% hint style="info" %}
-**Recommended:** `sbatch `can be used with a script to queue the job and store the resulting output to a file. `sbatch `is better than `srun `for long-running builds. 
+**Recommended:** `sbatch` can be used with a script to queue the job and store the resulting output to a file. `sbatch` is better than `srun` for long-running builds.&#x20;
 {% endhint %}
 
 #### Interactive Use: Allocate FPGA
@@ -75,9 +75,9 @@ srun -J interactive_fpga -p fpgarun --gres="fpga:U250:1" --pty bash
 ```
 
 > Where:\
->   \-J, --job-name=\<jobname>\
->   \-p, --partition=\<partition names>\
->   \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
 
 {% hint style="info" %}
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
@@ -90,10 +90,10 @@ sbatch -J batch_build -p fpgabuild -c 8 build.sh
 ```
 
 > Where:\
->   \-J, --job-name=\<jobname>\
->   \-p, --partition=\<partition names>\
->   \-c, --cpus-per-task=\<ncpus>\
->   build.sh is a script to launch the build.
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \-c, --cpus-per-task=\<ncpus>\
+> &#x20; build.sh is a script to launch the build.
 
 {% hint style="info" %}
 **Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
@@ -106,10 +106,10 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 ```
 
 > Where:\
->   \-J, --job-name=\<jobname>\
->   \-p, --partition=\<partition names>\
->   \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.\
->   run.sh is a script to launch the run.
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.\
+> &#x20; run.sh is a script to launch the run.
 
 {% hint style="info" %}
 **Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
@@ -122,13 +122,13 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 ### First Steps
 
 1. Follow the [quickstart](vitis.md#quickstart) to set up the [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment).
-2. Go through the [Vitis Getting Started Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Getting_Started).
-3. Go through the [Vitis Hardware Accelerators Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware_Accelerators).
-4. Go through the [Vitis Accel Examples](https://github.com/Xilinx/Vitis_Accel_Examples).
+2. Go through the [Vitis Getting Started Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Getting\_Started).
+3. Go through the [Vitis Hardware Accelerators Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware\_Accelerators).
+4. Go through the [Vitis Accel Examples](https://github.com/Xilinx/Vitis\_Accel\_Examples).
 
 ### Getting specific FPGA information from the Platform.
 
-Use [`platforminfo`](https://www.xilinx.com/html_docs/xilinx2019\_1/sdaccel_doc/wfa1542666187253.html) to query additional information about an FPGA platform. See the example command below.
+Use [`platforminfo`](https://www.xilinx.com/html\_docs/xilinx2019\_1/sdaccel\_doc/wfa1542666187253.html) to query additional information about an FPGA platform. See the example command below.
 
 ```bash
 $ platforminfo --platform xilinx_u250_gen3x16_xdma_3_1_202020_1
@@ -165,19 +165,19 @@ Board Part:                       xcu250-figd2104-2L-e
 
 ### Accessing ThinLinc
 
-The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses port 3000 and the ThinLinc client uses port 22.
+The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses port 3200 and the ThinLinc client uses port 22.
 
 #### Accessing ThinLinc through the web interface
 
-1.  Forward port 3000 from the VM to your local system through login.\
+1.  Forward port 3200 from the VM to your local system through login.\
     On Linux or macOS
 
     ```
-     $ ssh -L 3000:<VM Name>:3000 <Username>@login.excl.ornl.gov
+     $ ssh -L 3200:<VM Name>:3200 <Username>@login.excl.ornl.gov
     ```
 
-    On windows use MobaSSHTunnel or Visual Studio Code to forward port 3000. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Connect the forwarded port using a web browser. `https://localhost:3000`
+    On windows use MobaSSHTunnel or Visual Studio Code to forward port 3200. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
+2. Connect the forwarded port using a web browser. `https://localhost:3200`
 
 #### Accessing ThinLinc through ThinLinc Client
 
@@ -261,13 +261,13 @@ end
 
 ## Building and Running FPGA Applications
 
-Xilinx FPGA projects can be built using the [Vitis Compiler](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildingdevicebinary.html#ariaid-title2), the Vitis GUI, [Vitis HLS](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildingdevicebinary.html#xkj1541628747515), or [Vivado](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildingdevicebinary.html#ariaid-title6).
+Xilinx FPGA projects can be built using the [Vitis Compiler](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildingdevicebinary.html#ariaid-title2), the Vitis GUI, [Vitis HLS](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildingdevicebinary.html#xkj1541628747515), or [Vivado](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildingdevicebinary.html#ariaid-title6).
 
-In general, I recommend using the Vitis compiler via the command line and scripts, because the workflow is easy to document, store in git, and run with GitLab CI. I recommend using Vitis HLS when trying to optimize kernel since it provides many profiling tools. See [Vitis HLS Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting_Started/Vitis_HLS/synth_and_analysis.md).
+In general, I recommend using the Vitis compiler via the command line and scripts, because the workflow is easy to document, store in git, and run with GitLab CI. I recommend using Vitis HLS when trying to optimize kernel since it provides many profiling tools. See [Vitis HLS Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting\_Started/Vitis\_HLS/synth\_and\_analysis.md).
 
-[Tutorials are available to learn how to use Vitis.](https://github.com/Xilinx/Vitis-Tutorials) In particular, this [Getting started with Vitis Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting_Started/Vitis/Part4.md) goes over the building and running of an example application.
+[Tutorials are available to learn how to use Vitis.](https://github.com/Xilinx/Vitis-Tutorials) In particular, this [Getting started with Vitis Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/master/Getting\_Started/Vitis/Part4.md) goes over the building and running of an example application.
 
-**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/xia1553473418160.html) **for more details on building and running FPGA applications.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/xia1553473418160.html) **for more details on building and running FPGA applications.**
 
 ### Setting up the Vitis Environment
 
@@ -279,13 +279,13 @@ source ~7ry/vitis-2020.2.source
 
 If you want to use fish instead of bash, then see [Vitis FPGA Development](vitis.md#using-vitis-with-the-fish-shell).
 
-**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/settingupvitisenvironment.html#zks1565446519267) **for more details on setting up the Vitis Environment.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/settingupvitisenvironment.html#zks1565446519267) **for more details on setting up the Vitis Environment.**
 
 ### Build Targets
 
 There are three build targets available when building an FPGA kernel with Vitis tools.
 
-**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildtargets1.html#rst1525720251890) **for more information.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildtargets1.html#rst1525720251890) **for more information.**
 
 | Software Emulation                                                  | Hardware Emulation                                                                           | Hardware Execution                                                                     |
 | ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
@@ -299,7 +299,7 @@ The designed build target is specified with the `-t` flag with `v++`.
 
 The host program can be written using either the native XRT API or OpenCL API calls, and it is compiled using the GNU C++ compiler (`g++`). Each source file is compiled to an object file (`.o`) and linked with the Xilinx runtime (XRT) shared library to create the executable which runs on the host CPU.
 
-**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildinghostprogram.html#asy1528754332783) **for more information.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildinghostprogram.html#asy1528754332783) **for more information.**
 
 #### Compiling and Linking for x86
 
@@ -336,7 +336,7 @@ When linking the executable, the following g++ options are required:
 * `-lstdc++`: Search the named library during linking.
 
 {% hint style="info" %}
-**Note:** In the [Vitis Examples](https://github.com/Xilinx/Vitis_Accel_Examples) you may see the addition of xcl2.cpp source file, and the `-I../libs/xcl2` include statement. These additions to the host program and `g++` command provide access to helper utilities used by the example code, but are generally not required for your own code.
+**Note:** In the [Vitis Examples](https://github.com/Xilinx/Vitis\_Accel\_Examples) you may see the addition of xcl2.cpp source file, and the `-I../libs/xcl2` include statement. These additions to the host program and `g++` command provide access to helper utilities used by the example code, but are generally not required for your own code.
 {% endhint %}
 
 ### Building the Device Binary
@@ -349,19 +349,19 @@ The process, as outlined above, has two steps:
 
 1. Build the Xilinx object files from the kernel source code.
    * For C, C++, or OpenCL kernels, the `v++ -c` command compiles the source code into Xilinx object (XO) files. Multiple kernels are compiled into separate XO files.
-   * For RTL kernels, the `package_xo` command produces the XO file to be used for linking. Refer to [RTL Kernels](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/devrtlkernel.html#qnk1504034323350) for more information.
-   * You can also create kernel object (XO) files working directly in the Vitis™ HLS tool. Refer to [Compiling Kernels with the Vitis HLS](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildingdevicebinary.html#yzy1565965133810) for more information.
+   * For RTL kernels, the `package_xo` command produces the XO file to be used for linking. Refer to [RTL Kernels](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/devrtlkernel.html#qnk1504034323350) for more information.
+   * You can also create kernel object (XO) files working directly in the Vitis™ HLS tool. Refer to [Compiling Kernels with the Vitis HLS](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildingdevicebinary.html#yzy1565965133810) for more information.
 2. After compilation, the `v++ -l` command links one or multiple kernel objects (XO), together with the hardware platform XSA file, to produce the device binary XCLBIN file.
 
 {% hint style="info" %}
-**TIP:** The `v++` command can be used from the command line, in scripts, or a build system like `make`, and can also be used through the Vitis IDE as discussed in [Using the Vitis IDE](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/won1553474198838.html).
+**TIP:** The `v++` command can be used from the command line, in scripts, or a build system like `make`, and can also be used through the Vitis IDE as discussed in [Using the Vitis IDE](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/won1553474198838.html).
 {% endhint %}
 
 {% hint style="info" %}
-**TIP:** The output directories of `v++` can be changed. See [Vitis Documentation](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/rol1532064542594.html). This is particularly helpful when you want to build multiple versions of the kernel in the same file structure. The [makefile example](vitis.md#example-makefile) shows an example of how to do this.
+**TIP:** The output directories of `v++` can be changed. See [Vitis Documentation](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/rol1532064542594.html). This is particularly helpful when you want to build multiple versions of the kernel in the same file structure. The [makefile example](vitis.md#example-makefile) shows an example of how to do this.
 {% endhint %}
 
-**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildingdevicebinary.html#tvy1528754367816) **for more information.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildingdevicebinary.html#tvy1528754367816) **for more information.**
 
 #### Compiling Kernels with the Vitis Compiler
 
@@ -378,14 +378,14 @@ v++ -t sw_emu --platform xilinx_u200_xdma_201830_2 -c -k vadd \
 
 The various arguments used are described below. Note that some of the arguments are required.
 
-* `-t <arg>`: Specifies the build target, as discussed in [Build Targets](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/buildtargets1.html#rst1525720251890). Software emulation (`sw_emu`) is used as an example. Optional. The default is hw.
+* `-t <arg>`: Specifies the build target, as discussed in [Build Targets](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildtargets1.html#rst1525720251890). Software emulation (`sw_emu`) is used as an example. Optional. The default is hw.
 * `--platform <arg>`: Specifies the accelerator platform for the build. This is required because runtime features, and the target platform are linked as part of the FPGA binary. To compile a kernel for an embedded processor application, specify an embedded processor platform: `--platform $PLATFORM_REPO_PATHS/zcu102_base/zcu102_base.xpfm`.
 * `-c`: Compile the kernel. Required. The kernel must be compiled (`-c`) and linked (`-l`) in two separate steps.
 * `-k <arg>`: Name of the kernel associated with the source files.
 * `-o'<output>.xo'`: Specify the shared object file output by the compiler. Optional.
 * `<source_file>`: Specify source files for the kernel. Multiple source files can be specified. Required.
 
-The above list is a sample of the extensive options available. Refer to [Vitis Compiler Command](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/vitiscommandcompiler.html#wrj1504034328013) for details of the various command-line options. Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/rol1532064542594.html) to get an understanding of the location of various output files.
+The above list is a sample of the extensive options available. Refer to [Vitis Compiler Command](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/vitiscommandcompiler.html#wrj1504034328013) for details of the various command-line options. Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/rol1532064542594.html) to get an understanding of the location of various output files.
 
 #### Linking the Kernels
 
@@ -409,10 +409,10 @@ This command contains the following arguments:
 * `--link`: Link the kernels and platform into an FPGA binary file (xclbin).
 * `<input>.xo`: Input object file. Multiple object files can be specified to build into the .xclbin.
 * `-o'<output>.xclbin'`: Specify the output file name. The output file in the link stage will be an .xclbin file. The default output name is a.xclbin
-* `--config ./connectivity.cfg`: Specify a configuration file that is used to provide `v++` command options for a variety of uses. Refer to [Vitis Compiler Command](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/vitiscommandcompiler.html#wrj1504034328013) for more information on the `--config` option.
+* `--config ./connectivity.cfg`: Specify a configuration file that is used to provide `v++` command options for a variety of uses. Refer to [Vitis Compiler Command](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/vitiscommandcompiler.html#wrj1504034328013) for more information on the `--config` option.
 
 {% hint style="info" %}
-**TIP:** Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/rol1532064542594.html) to get an understanding of the location of various output files.
+**TIP:** Refer to [Output Directories of the v++ Command](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/rol1532064542594.html) to get an understanding of the location of various output files.
 {% endhint %}
 
 Beyond simply linking the Xilinx object (XO) files, the linking process is also where important architectural details are determined. In particular, this is where the number of compute unit (CUs) to instantiate into hardware is specified, connections from kernel ports to global memory are assigned, and CUs are assigned to SLRs. The following sections discuss some of these build options.
@@ -421,13 +421,13 @@ Beyond simply linking the Xilinx object (XO) files, the linking process is also 
 
 The Vitis™ analyzer is a graphical utility that allows you to view and analyze the reports generated while building and running the application. It is intended to let you review reports generated by both the Vitis compiler when the application is built, and the Xilinx® Runtime (XRT) library when the application is run. The Vitis analyzer can be used to view reports from both the `v++` command line flow, and the Vitis integrated design environment (IDE). You will launch the tool using the `vitis_analyzer` command (see [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment)).
 
-**See the** [**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/jfn1567005096685.html) **for more information.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/jfn1567005096685.html) **for more information.**
 
 ### **Running Emulation**
 
 TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION_MODE` to `sw_emu` or `hw_emu` before executing the host program. The device binary also has to be built for the corresponding target.
 
-**See the **[**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/runemulation1.html#btg1600442263101)** for more information.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/runemulation1.html#btg1600442263101) **for more information.**
 
 #### Running Emulation on Data Center Accelerator Cards
 
@@ -438,11 +438,11 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 1.  Set the desired runtime settings in the xrt.ini file. This step is optional.\
 
 
-    As described in [xrt.ini File](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run. \
+    As described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run. \
     \
     **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.\
 
-2.  Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\
+2.  Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\
 
 
     The emulation configuration file, `emconfig.json`, is generated from the specified platform using the `emconfigutil` command, and provides information used by the XRT library during emulation. The following example creates the `emconfig.json` file for the specified target platform:
@@ -486,22 +486,22 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
     ./host.exe kernel.xclbin
     ```
 
-    **TIP: **This command line assumes that the host program is written to take the name of the xclbin file as an argument, as most Vitis examples and tutorials do. However, your application may have the name of the xclbin file hard-coded into the host program, or may require a different approach to running the application.
+    **TIP:** This command line assumes that the host program is written to take the name of the xclbin file as an argument, as most Vitis examples and tutorials do. However, your application may have the name of the xclbin file hard-coded into the host program, or may require a different approach to running the application.
 
 ### Running the Application Hardware Build
 
 TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardware attached.
 
-**See the **[**Vitis Documentation**](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/lwu1600468728254.html)** for more information.**
+**See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/lwu1600468728254.html) **for more information.**
 
 {% hint style="info" %}
 **TIP:** To use the accelerator card, you must have it installed as described in Getting Started with Alveo Data Center Accelerator Cards ([UG1301](https://www.xilinx.com/cgi-bin/docs/bkdoc?v=latest;k=accelerator-cards;d=ug1301-getting-started-guide-alveo-accelerator-cards.pdf)).
 {% endhint %}
 
-1.  Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/obl1532064985142.html).\
+1.  Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
     ****
 
-    This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/debuggingapplicationskernels.html#hsr1538574456889).\
+    This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/debuggingapplicationskernels.html#hsr1538574456889).\
     \
     **TIP:** Ensure to use the `v++ -g` option when compiling your kernel code for debugging.\
 
@@ -514,7 +514,7 @@ TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardwar
     **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\
 
 
-    For an embedded processor platform, copy the contents of the ./sd_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
+    For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
 
 4.  Run your application.\
 
@@ -531,9 +531,9 @@ TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardwar
 
 ### Example Makefile
 
-A simple example Vitis project is available at [https://code.ornl.gov/7ry/add_test](https://code.ornl.gov/7ry/add_test). This project can be used to test the Vitis compile chain and [Vitis HLS](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/gnq1597858079367.html)
+A simple example Vitis project is available at [https://code.ornl.gov/7ry/add\_test](https://code.ornl.gov/7ry/add\_test). This project can be used to test the Vitis compile chain and [Vitis HLS](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/gnq1597858079367.html)
 
-The [makefile](https://code.ornl.gov/7ry/add_test/-/blob/main/Makefile) used by this project is an example of how to create a makefile to build an FPGA accelerated application.
+The [makefile](https://code.ornl.gov/7ry/add\_test/-/blob/main/Makefile) used by this project is an example of how to create a makefile to build an FPGA accelerated application.
 
 ```bash
 HW_TARGET ?= sw_emu # [sw_emu, hw_emu, hw]
@@ -584,9 +584,9 @@ clean:
 
 ### Performance Considerations
 
-Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags. 
+Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags.&#x20;
 
-Here is an example snippet from the [Xilinx Buttom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware_Accelerators/Design_Tutorials/05-bottom_up_rtl_kernel/krnl_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
+Here is an example snippet from the [Xilinx Buttom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware\_Accelerators/Design\_Tutorials/05-bottom\_up\_rtl\_kernel/krnl\_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
 
 ```bash
 NCPUS := $(shell grep -c ^processor /proc/cpuinfo)
@@ -604,11 +604,11 @@ build_hw:
 
 ## Useful References
 
-* [Vitis Unified Software Development Platform 2020.2 Documentation](https://www.xilinx.com/html_docs/xilinx2020\_2/vitis_doc/index.html)
-* [Vivado Design Suite User Guide (UG892)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2018\_2/ug892-vivado-design-flows-overview.pdf)
-* [Xilinx Vivado Design Suite Quick Reference Guide (UG975)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2013\_2/ug975-vivado-quick-reference.pdf)
-* [Vivado Design Suite Tcl Command Reference Guide (UG835)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2019\_2/ug835-vivado-tcl-commands.pdf)
-* [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf)
+* [Vitis Unified Software Development Platform 2020.2 Documentation](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/index.html)
+* [Vivado Design Suite User Guide (UG892)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2018\_2/ug892-vivado-design-flows-overview.pdf)
+* [Xilinx Vivado Design Suite Quick Reference Guide (UG975)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2013\_2/ug975-vivado-quick-reference.pdf)
+* [Vivado Design Suite Tcl Command Reference Guide (UG835)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2019\_2/ug835-vivado-tcl-commands.pdf)
+* [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf)
 
 ## Useful Commands
 
