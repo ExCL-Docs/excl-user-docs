@@ -167,6 +167,13 @@ Board Part:                       xcu250-figd2104-2L-e
 
 The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses port 3200 and the ThinLinc client uses port 22.
 
+#### Ports Used
+
+| Machine  | Port |
+| -------- | ---- |
+| Firefly  | 3200 |
+| Intrepid | 3201 |
+
 #### Accessing ThinLinc through the web interface
 
 1.  Forward port 3200 from the VM to your local system through login.\
