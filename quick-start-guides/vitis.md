@@ -43,7 +43,7 @@ It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00
 
 ### Vitis with Slurm (Recommended Method to use Tools)
 
-The Virtual Machines with Vitis installed are also set up with Slurm. Slurm is used as a resource manager to allocate compute resources as well as hardware resources. The use of Slurm is required to allocate FPGA hardware on Firefly and reserve build resources on Serenity. It is also recommended to reserve resources when running test builds on firefly. The best practice is to launch builds on serenity with Slurm, then launch bitfile tests on Firefly with Slurm. The use of Slurm is required to effectively share the FPGA, and to share build resources with automated CI Runs, and other automated build and test scripts. Slurm will automatically set up the Vitis environment so that it is ready to use. The rest of this section details how to use Slurm. See the [Cheat Sheet](../#excl-cheat-sheet) for commonly used Slurm commands. See the [Slurm Quick Start User Guide](https://slurm.schedmd.com/quickstart.html) to learn the basics of using Slurm.
+The Virtual Machines with Vitis installed are also set up with Slurm. Slurm is used as a resource manager to allocate compute resources as well as hardware resources. The use of Slurm is required to allocate FPGA hardware on Firefly and reserve build resources on Serenity. It is also recommended to reserve resources when running test builds on firefly. The best practice is to launch builds on serenity with Slurm, then launch bitfile tests on Firefly with Slurm. The use of Slurm is required to effectively share the FPGA, and to share build resources with automated CI Runs, and other automated build and test scripts. Slurm will automatically set up the Vitis environment and license so that it is ready to use. The rest of this section details how to use Slurm. See the [Cheat Sheet](../#excl-cheat-sheet) for commonly used Slurm commands. See the [Slurm Quick Start User Guide](https://slurm.schedmd.com/quickstart.html) to learn the basics of using Slurm.
 
 #### Interactive Use: Vitis Build
 
@@ -265,6 +265,16 @@ function vitis_init --description 'Setup Vitis paths'
    set -gx LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu/ $LD_LIBRARY_PATH
 end
 ```
+
+### Manually Setting up License
+
+In order to manually set up the the Xilinx license, set the environment variable `XILINXD_LICENSE_FILE` to `2100@license.ftpn.ornl.gov`.
+
+```
+export XILINXD_LICENSE_FILE=2100@license.ftpn.ornl.gov
+```
+
+The FlexLM server uses ports 2100 and 2101.
 
 ## Building and Running FPGA Applications
 
