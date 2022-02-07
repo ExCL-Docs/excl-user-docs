@@ -202,69 +202,23 @@ This approach is not as recommended as you can't forward 22 if you are running a
 
 ### Using Vitis with the [Fish Shell](https://fishshell.com)
 
-To use the Vitis toolchain with the fish shell, create the file `~/.config/fish/functions/vitis_init.fish` with the following content. Then to initialize Vitis, you run the `vitis_init` function. This function will find the latest Vitis version installed on the system and set up its environment. (Note: systems should only have one Vitis version installed.)
+Fish is installed system-wide with a default configuration based on Aaron's fish configuration that includes helpful functions to launch the Xilinx development tools. The next sections goes over the functions that this fish config provides.
 
-```
-function vitis_init --description 'Setup Vitis paths'
+#### vitis\_init
 
-   # Find the latest installed Vitis version as a default.
-   if test -e /tools/Xilinx/Vitis
-      set xilinx_version (ls /tools/Xilinx/Vitis | sort -r | head -n 1)
-      set base tools
-   else if test -e /opt/Xilinx/Vitis
-      set xilinx_version (ls /opt/Xilinx/Vitis | sort -r | head -n 1)
-      set base opt
-   else
-      echo "Could not find vitis installation"
-      return 1
-   end
+The function is used to set up the Vitis and Vivado toolchains. It is generic enough to find the toolchain on any of the systems on ExCL which have Vitis installed.
 
-   # Try to override Vitis version
-   if test (count $argv) -eq 1
-      set xilinx_version $argv[1]
-   end
+#### sfpgabuild
 
-   echo "Initializing Vivado $xilinx_version in base /$base"
+`sfpgabuild` is a shortcut to calling `srun -J interactive_build -p fpgabuild -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . Essentially it setups a FPGA build environment using slurm using resonable defaults. Each of the defaults can be overriden by spacifying the new parameter when calling `sfpgabuild` . `sfpgabuild` also modifies the prompt to remind you that you are in the fpga build environment.
 
-   # SDK
-   # set -gx PATH /opt/Xilinx/SDK/$xilinx_version/bin /opt/Xilinx/SDK/$xilinx_version/gnu/microblaze/lin/bin /opt/Xilinx/SDK/$xilinx_version/gnu/arm/lin/bin /opt/Xilinx/SDK/$xilinx_version/gnu/microblaze/linux_toolchain/lin64_be/bin /opt/Xilinx/SDK/$xilinx_version/gnu/microblaze/linux_toolchain/lin64_le/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch32/lin/gcc-arm-none-eabi/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch64/lin/aarch64-linux/bin /opt/Xilinx/SDK/$xilinx_version/gnu/aarch64/lin/aarch64-none/bin /opt/Xilinx/SDK/$xilinx_version/gnu/armr5/lin/gcc-arm-none-eabi/bin /opt/Xilinx/SDK/$xilinx_version/tps/lnx64/cmake-3.3.2/bin $PATH
+#### sfpgarun
 
-   # XRT
-   set -gx XILINX_XRT /opt/xilinx/xrt
-   set -gx LD_LIBRARY_PATH $XILINX_XRT/lib $LD_LIBRARY_PATH
-   set -gx PATH $XILINX_XRT/bin $PATH
-   set -gx PYTHONPATH $XILINX_XRT/python $PYTHONPATH
+Similar to `sfpgabuild` , sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U250:1" --pty $argv` . `sfpgarun` setups up an FPGA run environment complete with requesting the FPGA resource.
 
-   # DocNav
-   set -gx PATH /$base/Xilinx/DocNav $PATH
+#### viv
 
-   # Vitis_HLS
-   set -gx XILINX_HLS /$base/Xilinx/Vitis_HLS/$xilinx_version
-   set -gx PATH /$base/Xilinx/Vitis_HLS/$xilinx_version/bin $PATH
-
-   # Vivado
-   set -gx PATH /$base/Xilinx/Vivado/$xilinx_version/bin $PATH
-   set -gx XILINX_VIVADO /$base/Xilinx/Vivado/$xilinx_version
-
-   # Vitis
-   set -gx XILINX_VITIS /$base/Xilinx/Vitis/$xilinx_version
-   set -gx PATH /$base/Xilinx/Vitis/$xilinx_version/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/microblaze/lin/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/arm/lin/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/microblaze/linux_toolchain/lin64_le/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch32/lin/gcc-arm-none-eabi/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch64/lin/aarch64-linux/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/aarch64/lin/aarch64-none/bin /$base/Xilinx/Vitis/$xilinx_version/gnu/armr5/lin/gcc-arm-none-eabi/bin /$base/Xilinx/Vitis/$xilinx_version/tps/lnx64/cmake-3.3.2/bin /$base/Xilinx/Vitis/$xilinx_version/aietools/bin $PATH
-
-   # Model_Composer
-   set -gx PATH /$base/Xilinx/Model_Composer/2020.2/bin $PATH
-
-   # Set Platform Repo Paths
-   if test -e /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/
-      set -gx PLATFORM_REPO_PATHS /opt/xilinx/platforms/xilinx_u250_gen3x16_xdma_3_1_202020_1/
-   else if test -e /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/
-      set -gx PLATFORM_REPO_PATHS /opt/xilinx/platforms/xilinx_u250_xdma_201830_2/
-   end
-
-   # Set Library Paths
-   set -gx LD_LIBRARY_PATH /$base/Xilinx/Vitis/$xilinx_version/lib/lnx64.o $LD_LIBRARY_PATH
-   set -gx LD_LIBRARY_PATH /usr/lib/x86_64-linux-gnu/ $LD_LIBRARY_PATH
-end
-```
+After running `vitis_init`, `sfpgabuild`, or `sfpgarun`, `viv` can be used to launch Vivado in the background and is a shortcut to calling `vivado -nolog -nojournal`.
 
 ### Manually Setting up License
 
