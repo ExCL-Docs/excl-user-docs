@@ -40,6 +40,7 @@ It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00
 | torchwood | Vitis 2020.1 | justify | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
 | firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
+| intrepid  | Vitis 2021.2 | pcie    | /auto/software/vitis/vitis-2021.2.source |                                              |
 
 ### Vitis with Slurm (Recommended Method to use Tools)
 
