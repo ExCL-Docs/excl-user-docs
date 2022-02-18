@@ -12,7 +12,7 @@ We've assembled here the fundamental authoring guidelines for ExCl user document
 
 ### Document and Content Preferences
 
-* Documents should be created using [markdown](https://docs.gitlab.com/ee/user/markdown.html) using the [commonmark](https://docs.gitlab.com/ee/user/markdown.html#transitioning-to-commonmark) syntax.
+* Documents should be created using [markdown](https://docs.gitlab.com/ee/user/markdown.html) using the [CommonMark](https://docs.gitlab.com/ee/user/markdown.html#transitioning-to-commonmark) syntax.
 * Oak Ridge National Laboratory (ORNL) uses the [_Chicago Manual of Style_](http://www.chicagomanualofstyle.org/home.html) (_CMOS_) as a basic style guide.
 * Define the first instance of every acronym in each document. Ensure that the long-form is not repeated after it is defined.
 * Buttons and links that the user should "click" should go in `code`. For example, "Next, click the `Manage Rules` button."

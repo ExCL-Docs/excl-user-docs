@@ -39,8 +39,8 @@ If you used a different name for the ssh key file, then replace `~/.ssh/id_rsa` 
 On Windows, this config file is located at `%USERPROFILE%\.ssh\config`.
 The config file doesn’t have an extension, but it is a text file that can be edited with vscode.
 
-To avoid typing your ssh passphrase multiple times per login, use an SSH Agent to store the ssh credentials. See 
-[Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent) for details. On Windows, to enable SSH Agent automatically, start a local Administrator PowerShell and run the following commands:
+To avoid typing your ssh passphrase multiple times per login, use an SSH Agent to store the ssh credentials.
+See [Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent) for details. On Windows, to enable SSH Agent automatically, start a local Administrator PowerShell and run the following commands:
 
 ```powershell
 # Make sure you're running as an Administrator
