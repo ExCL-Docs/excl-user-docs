@@ -41,6 +41,7 @@ The config file doesn’t have an extension, but it is a text file that can be e
 
 To avoid typing your ssh passphrase multiple times per login, use an SSH Agent to store the ssh credentials. See 
 [Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent) for details. On Windows, to enable SSH Agent automatically, start a local Administrator PowerShell and run the following commands:
+
 ```powershell
 # Make sure you're running as an Administrator
 Set-Service ssh-agent -StartupType Automatic
@@ -49,6 +50,7 @@ Get-Service ssh-agent
 ```
 
 On the ExCL side, you can add this code snippet to `~/.bashrc` start the ssh-agent on login:
+
 ```bash
 # Start the SSH Agent
 if [ -z "$SSH_AUTH_SOCK" ] ; then
@@ -74,9 +76,9 @@ See [Varibles Reference Documentation](https://code.visualstudio.com/docs/editor
 ## Useful Extensions
 
 - GrapeCity.gc-excelviewer
-    - Preview CSV files.
+  - Preview CSV files.
 - Gruntfuggly.todo-tree
-    - View TODOs in a project.
+  - View TODOs in a project.
 - ms-vsliveshare.vsliveshare
   - Real-time Collaboration.
 - ms-vsliveshare.vsliveshare-audio
@@ -86,16 +88,19 @@ See [Varibles Reference Documentation](https://code.visualstudio.com/docs/editor
   - Use Vim Keybindings in VSCode.
 
 ### Remote Work
+
 - ms-vscode-remote.remote-containers
 - ms-vscode-remote.remote-ssh
 - ms-vscode-remote.remote-ssh-edit
 - ms-vscode-remote.remote-wsl
 
 ### Linters
+
 - DavidAnson.vscode-markdownlint
   - Lint markdown files.
 
 ### Language Support
+
 - lextudio.restructuredtext
 - ms-python.python
 - ms-python.vscode-pylance
@@ -111,10 +116,13 @@ See [Varibles Reference Documentation](https://code.visualstudio.com/docs/editor
 - slevesque.vscode-autohotkey
 - twxs.cmake
 - yzhang.markdown-all-in-one
+  - Supports markdown preview in addition to language support.
 
 ### Git
+
 - donjayamanne.githistory
 - eamodio.gitlens
 
 ### Note Taking/Knowledge Base
+
 - foam.foam-vscode
