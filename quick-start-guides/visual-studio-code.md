@@ -63,6 +63,16 @@ fi
 
 ![Remote.SSH: Lockfiles Setting](/assets/2022-02-18-lockfiles-setting.png)
 
+The remote SSH explorer provides the same experience editing code remotely as you get when you are editing locally.
+Files that are opened are edited locally and saved to the remote server which helps when you have a slow connection to the remote which makes editing view vim and ssh too irresponsive.
+You can also access a remote terminal with `ctl`+\`.
+The debuggers also run remotely.
+One gotcha is that extensions might need to be installed remotely for them to work properly.
+However, this is easy to do by clicking on the extension tab and choosing install local extensions on remote.
+The ssh explorer also makes it easy to forward remote ports to the local machine.
+This is especially helpful when launching an http server or a jupyter notebook.
+See [Jupyter Documentation](/quick-start-guides/jupyter-quick-start.md#Detailed-instructions-for-Windows-with-Visual-Studio-Code) for details.
+
 ## Debugging Using Run and Debug
 
 Edit `launch.json` to define launch configurations according to the [launch configuration documentation](https://code.visualstudio.com/docs/editor/debugging#_launchjson-attributes).
