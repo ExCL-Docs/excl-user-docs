@@ -69,6 +69,7 @@ You can also access a remote terminal with `ctl`+\`.
 The debuggers also run remotely.
 One gotcha is that extensions might need to be installed remotely for them to work properly.
 However, this is easy to do by clicking on the extension tab and choosing install local extensions on remote.
+
 The ssh explorer also makes it easy to forward remote ports to the local machine.
 This is especially helpful when launching an http server or a jupyter notebook.
 See [Jupyter Documentation](/quick-start-guides/jupyter-quick-start.md#detailed-instructions-for-windows-with-visual-studio-code) for details.
