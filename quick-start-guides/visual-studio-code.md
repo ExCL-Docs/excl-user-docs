@@ -61,7 +61,7 @@ fi
 
 **Important:** Since VSCode installs its configuration to your home directory by default and the home directories are stored in NFS, the `Remote.SSH: Lockfiles in Tmp` setting needs to be checked. This setting is easiest to find with the settings search box.
 
-![Lockfiles Remote.ssh Setting](/assets/2022-02-18-lockfiles-setting.png)
+![Remote.SSH: Lockfiles Setting](/assets/2022-02-18-lockfiles-setting.png)
 
 ## Debugging Using Run and Debug
 
