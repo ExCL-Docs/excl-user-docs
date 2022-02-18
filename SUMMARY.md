@@ -43,6 +43,7 @@
 * [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
 * [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
 * [Vitis FPGA Development](quick-start-guides/vitis.md)
+* [Visual Studio Code](quick-start-guides/visual-studio-code.md)
 
 ## Software
 
