@@ -14,7 +14,8 @@ Plugins add language support, linters, and compilers for many languages includin
 The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) and [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) are both extremely useful to edit code remotely on ExCL or locally in WSL if on a windows machine.
 Remote - SSH pulls the ssh targets from the users `.ssh/config` file.
 On Linux or MacOS, this process is straightforward and you likely already have an ssh config file setup.
-On Windows you have to specify the proxy command to use to proxy into the internal ExCL nodes. Here is an example file:
+On Windows you have to specify the proxy command to use to proxy into the internal ExCL nodes.
+Here is an example file:
 
 ```sshconfig
 Host excl
@@ -40,7 +41,8 @@ On Windows, this config file is located at `%USERPROFILE%\.ssh\config`.
 The config file doesn’t have an extension, but it is a text file that can be edited with vscode.
 
 To avoid typing your ssh passphrase multiple times per login, use an SSH Agent to store the ssh credentials.
-See [Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent) for details. On Windows, to enable SSH Agent automatically, start a local Administrator PowerShell and run the following commands:
+See [Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent) for details.
+On Windows, to enable SSH Agent automatically, start a local Administrator PowerShell and run the following commands:
 
 ```powershell
 # Make sure you're running as an Administrator
@@ -59,7 +61,8 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 ```
 
-**Important:** Since VSCode installs its configuration to your home directory by default and the home directories are stored in NFS, the `Remote.SSH: Lockfiles in Tmp` setting needs to be checked. This setting is easiest to find with the settings search box.
+**Important:** Since VSCode installs its configuration to your home directory by default and the home directories are stored in NFS, the `Remote.SSH: Lockfiles in Tmp` setting needs to be checked.
+This setting is easiest to find with the settings search box.
 
 ![Remote.SSH: Lockfiles Setting](/assets/2022-02-18-lockfiles-setting.png)
 
