@@ -15,7 +15,7 @@ The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode
 Remote - SSH pulls the ssh targets from the users `.ssh/config` file.
 On Linux or MacOS, this process is straightforward and you likely already have an ssh config file setup.
 On Windows you have to specify the proxy command to use to proxy into the internal ExCL nodes.
-Here is an example file:
+Here is an example file for Windows:
 
 ```sshconfig
 Host excl
@@ -33,11 +33,32 @@ Host *
     ForwardX11 yes
 ```
 
+Here is the same file for Linux or MacOS:
+
+```sshconfig
+Host excl
+    HostName login.excl.ornl.gov
+    IdentityFile ~/.ssh/id_rsa
+
+Host quad00
+    HostName quad00
+    ProxyJump excl
+    IdentityFile ~/.ssh/id_rsa
+
+Host *
+    User <Username>
+    ForwardAgent yes
+    ForwardX11 yes
+```
+
+The main difference between the files is that the Windows config has `ProxyCommand` with the windows `ssh.exe` and Linux and MacOS has `ProxyJump`, both commands setup the login node as a relay to the internal node.  
+
 Replace `<Username>` with your username.
 Other internal system can be added by copying the quad00 entry and modifying the name of the config and the HostName.
 It is highly recommended to use a passphrase protected ssh key as the login method.
 If you used a different name for the ssh key file, then replace `~/.ssh/id_rsa` with your private key file.
 On Windows, this config file is located at `%USERPROFILE%\.ssh\config`.
+On Linux and MacOS, this config file is located at `~/.ssh/config`.
 The config file doesn’t have an extension, but it is a text file that can be edited with vscode.
 
 To avoid typing your ssh passphrase multiple times per login, use an SSH Agent to store the ssh credentials.
