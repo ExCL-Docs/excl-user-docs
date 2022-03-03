@@ -591,5 +591,6 @@ xbutil query     # Query detailed information from the FPGA.
 xbutil program   # Download the accelerator program. Good for testing bitfile load.
 xbutil reset     # Reset the FPGA, used when kernel is unresponsive.
 
-platforminfo --platform <platform_file> # Get specific FPGA information from the Platform.
+platforminfo -l # List all installed platforms.
+platforminfo --platform <platform_file> # Get specific FPGA information from the platform.
 ```
