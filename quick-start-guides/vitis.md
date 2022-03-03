@@ -213,9 +213,21 @@ The function is used to set up the Vitis and Vivado toolchains. It is generic en
 
 `sfpgabuild` is a shortcut to calling `srun -J interactive_build -p fpgabuild -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . Essentially it setups a FPGA build environment using slurm using resonable defaults. Each of the defaults can be overriden by spacifying the new parameter when calling `sfpgabuild` . `sfpgabuild` also modifies the prompt to remind you that you are in the fpga build environment.
 
-#### sfpgarun
+#### sfpgarun-u250
 
-Similar to `sfpgabuild` , sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U250:1" --pty $argv` . `sfpgarun` setups up an FPGA run environment complete with requesting the FPGA resource.
+sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U250:1" --pty $argv` . `sfpgarun-u250` setups up an FPGA run environment complete with requesting the FPGA resource.
+
+#### sfpgarun-u55c
+
+sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U55C:1" --pty $argv` . `sfpgarun-u55c` setups up an FPGA run environment complete with requesting the FPGA resource.
+
+#### sfpgarun-hw-emu
+
+sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=hw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-hw-emu` setups up an FPGA run environment complete with specifying XCL_EMULARION_MODE.
+
+#### sfpgarun-sw-emu
+
+sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=sw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-sw-emu` setups up an FPGA run environment complete with specifying XCL_EMULARION_MODE.
 
 #### viv
 
