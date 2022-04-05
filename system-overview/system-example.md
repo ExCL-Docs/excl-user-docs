@@ -1,4 +1,4 @@
-# {{{System Name}}}
+# System Name
 
 ## Description
 
