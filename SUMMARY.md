@@ -24,6 +24,7 @@
   * [apachepass](system-overview/apachepass.md)
   * [quad\[00-03\]](system-overview/quad-00-03.md)
   * [thunderx](system-overview/thunderx.md)
+  * [System Example](system-overview/system-example.md)
 
 ## ExCl Support
 
