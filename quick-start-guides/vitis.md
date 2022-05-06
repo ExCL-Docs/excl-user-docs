@@ -171,7 +171,8 @@ The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cend
 #### Ports Used
 
 | Machine  | Port |
-| -------- | ---- |
+|----------|------|
+| Tardis   | 3202 |
 | Firefly  | 3200 |
 | Intrepid | 3201 |
 
