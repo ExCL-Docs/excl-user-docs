@@ -41,6 +41,7 @@ It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00
 | firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | intrepid  | Vitis 2021.2 | pcie    | /auto/software/vitis/vitis-2021.2.source |                                              |
+| polarden | Vitis 2022.1 | mcmurdo | /auto/software/vitis/vitis-2022.1.source | |
 
 ### Vitis with Slurm (Recommended Method to use Tools)
 
@@ -175,6 +176,7 @@ The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cend
 | Tardis   | 3202 |
 | Firefly  | 3200 |
 | Intrepid | 3201 |
+| Polarden | 3203 |
 
 #### Accessing ThinLinc through the web interface
 
