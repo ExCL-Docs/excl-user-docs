@@ -1,3 +1,6 @@
+---
+description: Getting started with ThinLinc.
+---
 # Accessing ThinLinc
 
 The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at <https://login.excl.ornl.gov:300>. Since this node is public facing, it is the easiest to access with ThinLinc.

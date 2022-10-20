@@ -1,3 +1,7 @@
+---
+description: Getting started with Vitis FPGA development.
+---
+
 # Vitis FPGA Development
 
 [ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
@@ -167,7 +171,7 @@ Board Part:                       xcu250-figd2104-2L-e
 ```
 
 ### Accessing systems graphically using ThinLinc
-See [ThinLinc Quickstart](quick-start-guides\ThinLinc.md).
+See [ThinLinc Quickstart](ThinLinc.md).
 
 ### Using Vitis with the [Fish Shell](https://fishshell.com)
 

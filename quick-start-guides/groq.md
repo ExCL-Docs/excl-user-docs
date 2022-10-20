@@ -1,3 +1,6 @@
+---
+description: Getting started with Groq.
+---
 # Groq Getting Started Guide
 
 ## Groq Links
@@ -35,7 +38,7 @@ Then to install jupyter notebook in your home directory, you would need to do
 ```
 
 ### Conda
-First install miniconda by following [Conda Installation Guide](quick-start-guides\conda-and-spack-installation.md#installing-conda).
+First install miniconda by following [Conda Installation Guide](conda-and-spack-installation.md#installing-conda).
 Then create a groq environment with 
 ```bash
 conda create -n groqflow python=3.8.13
@@ -44,7 +47,7 @@ conda activate groqflow
 See the [GroqFlow Installation](https://github.com/groq/groqflow/blob/main/docs/install.md) for more details for setting up the Conda environment.
 
 ## Graphical Access to Groq Systems
-See [ThinLinc Quickstart](quick-start-guides\ThinLinc.md).
+See [ThinLinc Quickstart](ThinLinc.md).
 
 ## Getting started Resources
 - [Groq API Tutorials](https://github.com/groq/GroqAPI/tree/main/gapi/tutorials)
