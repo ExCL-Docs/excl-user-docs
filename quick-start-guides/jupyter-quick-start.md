@@ -1,3 +1,6 @@
+---
+description: Getting started with Jupyter Notebook.
+---
 # Jupyter Notebook
 
 [ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Jupyter Quick Start](jupyter-quick-start.md)

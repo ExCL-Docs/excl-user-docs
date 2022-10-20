@@ -49,6 +49,9 @@ See the [GroqFlow Installation](https://github.com/groq/groqflow/blob/main/docs/
 ## Graphical Access to Groq Systems
 See [ThinLinc Quickstart](ThinLinc.md).
 
+## Jupyter Notebooks
+See [Jupyter Notebook Quickstart](jupyter-quick-start.md) for more information on setting up Jupyter Notebooks within ExCL.
+
 ## Getting started Resources
 - [Groq API Tutorials](https://github.com/groq/GroqAPI/tree/main/gapi/tutorials)
 - [GroqFlow Getting Started](https://github.com/groq/groqflow#getting-started)
