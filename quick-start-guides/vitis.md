@@ -9,7 +9,7 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 ### FPGAs
 
 | FPGA                                                                          | Host System |
-| ----------------------------------------------------------------------------- | ----------- |
+|-------------------------------------------------------------------------------|-------------|
 | [Alveo U250](https://www.xilinx.com/products/boards-and-kits/alveo/u250.html) | pcie        |
 
 ### Systems with the Vitis Toolchain
@@ -17,7 +17,7 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 #### Physical Systems
 
 | Name | Tool Chain   | Source File               | Platform Name                 |
-| ---- | ------------ | ------------------------- | ----------------------------- |
+|------|--------------|---------------------------|-------------------------------|
 | pcie | Vitis 2020.1 | \~7ry/vitis-2020.1.source | xilinx\_u250\_xdma\_201830\_2 |
 
 #### Spack based Xilinx build environment on ExCL CentOS systems
@@ -35,13 +35,14 @@ It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00
 #### Virtual Systems for Xilinx build and SW and HW emulation run
 
 | Name      | Tool Chain   | Host    | Source File                              | Platform Name                                |
-| --------- | ------------ | ------- | ---------------------------------------- | -------------------------------------------- |
+|-----------|--------------|---------|------------------------------------------|----------------------------------------------|
 | tardis    | Vitis 2020.1 | pcie    | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
 | torchwood | Vitis 2020.1 | justify | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
 | firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | intrepid  | Vitis 2021.2 | pcie    | /auto/software/vitis/vitis-2021.2.source |                                              |
-| polarden | Vitis 2022.1 | mcmurdo | /auto/software/vitis/vitis-2022.1.source | |
+| icarus00  | Vitis 2021.2 | Pharoah | /auto/software/vitis/vitis-2021.2.source |                                              |
+| polarden  | Vitis 2022.1 | mcmurdo | /auto/software/vitis/vitis-2022.1.source |                                              |
 
 ### Vitis with Slurm (Recommended Method to use Tools)
 
@@ -165,44 +166,8 @@ Board Part:                       xcu250-figd2104-2L-e
 ...
 ```
 
-### Accessing ThinLinc
-
-The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses port 3200 and the ThinLinc client uses port 22.
-
-#### Ports Used
-
-| Machine  | Port |
-|----------|------|
-| Tardis   | 3202 |
-| Firefly  | 3200 |
-| Intrepid | 3201 |
-| Polarden | 3203 |
-
-#### Accessing ThinLinc through the web interface
-
-1.  Forward port 3200 from the VM to your local system through login.\
-    On Linux or macOS
-
-    ```
-     $ ssh -L 3200:<VM Name>:3200 <Username>@login.excl.ornl.gov
-    ```
-
-    On windows use MobaSSHTunnel or Visual Studio Code to forward port 3200. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Connect the forwarded port using a web browser. `https://localhost:3200`
-
-#### Accessing ThinLinc through ThinLinc Client
-
-This approach is not as recommended as you can't forward 22 if you are running an ssh server.
-
-1.  Forward port 22 from the VM to your local system through login. On Linux or macOS
-
-    ```
-     $ ssh -L 22:<VM Name>:22 <Username>@login.excl.ornl.gov
-    ```
-
-    On windows use MobaSSHTunnel or Visual Studio Code to forward port 22. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Launch the ThinLinc Client.
-3. Connect to the server with "Connect".
+### Accessing systems graphically using ThinLinc
+See [ThinLinc Quickstart](quick-start-guides\ThinLinc.md).
 
 ### Using Vitis with the [Fish Shell](https://fishshell.com)
 
@@ -275,7 +240,7 @@ There are three build targets available when building an FPGA kernel with Vitis 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildtargets1.html#rst1525720251890) **for more information.**
 
 | Software Emulation                                                  | Hardware Emulation                                                                           | Hardware Execution                                                                     |
-| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
 | Host application runs with a C/C++ or OpenCL™ model of the kernels. | Host application runs with a simulated RTL model of the kernels.                             | Host application runs with actual hardware implementation of the kernels.              |
 | Used to confirm functional correctness of the system.               | Test the host / kernel integration, get performance estimates.                               | Confirm that the system runs correctly and with desired performance.                   |
 | Fastest build time supports quick design iterations.                | Best debug capabilities, moderate compilation time with increased visibility of the kernels. | Final FPGA implementation, long build time with accurate (actual) performance results. |
