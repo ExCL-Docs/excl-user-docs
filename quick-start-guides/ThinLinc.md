@@ -10,7 +10,7 @@ In addition to the login node, multiple systems including the [virtual systems](
 
 ## Ports Used
 
-| Hostname                           | Port | URL\[^url]                                       |
+| Hostname                           | Port | URL                                              |
 | ---------------------------------- | ---- | ------------------------------------------------ |
 | [Firefly](https://localhost:3200)  | 3200 | [https://localhost:3200](https://localhost:3200) |
 | [Intrepid](https://localhost:3201) | 3201 | [https://localhost:3201](https://localhost:3201) |
