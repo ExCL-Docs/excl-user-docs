@@ -1,16 +1,17 @@
 ---
 description: Getting started with ThinLinc.
 ---
-# Accessing ThinLinc
 
-The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at <https://login.excl.ornl.gov:300>. Since this node is public facing, it is the easiest to access with ThinLinc.
+# ThinLinc
+
+The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300). Since this node is public facing, it is the easiest to access with ThinLinc.
 
 In addition to the login node, multiple systems including the [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses the port in the table below and the ThinLinc client uses port 22.
 
 ## Ports Used
 
-| Hostname                           | Port | URL[^url]                                        |
-|------------------------------------|------|--------------------------------------------------|
+| Hostname                           | Port | URL\[^url]                                       |
+| ---------------------------------- | ---- | ------------------------------------------------ |
 | [Firefly](https://localhost:3200)  | 3200 | [https://localhost:3200](https://localhost:3200) |
 | [Intrepid](https://localhost:3201) | 3201 | [https://localhost:3201](https://localhost:3201) |
 | [Tardis](https://localhost:3202)   | 3202 | [https://localhost:3202](https://localhost:3202) |
@@ -20,9 +21,10 @@ In addition to the login node, multiple systems including the [virtual systems](
 | [Clerk](https://localhost:3206)    | 3206 | [https://localhost:3206](https://localhost:3206) |
 | [pcie](https://localhost:3207)     | 3207 | [https://localhost:3207](https://localhost:3207) |
 
-[^url]: The URL will only work once port forwarding is setup.  
-    MobaXTerm can be used to automatically setup port forwarding on launch which will make the links work when MobaXTerm is running.
-
+{% hint style="info" %}
+The URL will only work once port forwarding is set up.\
+MobaXTerm can be used to automatically set up port forwarding on launch, which will make the links work when MobaXTerm is running.
+{% endhint %}
 
 ## Accessing ThinLinc through the web interface
 
