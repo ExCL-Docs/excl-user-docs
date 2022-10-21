@@ -9,16 +9,20 @@ In addition to the login node, multiple systems including the [virtual systems](
 
 ## Ports Used
 
-| Hostname | Port |
-|----------|------|
-| Firefly  | 3200 |
-| Intrepid | 3201 |
-| Tardis   | 3202 |
-| Polarden | 3203 |
-| Zenith   | 3204 |
-| Lewis    | 3205 |
-| Clerk    | 3206 |
-| pcie     | 3207 |
+| Hostname                           | Port | URL[^url]                                        |
+|------------------------------------|------|--------------------------------------------------|
+| [Firefly](https://localhost:3200)  | 3200 | [https://localhost:3200](https://localhost:3200) |
+| [Intrepid](https://localhost:3201) | 3201 | [https://localhost:3201](https://localhost:3201) |
+| [Tardis](https://localhost:3202)   | 3202 | [https://localhost:3202](https://localhost:3202) |
+| [Polarden](https://localhost:3203) | 3203 | [https://localhost:3203](https://localhost:3203) |
+| [Zenith](https://localhost:3204)   | 3204 | [https://localhost:3204](https://localhost:3204) |
+| [Lewis](https://localhost:3205)    | 3205 | [https://localhost:3205](https://localhost:3205) |
+| [Clerk](https://localhost:3206)    | 3206 | [https://localhost:3206](https://localhost:3206) |
+| [pcie](https://localhost:3207)     | 3207 | [https://localhost:3207](https://localhost:3207) |
+
+[^url]: The URL will only work once port forwarding is setup.  
+    MobaXTerm can be used to automatically setup port forwarding on launch which will make the links work when MobaXTerm is running.
+
 
 ## Accessing ThinLinc through the web interface
 
