@@ -56,3 +56,15 @@ This approach is not as recommended as you can't forward a privileged port (i.e.
     On windows use MobaSSHTunnel or Visual Studio Code to forward port 22. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
 2. Launch the ThinLinc Client.
 3. Connect to the server with "Connect".
+
+## Potential Issues you may encounter
+
+If you use Gnome and not have access to the module command when you start 
+a terminal session over ThinLinc web, then your terminal session may not be 
+configured as a login session.  To resolve
+
+1. Right click on the terminal icon on the left side of your screen
+2. In Preferences -> Unnamed, make sure `Run command as a login shell` is checked.
+
+You will then get login processing (including sourcing the /etc/profiles.d files) and so the module command will now be present.
+
