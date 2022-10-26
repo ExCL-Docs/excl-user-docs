@@ -42,10 +42,10 @@ MobaXTerm can be used to automatically set up port forwarding on launch, which w
 
 This approach is not as recommended as you can't forward a privileged port (i.e., 22) if you are running an ssh server.
 
-1.  Forward port 22 from the VM to your local system through login. On Linux or macOS
+1.  Forward port 22 from the remote system to your local system through login. On Linux or macOS
 
     ```
-     $ ssh -L 22:<VM Name>:22 <Username>@login.excl.ornl.gov
+     $ ssh -L 22:<hostname>:22 <Username>@login.excl.ornl.gov
     ```
 
     On windows use MobaSSHTunnel or Visual Studio Code to forward port 22. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
