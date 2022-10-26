@@ -8,6 +8,11 @@ The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) 
 
 In addition to the login node, multiple systems including the [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses the port in the table below and the ThinLinc client uses port 22.
 
+{% hint style="warning" %}
+If you run into a "ThinLinc login failed. (No agent server was available)" error, then login to the node with ssh. This will mount your home directory and resolve the ThinLinc error.\
+&#x20;![](../.gitbook/assets/image.png)
+{% endhint %}
+
 ## Ports Used
 
 | Hostname                           | Port | URL                                              |

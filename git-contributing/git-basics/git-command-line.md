@@ -1,6 +1,6 @@
 # Git Command Line
 
-[ExCl](https://docs.excl.ornl.gov) → [User Documentation](../../) → [Contributing](../../excl-support/contributing.md) → [Git in the Command Line](git-command-line.md)
+[ExCl](https://docs.excl.ornl.gov/) → [User Documentation](../../) → [Contributing](../../excl-support/contributing.md) → [Git in the Command Line](git-command-line.md)
 
 ## Git Workflow from the Command Line
 
@@ -10,7 +10,7 @@ _Jump to a Section:_
 
 * [Setup](git-command-line.md#setup)
 * [Checkout](git-command-line.md#checkout)
-* [Edit](git-command-line.md#edit)   
+* [Edit](git-command-line.md#edit)  &#x20;
 * [Add](git-command-line.md#add)
 * [Commit](git-command-line.md#commit)
 * [Push](git-command-line.md#push)
@@ -41,14 +41,14 @@ It is assumed that users of this guide understand basic Git/version control prin
           sudo apt-get install git
           sudo apt-get update git
           ```
-      *   MacOS, use [Homebrew](https://brew.sh):
+      *   MacOS, use [Homebrew](https://brew.sh/):
 
           ```bash
           /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
           brew install git
           brew upgrade git
           ```
-      * Windows: download [Git for Windows](https://gitforwindows.org) and install it.
+      * Windows: download [Git for Windows](https://gitforwindows.org/) and install it.
 *   Setup Git with your access credentials to GitHub with the following commands:
 
     ```bash
@@ -70,7 +70,7 @@ It is assumed that users of this guide understand basic Git/version control prin
 
 ### Checkout
 
-*   If you have already cloned the repository but are returning to your local version after a while, you'll want to make sure your local files are up to date with the branch. You can pull updates from _master_ or _branch_name_.
+*   If you have already cloned the repository but are returning to your local version after a while, you'll want to make sure your local files are up to date with the branch. You can pull updates from _master_ or _branch\_name_.
 
     ```bash
     git pull origin branch_name

@@ -16,7 +16,7 @@ _Jump to a Section:_
 
 * [Setup](git-workflow.md#setup)
 * [Checkout](git-workflow.md#checkout)
-* [Edit](git-workflow.md#edit)   
+* [Edit](git-workflow.md#edit)  &#x20;
 * [Add](git-workflow.md#add)
 * [Commit](git-workflow.md#commit)
 * [Push](git-workflow.md#push)
@@ -34,7 +34,7 @@ This section covers the setup procedures for Atom and Git.
 
 While there are many text editors to choose from, Atom is recommended due to its ability to be customized and integrated with GitHub/Git.
 
-> Install Atom: [https://atom.io/](https://atom.io)
+> Install Atom: [https://atom.io/](https://atom.io/)
 
 Atom has several packages which enhance the user experience and some of them you'll need for the workflow. The packages can be installed by entering the `Settings` screen and choosing `Install`. There are thousands of packages, so try some out and have fun.
 
@@ -80,14 +80,14 @@ Atom has several packages which enhance the user experience and some of them you
           sudo apt-get install git
           sudo apt-get update git
           ```
-      *   MacOS, use [Homebrew](https://brew.sh):
+      *   MacOS, use [Homebrew](https://brew.sh/):
 
           ```bash
           /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
           brew install git
           brew upgrade git
           ```
-      * Windows: download [Git for Windows](https://gitforwindows.org) and install it.
+      * Windows: download [Git for Windows](https://gitforwindows.org/) and install it.
 *   Set up Git with your access credentials to GitHub with the following commands:
 
     ```bash
@@ -105,9 +105,9 @@ At this point, you likely either want to create a new branch and add your contri
 
 **Create a New Branch**
 
-1. Create a Git branch by clicking on the `master` button on the bottom-right of the Atom window. Name the branch something descriptive.   
+1. Create a Git branch by clicking on the `master` button on the bottom-right of the Atom window. Name the branch something descriptive.  &#x20;
 
-![image](../../.gitbook/assets/git-new_branch_atom.png)
+![image](../../.gitbook/assets/git-new\_branch\_atom.png)
 
 **Checkout an Existing Branch**
 

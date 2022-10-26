@@ -1,6 +1,6 @@
 # Contributing
 
-[ExCl](https://excl.ornl.gov) → [User Documentation](../) → [Contributing](contributing.md)
+[ExCl](https://excl.ornl.gov/) → [User Documentation](../) → [Contributing](contributing.md)
 
 ## About ExCl User Documentation
 

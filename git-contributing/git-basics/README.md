@@ -4,7 +4,7 @@
 
 ## Git Basics
 
-**Git**, like other version control (VC) software/system ([see a Wikipedia list](https://en.wikipedia.org/wiki/List_of_version_control_software)), tracks changes to a file system over time. It is typically used in software development but can be used to monitor changes in any file.
+**Git**, like other version control (VC) software/system ([see a Wikipedia list](https://en.wikipedia.org/wiki/List\_of\_version\_control\_software)), tracks changes to a file system over time. It is typically used in software development but can be used to monitor changes in any file.
 
 > **Git** - a version control system that records the changes to a file or files which allows you to return to a previous version
 
@@ -20,7 +20,7 @@ ORNL provides two GitLab servers [https://code.ornl.gov](https://code.ornl.gov) 
 
 ### Accessing GitLab
 
-* In your browser, navigate to [https://code.ornl.gov/](https://code.ornl.gov) and login using your UCAMS credentials. Click on the green button at the top of the window that says `New project`.
+* In your browser, navigate to [https://code.ornl.gov/](https://code.ornl.gov/) and login using your UCAMS credentials. Click on the green button at the top of the window that says `New project`.
 * Choose the `Blank project` tab, create a name for the project, and select the "Visibility Level" that you prefer. Then click `Create project`.
 * Notice that GitLab has provided instructions to perform Git setup and initialization of your repository. We will follow those instructions.
 * _(Optional)_ Prior to cloning the repository, consider adding your SSH key to your GitLab profile so you are not prompted for credentials after every commit. To add your public SSH key to GitLab:
@@ -50,14 +50,14 @@ ORNL provides two GitLab servers [https://code.ornl.gov](https://code.ornl.gov) 
           sudo apt-get install git
           sudo apt-get update git
           ```
-      *   MacOS, use [Homebrew](https://brew.sh):
+      *   MacOS, use [Homebrew](https://brew.sh/):
 
           ```bash
           /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
           brew install git
           brew upgrade git
           ```
-      * Windows: download [Git for Windows](https://gitforwindows.org) and install it. Also, this tutorial utilizes a Bash command line interface, therefore, you should use _Git Bash_, which is a part of the Git installation package for Windows.
+      * Windows: download [Git for Windows](https://gitforwindows.org/) and install it. Also, this tutorial utilizes a Bash command line interface, therefore, you should use _Git Bash_, which is a part of the Git installation package for Windows.
 *   Setup Git with your access credentials to GitLab with the following commands (use your ORNL email):
 
     ```bash
