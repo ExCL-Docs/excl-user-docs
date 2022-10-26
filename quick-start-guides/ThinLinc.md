@@ -67,4 +67,3 @@ configured as a login session.  To resolve
 2. In Preferences -> Unnamed, make sure `Run command as a login shell` is checked.
 
 You will then get login processing (including sourcing the /etc/profiles.d files) and so the module command will now be present.
-
