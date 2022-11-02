@@ -33,7 +33,7 @@ MobaXTerm can be used to automatically set up port forwarding on launch, which w
 
 ## Accessing ThinLinc through the web interface
 
-1.  Forward port from the above list from the remote host to your local system through login.\
+1. Forward port from the above list from the remote host to your local system through login.\
     On Linux or macOS, for example
 
     ```
@@ -47,7 +47,7 @@ MobaXTerm can be used to automatically set up port forwarding on launch, which w
 
 This approach is not as recommended as you can't forward a privileged port (i.e., 22) if you are running an ssh server.
 
-1.  Forward port 22 from the remote system to your local system through login. On Linux or macOS
+1. Forward port 22 from the remote system to your local system through login. On Linux or macOS
 
     ```
      $ ssh -L 22:<hostname>:22 <Username>@login.excl.ornl.gov
@@ -59,9 +59,9 @@ This approach is not as recommended as you can't forward a privileged port (i.e.
 
 ## Potential Issues you may encounter
 
-If you use Gnome and not have access to the module command when you start 
-a terminal session over ThinLinc web, then your terminal session may not be 
-configured as a login session.  To resolve
+If you use Gnome and do not have access to the module command when you start
+a terminal session over ThinLinc web, then your terminal session may not be
+configured as a login session. To resolve
 
 1. Right click on the terminal icon on the left side of your screen
 2. In Preferences -> Unnamed, make sure `Run command as a login shell` is checked.
