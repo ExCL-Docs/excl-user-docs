@@ -22,7 +22,7 @@ This page covers how to access the Vitis development tools available in ExCL. Th
 
 | Name | Tool Chain   | Source File               | Platform Name                 |
 |------|--------------|---------------------------|-------------------------------|
-| pcie | Vitis 2020.1 | \~7ry/vitis-2020.1.source | xilinx\_u250\_xdma\_201830\_2 |
+| zenith | Vitis 2022.2 | /auto/software/vitis/vitis-2022.2.source |  |
 
 #### Spack based Xilinx build environment on ExCL CentOS systems
 
@@ -391,14 +391,14 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 **Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
 {% endhint %}
 
-1.  Set the desired runtime settings in the xrt.ini file. This step is optional.\
+1. Set the desired runtime settings in the xrt.ini file. This step is optional.\
 
 
     As described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run. \
     \
     **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.\
 
-2.  Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\
+2. Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\
 
 
     The emulation configuration file, `emconfig.json`, is generated from the specified platform using the `emconfigutil` command, and provides information used by the XRT library during emulation. The following example creates the `emconfig.json` file for the specified target platform:
@@ -411,7 +411,7 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
     \
     **TIP:** It is mandatory to have an up-to-date JSON file for running emulation on your target platform.\
 
-3.  Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\
+3. Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\
 
 
     Use the following syntax to set the environment variable for C shell (csh):
@@ -428,7 +428,7 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
     **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\
 
-4.  Run the application.\
+4. Run the application.\
 
 
     With the runtime initialization file (xrt.ini), emulation configuration file (emconfig.json), and the `XCL_EMULATION_MODE` environment set, run the host executable with the desired command line argument.\
@@ -446,7 +446,7 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
 ### Running the Application Hardware Build
 
-TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardware attached.
+TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware attached.
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/lwu1600468728254.html) **for more information.**
 
@@ -454,7 +454,7 @@ TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardwar
 **TIP:** To use the accelerator card, you must have it installed as described in Getting Started with Alveo Data Center Accelerator Cards ([UG1301](https://www.xilinx.com/cgi-bin/docs/bkdoc?v=latest;k=accelerator-cards;d=ug1301-getting-started-guide-alveo-accelerator-cards.pdf)).
 {% endhint %}
 
-1.  Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
+1. Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
     ****
 
     This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/debuggingapplicationskernels.html#hsr1538574456889).\
@@ -465,14 +465,14 @@ TLDR: Make sure `XCL_EMULATION_MODE`  is unset. Use a node with the FPGA hardwar
    \
    **IMPORTANT:** The hardware build will not run if the `XCL_EMULATION_MODE` environment variable is set to an emulation target.\
 
-3.  For embedded platforms, boot the SD card.\
+3. For embedded platforms, boot the SD card.\
     \
     **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\
 
 
     For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
 
-4.  Run your application.\
+4. Run your application.\
 
 
     The specific command line to run the application will depend on your host code. A common implementation used in Xilinx tutorials and examples is as follows:

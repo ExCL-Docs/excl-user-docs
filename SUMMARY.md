@@ -48,6 +48,7 @@
 * [Visual Studio Code](quick-start-guides/visual-studio-code.md)
 * [Groq](quick-start-guides/groq.md)
 - [Devdocs](quick-start-guides/devdocs.md)
+- [Apptainer](quick-start-guides/apptainer.md)
 
 ## Software
 
