@@ -11,6 +11,7 @@ The documentation for hunter is built with GitLab-CI. Here are the relevant line
 ```yaml
 stages:
     - docs
+    - deploy_docs
 
 before_script:
     - source /auto/ciscratch/conda/etc/profile.d/conda.sh
@@ -24,10 +25,26 @@ docs-job:
         - cd docs
         - pip install sphinx sphinx-rtd-theme sphinx-serve recommonmark myst_parser sphinx-autoapi
         - make html
-        - rsync -a --delete _build/html/ ~/www/brisbane/hunter
     artifacts:
         paths:
             - docs/_build/html
+  
+.deploy_docs_common:
+    tags: [devdocs]
+    stage: deploy_docs
+    needs: [docs-job]
+    script:
+        - rsync -a --delete docs/_build/html/ ~/www/brisbane/hunter
+
+deploy_docs-job:
+    extends: .deploy_docs_common
+    only:
+        refs:
+            - develop
+  
+deploy_docs_manual-job:
+    extends: .deploy_docs_common
+    when: manual
 ```
 
 If you would like to host your project’s internal documentation on ExCL, please email [excl-help@ornl.gov](mailto:excl-help@ornl.gov) and we can help you get started with a subdomain and GitLab Runner.
