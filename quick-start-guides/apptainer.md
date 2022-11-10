@@ -36,7 +36,7 @@ Other systems can have Apptainer installed by request.
     - `%setup` is a scriplet which runs outside the container and can modify the host. Use `${APPTAINER_ROOTFS}` to access the files in the Apptainer image.
     - Environment variables defined in `%environment` are available only after the build, so if you need access to them for the build, define them in the `%post` section.
 - To use `--fakeroot` you must first have fakeroot configured for that user. This can be done with the command `sudo apptainer config fakeroot --add <user>`. See [User Namespaces & Fakeroot](https://apptainer.org/docs/admin/main/user_namespace.html)
-
+- To use X11 applications in Apptainer with over [ThinLinc](ThinLinc.md), you need to bind `/var/opt/thinlinc` with `--bind /var/opt/thinlinc` since that is where the user’s XAuthority file is stored.
 
 ## NFS Limitations
 
@@ -56,3 +56,10 @@ NFS filesystems support overlay mounts as a `lowerdir` only, and do not suppor
 - [Apptainer—CLI Run](https://apptainer.org/docs/user/1.0/cli/apptainer_run.html?highlight=run)
 - [Apptainer—Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind_paths_and_mounts.html)
 - [Apptainer—Definition Files](https://apptainer.org/docs/user/main/definition_files.html)
+
+# System Admin Notes
+- It is helpful to add commonly needed bind paths to `/etc/apptainer/apptainer.conf`. I have added the following bind commands to Zenith:
+```conf
+bind path = /noback
+bind path = /var/opt/thinlinc
+```
