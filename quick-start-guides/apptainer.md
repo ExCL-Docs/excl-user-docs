@@ -47,7 +47,7 @@ NFS filesystems support overlay mounts as a `lowerdir` only, and do not suppor
 - In setuid mode, you cannot use `--overlay mynfsdir/` to overlay a directory onto a container when the overlay (upperdir) directory is on an NFS filesystem. In non-setuid mode and fuse-overlayfs it is allowed but will be read-only.
 - When using `--fakeroot` and `/etc/subuid` mappings to build or run a container, your `TMPDIR` / `APPTAINER_TMPDIR` should not be set to an NFS location.
 - You should not run a sandbox container with `--fakeroot` and `/etc/subuid` mappings from an NFS location.
-        
+
 # Getting Started
 - [Apptainer—Documentation](https://apptainer.org/docs/user/1.0/introduction.html)
 - [Apptainer—Quickstart](https://apptainer.org/docs/user/main/quick_start.html)
