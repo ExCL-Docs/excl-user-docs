@@ -13,24 +13,24 @@ A Jupyter notebook server running on ExCL can be accessed via a local web browse
 
 These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster. If you want to access a different system, then replace `pcie` with the system you want to access.
 
-1.  Specify the ports that you want to use. Choose a different number from the default so that you don't conflict with other users.
+1. Specify the ports that you want to use. Choose a different number from the default so that you don't conflict with other users.
 
     ```
     export REMOTE_PORT=8888
     export LOCAL_PORT=8888
     ```
-2.  From your local machine connect to pcie using login.excl.ornl.gov as a proxy and local forward the jupyter port.
+2. From your local machine connect to pcie using login.excl.ornl.gov as a proxy and local forward the jupyter port.
 
     ```
     ssh -L $LOCAL_PORT:localhost:$REMOTE_PORT -J $USER@login.excl.ornl.gov $USER@pcie
     ```
 
-3.  (Optional) Load the anaconda module if you don't have jupyter notebook installed locally.
+3. (Optional) Load the anaconda module if you don't have jupyter notebook installed locally.
 
     ```
     module load anaconda3
     ```
-4.  Launch the Jupyter server on pcie
+4. Launch the Jupyter server on pcie
 
     ```
     export REMOTE_PORT=8888
@@ -40,31 +40,31 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
 
 If you ssh client is too old for proxyjump to work, you can always break up the process into anouther step.
 
-1.  From your local machine connect to login.excl.ornl.gov and local port forward port 8888.
+1. From your local machine connect to login.excl.ornl.gov and local port forward port 8888.
 
     ```
      $ ssh -L 8888:localhost:8888 <username>@login.excl.ornl.gov
     ```
-2.  From the login node connect to pcie and local port forward port 8888
+2. From the login node connect to pcie and local port forward port 8888
 
     ```
      $ ssh -L 8888:localhost:8888 pcie
     ```
-3.  Launch the Jupyter server on pcie
+3. Launch the Jupyter server on pcie
 
     ```
      $ jupyter notebook
     ```
-4.  Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:8888/?token=<token>`
+4. Connect to the Jupyter notebook using a web browser on your local machine. Use the token shown in the output from running the Jupyter server. Url: `http://localhost:8888/?token=<token>`
 
 ### Detailed instructions for Windows with MobaXterm
 
 These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster.
 
-1.  From your local machine connect to login.excl.ornl.gov using MobaXterm.
+1. From your local machine connect to login.excl.ornl.gov using MobaXterm.
 
     ![MobaXTerm SSH](../.gitbook/assets/mobaxterm-ssh.png)
-2.  Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888.
+2. Go to tools and click on MobaSSHTunnel. Use MobaSSHTunnel local forward port 8888.
 
     ![Click on MobaSSHTunnel](../.gitbook/assets/mobaxterm-ssh-tunnel.png)
 
@@ -81,12 +81,12 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
     ![Click the play button to start port forwarding](../.gitbook/assets/mobaxterm-play.png)
 
     Click the play button to start port forwarding
-3.  From the login node connect to pcie and local port forward port 8888
+3. From the login node connect to pcie and local port forward port 8888
 
     ```
      $ ssh -L 8888:localhost:8888 pcie
     ```
-4.  Launch the Jupyter server on pcie
+4. Launch the Jupyter server on pcie
 
     ```
      $ jupyter notebook
@@ -98,10 +98,10 @@ These instructions go over how to access a Jupyter notebook running on the pcie 
 These instructions go over how to access a Jupyter notebook running on the quad00 node in the ExCL Cluster using Visual Studio Code to handle port forwarding.
 
 1. Open Visual Studio Code
-2.  Make sure you have the Remote - SSH extension installed.
+2. Make sure you have the Remote - SSH extension installed.
 
     ![SSH Extension VS Code](../.gitbook/assets/visual-code-ssh-extension.png)
-3.  Setup .ssh
+3. Setup .ssh
 
     ![Navigate to the remote explorer settings.](../.gitbook/assets/visual-code-ssh-setup1.png)
 
@@ -114,17 +114,17 @@ These instructions go over how to access a Jupyter notebook running on the quad0
     ![Add the remote systems to connect to with the proxy command to connect through the login node.](../.gitbook/assets/visual-code-ssh-setup3.png)
 
     Add the remote systems to connect to with the proxy command to connect through the login node.
-4.  Connect to the remote system and open the Jupyter folder.
+4. Connect to the remote system and open the Jupyter folder.
 
     ![Connect step 1](../.gitbook/assets/visual-code-connect1.png)
 
     ![Open Folder](../.gitbook/assets/visual-code-connect2.png)
 
     Open Folder
-5.  Run the Jupyter notebook using the built-in terminal.
+5. Run the Jupyter notebook using the built-in terminal.
 
     ![Run Jupyter](../.gitbook/assets/visual-code-run.png)
-6.  Open the automatically forwarded port.
+6. Open the automatically forwarded port.
 
     ![Open Port](../.gitbook/assets/visual-code-open.png)
 
@@ -137,8 +137,28 @@ Anaconda3 is already installed in ExCL as a module and can be used to run Jupyte
 This section is a quick start to installing an anaconda python environment with Jupyter notebook.
 
 1. Follow [Conda and Spack Installation](conda-and-spack-installation.md#installing-conda) to install Conda.
-2.  Install Jupyter Notebook.
+2. Install Jupyter Notebook.
 
     ```
      $ conda install -c conda-forge notebook
     ```
+
+### Jupyter with conda environments
+
+See [How To Setup Jupyter Notebook In Conda Environment And Install Kernel - Python Engineer (python-engineer.com)](https://www.python-engineer.com/posts/setup-jupyter-notebook-in-conda-environment/).
+
+Create conda environment and activate it. Then install `ipykernel` and then install the kernel for use in Jupyter.
+```bash
+conda install ipykernel
+ipython kernel install --user --name=<any_name_for_kernel>
+```
+
+Use `jupyter kernelspec list` to view all the installed Jupyter kernels.
+```bash
+jupyter kernelspec list 
+```
+
+To uninstall a Jupyter kernel use uninstall.
+```bash
+jupyter kernelspec uninstall <unwanted-kernel>
+```
