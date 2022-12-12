@@ -23,6 +23,7 @@ Apptainer also has great support with Docker images.
 # Systems with Apptainer installed
 
 - docker
+- thunderx
 - zenith
 
 Other systems can have Apptainer installed by request.
