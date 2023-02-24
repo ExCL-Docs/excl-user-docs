@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Acknowledgment](acknowledgment.md)
 * [System Overview](system-overview/README.md)
-  * [Affirmed](system-overview/affirmed.md)
+  * [affirmed](system-overview/affirmed.md)
   * [amundsen](system-overview/amundsen.md)
   * [apachepass](system-overview/apachepass.md)
   * [clark](system-overview/clark.md)
