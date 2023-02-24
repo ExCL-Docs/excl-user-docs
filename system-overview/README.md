@@ -1,32 +1,67 @@
 # System Overview
 
-See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) for additional information.
+## ExCL Server List with Accelerators
 
-| System Name                       | Host              | Description                                                                                                                                                |
-| --------------------------------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AMD Radeon VII GPU                | radeon            | Intel W-2123 CPU @3.6 GHz 1x AMD Vega20 GPU [More info](https://docs.excl.ornl.gov/systems/radeon)                                                         |
-| AMD MI50 GPU                      | explorer          | AMD 7702 64-core CPU  2x AMD MI50 GPUs [More info](https://docs.excl.ornl.gov/systems/explorer)                                                            |
-| AMD MI100 GPU                     | cousteau          | AMD 7272 12-core CPU 2x AMD MI100 GPUs [More info](https://docs.excl.ornl.gov/systems/cousteau)                                                            |
-| Nvidia M2090 GPU                  | kold00            | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia M2090 GPUs [More info](https://docs.excl.ornl.gov/systems/kold00)                                                |
-| Nvidia M2090 GPU                  | kold01            | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia M2090 GPUs [More info](https://docs.excl.ornl.gov/systems/kold01)                                                |
-| Nvidia K20m GPU                   | kold02            | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia K20m GPUs  [More info](https://docs.excl.ornl.gov/systems/kold02)                                                |
-| Nvidia M2090 GPU                  | kold03            | Intel Xeon E5-2670 CPU @ 2.6GHz 2x Nvidia M2090 GPUs [More info](https://docs.excl.ornl.gov/systems/kold03)                                                |
-| Nvidia P100 GPU                   | oswald00          | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x Nvidia P100 GPU (12GB) [More info](https://docs.excl.ornl.gov/systems/oswald00)                                      |
-| Nvidia P100 GPU                   | oswald01          | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x Nvidia P100 GPU (12GB) [More info](https://docs.excl.ornl.gov/systems/oswald01)                                      |
-| Nvidia P100 GPU                   | oswald02          | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x Nvidia P100 GPU (12GB) [More info](https://docs.excl.ornl.gov/systems/oswald02)                                      |
-| Nvidia RTX2080 GPU                | oswald03          | Intel Xeon E5-2683 v4 CPU @ 2.1GHz 1x GeForce RTX2080 GPU [More info](https://docs.excl.ornl.gov/systems/oswald03)                                         |
-| Nvidia P100 GPU                   | pcie              | Intel Xeon Gold 6130 CPU @ 2.1 GHz 1x Nvidia P100 GPU (12GB) [More info](https://docs.excl.ornl.gov/systems/pcie)                                          |
-| Nvidia V100 GPU                   | leconte           | IBM POWER9 CPU 6x Nvidia V100 SXM2 GPU (16GB) [More info](https://docs.excl.ornl.gov/systems/leconte)                                                      |
-| Nvidia V100 GPU                   | equinox           | Intel Xeon E5-2698 v4 CPU @ 2.20 GHz 4x Nvidia V100 DGXS GPU (32GB) [More info](https://docs.excl.ornl.gov/systems/equinox)                                |
-| Nvidia Jetson                     | xavier            | ARMv8 8-core  rev0  1x Nvidia Volta 512-core GPU 2x Nvidia DL accelerators 32 GB LPDDR4x 64 GB eMMC [More info](https://docs.excl.ornl.gov/systems/xavier) |
-| Qualcomm Snapdragon 855           | amundsen, mcmurdo | ARM Cortex A76/A55 1x Adreno 640 GPU 1x Hexagon 690 DSP [More info](https://docs.excl.ornl.gov/systems/snapdragon)                                         |
-| Intel Stratix V FPGA              | newark            | Intel Xeon  E5520 CPU @2.27 GHz 1x Intel Stratix V  FPGA [More info](https://docs.excl.ornl.gov/systems/newark)                                            |
-| Intel Arria 10 FPGA               | pcie              | Intel Xeon E5-2683 v4 CPU @ 2.1 GHz 1x Intel Arria 10 FPGA [More info](https://docs.excl.ornl.gov/systems/pcie)                                            |
-| Intel Stratix 10 FPGA             | pcie              | Intel Xeon Gold 6130 CPU @ 2.1 GHz 1x Intel Stratix 10 FPGA [More info](https://docs.excl.ornl.gov/systems/pcie)                                           |
-| Xilinx Zynq ZCU 102               | n/a               |                                                                                                                                                            |
-| Xilinx Zynq ZCU 106               | n/a               |                                                                                                                                                            |
-| Xilinx Alveo U250                 | pcie              | Intel Xeon Gold 6130 CPU @ 2.1 GHz 1x Xilinx Alveo U250 FPGA [More info](https://docs.excl.ornl.gov/systems/pcie)                                          |
-| Intel Optane DC Persistent Memory | apachepass        | Intel Xeon Gold 6248 @ 2.5 GHz 1.5 TB Optane DIMMs 384 GiB of DRAM [More info](https://docs.excl.ornl.gov/systems/apachepass)                              |
-| Intel Skylake CPU                 | quad\[0-3]        | Intel Xeon Silver 4114 CPU @ 2.2GHz [More info](https://docs.excl.ornl.gov/systems/quad\[00-03])                                                           |
-| Emu Technology CPU                | emu               |                                                                                                                                                            |
-| Cavium CPU                        | thunderx          | Cavium ThunderX2 56-core CPU [More info](https://docs.excl.ornl.gov/systems/thunderx)                                                                      |
+| Host Name              | Description                              | OS                    | Accelerators or other special hardware                                |
+| ---                    | ---                                      | ---                   | ---                                                                   |
+| affirmed               | Triple Crown AMD  (128 cores/1 TB)       | Ubuntu 20.04          | Bluefield 2                                                           |
+| amundsen               | Desktop embedded system development      | Ubuntu 20.04          | Snapdragon 855 (retiring)                                             |
+| apachepass             | ApachePass memory system                 | Centos 7.9            | 375 GB Apachepass memory                                              |
+| clark                  | Desktop embedded system development      | Ubuntu 22.04          |                                                                       |
+| cousteau               | HP AMD 24 Core Server 256 GB             | Ubuntu 22.04          | 2 AMD MI100 GPUs                                                      |
+| docker (quad03)        | Intel 20 Core Server 96 GB               | Ubuntu 20.04          | Docker development environment                                        |
+| equinox                | DGX Workstation                          | Ubuntu 20.04          | 4 Tesla V100 32 GB GPUs                                               |
+| excl-us00              | Intel 16 Core Utility Server 196 GB      |                       |                                                                       |
+| excl-us01 (hypervisor) | Intel 16 Core Utility Server 196 GB      |                       |                                                                       |
+| excl-us03              | Intel 16 Core Utility Server 196 GB      |                       |                                                                       |
+| explorer               | AMD 128 Core 512 Gb                      |                       | 2 AMD MI50 GPUs                                                       |
+| justify                | Triple Crown AMD  (128 cores/1 TB)       | Centos 7.9            |                                                                       |
+| leconte                | Summit server Power9 42 Cores            | Centos 8.4            | 6 Tesla V100 16 Gb                                                    |
+| lewis                  | Desktop embedded system development      | Ubuntu 22.04          |                                                                       |
+| mcmurdo                | Desktop embedded system development      | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                             |
+| milan0                 | AMD Milan server                         | Ubuntu 22.04          | 2 * Nvidia A100 (not deployed)                                        |
+| milan[1-3]             | AMD Milan server                         | Ubuntu 22.04 or other | heterogeneous research <br> not deployed                              |
+| minim1                 | Apple M1 Desktop                         | OSX                   |                                                                       |
+| oswald00               | Intel 32 Core 256 GB                     | Centos 7.9            | Tesla P100 & Nallatech FPGA                                           |
+| oswald01               | failed, all usable accelerators salvaged |                       |                                                                       |
+| oswald02               | Intel 32 Core 256 GB                     | Centos 7.9            | Tesla P100 & Nallatech FPGA                                           |
+| oswald03               | Intel 32 Core 256 GB                     | Centos 7.9            | Tesla P100 & Nallatech FPGA                                           |
+| oswald                 | Intel 16 Core 128 GB utility server      | Centos 7.9            |                                                                       |
+| [pcie](system-overview/pcie.md) | Intel 32 Core 196 GB                     | Ubuntu 22.04          | Xylinx U250 <br> Nalllatech Stratix 10 <br> Tesla P100 <br> Groq Card |
+| pharoah                | Triple Crown AMD  (128 cores/1 TB)       | Centos 7.9            |                                                                       |
+| quad00 (graylog)       | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                       |
+| quad01                 | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                       |
+| quad02                 | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                       |
+| radeon                 | Intel 4 Core 64 GB                       | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                                          |
+| secretariat            | Triple Crown AMD  (128 cores/1 TB)       | Ubuntu 20.04          | Bluefield 2                                                           |
+| thunderx               | ARM Cavium ThunderX2 Server 128 GB       | Centos Stream 8       |                                                                       |
+| xavier[1-3]            | Nvidia Jetson AGX                        | Ubuntu                | Volta GPU                                                             |
+| xavier[4-5]            | Nvidia Jetsion AGX Orin                  | Ubuntu                | Ampere GPU (not deployed)                                             |
+| zenith                 | AMD Ryzen 32 Core 132 Gb                 | Ubuntu 22.04          | Nvidia GTX 3090 <br> AMD Radeon RX 6800                               |
+
+## New Systems and Devices to be Deployed
+
+- Intel ARC GPU
+- Achronix FPGA
+- Xilinx U280
+
+See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) for additional information (outdated).
+
+## Accelerator Highlights
+
+| Accelerator Name                  | Host(s)           | 
+| --------------------------------- | ----------------- | 
+| AMD Radeon VII GPU                | radeon            | 
+| AMD MI50 GPU                      | explorer          |
+| AMD MI100 GPU                     | cousteau          | 
+| Nvidia P100 GPU                   | pcie              | 
+| Nvidia V100 GPU                   | equinox, leconte  |
+| Nvidia Jetson                     | xavier            |
+| Qualcomm Snapdragon 855           | amundsen, mcmurdo | 
+| Intel Stratix 10 FPGA             | pcie              | 
+| Xilinx Zynq ZCU 102               | n/a               | 
+| Xilinx Zynq ZCU 106               | n/a               | 
+| Xilinx Alveo U250                 | pcie              | 
+| Intel Optane DC Persistent Memory | apachepass        | 
+| Emu Technology CPU                | emu               | 
+| Cavium CPU                        | thunderx          | 
