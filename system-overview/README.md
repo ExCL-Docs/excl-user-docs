@@ -27,7 +27,7 @@
 | oswald02               | Intel 32 Core 256 GB                     | Centos 7.9            | Tesla P100 & Nallatech FPGA                                           |
 | oswald03               | Intel 32 Core 256 GB                     | Centos 7.9            | Tesla P100 & Nallatech FPGA                                           |
 | oswald                 | Intel 16 Core 128 GB utility server      | Centos 7.9            |                                                                       |
-| [pcie](system-overview/pcie.md) | Intel 32 Core 196 GB                     | Ubuntu 22.04          | Xylinx U250 <br> Nalllatech Stratix 10 <br> Tesla P100 <br> Groq Card |
+| [pcie](pcie.md) | Intel 32 Core 196 GB                     | Ubuntu 22.04          | Xylinx U250 <br> Nalllatech Stratix 10 <br> Tesla P100 <br> Groq Card |
 | pharoah                | Triple Crown AMD  (128 cores/1 TB)       | Centos 7.9            |                                                                       |
 | quad00 (graylog)       | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                       |
 | quad01                 | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                       |
