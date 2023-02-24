@@ -2,8 +2,6 @@
 description: Overview of ExCL Systems
 ---
 
-Change to trigger link fix
-
 # System Overview
 
 ## ExCL Server List with Accelerators
