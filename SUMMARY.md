@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Acknowledgment](acknowledgment.md)
 * [System Overview](system-overview/README.md)
-  * [affirmed](system-overview/affirmed.md)
+  * [Affirmed](system-overview/affirmed.md)
   * [amundsen](system-overview/amundsen.md)
   * [apachepass](system-overview/apachepass.md)
   * [clark](system-overview/clark.md)
@@ -29,7 +29,6 @@
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
 
-
 ## ExCl Support
 
 * [Support](excl-support/support/README.md)
@@ -51,8 +50,8 @@
 * [Vitis FPGA Development](quick-start-guides/vitis.md)
 * [Visual Studio Code](quick-start-guides/visual-studio-code.md)
 * [Groq](quick-start-guides/groq.md)
-- [Devdocs](quick-start-guides/devdocs.md)
-- [Apptainer](quick-start-guides/apptainer.md)
+* [Devdocs](quick-start-guides/devdocs.md)
+* [Apptainer](quick-start-guides/apptainer.md)
 
 ## Software
 
