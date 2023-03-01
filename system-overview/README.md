@@ -23,8 +23,9 @@ description: Overview of ExCL Systems
 | [leconte](leconte.md)                | Summit server Power9 42 Cores            | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
 | [lewis](lewis.md)                    | Desktop embedded system development      | Ubuntu 22.04          |                                                                        |
 | [mcmurdo](mcmurdo.md)                | Desktop embedded system development      | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
-| [milan0](milan.md)                   | AMD Milan server                         | Ubuntu 22.04          | 2 \* Nvidia A100 (not deployed)                                        |
-| [milan\[1-3\]](milan.md)             | AMD Milan server                         | Ubuntu 22.04 or other | <p>heterogeneous research<br>not deployed</p>                          |
+| [milan0](milan.md)                   | AMD Milan server                         | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
+| [milan\[1-2\]](milan.md)             | AMD Milan server                         | Ubuntu 22.04 or other | Groq                                                                   |
+| [milan3](milan.md)                   | AMD Milan server                         | Ubuntu 22.04 or other | <p>heterogeneous research<br>not deployed</p>                          |
 | [minim1](minim1.md)                  | Apple M1 Desktop                         | OSX                   |                                                                        |
 | [oswald00](oswald.md)                | Intel 32 Core 256 GB                     | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald01](oswald.md)                | failed, all usable accelerators salvaged |                       |                                                                        |
@@ -45,9 +46,12 @@ description: Overview of ExCL Systems
 
 ## New Systems and Devices to be Deployed
 
+* 2 Snapdragon HDK & Display
 * Intel ARC GPU
 * Achronix FPGA
+* AGX Orin Developer Kits
 * Xilinx U280
+* 2 Ettus x410 high-performance, multi-channel, Zynq US+ RFSoC based software defined radio (SDR)
 
 See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) for additional information (outdated).
 
@@ -58,6 +62,7 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | AMD Radeon VII GPU                       | radeon            |
 | AMD MI50 GPU                             | explorer          |
 | AMD MI100 GPU                            | cousteau          |
+| [Groq](../quick-start-guides/groq.md)    | milan[1-2]        |
 | Nvidia P100 GPU                          | pcie              |
 | Nvidia V100 GPU                          | equinox, leconte  |
 | Nvidia Jetson                            | xavier            |
@@ -66,6 +71,14 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | Xilinx Zynq ZCU 102                      | n/a               |
 | Xilinx Zynq ZCU 106                      | n/a               |
 | Xilinx Alveo U250                        | pcie              |
+
+## Unique Architecture Highlights
+
+| Accelerator Name                         | Host(s)           |
+| ---------------------------------------- | ----------------- |
 | Intel Optane DC Persistent Memory        | apachepass        |
-| Emu Technology CPU                       | emu               |
+| Emu Technology CPU                       | [emu](emu.md)     |
 | Cavium CPU                               | thunderx          |
+
+## Other Equipment
+- RTP164 High Performance Oscilloscope

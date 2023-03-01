@@ -9,6 +9,7 @@
   * [clark](system-overview/clark.md)
   * [cousteau](system-overview/cousteau.md)
   * [docker](system-overview/docker.md)
+  * [emu](system-overview/emu.md)
   * [equinox](system-overview/equinox.md)
   * [excl-us](system-overview/excl-us.md)
   * [explorer](system-overview/explorer.md)
