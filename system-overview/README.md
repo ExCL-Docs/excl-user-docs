@@ -19,7 +19,6 @@ description: Overview of ExCL Systems
 | [excl-us01](excl-us.md) (hypervisor) | Intel 16 Core Utility Server 196 GB      |                       |                                                                        |
 | [excl-us03](excl-us.md)              | Intel 16 Core Utility Server 196 GB      |                       |                                                                        |
 | [explorer](explorer.md)              | AMD 128 Core 512 Gb                      |                       | 2 AMD MI50 GPUs                                                        |
-| [justify](justify.md)                | Triple Crown AMD (128 cores/1 TB)        | Centos 7.9            |                                                                        |
 | [leconte](leconte.md)                | Summit server Power9 42 Cores            | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
 | [lewis](lewis.md)                    | Desktop embedded system development      | Ubuntu 22.04          |                                                                        |
 | [mcmurdo](mcmurdo.md)                | Desktop embedded system development      | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
@@ -43,7 +42,6 @@ description: Overview of ExCL Systems
 | [xavier\[1-3\]](xavier.md)           | Nvidia Jetson AGX                        | Ubuntu                | Volta GPU                                                              |
 | [xavier\[4-5\]](xavier.md)           | Nvidia Jetsion AGX Orin                  | Ubuntu                | Ampere GPU (not deployed)                                              |
 | [zenith](zenith.md)                  | AMD Ryzen 32 Core 132 Gb                 | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
-
 ## New Systems and Devices to be Deployed
 
 * 2 Snapdragon HDK & Display
