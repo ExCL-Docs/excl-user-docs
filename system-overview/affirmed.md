@@ -2,6 +2,13 @@
 
 Affirmed is one of our triple crown servers (named after Triple Crown winners).  These are highly capable large memory servers
 
+It currently runs Ubuntu 22.04.
+
+## Specialized hardware
+
+  - BlueField-2 DPU connected to 100Gb Infiniband Network
+     - Can also be connected to 10Gb ethernet network
+     - used to investigate properties and usage of the NVidia BlueField-2 card (ConnectX-6 VPI with DPU).
 
 ## All Triple Crown Servers
 
