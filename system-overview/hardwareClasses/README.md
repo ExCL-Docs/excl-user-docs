@@ -1,3 +1,3 @@
-# Z2
+# Hardware Classes
 
-Z2 system overview.
+The Experimental Computing Laboratory has several systems that are near-identical.  Their configuration is discussed here.
