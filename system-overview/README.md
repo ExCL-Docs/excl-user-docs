@@ -42,6 +42,7 @@ description: Overview of ExCL Systems
 | [xavier\[1-3\]](xavier.md)           | Nvidia Jetson AGX                        | Ubuntu                | Volta GPU                                                              |
 | [xavier\[4-5\]](xavier.md)           | Nvidia Jetsion AGX Orin                  | Ubuntu                | Ampere GPU (not deployed)                                              |
 | [zenith](zenith.md)                  | AMD Ryzen 32 Core 132 Gb                 | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
+
 ## New Systems and Devices to be Deployed
 
 * 2 Snapdragon HDK & Display
