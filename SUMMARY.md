@@ -29,7 +29,7 @@
   * [thunderx](system-overview/thunderx.md)
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
-  * [Hardware Classes](system-overview/hardwareClasses/README.md)
+  * [Hardware Classes](system-overview/hardwareclasses/README.md)
     * [Triple Crown](system-overview/hardwareclasses/triple-crown.md)
 
 ## ExCl Support
