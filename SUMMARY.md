@@ -30,8 +30,7 @@
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
   * [Hardware Classes](system-overview/hardwareClasses/README.md)
-    * [oswald9](system-overview/hardwareClasses/oswald9.md)
-    * [oswald10](system-overview/hardwareClasses/oswald10.md)
+    * [Triple Crown](system-overview/hardwareClasses/tripleCrown.md)
 
 ## ExCl Support
 
