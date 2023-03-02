@@ -35,9 +35,7 @@
 
 ## ExCl Support
 
-* [Support](excl-support/support/README.md)
-  * [ExCl Team](excl-support/support/excl-team.md)
-  * [ExCL Acknowledgement](excl-support/support/excl-acknowledgement.md)
+* [ExCL Team](excl-support/excl-team.md)
 * [Access to ExCL](excl-support/access.md)
 * [Contributing](excl-support/contributing.md)
 * [Glossary & Acronyms](excl-support/glossary-and-acronyms.md)
