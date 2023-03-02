@@ -37,7 +37,7 @@ description: Overview of ExCL Systems
 | [quad01](quad.md)                    | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                        |
 | [quad02](quad.md)                    | Intel 20 Core 96 GB utility server       | Centos 7.9            |                                                                        |
 | [radeon](radeon.md)                  | Intel 4 Core 64 GB                       | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
-| [secretariat](broken-reference)      | Triple Crown AMD (128 cores/1 TB)        | Ubuntu 20.04          | Bluefield 2                                                            |
+| [secretariat](secretariat.md)        | Triple Crown AMD (128 cores/1 TB)        | Ubuntu 20.04          | Bluefield 2                                                            |
 | [thunderx](thunderx.md)              | ARM Cavium ThunderX2 Server 128 GB       | Centos Stream 8       |                                                                        |
 | [xavier\[1-3\]](xavier.md)           | Nvidia Jetson AGX                        | Ubuntu                | Volta GPU                                                              |
 | [xavier\[4-5\]](xavier.md)           | Nvidia Jetsion AGX Orin                  | Ubuntu                | Ampere GPU (not deployed)                                              |
@@ -61,7 +61,7 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | AMD Radeon VII GPU                       | radeon            |
 | AMD MI50 GPU                             | explorer          |
 | AMD MI100 GPU                            | cousteau          |
-| [Groq](../quick-start-guides/groq.md)    | milan\[1-2]       |
+| [Groq](../quick-start-guides/groq.md)    | milan[1-2]        |
 | Nvidia P100 GPU                          | pcie              |
 | Nvidia V100 GPU                          | equinox, leconte  |
 | Nvidia Jetson                            | xavier            |
@@ -73,12 +73,11 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 
 ## Unique Architecture Highlights
 
-| Accelerator Name                  | Host(s)       |
-| --------------------------------- | ------------- |
-| Intel Optane DC Persistent Memory | apachepass    |
-| Emu Technology CPU                | [emu](emu.md) |
-| Cavium CPU                        | thunderx      |
+| Accelerator Name                         | Host(s)           |
+| ---------------------------------------- | ----------------- |
+| Intel Optane DC Persistent Memory        | apachepass        |
+| Emu Technology CPU                       | [emu](emu.md)     |
+| Cavium CPU                               | thunderx          |
 
 ## Other Equipment
-
-* RTP164 High Performance Oscilloscope
+- RTP164 High Performance Oscilloscope

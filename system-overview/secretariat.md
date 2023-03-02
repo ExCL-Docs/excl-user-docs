@@ -1,6 +1,6 @@
-# affirmed
+# secretariat
 
-Affirmed is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
+Secretariat is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
 
 It currently runs Ubuntu 22.04.
 
@@ -26,7 +26,3 @@ It currently runs Ubuntu 22.04.
 ### Usage
 
 These servers are generally used for customized VM environments, which are often scheduled via SLURM.
-
-{% content-ref url="affirmed.md" %}
-[affirmed.md](affirmed.md)
-{% endcontent-ref %}
