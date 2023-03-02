@@ -29,9 +29,9 @@
   * [thunderx](system-overview/thunderx.md)
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
-  * [z2](system-overview/z2.md)
-    * [oswald9](system-overview/oswald9.md)
-    * [oswald10](system-overview/oswald10.md)
+  * [z2](system-overview/z2/README.md)
+    * [oswald9](system-overview/z2/oswald9.md)
+    * [oswald10](system-overview/z2/oswald10.md)
 
 ## ExCl Support
 
