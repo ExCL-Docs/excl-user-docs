@@ -29,9 +29,9 @@
   * [thunderx](system-overview/thunderx.md)
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
-  * subdirectory
-    * [oswald](system-overview/oswald.md)
-    * [oswald](system-overview/oswald.md)
+  * [z2](system-overview/README.md)
+    * [oswald9](system-overview/oswald.md)
+    * [oswald10](system-overview/oswald.md)
 
 ## ExCl Support
 
