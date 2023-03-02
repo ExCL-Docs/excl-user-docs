@@ -1,4 +1,4 @@
-# Table of contents 
+# Table of contents
 
 * [Introduction](README.md)
 * [Acknowledgment](acknowledgment.md)
@@ -30,7 +30,7 @@
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
   * [Hardware Classes](system-overview/hardwareClasses/README.md)
-    * [Triple Crown](system-overview/hardwareClasses/tripleCrown.md)
+    * [Triple Crown](system-overview/hardwareclasses/triple-crown.md)
 
 ## ExCl Support
 
