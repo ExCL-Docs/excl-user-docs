@@ -2,7 +2,7 @@
 description: Affirmed is one of our triple crown servers (named after Triple Crown winners)
 ---
 
-# affirmed
+# secretariat
 
 &#x20;It currently runs Ubuntu 22.04.
 

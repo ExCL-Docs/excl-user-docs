@@ -24,7 +24,7 @@
   * [pharoah](system-overview/pharoah.md)
   * [quad](system-overview/quad.md)
   * [radeon](system-overview/radeon.md)
-  * [secretariat](system-overview/secretariat.md)
+  * [secretariat](system-overview/affirmed-1.md)
   * [snapdragon](system-overview/snapdragon.md)
   * [thunderx](system-overview/thunderx.md)
   * [xavier](system-overview/xavier.md)
