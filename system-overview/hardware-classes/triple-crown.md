@@ -1,5 +1,5 @@
 ---
-description: High performance build and compute servers
+description: HP Large Memory / Many Core servers
 ---
 
 # Triple Crown
