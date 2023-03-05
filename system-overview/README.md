@@ -1,5 +1,7 @@
 ---
 description: Overview of ExCL Systems
+cover: ../.gitbook/assets/systems-image (1).jpg
+coverY: 0
 ---
 
 # System Overview
@@ -61,7 +63,7 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | AMD Radeon VII GPU                       | radeon            |
 | AMD MI50 GPU                             | explorer          |
 | AMD MI100 GPU                            | cousteau          |
-| [Groq](../quick-start-guides/groq.md)    | milan[1-2]        |
+| [Groq](../quick-start-guides/groq.md)    | milan\[1-2]       |
 | Nvidia P100 GPU                          | pcie              |
 | Nvidia V100 GPU                          | equinox, leconte  |
 | Nvidia Jetson                            | xavier            |
@@ -73,11 +75,12 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 
 ## Unique Architecture Highlights
 
-| Accelerator Name                         | Host(s)           |
-| ---------------------------------------- | ----------------- |
-| Intel Optane DC Persistent Memory        | apachepass        |
-| Emu Technology CPU                       | [emu](emu.md)     |
-| Cavium CPU                               | thunderx          |
+| Accelerator Name                  | Host(s)       |
+| --------------------------------- | ------------- |
+| Intel Optane DC Persistent Memory | apachepass    |
+| Emu Technology CPU                | [emu](emu.md) |
+| Cavium CPU                        | thunderx      |
 
 ## Other Equipment
-- RTP164 High Performance Oscilloscope
+
+* RTP164 High Performance Oscilloscope
