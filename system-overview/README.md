@@ -10,7 +10,7 @@ coverY: 0
 
 | Host Name                            | Description                         | OS                    | Accelerators or other special hardware                                 |
 | ------------------------------------ | ----------------------------------- | --------------------- | ---------------------------------------------------------------------- |
-| [affirmed](affirmed.md)              | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | <p>Bluefield 2 </p><p>NIC/DPUs</p>                                     |
+| [affirmed](triple-crown.md#Affirmed)              | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | <p>Bluefield 2 </p><p>NIC/DPUs</p>                                     |
 | [amundsen](amundsen.md)              | Desktop embedded system development | Ubuntu 20.04          | Snapdragon 855 (desktop retiring)                                      |
 | [apachepass](apachepass.md)          | ApachePass memory system            | Centos 7.9            | 375 GB Apachepass memory                                               |
 | [clark](clark.md)                    | Desktop embedded system development | Ubuntu 22.04          | Intel A770 Accelerator                                                 |
@@ -21,7 +21,7 @@ coverY: 0
 | [excl-us01](excl-us.md) (hypervisor) | Intel 16 Core Utility Server 196 GB |                       |                                                                        |
 | [excl-us03](excl-us.md)              | Intel 16 Core Utility Server 196 GB |                       |                                                                        |
 | [explorer](explorer.md)              | AMD 128 Core 512 Gb                 | Ubuntu 22.04          | 2 AMD MI50 GPUs                                                        |
-| [justify](broken-reference)          | Triple Crown AMD (128 cores/ TB)    | Centos 7.9            |                                                                        |
+| [justify](triple-crown.md#Justify)          | Triple Crown AMD (128 cores/ TB)    | Centos 7.9            |                                                                        |
 | [leconte](leconte.md)                | Summit server Power9 42 Cores       | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
 | [lewis](lewis.md)                    | Desktop embedded system development | Ubuntu 22.04          |                                                                        |
 | [mcmurdo](mcmurdo.md)                | Desktop embedded system development | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
@@ -34,12 +34,12 @@ coverY: 0
 | [oswald03](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald](oswald.md)                  | Intel 16 Core 128 GB utility server | Centos 7.9            |                                                                        |
 | [pcie](pcie.md)                      | Intel 32 Core 196 GB                | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
-| [pharoah](pharoah.md)                | Triple Crown AMD (128 cores/1 TB)   | Centos 7.9            |                                                                        |
+| [pharoah](triple-crown.md#Pharoah)                | Triple Crown AMD (128 cores/1 TB)   | Centos 7.9            |                                                                        |
 | [quad00](quad.md) (graylog)          | Intel 20 Core 96 GB utility server  | Centos 7.9            |                                                                        |
 | [quad01](quad.md)                    | Intel 20 Core 96 GB utility server  | Centos 7.9            |                                                                        |
 | [quad02](quad.md)                    | Intel 20 Core 96 GB utility server  | Centos 7.9            |                                                                        |
 | [radeon](radeon.md)                  | Intel 4 Core 64 GB                  | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
-| [secretariat](secretariat.md)        | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
+| [secretariat](triple-crown.md#Secretariat)        | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
 | [thunderx](thunderx.md)              | ARM Cavium ThunderX2 Server 128 GB  | Centos Stream 8       |                                                                        |
 | [xavier\[1-3\]](xavier.md)           | Nvidia Jetson AGX                   | Ubuntu                | Volta GPU                                                              |
 | [xavier\[4-5\]](xavier.md)           | Nvidia Jetsion AGX Orin             | Ubuntu                | Ampere GPU (not deployed)                                              |
