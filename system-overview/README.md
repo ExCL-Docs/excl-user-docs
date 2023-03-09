@@ -1,6 +1,6 @@
 ---
 description: Overview of ExCL Systems
-cover: ../.gitbook/assets/systems-image (1).jpg
+cover: ../.gitbook/assets/systems-image.jpg
 coverY: 0
 ---
 
