@@ -27,37 +27,35 @@ Affirmed is one of our triple crown servers (named after Triple Crown winners). 
 
 It currently runs Ubuntu 22.04.
 
-### Specialized hardware
+#### Specialized hardware
 
 * BlueField-2 DPU connected to 100Gb Infiniband Network
   * Can also be connected to 10Gb ethernet network
   * used to investigate properties and usage of the NVidia BlueField-2 card (ConnectX-6 VPI with DPU).
 
-### Usage
+#### Usage
 
 These servers are generally used for customized VM environments, which are often scheduled via SLURM.
 
 ## Justify
 
-Justify  is one of our triple crown servers (named after Triple Crown winners).  These are highly capable large memory servers
+Justify is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
 
 It currently runs Centos 7.9.
 
-### Usage
+#### Usage
 
-These servers are generally used for customized VM environments, which are 
-often scheduled via SLURM.
+These servers are generally used for customized VM environments, which are often scheduled via SLURM.
 
 ## Pharaoh
 
-Pharaoh is one of our triple crown servers (named after Triple Crown winners).  These are highly capable large memory servers
+Pharaoh is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
 
 It currently runs Centos 7.9.
 
-### Usage
+#### Usage
 
-These servers are generally used for customized VM environments, which are 
-often scheduled via SLURM.
+These servers are generally used for customized VM environments, which are often scheduled via SLURM.
 
 ## Secretariat
 
@@ -65,12 +63,12 @@ Secretariat is one of our triple crown servers (named after Triple Crown winners
 
 It currently runs Ubuntu 22.04.
 
-### Specialized hardware
+#### Specialized hardware
 
 * BlueField-2 DPU connected to 100Gb Infiniband Network
   * Can also be connected to 10Gb ethernet network
   * used to investigate properties and usage of the NVidia BlueField-2 card (ConnectX-6 VPI with DPU).
 
-### Usage
+#### Usage
 
 These servers are generally used for customized VM environments, which are often scheduled via SLURM.
