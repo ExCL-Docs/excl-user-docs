@@ -11,7 +11,7 @@ The system is
 * Penguin Computing Relion 2903GT
 * Gigabyte motherboard MD90-FS0-ZB
 * 256 GB memory
-* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
+* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz 2x16 cores no hyperthreading
 * Centos
 
 ### Access
@@ -28,6 +28,10 @@ Please send assistance requests to excl-help@ornl.gov.
 
 ## oswald01
 
+{% hint style="danger" %}
+Oswald01 has been decommissioned due to a hardware failure.
+{% endhint %}
+
 ### Description
 
 This system is a generic development server purchased with the intent of housing various development boards as needed.
@@ -37,7 +41,7 @@ The system is
 * Penguin Computing Relion 2903GT
 * Gigabyte motherboard MD90-FS0-ZB
 * 256 GB memory
-* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
+* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz 2x16 cores no hyperthreading
 * Centosa
 * Micron 9100 NVM 2.4TB MTFDHAX214MCF
 
@@ -59,7 +63,6 @@ There is not currently special access permissions. The system is available to Ex
 
 Please send assistance requests to excl-help@ornl.gov.
 
-
 ## oswald02
 
 ### Description
@@ -71,7 +74,7 @@ The system is
 * Penguin Computing Relion 2903GT
 * Gigabyte motherboard MD90-FS0-ZB
 * 256 GB memory
-* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
+* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz 2x16 cores no hyperthreading
 * Centos
 
 ### Access
@@ -99,7 +102,7 @@ The system is
 * Penguin Computing Relion 2903GT
 * Gigabyte motherboard MD90-FS0-ZB
 * 256 GB memory
-* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz  2x16 cores no hyperthreading
+* Intel(R) Xeon(R) CPU E5-2683 v4 @ 2.10GHz 2x16 cores no hyperthreading
 * Centos
 
 ### Access
