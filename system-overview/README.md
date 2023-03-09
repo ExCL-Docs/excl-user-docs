@@ -29,7 +29,6 @@ coverY: 0
 | [oswald00](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald02](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald03](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [oswald](oswald.md)                  | Intel 16 Core 128 GB utility server | Centos 7.9            |                                                                        |
 | [pcie](pcie.md)                      | Intel 32 Core 196 GB                | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
 | [pharoah](triple-crown.md#pharoah)                | Triple Crown AMD (128 cores/1 TB)   | Centos 7.9            |                                                                        |
 | [radeon](radeon.md)                  | Intel 4 Core 64 GB                  | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
@@ -86,6 +85,7 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 | excl-us00                            | Intel 16 Core Utility Server 196 GB |                       |
 | excl-us01 (hypervisor)               | Intel 16 Core Utility Server 196 GB |                       |
 | excl-us03                            | Intel 16 Core Utility Server 196 GB |                       |
+| oswald                   | Intel 16 Core 128 GB utility server | Centos 7.9            |                                                                        |
 | quad00                               | Intel 20 Core 96 GB utility server  | Centos 7.9            |
 | quad01                               | Intel 20 Core 96 GB utility server  | Centos 7.9            |
 | quad02                               | Intel 20 Core 96 GB utility server  | Centos 7.9            |
