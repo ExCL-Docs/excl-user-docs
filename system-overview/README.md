@@ -17,9 +17,6 @@ coverY: 0
 | [cousteau](cousteau.md)              | HP AMD 24 Core Server 256 GB        | Ubuntu 22.04          | 2 AMD MI100 GPUs                                                       |
 | [docker](docker.md) (quad03)         | Intel 20 Core Server 96 GB          | Ubuntu 20.04          | Docker development environment                                         |
 | [equinox](equinox.md)                | DGX Workstation                     | Ubuntu 22.04          | 4 Tesla V100 32 GB GPUs                                                |
-| [excl-us00](excl-us.md)              | Intel 16 Core Utility Server 196 GB |                       |                                                                        |
-| [excl-us01](excl-us.md) (hypervisor) | Intel 16 Core Utility Server 196 GB |                       |                                                                        |
-| [excl-us03](excl-us.md)              | Intel 16 Core Utility Server 196 GB |                       |                                                                        |
 | [explorer](explorer.md)              | AMD 128 Core 512 Gb                 | Ubuntu 22.04          | 2 AMD MI50 GPUs                                                        |
 | [justify](triple-crown.md#justify)          | Triple Crown AMD (128 cores/ TB)    | Centos 7.9            |                                                                        |
 | [leconte](leconte.md)                | Summit server Power9 42 Cores       | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
@@ -35,9 +32,6 @@ coverY: 0
 | [oswald](oswald.md)                  | Intel 16 Core 128 GB utility server | Centos 7.9            |                                                                        |
 | [pcie](pcie.md)                      | Intel 32 Core 196 GB                | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
 | [pharoah](triple-crown.md#pharoah)                | Triple Crown AMD (128 cores/1 TB)   | Centos 7.9            |                                                                        |
-| [quad00](quad.md) (graylog)          | Intel 20 Core 96 GB utility server  | Centos 7.9            |                                                                        |
-| [quad01](quad.md)                    | Intel 20 Core 96 GB utility server  | Centos 7.9            |                                                                        |
-| [quad02](quad.md)                    | Intel 20 Core 96 GB utility server  | Centos 7.9            |                                                                        |
 | [radeon](radeon.md)                  | Intel 4 Core 64 GB                  | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
 | [secretariat](triple-crown.md#secretariat)        | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
 | [thunderx](thunderx.md)              | ARM Cavium ThunderX2 Server 128 GB  | Centos Stream 8       |                                                                        |
@@ -84,3 +78,14 @@ See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) f
 ## Other Equipment
 
 * RTP164 High Performance Oscilloscope
+
+## Infrastructure Systems
+
+| Host Name                            | Description                         | OS                    |
+| ------------------------------------ | ----------------------------------- | --------------------- |
+| excl-us00                            | Intel 16 Core Utility Server 196 GB |                       |
+| excl-us01 (hypervisor)               | Intel 16 Core Utility Server 196 GB |                       |
+| excl-us03                            | Intel 16 Core Utility Server 196 GB |                       |
+| quad00                               | Intel 20 Core 96 GB utility server  | Centos 7.9            |
+| quad01                               | Intel 20 Core 96 GB utility server  | Centos 7.9            |
+| quad02                               | Intel 20 Core 96 GB utility server  | Centos 7.9            |
