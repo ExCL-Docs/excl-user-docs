@@ -27,10 +27,9 @@
   * [secretariat](system-overview/secretariat.md)
   * [snapdragon](system-overview/snapdragon.md)
   * [thunderx](system-overview/thunderx.md)
+  * [Triple Crown](system-overview/triple-crown.md)
   * [xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
-  * [Hardware Classes](system-overview/hardware-classes/README.md)
-    * [Triple Crown](system-overview/hardwareclasses/triple-crown.md)
 
 ## ExCl Support
 
