@@ -54,6 +54,9 @@
 * [Git](software/git.md)
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
 
+## Presentations and Other Ephemera
+* [Presentations](presentations/presentations.md)
+
 ## Git Contributing
 
 * [Git Basics](git-contributing/git-basics/README.md)
