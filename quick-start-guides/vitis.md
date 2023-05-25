@@ -111,7 +111,7 @@ sbatch -J batch_build -p fpgabuild -c 8 build.sh
 > &#x20; build.sh is a script to launch the build.
 
 {% hint style="info" %}
-**Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
+**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
 {% endhint %}
 
 #### Non-interactive Use: Vitis Run
@@ -127,7 +127,7 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 > &#x20; run.sh is a script to launch the run.
 
 {% hint style="info" %}
-**Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
+**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
 {% endhint %}
 
 ### Quickstart
