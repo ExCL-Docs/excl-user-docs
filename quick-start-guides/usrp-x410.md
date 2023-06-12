@@ -163,6 +163,20 @@ usrp_update_fs -t v4.4.0.0
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "x410-0"
 ssh root@x410-0
 mender commit
+
+
+```shell
+[WARNING] [UDP] The recv buffer could not be resized sufficiently.
+Target sock buff size: 2500000 bytes.
+Actual sock buff size: 212992 bytes.
+See the transport application notes on buffer resizing.
+Please run: sudo sysctl -w net.core.rmem_max=2500000
+
+[WARNING] [UDP] The send buffer could not be resized sufficiently.
+Target sock buff size: 2500000 bytes.
+Actual sock buff size: 212992 bytes.
+See the transport application notes on buffer resizing.
+Please run: sudo sysctl -w net.core.wmem_max=2500000
 ```
 
 ### References
