@@ -24,6 +24,20 @@ bash Miniconda3-latest-Linux-x86_64.sh
 
 Follow the prompts on the installer screens. Accept the license agreements. **Specify `/noback/$USER/conda` as the installation location.** Choose if you want the installer to initialize Miniconda.
 
+### Improving Conda Environment Solver Performance
+
+To improve the performance of the Conda environment solver, you can use the `conda-libmamba-solver` plugin which allows you to use `libmamba`, the same `libsolv`-powered solver used by [mamba](https://mamba.readthedocs.io/en/latest/index.html) and [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html), directly in `conda`.
+
+The quick start guide is below.
+
+```bash
+conda update -n base conda
+conda install -n base conda-libmamba-solver
+conda config --set solver libmamba
+```
+
+See [Anaconda | A Faster Solver for Conda: Libmamba](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community) and [Getting started — conda-libmamba-solver](https://conda.github.io/conda-libmamba-solver/getting-started/) for more information.
+
 ## Installing Spack
 
 ```bash
