@@ -25,7 +25,8 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 | [Lewis](https://localhost:3205)    | 3205 | [https://localhost:3205](https://localhost:3205) |
 | [Clark](https://localhost:3206)    | 3206 | [https://localhost:3206](https://localhost:3206) |
 | [Pcie](https://localhost:3207)     | 3207 | [https://localhost:3207](https://localhost:3207) |
-| [Aries](https://localhost:3208)     | 3208 | [https://localhost:3208](https://localhost:3208) |
+| [Aries](https://localhost:3208)    | 3208 | [https://localhost:3208](https://localhost:3208) |
+| [Bonsai](https://localhost:3209)   | 3209 | [https://localhost:3209](https://localhost:3209) |
 
 {% hint style="info" %}
 The URL will only work once port forwarding is set up.\
