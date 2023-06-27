@@ -6,44 +6,55 @@ description: Getting started with ThinLinc.
 
 The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300). Since this node is public facing, it is the easiest to access with ThinLinc.
 
-In addition to the login node, multiple systems including the [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use port forwarding to forward the ThinLinc ports. The ThinLinc web interface uses the port in the table below and the ThinLinc client uses port 22.
+In addition to the login node, multiple systems including the [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use as socks proxy to forward traffic to the ExCL network or port forwarding of port 22 to use the ThinLinc client.
 
 {% hint style="warning" %}
 If you run into a "ThinLinc login failed. (No agent server was available)" error, then login to the node with ssh. This will mount your home directory and resolve the ThinLinc error.\
 &#x20;![](../.gitbook/assets/image.png)
 {% endhint %}
 
-## Ports Used
+## Systems Availible
 
-| Hostname                           | Port | URL                                              |
-| ---------------------------------- | ---- | ------------------------------------------------ |
-| [Firefly](https://localhost:3200)  | 3200 | [https://localhost:3200](https://localhost:3200) |
-| [Intrepid](https://localhost:3201) | 3201 | [https://localhost:3201](https://localhost:3201) |
-| [Tardis](https://localhost:3202)   | 3202 | [https://localhost:3202](https://localhost:3202) |
-| [Polarden](https://localhost:3203) | 3203 | [https://localhost:3203](https://localhost:3203) |
-| [Zenith](https://localhost:3204)   | 3204 | [https://localhost:3204](https://localhost:3204) |
-| [Lewis](https://localhost:3205)    | 3205 | [https://localhost:3205](https://localhost:3205) |
-| [Clark](https://localhost:3206)    | 3206 | [https://localhost:3206](https://localhost:3206) |
-| [Pcie](https://localhost:3207)     | 3207 | [https://localhost:3207](https://localhost:3207) |
-| [Aries](https://localhost:3208)    | 3208 | [https://localhost:3208](https://localhost:3208) |
-| [Bonsai](https://localhost:3209)   | 3209 | [https://localhost:3209](https://localhost:3209) |
+| Hostname                                       | URL                                                                      |
+| ---------------------------------------------- | ------------------------------------------------------------------------ |
+| [Firefly](https://Firefly.ftpn.ornl.gov:300)   | [https://Firefly.ftpn.ornl.gov:300](https://Firefly.ftpn.ornl.gov:300)   |
+| [Intrepid](https://Intrepid.ftpn.ornl.gov:300) | [https://Intrepid.ftpn.ornl.gov:300](https://Intrepid.ftpn.ornl.gov:300) |
+| [Tardis](https://Tardis.ftpn.ornl.gov:300)     | [https://Tardis.ftpn.ornl.gov:300](https://Tardis.ftpn.ornl.gov:300)     |
+| [Polarden](https://Polarden.ftpn.ornl.gov:300) | [https://Polarden.ftpn.ornl.gov:300](https://Polarden.ftpn.ornl.gov:300) |
+| [Zenith](https://Zenith.ftpn.ornl.gov:300)     | [https://Zenith.ftpn.ornl.gov:300](https://Zenith.ftpn.ornl.gov:300)     |
+| [Lewis](https://Lewis.ftpn.ornl.gov:300)       | [https://Lewis.ftpn.ornl.gov:300](https://Lewis.ftpn.ornl.gov:300)       |
+| [Clark](https://Clark.ftpn.ornl.gov:300)       | [https://Clark.ftpn.ornl.gov:300](https://Clark.ftpn.ornl.gov:300)       |
+| [Pcie](https://Pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://Pcie.ftpn.ornl.gov:300)         |
+| [Aries](https://Aries.ftpn.ornl.gov:300)       | [https://Aries.ftpn.ornl.gov:300](https://Aries.ftpn.ornl.gov:300)       |
+| [Bonsai](https://Bonsai.ftpn.ornl.gov:300)     | [https://Bonsai.ftpn.ornl.gov:300](https://Bonsai.ftpn.ornl.gov:300)     |
 
 {% hint style="info" %}
-The URL will only work once port forwarding is set up.\
-MobaXTerm can be used to automatically set up port forwarding on launch, which will make the links work when MobaXTerm is running.
+The URL will only work once the SOCKS proxy is set up.\
+FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 {% endhint %}
 
 ## Accessing ThinLinc through the web interface
 
-1. Forward port from the above list from the remote host to your local system through login.\
+1. Launch SOCKS dynamic proxy forwarding to the login node.\
     On Linux or macOS, for example
 
     ```
-     $ ssh -L 3200:<hostname>:3200 <Username>@login.excl.ornl.gov
+     $ ssh -D 9090 <Username>@login.excl.ornl.gov
     ```
 
-    On windows use MobaSSHTunnel or Visual Studio Code to forward the port. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Connect the forwarded port using a web browser. For example: `https://localhost:3200`
+    or in the ssh config add
+
+    ```
+    DynamicForward 9090
+    ```
+
+    On windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
+
+2. Setup FoxyProxy\
+    Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
+
+    Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression url pattern `.*ftpn.ornl.gov:300/.*` to forward ThinLinc traffic to ExCL.
+3. Connect to the ThinLinc server using the links above.
 
 ## Accessing ThinLinc through ThinLinc Client
 
