@@ -11,11 +11,14 @@ description: Getting started with Vitis FPGA development.
  | FPGA | State  |
  | ---- | ------ |
  | U250 | Attached to Intrepid in Alveo mode. |
- | u55C | Unused |
+ | u55C | On pcie and unused |
+ | u280 | On pcie and unused |
  
 ## Vitis Development Tools
 
 This page covers how to access the Vitis development tools available in ExCL. The available FPGAs are listed in the [FPGAs](vitis.md#fpgas) section. The available systems with the Vitis toolchain installed are listed in section [Systems with the Vitis Toolchain](vitis.md#systems-with-the-vitis-toolchain). See [Quickstart](vitis.md#quickstart) to get started. The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. See section [Accessing ThinLinc](vitis.md#accessing-thinlinc) to get started.
+
+Vitis is also installed as a module for Ubuntu 22.04 systems. You can view available modules with `module avail` and load the most recent version with `module load Vitis`.
 
 ### FPGAs
 
