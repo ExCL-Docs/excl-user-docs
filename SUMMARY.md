@@ -47,6 +47,7 @@
 * [Groq](quick-start-guides/groq.md)
 * [Devdocs](quick-start-guides/devdocs.md)
 * [Apptainer](quick-start-guides/apptainer.md)
+* [Siemens EDA](quick-start-guides/siemens-eda.md)
 
 ## Software
 
@@ -55,6 +56,7 @@
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
 
 ## Presentations and Other Ephemera
+
 * [Presentations](presentations/presentations.md)
 
 ## Git Contributing
