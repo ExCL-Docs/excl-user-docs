@@ -9,7 +9,7 @@ The EDA tools are installed on the system `dragon`. `dragon` can be access via s
 Ssh access:
 
 ```bash
-ssh login.excl.ornl.gov
+ssh -Y -j <username>@login.excl.ornl.gov <username>@dragon
 ```
 
 ThinLinc access to login:
