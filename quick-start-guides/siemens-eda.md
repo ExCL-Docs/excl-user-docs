@@ -18,7 +18,7 @@ ThinLinc access to login:
 
 ThinLinc access to dragon (Requires reverse proxy to be setup):
 
-[https://dragon.ftpn.ornl.gov:300](https://dragon.ftpn.ornl.gov:300/agent)
+[https://dragon.ftpn.ornl.gov:300](https://dragon.ftpn.ornl.gov:300)
 
 All of the tools are installed to `/opt/Siemens` and the tools can be set up with
 
