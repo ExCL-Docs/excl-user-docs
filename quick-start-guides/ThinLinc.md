@@ -8,25 +8,27 @@ The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) 
 
 In addition to the login node, multiple systems including the [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use as socks proxy to forward traffic to the ExCL network or port forwarding of port 22 to use the ThinLinc client.
 
+For better keyboard shortcut support and to prevent the browser from triggering the shortcuts, I recommend installing [Open-as-Popup](https://chrome.google.com/webstore/detail/open-as-popup/ncppfjladdkdaemaghochfikpmghbcpc).
+
 {% hint style="warning" %}
 If you run into a "ThinLinc login failed. (No agent server was available)" error, then login to the node with ssh. This will mount your home directory and resolve the ThinLinc error.\
-&#x20;![](../.gitbook/assets/image.png)
+![](../.gitbook/assets/image.png)
 {% endhint %}
 
 ## Systems Availible
 
 | Hostname                                       | URL                                                                      |
 | ---------------------------------------------- | ------------------------------------------------------------------------ |
-| [Firefly](https://Firefly.ftpn.ornl.gov:300)   | [https://Firefly.ftpn.ornl.gov:300](https://Firefly.ftpn.ornl.gov:300)   |
-| [Intrepid](https://Intrepid.ftpn.ornl.gov:300) | [https://Intrepid.ftpn.ornl.gov:300](https://Intrepid.ftpn.ornl.gov:300) |
-| [Tardis](https://Tardis.ftpn.ornl.gov:300)     | [https://Tardis.ftpn.ornl.gov:300](https://Tardis.ftpn.ornl.gov:300)     |
-| [Polarden](https://Polarden.ftpn.ornl.gov:300) | [https://Polarden.ftpn.ornl.gov:300](https://Polarden.ftpn.ornl.gov:300) |
-| [Zenith](https://Zenith.ftpn.ornl.gov:300)     | [https://Zenith.ftpn.ornl.gov:300](https://Zenith.ftpn.ornl.gov:300)     |
-| [Lewis](https://Lewis.ftpn.ornl.gov:300)       | [https://Lewis.ftpn.ornl.gov:300](https://Lewis.ftpn.ornl.gov:300)       |
-| [Clark](https://Clark.ftpn.ornl.gov:300)       | [https://Clark.ftpn.ornl.gov:300](https://Clark.ftpn.ornl.gov:300)       |
-| [Pcie](https://Pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://Pcie.ftpn.ornl.gov:300)         |
-| [Aries](https://Aries.ftpn.ornl.gov:300)       | [https://Aries.ftpn.ornl.gov:300](https://Aries.ftpn.ornl.gov:300)       |
-| [Bonsai](https://Bonsai.ftpn.ornl.gov:300)     | [https://Bonsai.ftpn.ornl.gov:300](https://Bonsai.ftpn.ornl.gov:300)     |
+| [Firefly](https://firefly.ftpn.ornl.gov:300)   | [https://Firefly.ftpn.ornl.gov:300](https://firefly.ftpn.ornl.gov:300)   |
+| [Intrepid](https://intrepid.ftpn.ornl.gov:300) | [https://Intrepid.ftpn.ornl.gov:300](https://intrepid.ftpn.ornl.gov:300) |
+| [Tardis](https://tardis.ftpn.ornl.gov:300)     | [https://Tardis.ftpn.ornl.gov:300](https://tardis.ftpn.ornl.gov:300)     |
+| [Polarden](https://polarden.ftpn.ornl.gov:300) | [https://Polarden.ftpn.ornl.gov:300](https://polarden.ftpn.ornl.gov:300) |
+| [Zenith](https://zenith.ftpn.ornl.gov:300)     | [https://Zenith.ftpn.ornl.gov:300](https://zenith.ftpn.ornl.gov:300)     |
+| [Lewis](https://lewis.ftpn.ornl.gov:300)       | [https://Lewis.ftpn.ornl.gov:300](https://lewis.ftpn.ornl.gov:300)       |
+| [Clark](https://clark.ftpn.ornl.gov:300)       | [https://Clark.ftpn.ornl.gov:300](https://clark.ftpn.ornl.gov:300)       |
+| [Pcie](https://pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://pcie.ftpn.ornl.gov:300)         |
+| [Aries](https://aries.ftpn.ornl.gov:300)       | [https://Aries.ftpn.ornl.gov:300](https://aries.ftpn.ornl.gov:300)       |
+| [Bonsai](https://bonsai.ftpn.ornl.gov:300)     | [https://Bonsai.ftpn.ornl.gov:300](https://bonsai.ftpn.ornl.gov:300)     |
 
 {% hint style="info" %}
 The URL will only work once the SOCKS proxy is set up.\
@@ -35,7 +37,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 
 ## Accessing ThinLinc through the web interface
 
-1. Launch SOCKS dynamic proxy forwarding to the login node.\
+1.  Launch SOCKS dynamic proxy forwarding to the login node.\
     On Linux or macOS, for example
 
     ```
@@ -49,8 +51,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
     ```
 
     On windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-
-2. Setup FoxyProxy\
+2.  Setup FoxyProxy\
     Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
 
     Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
@@ -60,7 +61,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 
 This approach is not as recommended as you can't forward a privileged port (i.e., 22) if you are running an ssh server.
 
-1. Forward port 22 from the remote system to your local system through login. On Linux or macOS
+1.  Forward port 22 from the remote system to your local system through login. On Linux or macOS
 
     ```
      $ ssh -L 22:<hostname>:22 <Username>@login.excl.ornl.gov
@@ -72,9 +73,7 @@ This approach is not as recommended as you can't forward a privileged port (i.e.
 
 ## Potential Issues you may encounter
 
-If you use Gnome and do not have access to the module command when you start
-a terminal session over ThinLinc web, then your terminal session may not be
-configured as a login session. To resolve
+If you use Gnome and do not have access to the module command when you start a terminal session over ThinLinc web, then your terminal session may not be configured as a login session. To resolve
 
 1. Right click on the terminal icon on the left side of your screen
 2. In Preferences -> Unnamed, make sure `Run command as a login shell` is checked.
