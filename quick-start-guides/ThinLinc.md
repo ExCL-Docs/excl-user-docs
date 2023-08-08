@@ -59,7 +59,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 
 ## Accessing ThinLinc through ThinLinc Client
 
-This approach is not as recommended as you can't forward a privileged port (i.e., 22) if you are running an ssh server.
+This approach is not as recommended as you can't forward a privileged port (i.e., 22) if you are running an ssh server. Also this approach no longer works to access internal nodes. You can still use the client to connect to the login node, but not internal nodes.
 
 1.  Forward port 22 from the remote system to your local system through login. On Linux or macOS
 
