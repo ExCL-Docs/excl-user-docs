@@ -34,7 +34,7 @@ Other systems can have Apptainer installed by request.
 
 ## Notes:
 
-* Apptainer mounts `$HOME` ,  `/sys:/sys` ,  `/proc:/proc`,  `/tmp:/tmp`,  `/var/tmp:/var/tmp`,  `/etc/resolv.conf:/etc/resolv.conf`,  `/etc/passwd:/etc/passwd`, and `$PWD` by default and run in `~` by default. This means you can change files in your home directory by running with Apptainer. This is different from Docker which creates a container (overlay in Apptainer) by default for the application to run in. See [Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind\_paths\_and\_mounts.html).
+* Apptainer mounts `$HOME` , `/sys:/sys` , `/proc:/proc`, `/tmp:/tmp`, `/var/tmp:/var/tmp`, `/etc/resolv.conf:/etc/resolv.conf`, `/etc/passwd:/etc/passwd`, and `$PWD` by default and run in `~` by default. This means you can change files in your home directory by running with Apptainer. This is different from Docker which creates a container (overlay in Apptainer) by default for the application to run in. See [Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind\_paths\_and\_mounts.html).
 * To mount another location when running Apptainer, use the `--bind` option. For example to mount `/noback` use `--bind /noback:/noback`. See [Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind\_paths\_and\_mounts.html).
 * Admins can specify default bind points in `/etc/apptainer/apptainer.conf`. See [Apptainer Configuration Files](https://apptainer.org/docs/admin/main/configfiles.html#bind-mount-management)
 * When creating a definition file, pay attention to the rules for each section. See [Definition Files](https://apptainer.org/docs/user/main/definition\_files.html) For example:
@@ -42,6 +42,7 @@ Other systems can have Apptainer installed by request.
   * Environment variables defined in `%environment` are available only after the build, so if you need access to them for the build, define them in the `%post` section.
 * To use `--fakeroot` you must first have fakeroot configured for that user. This can be done with the command `sudo apptainer config fakeroot --add <user>`. See [User Namespaces & Fakeroot](https://apptainer.org/docs/admin/main/user\_namespace.html)
 * To use X11 applications in Apptainer with over [ThinLinc](ThinLinc.md), you need to bind `/var/opt/thinlinc` with `--bind /var/opt/thinlinc` since that is where the user’s XAuthority file is stored.
+- `sandbox` image build mode along with `fakeroot` can help if one needs to `apt-get install` or `yum install` packages within a singularity / apptainer container and persist the mutable image out on disk: [Build a Container — Apptainer User Guide main documentation](https://apptainer.org/docs/user/main/build_a_container.html#sandbox).
 
 ### NFS Limitations
 
@@ -72,3 +73,7 @@ NFS filesystems support overlay mounts as a `lowerdir` only, and do not support 
 bind path = /noback
 bind path = /var/opt/thinlinc
 ```
+
+# See also
+
+- ORNL uses can also look at this [ornl-containers / singularity](https://code.ornl.gov/ornl-containers/singularity) page for more details on using containers at ORNL.
