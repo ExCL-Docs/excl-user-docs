@@ -57,3 +57,21 @@ An alternative to setting up a proxy is to configure Git to convert Git URLs to 
 git config --global url."https://bitbucket.org/".insteadOf git@bitbucket.org:
 git config --global url."https://github.com/".insteadOf git@github.com:
 ```
+
+## Git SSH Access
+
+ssh can be used to clone repositories on the login node. In order to clone repositories on the internal nodes, the ssh config needs to be changed to use the login node as a proxy jump. Here is an example ssh config with jump proxies to code.ornl.gov, bitbucket.org, and github.com.
+
+```config
+Host code.ornl.gov
+   HostName code.ornl.gov
+   ProxyJump login
+
+Host bitbucket.org
+   HostName bitbucket.org
+   ProxyJump login
+
+Host github.com
+   HostName github.com
+   ProxyJump login
+```
