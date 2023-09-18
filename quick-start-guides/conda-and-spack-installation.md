@@ -4,7 +4,7 @@ description: The recommended way to install Conda and Spack.
 
 # Conda and Spack Installation
 
-This guide goes over the recommended way to install [Conda](https://docs.conda.io/en/latest/) and [Spack](https://spack-tutorial.readthedocs.io/en/latest/) in ExCL. If you are already familiar with the Conda and Spack installation process, then the main takeaway is to install both packages in `/noback/<userid>` since the installations can become quite large (>50GB) and they typically do not need to be backed up. Another recommendation is to store the `environment.yml` and `spack.yaml` files in your git repositories to make it easy to recreate the Conda and Spack environments required for that project. The remainder of this page goes over the installation in more detail.
+This guide goes over the recommended way to install [Conda](https://docs.conda.io/en/latest/) and [Spack](https://spack-tutorial.readthedocs.io/en/latest/) in ExCL. If you are already familiar with the Conda and Spack installation process, then these tools can be installed to their default locations. One recommendation is to store the `environment.yml` and `spack.yaml` files in your git repositories to make it easy to recreate the Conda and Spack environments required for that project. The remainder of this page goes over the installation in more detail.
 
 ## Installing Conda
 
@@ -22,7 +22,7 @@ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 
-Follow the prompts on the installer screens. Accept the license agreements. **Specify `/noback/$USER/conda` as the installation location.** Choose if you want the installer to initialize Miniconda.
+Follow the prompts on the installer screens. Accept the license agreements. **Specify `/home/$USER/conda` as the installation location.** Choose if you want the installer to initialize Miniconda.
 
 ### Improving Conda Environment Solver Performance
 
@@ -41,9 +41,9 @@ See [Anaconda | A Faster Solver for Conda: Libmamba](https://www.anaconda.com/bl
 ## Installing Spack
 
 ```bash
-# Install spack by checking out the right branch to /noback
-git clone https://github.com/spack/spack /noback/$USER/spack
-cd /noback/$USER/spack
+# Install spack by checking out the right branch to /home
+git clone https://github.com/spack/spack /home/$USER/spack
+cd /home/$USER/spack
 git checkout releases/latest # or release/v0.16
 
 # Install a spack compiler to use as the default
@@ -53,8 +53,8 @@ spack compiler add $(spack location -i gcc@9.3.0)
 # Add Spack to bashrc.
 cat >> ~/.bashrc << 'EOL'
 # Setup Spack
-if [ -f "/noback/$USER/spack/share/spack/setup-env.sh" ]; then
-   source /noback/$USER/spack/share/spack/setup-env.sh
+if [ -f "/home/$USER/spack/share/spack/setup-env.sh" ]; then
+   source /home/$USER/spack/share/spack/setup-env.sh
 fi
 EOL
 ```
