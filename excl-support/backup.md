@@ -1,7 +1,5 @@
 # Backup and Storage
 
-## Storage
-
 User files (home directories) are stored on an ZFS-based NFS server, and are generally available to all ExCL systems (there are exceptions for operational and security reasons.  If you trip over something please let excl-help@ornl.gov know).  The /noback/<user> facility is no longer required and is not being created for new users accounts.   Files already in the /noback heirarchy will not be affected; if you would like assistance in moving these files to your home directory please let excl-help@ornl.gov know.   
 
 {% hint style="danger" %}
