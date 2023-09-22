@@ -55,6 +55,9 @@
 * [Git](software/git.md)
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
 
+## Devices
+* [BlueField-2](devices/bluefield2.md)
+
 ## Presentations and Other Ephemera
 
 * [Presentations](presentations/presentations.md)
