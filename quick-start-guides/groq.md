@@ -20,7 +20,8 @@ ssh pcie
 Here is a table of the Groq cards available:
 | Hostname | Groq Cards |
 |----------|------------|
-| pcie     | 1          |
+| milan1   | 1          |
+| milan2   | 1          |
 
 ## Groq card and Slurm
 
