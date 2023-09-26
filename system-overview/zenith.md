@@ -26,7 +26,7 @@ Type|Item|Price
 
 To have access to the GPUs, request to be added to the `video` and `render` groups if you are not already in these groups.
 
-# Images
+## Images
 
 ![Zenith - 0](../assets/zenith-0.jpeg)
 
