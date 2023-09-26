@@ -88,6 +88,7 @@ See [Jupyter Notebook Quickstart](jupyter-quick-start.md) for more information o
 ## Getting started Resources
 - [Groq API Tutorials](https://github.com/groq/GroqAPI/tree/main/gapi/tutorials)
 - [GroqFlow Getting Started](https://github.com/groq/groqflow#getting-started)
+- [GroqFlow installation](https://github.com/groq/groqflow/blob/main/docs/install.md)
 
 ## Useful Groq Commands
 - Run regression tests to verify card functionality: `/opt/groq/runtime/site-packages/bin/tsp-regression run` 
