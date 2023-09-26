@@ -28,5 +28,6 @@ To have access to the GPUs, request to be added to the `video` and `render` grou
 
 # Images
 
-![Zenith - 0](../assets/zenith-0.JPEG)
-![Zenith - 1](../assets/zenith-1.JPEG)
+![Zenith - 0](../assets/zenith-0.jpeg)
+
+![Zenith - 1](../assets/zenith-1.jpeg)
