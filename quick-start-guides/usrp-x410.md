@@ -171,7 +171,9 @@ usrp_update_fs -t v4.5.0.0
 ssh-keygen -f "$HOME/.ssh/known_hosts" -R "x410-0"
 ssh root@x410-0
 mender commit
+```
 
+The UHD driver will strongly suggest that the networking subsystem send and recv buffers are sized sufficiently.
 
 ```shell
 [WARNING] [UDP] The recv buffer could not be resized sufficiently.
@@ -186,6 +188,8 @@ Actual sock buff size: 212992 bytes.
 See the transport application notes on buffer resizing.
 Please run: sudo sysctl -w net.core.wmem_max=2500000
 ```
+
+The UHD package installs a `/etc/sysctl.d/uhd-usrp2.conf` to adjust these settings on boot, but these values are for the older gigabet Ethernet devices and need to be increased.
 
 ### References
 
