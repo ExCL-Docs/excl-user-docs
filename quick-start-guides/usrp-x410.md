@@ -115,11 +115,19 @@ source setupenv.sh --vivado-path=/tools/Xilinx/Vivado
 make help
 ```
 
+Images that use 100G Ethernet requires an additonal no cost license for [Xilinx 100G Ethernet IP](https://www.xilinx.com/products/intellectual-property/cmac_usplus.html). Until this is added to the ExCL license server you can download the license to `~/.Xilinx/Xilinx.lic` or similaer and append it to the `XILINXD_LICENSE_FILE` evironment variable using a colon:
+
+```shell
+export XILINXD_LICENSE_FILE=2100@license:$HOME/.Xilinx/Xilinx.lic
+```
+
 The default image *X410_X4_200* requires greater then 16 GB of memory (~17 GB peak). Currently arias only has 16 GB of memory so only smaller images like the *X410_X1_100* can be built.
 
 ```shell
 make X410_X1_100
 ```
+
+Program the image as follows:
 
 ```shell
 uhd_image_loader --args type=x4xx,mgmt_addr=x410-0 --fpga-path build/usrp_x410_fpga_X1_100.bit
