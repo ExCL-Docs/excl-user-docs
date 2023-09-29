@@ -12,9 +12,10 @@ Start by logging into ExCL's login node.
 ```bash
 ssh login.excl.ornl.gov
 ```
-This will create your home directory if you have not logged into ExCL before. From the login node, you can then login to a node with a Groq card.
+From the login node, you can then login to a node with a Groq card, for example
+
 ```bash
-ssh pcie
+ssh milan1
 ```
 
 Here is a table of the Groq cards available:
