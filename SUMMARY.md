@@ -48,6 +48,7 @@
 * [Devdocs](quick-start-guides/devdocs.md)
 * [Apptainer](quick-start-guides/apptainer.md)
 * [Siemens EDA](quick-start-guides/siemens-eda.md)
+* [Gitlab CI](quick-start-guides/gitlab-ci.md)
 
 ## Software
 
