@@ -1,5 +1,5 @@
 ---
-description: Getting started with Gitlab CI runners in code.onrl.gov running on ExCL systems.
+description: Getting started with Gitlab CI runners in code.ornl.gov running on ExCL systems.
 ---
 
 # GitLab CI Runners in ExCL
@@ -13,11 +13,11 @@ Send the following information to [excl-help@ornl.gov](mailto:excl-help@ornl.gov
 - URL
 - Registration Token
 - Executor (choose shell or docker with image)
-- Project Name
+- Project Name (This can be group name or repo name)
 - ExCL System
 - Tag List
 
-The method for finding the registration differs depending on if you want to register a group runner or a single repository runner. See [Group Runner](#group-runner) and [Single Repo Runner (Project Runner))](#single-repo-runner-(project-runner)) sections below.
+The method for finding the registration differs depending on if you want to register a group runner or a single repository runner. See [Group Runner](#group-runner) and [Single Repo Runner (Project Runner))](#single-repo-runner-project-runner) sections below.
 
 After the runner is added, you can edit the runner to change the tags and description.
 
@@ -28,3 +28,45 @@ Navigate to the group page. Click on `Build` → `Runners`. Choose the vertical 
 ### Single Repo Runner (Project Runner)
 
 Navigate to the repo page. Click on `Settings` → `CI/CD` → `Runners`. Choose the vertical dots next to `New project runner` and copy registration token.
+
+## List of ExCL Systems with a runner
+
+Any system can be requested as a runner. These systems are already being used as a runner. (Updated October 2023)
+
+- docker.ftpn.ornl.gov
+- explorer.ftpn.ornl.gov
+- intrepid.ftpn.ornl.gov
+- justify.ftpn.ornl.gov
+- leconte.ftpn.ornl.gov
+- lewis.ftpn.ornl.gov
+- milan2.ftpn.ornl.gov
+- milan3.ftpn.ornl.gov
+- oswald00.ftpn.ornl.gov
+- oswald02.ftpn.ornl.gov
+- oswald03.ftpn.ornl.gov
+- pcie.ftpn.ornl.gov
+- zenith.ftpn.ornl.gov
+
+## Using Slurm with Gitlab CI
+
+The system slurm-gitlab-runner is setup specifically to run CI jobs that then run the execution using slurm with `sbatch --wait`.
+
+## Spack and Conda with Gitlab-CI
+
+```yml
+.setup:
+  tags: [shell]
+  before_script:
+    - source /auto/ciscratch/spack/share/spack/setup-env.sh
+    - source /auto/ciscratch/conda/etc/profile.d/conda.sh
+
+build:
+  extends: [.setup]
+  script: 
+    - spack env create -d . spack.yaml
+    - spack env activate .
+    - spack install
+    - conda create -p ./envs
+    - conda activate ./envs
+    - conda install pip
+```
