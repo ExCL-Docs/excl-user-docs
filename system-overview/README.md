@@ -47,8 +47,6 @@ coverY: 0
 * Xilinx U280
 * 2 Ettus x410 high-performance, multi-channel, Zynq US+ RFSoC based software defined radio (SDR)
 
-See [https://excl.ornl.gov/excl-systems/](https://excl.ornl.gov/excl-systems/) for additional information (outdated).
-
 ## Accelerator Highlights
 
 | Accelerator Name                         | Host(s)           |

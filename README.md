@@ -18,7 +18,6 @@ See [Requesting access](excl-support/access-info.md) for information on how to r
 
 * [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
 * [excl.ornl.gov](https://excl.ornl.gov)
-* [excl.ornl.gov/systems](https://excl.ornl.gov/excl-systems/)
 
 ## How to Login
 
