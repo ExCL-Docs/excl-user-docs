@@ -1,7 +1,6 @@
 ---
 description: Getting started with ThinLinc.
 ---
-
 # ThinLinc
 
 The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300). Since this node is public facing, it is the easiest to access with ThinLinc.
@@ -37,7 +36,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 
 ## Accessing ThinLinc through the web interface
 
-1.  Launch SOCKS dynamic proxy forwarding to the login node.\
+1. Launch SOCKS dynamic proxy forwarding to the login node.\
     On Linux or macOS, for example
 
     ```
@@ -51,7 +50,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
     ```
 
     On windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2.  Setup FoxyProxy\
+2. Setup FoxyProxy\
     Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
 
     Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
@@ -59,17 +58,28 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 
 ## Accessing ThinLinc through ThinLinc Client
 
-This approach is not as recommended as you can't forward a privileged port (i.e., 22) if you are running an ssh server. Also this approach no longer works to access internal nodes. You can still use the client to connect to the login node, but not internal nodes.
+This approach is recommended if you need better keyboard forwarding support for keyboard shortcuts that are not working with the Web client. The web client approach is easier to use and enables connecting to multiple systems at a time.
 
-1.  Forward port 22 from the remote system to your local system through login. On Linux or macOS
+If the system is directly accessible (for example login.excl.ornl.gov), then you can specify the system and connect directly.
+
+If the system is an internal node, then local port forwarding must be used. The steps to setting this up are as follows.
+
+1. Forward port 22 from the remote system to your local system through login. On Linux or macOS
 
     ```
-     $ ssh -L 22:<hostname>:22 <Username>@login.excl.ornl.gov
+     $ ssh -L <localport>:<hostname>:22 <Username>@login.excl.ornl.gov
     ```
 
-    On windows use MobaSSHTunnel or Visual Studio Code to forward port 22. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Launch the ThinLinc Client.
-3. Connect to the server with "Connect".
+    On windows use ssh via powershell, MobaSSHTunnel, Visual Studio Code, or putty to forward port 22. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
+2. Add alias in hosts file for the remote node. This is needed because of how ThinLinc establishes the remote connected. On Linux this host file is `/etc/hosts`. On windows the file is `C:\Windows\System32\drivers\etc\hosts`.
+   Host file:
+    ```
+    127.0.0.1 <hostname>
+    ```
+3. Launch the ThinLinc Client.
+4. In the options, specify the SSH port to be `<localport>`.
+5. Specify the Server, Username, and credentials.
+6. Connect to the server with "Connect".
 
 ## Potential Issues you may encounter
 
