@@ -51,5 +51,5 @@ deploy_docs_manual-job:
 If you would like to host your project’s internal documentation on ExCL, please email [excl-help@ornl.gov](mailto:excl-help@ornl.gov?subject=Request%20DevDocs%20Site&body=Request%20a%20new%20DevDocs%20internal%20documentation%20site%20and%20DevDocs%20GitLab%20Runner:%0D%0A%0D%0A-%20URL:%20https://code.ornl.gov/%0D%0A-%20Registration%20Token:%20%20%0D%0A-%20Project%20Name%20(DevDocs%20URL%20Subdirectory):) with the following information and we can help you get started with a DevDocs subdirectory and the DevDocs GitLab Runner.
 
 - URL
-- Registration Token
+- [Runner Registration Token](gitlab-ci.md#register-a-runner)
 - Project Name (This will be your DevDocs subdirectory)
