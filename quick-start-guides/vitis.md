@@ -70,9 +70,9 @@ srun -J interactive_build -p fpgabuild -c 8 --pty bash
 ```
 
 > Where:\
-> \-J, --job-name=\<jobname>\
-> \-p, --partition=\<partition names>\
-> \-c, --cpus-per-task=\<ncpus>
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \-c, --cpus-per-task=\<ncpus>
 
 {% hint style="info" %}
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
@@ -91,9 +91,9 @@ srun -J interactive_fpga -p fpgarun --gres="fpga:U250:1" --pty bash
 ```
 
 > Where:\
-> \-J, --job-name=\<jobname>\
-> \-p, --partition=\<partition names>\
-> \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
 
 {% hint style="info" %}
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
@@ -106,13 +106,13 @@ sbatch -J batch_build -p fpgabuild -c 8 build.sh
 ```
 
 > Where:\
-> \-J, --job-name=\<jobname>\
-> \-p, --partition=\<partition names>\
-> \-c, --cpus-per-task=\<ncpus>\
-> build.sh is a script to launch the build.
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \-c, --cpus-per-task=\<ncpus>\
+> &#x20; build.sh is a script to launch the build.
 
 {% hint style="info" %}
-**Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
+**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
 {% endhint %}
 
 #### Non-interactive Use: Vitis Run
@@ -122,13 +122,13 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 ```
 
 > Where:\
-> \-J, --job-name=\<jobname>\
-> \-p, --partition=\<partition names>\
-> \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.\
-> run.sh is a script to launch the run.
+> &#x20; \-J, --job-name=\<jobname>\
+> &#x20; \-p, --partition=\<partition names>\
+> &#x20; \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.\
+> &#x20; run.sh is a script to launch the run.
 
 {% hint style="info" %}
-**Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
+**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
 {% endhint %}
 
 ### Quickstart
@@ -401,12 +401,13 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 **Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
 {% endhint %}
 
-1.  Set the desired runtime settings in the xrt.ini file. This step is optional.\\
+1. Set the desired runtime settings in the xrt.ini file. This step is optional.\
 
     As described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run.\
     \
-    **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.\\
-2.  Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\\
+    **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.\
+
+2. Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\
 
     The emulation configuration file, `emconfig.json`, is generated from the specified platform using the `emconfigutil` command, and provides information used by the XRT library during emulation. The following example creates the `emconfig.json` file for the specified target platform:
 
@@ -416,8 +417,10 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
     In emulation mode, the runtime looks for the emconfig.json file in the same directory as the host executable, and reads in the target configuration for the emulation runs.\
     \
-    **TIP:** It is mandatory to have an up-to-date JSON file for running emulation on your target platform.\\
-3.  Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\\
+    **TIP:** It is mandatory to have an up-to-date JSON file for running emulation on your target platform.\
+
+3. Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\
+
 
     Use the following syntax to set the environment variable for C shell (csh):
 
@@ -431,12 +434,15 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
     export  XCL_EMULATION_MODE=sw_emu
     ```
 
-    **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\\
-4.  Run the application.\\
+    **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\
+
+4. Run the application.\
+
 
     With the runtime initialization file (xrt.ini), emulation configuration file (emconfig.json), and the `XCL_EMULATION_MODE` environment set, run the host executable with the desired command line argument.\
     \
-    **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.\\
+    **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.\
+
 
     For example:
 
@@ -456,22 +462,26 @@ TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware
 **TIP:** To use the accelerator card, you must have it installed as described in Getting Started with Alveo Data Center Accelerator Cards ([UG1301](https://www.xilinx.com/cgi-bin/docs/bkdoc?v=latest;k=accelerator-cards;d=ug1301-getting-started-guide-alveo-accelerator-cards.pdf)).
 {% endhint %}
 
-1.  Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\\
-
-    ***
+1. Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
+    ****
 
     This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/debuggingapplicationskernels.html#hsr1538574456889).\
     \
-    **TIP:** Ensure to use the `v++ -g` option when compiling your kernel code for debugging.\\
+    **TIP:** Ensure to use the `v++ -g` option when compiling your kernel code for debugging.\
+
 2. Unset the `XCL_EMULATION_MODE` environment variable.\
    \
-   **IMPORTANT:** The hardware build will not run if the `XCL_EMULATION_MODE` environment variable is set to an emulation target.\\
-3.  For embedded platforms, boot the SD card.\
-    \
-    **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\\
+   **IMPORTANT:** The hardware build will not run if the `XCL_EMULATION_MODE` environment variable is set to an emulation target.\
 
-    For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\\
-4.  Run your application.\\
+3. For embedded platforms, boot the SD card.\
+    \
+    **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\
+
+
+    For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
+
+4. Run your application.\
+
 
     The specific command line to run the application will depend on your host code. A common implementation used in Xilinx tutorials and examples is as follows:
 

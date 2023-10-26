@@ -2,7 +2,7 @@
 description: Getting started with Groq.
 ---
 
-# Groq
+# Groq Getting Started Guide
 
 ## Groq Links
 
