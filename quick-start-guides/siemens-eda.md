@@ -4,7 +4,7 @@ description: Getting Started with Siemens EDA Tools.
 
 # Siemens EDA
 
-The EDA tools are installed on the system `dragon`. `dragon` can be access via ssh from the `login` node, via x11 forwarding from the login node's ThinLink, or directly via ThinLink with Foxy Proxy. See [ThinLinc Quickstart](ThinLinc.md) to get started with ThinLinc Setup. See [Accessing ExCL](../excl-support/access.md) for more details on logging in.
+The EDA tools are installed on the system `dragon`. `dragon` can be access via ssh from the `login` node, via x11 forwarding from the login node's ThinLink, or directly via ThinLink with Foxy Proxy. See [ThinLinc Quickstart](thinlinc.md) to get started with ThinLinc Setup. See [Accessing ExCL](../excl-support/access.md) for more details on logging in.
 
 Ssh access:
 

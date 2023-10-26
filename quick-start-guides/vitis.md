@@ -8,12 +8,12 @@ description: Getting started with Vitis FPGA development.
 
 ## FPGA Current state
 
- | FPGA | State  |
- | ---- | ------ |
- | U250 | Attached to Intrepid in Alveo mode. |
- | u55C | On pcie and unused |
- | u280 | On pcie and unused |
- 
+| FPGA | State                               |
+| ---- | ----------------------------------- |
+| U250 | Attached to Intrepid in Alveo mode. |
+| u55C | On pcie and unused                  |
+| u280 | On pcie and unused                  |
+
 ## Vitis Development Tools
 
 This page covers how to access the Vitis development tools available in ExCL. The available FPGAs are listed in the [FPGAs](vitis.md#fpgas) section. The available systems with the Vitis toolchain installed are listed in section [Systems with the Vitis Toolchain](vitis.md#systems-with-the-vitis-toolchain). See [Quickstart](vitis.md#quickstart) to get started. The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. See section [Accessing ThinLinc](vitis.md#accessing-thinlinc) to get started.
@@ -23,20 +23,20 @@ Vitis is also installed as a module for Ubuntu 22.04 systems. You can view avail
 ### FPGAs
 
 | FPGA                                                                          | Host System |
-|-------------------------------------------------------------------------------|-------------|
+| ----------------------------------------------------------------------------- | ----------- |
 | [Alveo U250](https://www.xilinx.com/products/boards-and-kits/alveo/u250.html) | pcie        |
 
 ### Systems with the Vitis Toolchain
 
 #### Physical Systems
 
-| Name | Tool Chain   | Source File               | Platform Name                 |
-|------|--------------|---------------------------|-------------------------------|
-| zenith | Vitis 2022.2 | /auto/software/vitis/vitis-2022.2.source |  |
+| Name   | Tool Chain   | Source File                              | Platform Name |
+| ------ | ------------ | ---------------------------------------- | ------------- |
+| zenith | Vitis 2022.2 | /auto/software/vitis/vitis-2022.2.source |               |
 
 #### Spack based Xilinx build environment on ExCL CentOS systems
 
-All CentOS systems in ExCL cluster are capable to build (only) Xilinx application with Vitis toolchain using Spack environment. Below are the instructions to enable Xilinx development environment in CentOS systems. It is very easy to do this. It enables very fast design space exploration with Slurm support.&#x20;
+All CentOS systems in ExCL cluster are capable to build (only) Xilinx application with Vitis toolchain using Spack environment. Below are the instructions to enable Xilinx development environment in CentOS systems. It is very easy to do this. It enables very fast design space exploration with Slurm support.
 
 ```bash
 $ source  /home/nqx/spack_centos_vitis.source 
@@ -44,17 +44,15 @@ $ source  /home/nqx/spack_centos_vitis.source
 
 It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00,02-03], justify, kold\[00-03], megatron, newark, oswald, oswald\[00-03], pcie, pharoah, quad\[00-02], secretariat
 
-
-
 #### Virtual Systems for Xilinx build and SW and HW emulation run
 
 | Name      | Tool Chain   | Host    | Source File                              | Platform Name                                |
-|-----------|--------------|---------|------------------------------------------|----------------------------------------------|
+| --------- | ------------ | ------- | ---------------------------------------- | -------------------------------------------- |
 | tardis    | Vitis 2020.1 | pcie    | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
 | torchwood | Vitis 2020.1 | justify | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
 | firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
 | serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
-| aries  | Vitis 2021.1 | pcie | /auto/software/vitis/vitis-2021.1.source |  |
+| aries     | Vitis 2021.1 | pcie    | /auto/software/vitis/vitis-2021.1.source |                                              |
 | intrepid  | Vitis 2021.2 | pcie    | /auto/software/vitis/vitis-2021.2.source |                                              |
 | icarus00  | Vitis 2021.2 | Pharoah | /auto/software/vitis/vitis-2021.2.source |                                              |
 | polarden  | Vitis 2022.1 | mcmurdo | /auto/software/vitis/vitis-2022.1.source |                                              |
@@ -65,23 +63,23 @@ The Virtual Machines with Vitis installed are also set up with Slurm. Slurm is u
 
 #### Interactive Use: Vitis Build
 
-Allocate a build instance for 1 Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly.&#x20;
+Allocate a build instance for 1 Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly.
 
 ```bash
 srun -J interactive_build -p fpgabuild -c 8 --pty bash
 ```
 
 > Where:\
-> &#x20; \-J, --job-name=\<jobname>\
-> &#x20; \-p, --partition=\<partition names>\
-> &#x20; \-c, --cpus-per-task=\<ncpus>
+> \-J, --job-name=\<jobname>\
+> \-p, --partition=\<partition names>\
+> \-c, --cpus-per-task=\<ncpus>
 
 {% hint style="info" %}
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
 {% endhint %}
 
 {% hint style="info" %}
-**Recommended:** `sbatch` can be used with a script to queue the job and store the resulting output to a file. `sbatch` is better than `srun` for long-running builds.&#x20;
+**Recommended:** `sbatch` can be used with a script to queue the job and store the resulting output to a file. `sbatch` is better than `srun` for long-running builds.
 {% endhint %}
 
 #### Interactive Use: Allocate FPGA
@@ -93,9 +91,9 @@ srun -J interactive_fpga -p fpgarun --gres="fpga:U250:1" --pty bash
 ```
 
 > Where:\
-> &#x20; \-J, --job-name=\<jobname>\
-> &#x20; \-p, --partition=\<partition names>\
-> &#x20; \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
+> \-J, --job-name=\<jobname>\
+> \-p, --partition=\<partition names>\
+> \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.
 
 {% hint style="info" %}
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
@@ -108,13 +106,13 @@ sbatch -J batch_build -p fpgabuild -c 8 build.sh
 ```
 
 > Where:\
-> &#x20; \-J, --job-name=\<jobname>\
-> &#x20; \-p, --partition=\<partition names>\
-> &#x20; \-c, --cpus-per-task=\<ncpus>\
-> &#x20; build.sh is a script to launch the build.
+> \-J, --job-name=\<jobname>\
+> \-p, --partition=\<partition names>\
+> \-c, --cpus-per-task=\<ncpus>\
+> build.sh is a script to launch the build.
 
 {% hint style="info" %}
-**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
+**Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
 {% endhint %}
 
 #### Non-interactive Use: Vitis Run
@@ -124,13 +122,13 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 ```
 
 > Where:\
-> &#x20; \-J, --job-name=\<jobname>\
-> &#x20; \-p, --partition=\<partition names>\
-> &#x20; \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.\
-> &#x20; run.sh is a script to launch the run.
+> \-J, --job-name=\<jobname>\
+> \-p, --partition=\<partition names>\
+> \--`gres="fpga:U250:1"` specifies that you want to use 1 U250 FPGA.\
+> run.sh is a script to launch the run.
 
 {% hint style="info" %}
-**Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
+**Recommended:** The Slurm parameters can be stored in `build.sh` with #SBATCH \<parameter>.
 {% endhint %}
 
 ### Quickstart
@@ -182,7 +180,8 @@ Board Part:                       xcu250-figd2104-2L-e
 ```
 
 ### Accessing systems graphically using ThinLinc
-See [ThinLinc Quickstart](ThinLinc.md).
+
+See [ThinLinc Quickstart](thinlinc.md).
 
 ### Using Vitis with the [Fish Shell](https://fishshell.com)
 
@@ -206,11 +205,11 @@ sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --me
 
 #### sfpgarun-hw-emu
 
-sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=hw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-hw-emu` setups up an FPGA run environment complete with specifying XCL_EMULARION_MODE.
+sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=hw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-hw-emu` setups up an FPGA run environment complete with specifying XCL\_EMULARION\_MODE.
 
 #### sfpgarun-sw-emu
 
-sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=sw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-sw-emu` setups up an FPGA run environment complete with specifying XCL_EMULARION_MODE.
+sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=sw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-sw-emu` setups up an FPGA run environment complete with specifying XCL\_EMULARION\_MODE.
 
 #### viv
 
@@ -255,7 +254,7 @@ There are three build targets available when building an FPGA kernel with Vitis 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/buildtargets1.html#rst1525720251890) **for more information.**
 
 | Software Emulation                                                  | Hardware Emulation                                                                           | Hardware Execution                                                                     |
-|---------------------------------------------------------------------|----------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+| ------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | Host application runs with a C/C++ or OpenCL™ model of the kernels. | Host application runs with a simulated RTL model of the kernels.                             | Host application runs with actual hardware implementation of the kernels.              |
 | Used to confirm functional correctness of the system.               | Test the host / kernel integration, get performance estimates.                               | Confirm that the system runs correctly and with desired performance.                   |
 | Fastest build time supports quick design iterations.                | Best debug capabilities, moderate compilation time with increased visibility of the kernels. | Final FPGA implementation, long build time with accurate (actual) performance results. |
@@ -402,15 +401,12 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 **Important:** Set up the command shell or window as described in [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment) prior to running the tools.
 {% endhint %}
 
-1. Set the desired runtime settings in the xrt.ini file. This step is optional.\
+1.  Set the desired runtime settings in the xrt.ini file. This step is optional.\\
 
-
-    As described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run. \
+    As described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html), the file specifies various parameters to control debugging, profiling, and message logging in XRT when running the host application and kernel execution. This enables the runtime to capture debugging and profile data as the application is running. The `Emulation` group in the xrt.ini provides features that affect your emulation run.\
     \
-    **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.\
-
-2. Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\
-
+    **TIP:** Be sure to use the `v++ -g` option when compiling your kernel code for emulation mode.\\
+2.  Create an emconfig.json file from the target platform as described in [emconfigutil Utility](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/nrj1570599837825.html). This is required for running hardware or software emulation.\\
 
     The emulation configuration file, `emconfig.json`, is generated from the specified platform using the `emconfigutil` command, and provides information used by the XRT library during emulation. The following example creates the `emconfig.json` file for the specified target platform:
 
@@ -420,10 +416,8 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
     In emulation mode, the runtime looks for the emconfig.json file in the same directory as the host executable, and reads in the target configuration for the emulation runs.\
     \
-    **TIP:** It is mandatory to have an up-to-date JSON file for running emulation on your target platform.\
-
-3. Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\
-
+    **TIP:** It is mandatory to have an up-to-date JSON file for running emulation on your target platform.\\
+3.  Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\\
 
     Use the following syntax to set the environment variable for C shell (csh):
 
@@ -437,15 +431,12 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
     export  XCL_EMULATION_MODE=sw_emu
     ```
 
-    **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\
-
-4. Run the application.\
-
+    **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\\
+4.  Run the application.\\
 
     With the runtime initialization file (xrt.ini), emulation configuration file (emconfig.json), and the `XCL_EMULATION_MODE` environment set, run the host executable with the desired command line argument.\
     \
-    **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.\
-
+    **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.\\
 
     For example:
 
@@ -465,26 +456,22 @@ TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware
 **TIP:** To use the accelerator card, you must have it installed as described in Getting Started with Alveo Data Center Accelerator Cards ([UG1301](https://www.xilinx.com/cgi-bin/docs/bkdoc?v=latest;k=accelerator-cards;d=ug1301-getting-started-guide-alveo-accelerator-cards.pdf)).
 {% endhint %}
 
-1. Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
-    ****
+1.  Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\\
+
+    ***
 
     This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/debuggingapplicationskernels.html#hsr1538574456889).\
     \
-    **TIP:** Ensure to use the `v++ -g` option when compiling your kernel code for debugging.\
-
+    **TIP:** Ensure to use the `v++ -g` option when compiling your kernel code for debugging.\\
 2. Unset the `XCL_EMULATION_MODE` environment variable.\
    \
-   **IMPORTANT:** The hardware build will not run if the `XCL_EMULATION_MODE` environment variable is set to an emulation target.\
-
-3. For embedded platforms, boot the SD card.\
+   **IMPORTANT:** The hardware build will not run if the `XCL_EMULATION_MODE` environment variable is set to an emulation target.\\
+3.  For embedded platforms, boot the SD card.\
     \
-    **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\
+    **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\\
 
-
-    For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
-
-4. Run your application.\
-
+    For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\\
+4.  Run your application.\\
 
     The specific command line to run the application will depend on your host code. A common implementation used in Xilinx tutorials and examples is as follows:
 
@@ -551,7 +538,7 @@ clean:
 
 ### Performance Considerations
 
-Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags.&#x20;
+Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags.
 
 Here is an example snippet from the [Xilinx Buttom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware\_Accelerators/Design\_Tutorials/05-bottom\_up\_rtl\_kernel/krnl\_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
 
