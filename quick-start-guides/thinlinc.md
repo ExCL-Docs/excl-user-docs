@@ -75,6 +75,7 @@ If the system is an internal node, then local port forwarding must be used. The 
    Host file:
     ```
     127.0.0.1 <hostname>
+    ::1       <hostname>
     ```
 3. Launch the ThinLinc Client.
 4. In the options, specify the SSH port to be `<localport>`.
