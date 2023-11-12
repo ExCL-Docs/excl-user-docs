@@ -1,7 +1,6 @@
 ---
 description: High performance build and compute servers
 ---
-
 # Triple Crown
 
 These 2U servers are highly capable large memory servers, except that they have limited PCIe4 slots for expansion.
@@ -16,10 +15,20 @@ These 2U servers are highly capable large memory servers, except that they have 
   * one is system disk, one available for research use
 * 4 MO003200KWZQQ 3.2 TB NVME storage
   * available as needed
+  
 
-#### Usage
+## Usage
 
 These servers are generally used for customized VM environments, which are often scheduled via SLURM, and for networking/DPU research.
+
+## Status
+
+| Node        | VM      | OS           | Status      |
+| ----------- | ------- | ------------ | ----------- |
+| Justify     | All off | Ubuntu 22.04 | Operational |
+| Pharoah     | All off | Ubuntu 22.04 | Operational |
+| Affirmed    | All off | Ubuntu 22.04 | Operational |
+| Secretariat | All off | Ubuntu 22.04 | Operational |
 
 ## Affirmed
 
