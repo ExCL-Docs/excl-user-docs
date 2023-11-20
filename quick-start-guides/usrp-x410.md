@@ -81,10 +81,10 @@ sudo screen /dev/serial/by-id/usb-Digilent_Digilent_USB_Device_2516351DDCC0-if03
 
 ```shell
 git clone -b 2.6.3 https://github.com/siemens/kas.git
-git clone -b v4.5.0.0 https://github.com/EttusResearch/meta-ettus.git
-./kas/kas-container build meta-ettus/kas/x4xx.yml --runtime-args "-e MENDER_ARTIFACT_NAME=v4.5.0.0-excl"
+git clone -b v4.6.0.0 https://github.com/EttusResearch/meta-ettus.git
+./kas/kas-container build meta-ettus/kas/x4xx.yml --runtime-args "-e MENDER_ARTIFACT_NAME=v4.6.0.0-excl"
 ./kas/kas-container shell meta-ettus/kas/x4xx.yml -c "bitbake gnuradio-image -cpopulate_sdk"
-./meta-ettus/contrib/create_packages.sh x4xx v4.5.0.0-excl gnuradio-image build/tmp-glibc/deploy
+./meta-ettus/contrib/create_packages.sh x4xx v4.6.0.0-excl gnuradio-image build/tmp-glibc/deploy
 ```
 
 ### Radio Frequency Network-on-Chip (RFNoC)
@@ -109,7 +109,7 @@ ssh arias
 cd /noback/$USER
 git clone https://github.com/EttusResearch/uhd.git
 cd uhd
-git checkout -b $USER/develop v4.5.0.0
+git checkout -b $USER/develop v4.6.0.0
 cd fpga/usrp3/top/x400/
 source setupenv.sh --vivado-path=/tools/Xilinx/Vivado
 make help
@@ -164,7 +164,7 @@ $ timedatectl timesync-status
 ```
 
 ```shell
-usrp_update_fs -t v4.5.0.0
+usrp_update_fs -t v4.6.0.0
 ```
 
 ```shell
