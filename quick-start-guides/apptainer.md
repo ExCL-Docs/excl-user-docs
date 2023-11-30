@@ -70,8 +70,13 @@ NFS filesystems support overlay mounts as a `lowerdir` only, and do not support 
 * It is helpful to add commonly needed bind paths to `/etc/apptainer/apptainer.conf`. I have added the following bind commands to Zenith:
 
 ```
+bind path = /scratch
+bind path = /etc/localtime
+bind path = /etc/hosts
 bind path = /noback
 bind path = /var/opt/thinlinc
+bind path = /auto
+
 ```
 
 ## See also
