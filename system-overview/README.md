@@ -21,6 +21,7 @@ coverY: 0
 | [justify](triple-crown.md#justify)   | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB | Centos 7.9            |                                                                        |
 | [leconte](leconte.md)                | Summit server POWER9 42 Cores       | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
 | [lewis](lewis.md)                    | Desktop embedded system development | Ubuntu 22.04          |                                                                        |
+| [marconi](marconi.md)                | Software Defined Radio (SDR) development | Ubuntu 22.04     | 2 Ettus X410 (RFSoC) SDRs                                              |
 | [mcmurdo](mcmurdo.md)                | Desktop embedded system development | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
 | [milan0](milan.md)                   | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
 | [milan\[1-2\]](milan.md)             | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | Groq                                                                   |
@@ -45,7 +46,6 @@ coverY: 0
 * Achronix FPGA
 * AGX Orin Developer Kits
 * Xilinx U280
-* 2 Ettus x410 high-performance, multi-channel, Zynq US+ RFSoC based software defined radio (SDR)
 
 ## Accelerator Highlights
 
