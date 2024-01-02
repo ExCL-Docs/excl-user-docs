@@ -10,33 +10,33 @@ coverY: 0
 
 | Host Name                            | Description                         | OS                    | Accelerators or other special hardware                                 |
 | ------------------------------------ | ----------------------------------- | --------------------- | ---------------------------------------------------------------------- |
-| [affirmed](triple-crown.md#affirmed)              | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | <p>Bluefield 2 </p><p>NIC/DPUs</p>                                     |
+| [affirmed](triple-crown.md#affirmed) | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB | Ubuntu 22.04          | <p>Bluefield 2 </p><p>NIC/DPUs</p>                                     |
 | [amundsen](amundsen.md)              | Desktop embedded system development | Ubuntu 20.04          | Snapdragon 855 (desktop retiring)                                      |
 | [apachepass](apachepass.md)          | ApachePass memory system            | Centos 7.9            | 375 GB Apachepass memory                                               |
 | [clark](clark.md)                    | Desktop embedded system development | Ubuntu 22.04          | Intel A770 Accelerator                                                 |
 | [cousteau](cousteau.md)              | HP AMD 24 Core Server 256 GB        | Ubuntu 22.04          | 2 AMD MI100 GPUs                                                       |
 | [docker](docker.md) (quad03)         | Intel 20 Core Server 96 GB          | Ubuntu 20.04          | Docker development environment                                         |
-| [equinox](equinox.md)                | DGX Workstation                     | Ubuntu 22.04          | 4 Tesla V100 32 GB GPUs                                                |
-| [explorer](explorer.md)              | AMD 128 Core 512 Gb                 | Ubuntu 22.04          | 2 AMD MI50 GPUs                                                        |
-| [justify](triple-crown.md#justify)          | Triple Crown AMD (128 cores/ TB)    | Centos 7.9            |                                                                        |
-| [leconte](leconte.md)                | Summit server Power9 42 Cores       | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
+| [equinox](equinox.md)                | DGX Workstation Intel Xeon E5-2698 v4 (Broadwell) 20-core 256 GB | Ubuntu 22.04          | 4 Tesla V100-DGXS 32 GB GPUs              |
+| [explorer](explorer.md)              | AMD EPYC 7702 2x64-core 512 GB      | Ubuntu 22.04          | 2 AMD MI60 32 GB GPUs                                                  |
+| [justify](triple-crown.md#justify)   | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB | Centos 7.9            |                                                                        |
+| [leconte](leconte.md)                | Summit server POWER9 42 Cores       | Centos 8.4            | 6 Tesla V100 16 Gb                                                     |
 | [lewis](lewis.md)                    | Desktop embedded system development | Ubuntu 22.04          |                                                                        |
 | [mcmurdo](mcmurdo.md)                | Desktop embedded system development | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
-| [milan0](milan.md)                   | AMD Milan server                    | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
-| [milan\[1-2\]](milan.md)             | AMD Milan server                    | Ubuntu 22.04 or other | Groq                                                                   |
-| [milan3](milan.md)                   | AMD Milan server                    | Ubuntu 22.04 or other | <p>heterogeneous research<br>not deployed</p>                          |
+| [milan0](milan.md)                   | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
+| [milan\[1-2\]](milan.md)             | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | Groq                                                                   |
+| [milan3](milan.md)                   | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | <p>heterogeneous research<br>not deployed</p>                          |
 | [minim1](minim1.md)                  | Apple M1 Desktop                    | OSX                   |                                                                        |
-| [oswald00](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [oswald02](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [oswald03](oswald.md)                | Intel 32 Core 256 GB                | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [pcie](pcie.md)                      | Intel 32 Core 196 GB                | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
-| [pharoah](triple-crown.md#pharoah)                | Triple Crown AMD (128 cores/1 TB)   | Centos 7.9            |                                                                        |
+| [oswald00](oswald.md)                | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
+| [oswald02](oswald.md)                | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
+| [oswald03](oswald.md)                | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
+| [pcie](pcie.md)                      | Intel Xeon Gold 6130 CPU (Skylake) 32-core 192 GB | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
+| [pharoah](triple-crown.md#pharoah)   | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB | Centos 7.9            |                                                                        |
 | [radeon](radeon.md)                  | Intel 4 Core 64 GB                  | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
-| [secretariat](triple-crown.md#secretariat)        | Triple Crown AMD (128 cores/1 TB)   | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
+| [secretariat](triple-crown.md#secretariat) | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
 | [thunderx](thunderx.md)              | ARM Cavium ThunderX2 Server 128 GB  | Centos Stream 8       |                                                                        |
 | [xavier\[1-3\]](xavier.md)           | Nvidia Jetson AGX                   | Ubuntu                | Volta GPU                                                              |
-| [xavier\[4-5\]](xavier.md)           | Nvidia Jetsion AGX Orin             | Ubuntu                | Ampere GPU (not deployed)                                              |
-| [zenith](zenith.md)                  | AMD Ryzen 32 Core 132 Gb            | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
+| [xavier\[4-5\]](xavier.md)           | Nvidia Jetson AGX Orin              | Ubuntu                | Ampere GPU (not deployed)                                              |
+| [zenith](zenith.md)                  |  AMD Ryzen Threadripper 3970X (Castle Peak) 32-core 132 GB | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
 
 ## New Systems and Devices to be Deployed
 
@@ -52,7 +52,7 @@ coverY: 0
 | Accelerator Name                         | Host(s)           |
 | ---------------------------------------- | ----------------- |
 | AMD Radeon VII GPU                       | radeon            |
-| AMD MI50 GPU                             | explorer          |
+| AMD MI60 GPU                             | explorer          |
 | AMD MI100 GPU                            | cousteau          |
 | [Groq](../quick-start-guides/groq.md)    | milan\[1-2]       |
 | Nvidia P100 GPU                          | pcie              |
