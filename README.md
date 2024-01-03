@@ -28,3 +28,5 @@ See [Access to ExCL](excl-support/access.md) for more details.
 ## ExCL Cheat Sheet
 
 [Download Cheat Sheet](https://github.com/ExCL-Docs/excl-user-docs/raw/master/cheat-sheets/excl-cheat-sheet.pdf)
+
+{% embed url="https://excl-docs.github.io/excl-user-docs/excl-cheat-sheet.pdf" %}
