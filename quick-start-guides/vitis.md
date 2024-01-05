@@ -1,7 +1,6 @@
 ---
 description: Getting started with Vitis FPGA development.
 ---
-
 # Vitis FPGA Development
 
 [ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
@@ -246,6 +245,10 @@ source ~7ry/vitis-2020.2.source
 If you want to use fish instead of bash, then see [Vitis FPGA Development](vitis.md#using-vitis-with-the-fish-shell).
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/settingupvitisenvironment.html#zks1565446519267) **for more details on setting up the Vitis Environment.**
+
+{% hint style="info" %}
+**Note:** Because of issues with XRT and with OpenCL including the xilinx.icd by default, on many system we moved the xilinx.icd to `/etc/OpenCL/vendors/xilinx/xilinx.icd`. Now to load the FPGA as an OpenCL device, you must change the environment variable `OPENCL_VENDOR_PATH` to point to `/etc/OpenCL/vendors/xilinx` or `/etc/OpenCL/vendors/all`.
+{% endhint %}
 
 ### Build Targets
 
