@@ -1,3 +1,6 @@
+---
+description: Getting started with self-hosted runners for GitHub CI on ExCL systems.
+---
 # GitLab CI Runners in ExCL
 
 If you don’t want to run the runner as service then you can follow the steps posted at [Adding self-hosted runners - GitHub Docs](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners) to create a self-hosted runner in ExCL.
