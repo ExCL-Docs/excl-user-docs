@@ -75,3 +75,9 @@ Host github.com
    HostName github.com
    ProxyJump login
 ```
+
+To configure git to always use ssh for code.ornl.gov repositories, use the config command below.
+
+```bash
+git config --global url."git@code.ornl.gov:".insteadOf https://code.ornl.gov/
+```
