@@ -54,6 +54,7 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
     Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
 
     Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
+   ![proxy foxy settings](/assets/foxyproxy-settings.png)
 3. Connect to the ThinLinc server using the links above.
 
 ## Accessing ThinLinc through ThinLinc Client
