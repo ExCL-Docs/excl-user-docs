@@ -27,7 +27,7 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 ## Getting Assistance
 
-Please send an email request to excl-help@ornl.gov for assistance.  This initiates a service ticket and dispatches it to ExCL staff.
+Please send an email request to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) for assistance.  This initiates a service ticket and dispatches it to ExCL staff.
 
 ## ExCL Cheat Sheet
 
