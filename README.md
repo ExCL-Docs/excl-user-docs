@@ -1,5 +1,5 @@
 ---
-description: Landing page for getting started with ExCL Systems
+description: Getting Started with the ORNL ACSR Experimental Computing Laboratory
 ---
 # Introduction
 
