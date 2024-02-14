@@ -13,11 +13,6 @@ Please acknowledge in your publications the role the Experimental Computing Labo
 
 See [Requesting access](excl-support/access-info.md) for information on how to request access to the system.
 
-## Useful URLs
-
-* Thinlinc Session: [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
-* ExCL front page: [www.excl.ornl.gov](https://www.excl.ornl.gov)
-
 ## How to Login
 
 See [Access to ExCL](excl-support/access.md) for more details.
