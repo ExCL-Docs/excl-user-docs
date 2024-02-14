@@ -15,15 +15,19 @@ See [Requesting access](excl-support/access-info.md) for information on how to r
 
 ## Useful URLs
 
-* [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
-* [www.excl.ornl.gov](https://www.excl.ornl.gov)
+* Thinlinc Session: [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
+* ExCL front page: [www.excl.ornl.gov](https://www.excl.ornl.gov)
 
 ## How to Login
 
 See [Access to ExCL](excl-support/access.md) for more details.
 
-* `ssh login.excl.ornl.gov`
-* [login.excl.ornl.gov](https://login.excl.ornl.gov:300)
+* Shell login: `ssh login.excl.ornl.gov`
+* ThinLinc Session: [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300)
+
+## Getting Assistance
+
+Please send an email request to excl-help@ornl.gov for assistance.  This initiates a service ticket and dispatches it to ExCL staff.
 
 ## ExCL Cheat Sheet
 
