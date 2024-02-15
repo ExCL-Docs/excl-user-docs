@@ -1,7 +1,6 @@
 ---
 description: Getting started with Gitlab CI runners in code.ornl.gov running on ExCL systems.
 ---
-
 # GitLab CI Runners in ExCL
 
 ## Register a Runner
@@ -50,6 +49,14 @@ Any system can be requested as a runner. These systems are already being used as
 ## Using Slurm with Gitlab CI
 
 The system slurm-gitlab-runner is setup specifically to run CI jobs that then run the execution using slurm with `sbatch --wait`.
+
+For a complete example and template for how to use the Slurm with GitLab in ExCL see [this pipeline](https://code.ornl.gov/7ry/templates/-/pipelines) and [this template](https://code.ornl.gov/7ry/templates/-/tree/master/gitlab-ci).
+
+This template includes two helper scripts, `runner_watcher.sh` and `slurm-tee.py`.
+
+`runner_watcher.sh` watches the CI job and cancels the Slurm job if the CI job is canceled or times out.
+
+`slurm-tee.py` watches the `slurm-out.txt` and `slurm-err.txt` files and prints their content to std-out so that the build log can be watched from the GitLab web interface. Unlike regular `less --folow`, `slurm-tee` watches the multiple files for changes and also exits once the slurm job completes.
 
 ## Spack and Conda with Gitlab-CI
 

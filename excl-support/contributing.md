@@ -4,7 +4,7 @@
 
 ## About ExCl User Documentation
 
-Documentation published to ExCL users is available in our GitHub [repo](https://github.com/ORNL-ExCL/excl-user-docs). Users are encouraged to contribute by improving the material or providing user-created tutorials to share with the community.
+Documentation published to ExCL users is available in our [GitHub repo](https://github.com/ORNL-ExCL/excl-user-docs). Users are encouraged to contribute by improving the material or providing user-created tutorials to share with the community.
 
 ## Ways to Contribute
 
