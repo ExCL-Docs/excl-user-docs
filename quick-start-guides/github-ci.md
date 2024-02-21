@@ -18,7 +18,7 @@ ln -s /scratch/$USER/.config/systemd /home/$USER/.config/systemd
 
 Notes:
 - If you are trying this on a system which doesn’t already have a `/scratch` folder the command will fail. Please send an email to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) to create a folder for local storage.
-- If you setting up a second runner, the `ln` command will fail if the link already exists. In sure that the link is a valid link pointing to scratch before continuing with these instructions.
+- If you setting up a second runner, the `ln` command will fail if the link already exists. Ensure that the link is a valid link pointing to scratch before continuing with these instructions.
 
 ### Create a folder to store the GitHub Runner.
 
