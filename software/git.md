@@ -49,7 +49,7 @@ If you get a complaint about not being able to find socat, send an email to [exc
 
 exception 160.91.186.123:_->_:9418 service.ftpn.ornl.gov. squid proxy configured to allow this.
 
-## Git Config to convert Git SSH URLs to HTTPS
+## Git config to convert Git SSH URLs to HTTPS
 
 An alternative to setting up a proxy is to configure Git to convert Git URLs to HTTPS URLs by changing your global git config with the following commands.
 
@@ -81,3 +81,25 @@ To configure git to always use ssh for code.ornl.gov repositories, use the confi
 ```bash
 git config --global url."git@code.ornl.gov:".insteadOf https://code.ornl.gov/
 ```
+
+## Setup Git access to Code.ornl.gov
+
+The recommended approach to access `code.ornl.gov` is to use SSH. To do this, you need to generate an SSH key and add it to your GitLab account. The following steps will guide you through the process.
+
+1. Generate an SSH key.
+
+```bash
+ssh-keygen
+```
+
+2. Add the SSH key to your GitLab account.
+
+```bash
+cat ~/.ssh/id_rsa.pub
+```
+
+3. Copy the output of the command and paste it into the SSH key section of your GitLab account settings.
+    ![code-ornl-user-preferences](../assets/code-ornl-user-preferences.png)   
+    ![code-ornl-ssh-keys.png](../assets/code-ornl-ssh-keys.png)
+
+4. If you are on an ExCL system and you have not already done so, configure your SSH client to use the login node as a jump proxy. See [Git SSH Access](#git-ssh-access) for more information.
