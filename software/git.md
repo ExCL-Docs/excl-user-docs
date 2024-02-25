@@ -82,7 +82,7 @@ To configure git to always use ssh for code.ornl.gov repositories, use the confi
 git config --global url."git@code.ornl.gov:".insteadOf https://code.ornl.gov/
 ```
 
-## Setup Git access to Code.ornl.gov
+## Setup Git access to [code.ornl.gov](https://code.ornl.gov)
 
 The recommended approach to access `code.ornl.gov` is to use SSH. To do this, you need to generate an SSH key and add it to your GitLab account. The following steps will guide you through the process.
 
@@ -98,7 +98,7 @@ ssh-keygen
 cat ~/.ssh/id_rsa.pub
 ```
 
-3. Copy the output of the command and paste it into the SSH key section of your GitLab account settings.
+3. Copy the output of the command and paste it into the SSH key section of your GitLab account settings.  
     ![code-ornl-user-preferences](../assets/code-ornl-user-preferences.png)   
     ![code-ornl-ssh-keys.png](../assets/code-ornl-ssh-keys.png)
 
