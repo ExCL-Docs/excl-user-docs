@@ -23,8 +23,9 @@ coverY: 0
 | [lewis](lewis.md)                    | Desktop embedded system development | Ubuntu 22.04          |                                                                        |
 | [mcmurdo](mcmurdo.md)                | Desktop embedded system development | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
 | [milan0](milan.md)                   | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
-| [milan\[1-2\]](milan.md)             | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | Groq                                                                   |
-| [milan3](milan.md)                   | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | <p>heterogeneous research<br>not deployed</p>                          |
+| [milan1](milan.md)             | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | 2 Groq AI accelerators                                                                   |
+| [milan2](milan.md)             | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | 8 Nvidia Tesla P100-PCIE-32GB GPUs|
+| [milan3](milan.md)                   | AMD EPYC 7513 (Milan) 2x32-core 1 TB | Ubuntu 22.04 or other | General Use  |
 | [minim1](minim1.md)                  | Apple M1 Desktop                    | OSX                   |                                                                        |
 | [oswald00](oswald.md)                | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald02](oswald.md)                | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
