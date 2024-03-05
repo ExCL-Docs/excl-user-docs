@@ -47,7 +47,7 @@ cd /home/$USER/spack
 git checkout releases/latest # or release/v0.16
 
 # Install a spack compiler to use as the default
-spack install git@9.3.0 
+spack install gcc@9.3.0 
 spack compiler add $(spack location -i gcc@9.3.0)
 
 # Add Spack to bashrc.
