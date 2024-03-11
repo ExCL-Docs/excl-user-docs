@@ -76,7 +76,6 @@ bind path = /etc/hosts
 bind path = /noback
 bind path = /var/opt/thinlinc
 bind path = /auto
-
 ```
 
 ## See also
