@@ -14,8 +14,8 @@ However, the crucial elements to include are:
 * Office of Science and U.S. Department of Energy
 * Contract No. DE-AC05-00OR22725
 
-We appreciate your conscientiousness in this matter. Acknowledgment and pre-publication notification helps ExCL communicate the importance of its role in science to our sponsors and stakeholders, helping assure the continued availability of this valuable resource.
-
 Additionally, when you add the paper to Resolution, please add “Experimental Computing Laboratory” to Research Centers and Institutes under Funding and Facilities as show in this image.
 
 ![excl-acknowledge-resolution](./assets/excl-acknowledge-resolution.png)
+
+We appreciate your conscientiousness in this matter. Acknowledgment and pre-publication notification helps ExCL communicate the importance of its role in science to our sponsors and stakeholders, helping assure the continued availability of this valuable resource.
