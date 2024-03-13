@@ -13,12 +13,18 @@ The Qualcomm® Snapdragon™ 855 Mobile Hardware Development Kit (HDK) is a high
 
 Accessing this system:
 
-* Qualcomm board is connected to an HPZ820 workstation  through USB
+* Qualcomm board is connected to an HPZ820 workstation (McMurdo) or to an HP Z4 workstation (Clark) through USB
 * Development Environment: Android SDK/NDK
-* Login to mcmurdo
+* Login to mcmurdo or clark
   * $ ssh –Y mcmurdo
 * Setup Android platform tools and development environment
   * $ source /home/nqx/setup_android.source
+* Make sure you have a functining environment 
+  * adb kill-server
+  * adb start-server
+  * adb root (restart adbd as root)
+  * adb devices (to make sure there is a snapdragon responding)
+  * adb shell (to test connecting to the device)
 * Run Hello-world on ARM cores
   * $ git clone [https://code.ornl.gov/nqx/helloworld-android](https://code.ornl.gov/nqx/helloworld-android)
   * $ make  compile  push  run
@@ -29,6 +35,9 @@ Accessing this system:
   * Login to Qualcomm development board shell
     * $ adb shell
     * $ cd /data/local/tmp
+
+## Other Details
+The snapdragon SDK uses python 2.7; you may need to explicitly specify python2 in your environment.
 
 ## Access
 
