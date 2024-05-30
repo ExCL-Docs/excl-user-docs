@@ -54,6 +54,7 @@
 ## Software
 
 * [Compilers](software/compilers.md)
+* [MPI](software/mpi.md)
 * [Git](software/git.md)
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
 
