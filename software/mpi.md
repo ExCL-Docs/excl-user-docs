@@ -1,5 +1,5 @@
 ---
-description: Build and run MPI (Message Passing Interface) enabled codes on EXCL
+description: Build and run MPI (Message Passing Interface) enabled codes on ExCL
 ---
 
 # MPI
