@@ -75,9 +75,6 @@ Hello world from processor milan0.ftpn.ornl.gov, rank 2 out of 4 processors
 Hello world from processor milan0.ftpn.ornl.gov, rank 0 out of 4 processors
 Hello world from processor milan0.ftpn.ornl.gov, rank 1 out of 4 processors
 Hello world from processor milan0.ftpn.ornl.gov, rank 3 out of 4 processors
-[milan0.ftpn.ornl.gov:2122196] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
-[milan0.ftpn.ornl.gov:2122196] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
-
 ```
 * `-np 4` specifies that 4 processes will be created, each running a copy of the mpi_hello_world program
 * `-mca coll_hcoll_enable 0` disables HCOLL
