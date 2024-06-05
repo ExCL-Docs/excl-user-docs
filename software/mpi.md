@@ -41,16 +41,46 @@ int main(int argc, char** argv) {
     // Finalize the MPI environment.
     MPI_Finalize();
 }
-
 ```
 
-Load the nvhpc (NVidia compiler)
+Load the Nvidia HPC SDK environment module
 ```bash
 $ module load nvhpc-openmpi3
 ```
 
+Verify the compiler path
 ```bash
 $ which mpicc
 /opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/openmpi/openmpi-3.1.5/bin/mpicc
 ```
 
+Build the program
+```bash
+$ mpicc ./mpi_hello_world.c
+```
+
+Run the program with MPI
+```bash
+$ mpirun -np 4 -mca coll_hcoll_enable 0 ./a.out
+
+--------------------------------------------------------------------------
+[[63377,1],2]: A high-performance Open MPI point-to-point messaging module
+was unable to find any relevant network interfaces:
+
+Module: OpenFabrics (openib)
+  Host: milan0
+
+Another transport will be used instead, although this may result in
+lower performance.
+
+NOTE: You can disable this warning by setting the MCA parameter
+btl_base_warn_component_unused to 0.
+--------------------------------------------------------------------------
+Hello world from processor milan0.ftpn.ornl.gov, rank 2 out of 4 processors
+Hello world from processor milan0.ftpn.ornl.gov, rank 0 out of 4 processors
+Hello world from processor milan0.ftpn.ornl.gov, rank 1 out of 4 processors
+Hello world from processor milan0.ftpn.ornl.gov, rank 3 out of 4 processors
+[milan0.ftpn.ornl.gov:2122196] 3 more processes have sent help message help-mpi-btl-base.txt / btl:no-nics
+[milan0.ftpn.ornl.gov:2122196] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+
+```
