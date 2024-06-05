@@ -4,11 +4,6 @@ description: Build and run MPI (Message Passing Interface) enabled codes on EXCL
 
 # MPI
 
-## Notes
-
-- ExCL systems typically do not have InfiniBand setup. (Although if this is required, it can be added as needed.) This means that you could see HCOLL warnings/errors which state that no HCA device can be found. This happens since HPC-X enables HCOLL by default and HCOLL requires an InfiniBand adapter. You can disable HCOLL and get rid of these warnings/errors with the `-mca coll_hcoll_enable 0` flag for example: `mpirun -np 4 -mca coll_hcoll_enable 0 ./a.out`.
-
-
 ## Hello World built with nvhpc
 
 ```c
@@ -84,3 +79,11 @@ Hello world from processor milan0.ftpn.ornl.gov, rank 3 out of 4 processors
 [milan0.ftpn.ornl.gov:2122196] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
 
 ```
+* `-np 4` specifies that 4 processes will be created, each running a copy of the mpi_hello_world program
+* `-mca coll_hcoll_enable 0` disables HCOLL
+
+## Notes
+
+### InfiniBand and HCOLL
+ExCL systems typically do not have InfiniBand setup. (Although if this is required, it can be added as needed.)   HCOLL (HPC-X: Collective Communication Library) requires an InfiniBand adapter and since it's enabled by default, you could see HCOLL warnings/errors which state that no HCA device can be found.  You can disable HCOLL and get rid of these warnings/errors with the `-mca coll_hcoll_enable 0` flag for example: `mpirun -np 4 -mca coll_hcoll_enable 0 ./a.out`.
+
