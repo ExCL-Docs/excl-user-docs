@@ -8,7 +8,7 @@ While our file server and backup file server are quite robust, ExCL does not hav
 
 ExCL uses ZFS with snapshots.  The homegrown scripts to manage snapshot and replication have been replaced by zrepl (https://zrepl.github.io/), which has much better handling of edge condition, and is overall much more reliable.  Zrepl handles both automated snapshot generation and file system replication.  Snapshots are taken hourly, and ExCL file systems are replicated to the back up (old FS00) fileserver.
 
-In the past, snapshots have been available as ~/.zfs/snapshot/(hourly,daily,weekly)*.  These will continue to be available as they age out, then will simply disappear as each snapshot does.  The new snapshot format is
+In the past, snapshots have been available as ~/.zfs/snapshot/(hourly,daily,weekly)*.  These will continue to be available as they age out, then will simply disappear.  The new snapshot format is
 
 `~/.zfs/snapshots/zrepl_yyyymmdd_hhmmss_000`
 
