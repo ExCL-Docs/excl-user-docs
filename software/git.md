@@ -103,3 +103,5 @@ cat ~/.ssh/id_rsa.pub
     ![code-ornl-ssh-keys.png](../assets/code-ornl-ssh-keys.png)
 
 4. If you are on an ExCL system and you have not already done so, configure your SSH client to use the login node as a jump proxy. See [Git SSH Access](#git-ssh-access) for more information.
+
+If you use a passphrase with your SSH key (recommended for security), then you should also setup an SSH Agent to load the SSH key. This allows you to enter your passphrase once for the session without needing to enter your passphrase potentially many times for each git command. The VS Code documentation is well written for setting up this SSH Agent on a variety of platforms, see [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent).
