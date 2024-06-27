@@ -35,7 +35,7 @@
 * [Glossary & Acronyms](excl-support/glossary-and-acronyms.md)
 * [Requesting Access](excl-support/access-info.md)
 * [Outages and Maintenance Policy](excl-support/outages.md)
-* [Backup](excl-support/backup.md)
+* [Backup & Storage](excl-support/backup.md)
 
 ## Quick-Start Guides
 
