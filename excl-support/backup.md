@@ -39,4 +39,4 @@ In addition to the shared network NFS storage, each system has a local scratch s
 {% endhint %}
 
 A working space can be created with `mkdir /scratch/$USER`. Since there is no purging policy, please clean up after you no longer need the scratch space.
-If a system does not already have a `/scratch` space please open a ticket via [excl-help@ornl.gov](mailto:excl-help@ornl.gov)
+If a system does not already have a `/scratch/` space please open a ticket via [excl-help@ornl.gov](mailto:excl-help@ornl.gov)
