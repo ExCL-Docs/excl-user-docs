@@ -17,6 +17,7 @@ coverY: 0
 | [docker](docker.md) (quad03)               | Intel 20 Core Server 96 GB                                       | Ubuntu 20.04          | Docker development environment                                         |
 | [equinox](equinox.md)                      | DGX Workstation Intel Xeon E5-2698 v4 (Broadwell) 20-core 256 GB | Ubuntu 22.04          | 4 Tesla V100-DGXS 32 GB GPUs                                           |
 | [explorer](explorer.md)                    | AMD EPYC 7702 (Rome) 2x64-core 512 GB                            | Ubuntu 22.04          | 2 AMD MI60 32 GB GPUs                                                  |
+| [hudson](hudson.md)                        | AMD EPYC 9454 (Genoa) 2x48-core 1.5 TB                           | Ubuntu 22.04          | 2 Nvidia H100s                                                         |
 | [justify](triple-crown.md#justify)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                 | Centos 7.9            |                                                                        |
 | [leconte](leconte.md)                      | Summit server POWER9 42 Cores                                    | Centos 8.4            | 6 Tesla V100 16 GB GPUs                                                |
 | [lewis](lewis.md)                          | Desktop embedded system development                              | Ubuntu 22.04          |                                                                        |
