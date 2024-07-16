@@ -124,7 +124,7 @@ We follow the resulting workflow yaml file in the JACC.jl [repo](https://github.
     - name: GitHub API Request
         if: steps.check.outputs.triggered == 'true'
         id: request
-        uses: octokit/request-action@v2.1.9
+        uses: octokit/request-action@v2.x
         with:
           route: ${{github.event.issue.pull_request.url}}
         env:
