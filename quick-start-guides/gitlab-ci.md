@@ -7,7 +7,7 @@ description: Getting started with Gitlab CI runners in code.ornl.gov running on 
 
 Runners can be registered as either a group runner or for a single repository (also know as a project runner). Group runners are are made available to all the repositories in a group.
 
-Send the following information to [excl-help@ornl.gov](mailto:excl-help@ornl.gov?subject=Request%20GitLab%20Runner%20Registration&body=Request%20to%20register%20an%20ExCL%20node%20as%20a%20GitLab%20Runner:%0D%0A%0D%0A-%20URL:%20https://code.ornl.gov/%0D%0A-%20Registration%20Token:%20%20%0D%0A-%20Executor:%20(choose%20shell%20or%20docker%20with%20image)%20%0D%0A-%20Project%20Name:%20%0D%0A-%20ExCL%20System:%20%0D%0A-%20Tag%20List:)
+Send the following information to [excl-help@ornl.gov](mailto:excl-help@ornl.gov?subject=Request%20GitLab%20Runner%20Registration&body=Request%20to%20register%20an%20ExCL%20node%20as%20a%20GitLab%20Runner%3A%20%0A%0A-%20URL%3A%20https%3A%2F%2Fcode.ornl.gov%2F%20%0A-%20Registration%20Token%3A%20%20%0A-%20Executor%3A%20(choose%20shell%20or%20docker%20with%20image)%20%0A-%20Project%20Name%3A%20%0A-%20ExCL%20System%3A%20%0A-%20Tag%20List%3A%20%0A%0AGitLab-Runner%20Register%20Command%3A%0A) and we will register the runner as a system runner.
 
 - URL
 - Registration Token
@@ -16,17 +16,17 @@ Send the following information to [excl-help@ornl.gov](mailto:excl-help@ornl.gov
 - ExCL System
 - Tag List
 
-The method for finding the registration differs depending on if you want to register a group runner or a single repository runner. See [Group Runner](#group-runner) and [Single Repo Runner (Project Runner))](#single-repo-runner-project-runner) sections below.
+The method for obtaining this information differs depending on if you want to register a group runner or a single repository runner. See [Group Runner](#group-runner) and [Single Repo Runner (Project Runner))](#single-repo-runner-project-runner) sections below.
 
 After the runner is added, you can edit the runner to change the tags and description.
 
 ### Group Runner
 
-Navigate to the group page. Click on `Build` → `Runners`. Choose the vertical dots at the top of the page next to `New group runner` and copy registration token.
+Navigate to the group page. Click on `Build` → `Runners`. Then select `New group runner` and progress until you have created the runner and are provided with a command to run in the command line to register the runner. Since we use system runners instead of user runners, you will need to send this information to [excl-help@ornl.gov](mailto:excl-help@ornl.gov?subject=Request%20GitLab%20Runner%20Registration&body=Request%20to%20register%20an%20ExCL%20node%20as%20a%20GitLab%20Runner%3A%20%0A%0A-%20URL%3A%20https%3A%2F%2Fcode.ornl.gov%2F%20%0A-%20Registration%20Token%3A%20%20%0A-%20Executor%3A%20(choose%20shell%20or%20docker%20with%20image)%20%0A-%20Project%20Name%3A%20%0A-%20ExCL%20System%3A%20%0A-%20Tag%20List%3A%20%0A%0AGitLab-Runner%20Register%20Command%3A%0A) to get the runner registered.
 
 ### Single Repo Runner (Project Runner)
 
-Navigate to the repo page. Click on `Settings` → `CI/CD` → `Runners`. Choose the vertical dots next to `New project runner` and copy registration token.
+Navigate to the repo page. Click on `Settings` → `CI/CD` → `Runners`. Then select `New project runner` and progress until you have created the runner and are provided with a command to run in the command line to register the runner. Since we use system runners instead of user runners, you will need to send this information to [excl-help@ornl.gov](mailto:excl-help@ornl.gov?subject=Request%20GitLab%20Runner%20Registration&body=Request%20to%20register%20an%20ExCL%20node%20as%20a%20GitLab%20Runner%3A%20%0A%0A-%20URL%3A%20https%3A%2F%2Fcode.ornl.gov%2F%20%0A-%20Registration%20Token%3A%20%20%0A-%20Executor%3A%20(choose%20shell%20or%20docker%20with%20image)%20%0A-%20Project%20Name%3A%20%0A-%20ExCL%20System%3A%20%0A-%20Tag%20List%3A%20%0A%0AGitLab-Runner%20Register%20Command%3A%0A) to get the runner registered.
 
 ## List of ExCL Systems with a runner
 
