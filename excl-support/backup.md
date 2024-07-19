@@ -34,6 +34,6 @@ If you require more scratch storage than is available, or if you have any diffic
  [excl-help@ornl.gov](mailto:excl-help@ornl.gov) as on newer systems there is often additional
 storage available that has not been allocated. Since there is no purging policy, please clean up after you no longer need the scratch space.
 
-% hint style="danger" %}
+{% hint style="danger" %}
 `/scratch/` is not shared between nodes, not stored in raid, and not backed up in any way. However, this storage does not have any automatic purging policy (unlike `/tmp/`), so the files should persist as long as the storage doesn’t fill up and the drives don’t fail.
 {% endhint %}
