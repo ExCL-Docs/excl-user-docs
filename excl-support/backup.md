@@ -28,9 +28,16 @@ We can also help diagnose the cause of large storage use by providing a breakdow
 
 ## Local Storage
 
-In addition to shared network storage, each system has a local `/scratch` directory.  The size will vary from system to system, and some systems may have `/scratch2` in addition. Users may store files on this local storage in `/scratch/$USER/` (which you may need to create via mkdir.
-This storage location is good for caching files on local host storage, for speeding up tasks which are storage IO bound, and performing tasks which can’t be done on NFS storage (for example, Apptainer and embedded Linux builds).
-If you require more scratch storage than is available, or if you have any difficulty using `/scratch`, contact
+In addition to shared network storage, each system has a local `/scratch`
+directory.  The size will vary from system to system, and some systems may 
+have `/scratch2` in addition. A working space can be created with 
+`mkdir /srcatch$USER` if one is not already present.
+This storage location is good for caching files on local host storage, 
+for speeding up tasks which are storage IO bound, and performing tasks 
+which can’t be done on NFS storage (for example, Apptainer and 
+embedded Linux builds).
+If you require more scratch storage than is available, or if you have 
+any difficulty using `/scratch` including a missing /scratch or /scratch2 directory, contact
  [excl-help@ornl.gov](mailto:excl-help@ornl.gov) as on newer systems there is often additional
 storage available that has not been allocated. Since there is no purging policy, please clean up after you no longer need the scratch space.
 
