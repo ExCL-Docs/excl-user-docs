@@ -1,0 +1,42 @@
+# Frequently encountered problems.
+
+## I can't log in
+
+There are two most likely sources of this problem
+
+### Password won't work
+
+The most frequent cause is having your visitor (non-ORNL internal password)
+wrong, or having had it expire.   See `https://xcams.ornl.gov` to address
+this.   If you are ORNL staff, a frequent cause is a failure to keep your
+internal ORNL systems password up to date (UCAMS) or have missed required
+training.  ExCL makes the same check that any ORNL system makes as to
+whether a password is valid or an account exists (you will not be able to
+differentiate the two errors based on the login failure).   This will look
+like
+
+```text
+$  login.excl.ornl.gov
+hsm@login.excl.ornl.gov's password:
+Permission denied, please try again.
+```
+
+### Too many login attempts from a given IP address
+
+ExCL limits logins to five consecutive failures within a short period of time.
+After that limit exceeded, login atempts from your IP address will be blocked.
+This might look like
+
+```text
+$ ssh login.excl.ornl.gov
+ssh: connect to host login.excl.ornl.gov port 22: Operation timed out
+```
+
+To have this addressed, report your IP address to `excl-help@ornl.gov`.
+If you are on an ORNL network, you can use the usual native tools on
+your system to find your IP address.   If you are at home and on a network
+using NAT (as most home networks do) use
+[What Is My IP? Best Way To Check Your Public IP Address](https://www.whatismyip.com/)
+to determine your public IPv4 address when external to the lab.  Note that
+this will not report the correct address if you are on an ORNL
+(workstations or visitor) network.
