@@ -38,7 +38,7 @@ If you have done so, you can put git-proxy \~/bin. Make sure you have modified i
 
 3\) Add the following line to your `~/.gitconfig` file
 
-```
+```.gitconfig
 [core]
     gitProxy = git-proxy
 ```
@@ -63,16 +63,7 @@ git config --global url."https://github.com/".insteadOf git@github.com:
 ssh can be used to clone repositories on the login node. In order to clone repositories on the internal nodes, the ssh config needs to be changed to use the login node as a proxy jump. Here is an example ssh config with jump proxies to code.ornl.gov, bitbucket.org, and github.com.
 
 ```config
-Host code.ornl.gov
-   HostName code.ornl.gov
-   ProxyJump login
-
-Host bitbucket.org
-   HostName bitbucket.org
-   ProxyJump login
-
-Host github.com
-   HostName github.com
+Host code.ornl.gov bitbucket.org github.com
    ProxyJump login
 ```
 
@@ -99,7 +90,7 @@ cat ~/.ssh/id_rsa.pub
 ```
 
 3. Copy the output of the command and paste it into the SSH key section of your GitLab account settings.  
-    ![code-ornl-user-preferences](../assets/code-ornl-user-preferences.png)   
+    ![code-ornl-user-preferences](../assets/code-ornl-user-preferences.png)
     ![code-ornl-ssh-keys.png](../assets/code-ornl-ssh-keys.png)
 
 4. If you are on an ExCL system and you have not already done so, configure your SSH client to use the login node as a jump proxy. See [Git SSH Access](#git-ssh-access) for more information.
