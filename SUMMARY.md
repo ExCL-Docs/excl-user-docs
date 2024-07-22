@@ -31,6 +31,7 @@
 ## ExCl Support
 
 * [ExCL Team](excl-support/excl-team.md)
+* [Frequently Encountered Problems](excl-support/frequentProblems.md)
 * [Access to ExCL](excl-support/access.md)
 * [Contributing](excl-support/contributing.md)
 * [Glossary & Acronyms](excl-support/glossary-and-acronyms.md)
