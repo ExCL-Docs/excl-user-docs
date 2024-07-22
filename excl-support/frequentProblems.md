@@ -7,12 +7,12 @@ There are two most likely sources of this problem
 ### Password won't work
 
 The most frequent cause is having your visitor (non-ORNL internal password)
-wrong, or having had it expire.   See `https://xcams.ornl.gov` to address
-this.   If you are ORNL staff, a frequent cause is a failure to keep your
+wrong, or having had it expire. See `https://xcams.ornl.gov` to address
+this. If you are ORNL staff, a frequent cause is a failure to keep your
 internal ORNL systems password up to date (UCAMS) or have missed required
-training.  ExCL makes the same check that any ORNL system makes as to
+training. ExCL makes the same check that any ORNL system makes as to
 whether a password is valid or an account exists (you will not be able to
-differentiate the two errors based on the login failure).   This will look
+differentiate the two errors based on the login failure). This will look
 like
 
 ```text
@@ -34,9 +34,17 @@ ssh: connect to host login.excl.ornl.gov port 22: Operation timed out
 
 To have this addressed, report your IP address to `excl-help@ornl.gov`.
 If you are on an ORNL network, you can use the usual native tools on
-your system to find your IP address.   If you are at home and on a network
+your system to find your IP address. If you are at home and on a network
 using NAT (as most home networks do) use
 [What Is My IP? Best Way To Check Your Public IP Address](https://www.whatismyip.com/)
-to determine your public IPv4 address when external to the lab.  Note that
+to determine your public IPv4 address when external to the lab. Note that
 this will not report the correct address if you are on an ORNL
 (workstations or visitor) network.
+
+## I can’t clone my git repo
+
+The recommended approach for accessing git repositories in ExCL is to use the SSH protocol instead of the HTTPS protocol for private repositories and either protocol for public repositories. However, both approaches will work with the proper proxies, keys, applications passwords, and password managers in place.
+
+To use the SSH protocol you must first setup SSH keys to the git website (i.e. GitLab, GitHub, and Bitbucket). See [Git - Setup Git access to code.ornl.gov | ExCL User Docs (ornl.gov)](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov) for details for how to do this for code.ornl.gov. The other Git Clouds have similar methods to add SSH keys to your profile.
+
+Since the worker nodes are behind a proxy. You must setup an SSH jump host in your `.ssh/config` to access Git SSH servers. See [Git - Git SSH Access | ExCL User Docs (ornl.gov)](https://docs.excl.ornl.gov/software/git#git-ssh-access) to verify that you have setup the proper lines in your SSH Config.
