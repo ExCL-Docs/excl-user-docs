@@ -16,7 +16,7 @@ differentiate the two errors based on the login failure). This will look
 like
 
 ```text
-$  login.excl.ornl.gov
+$ ssh login.excl.ornl.gov
 hsm@login.excl.ornl.gov's password:
 Permission denied, please try again.
 ```
