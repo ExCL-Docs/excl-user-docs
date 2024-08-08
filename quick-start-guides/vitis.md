@@ -27,8 +27,6 @@ Vitis is now primarily deployed as a module for Ubuntu 22.04 systems. You can vi
 | [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | Spike       | U55C            |
 | [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    |             | U280            |
 
-![ExCL FPGA Overview](../assets/ExCL-FPGA-Overview.png)
-
 ### Vitis and FPGA Allocation with Slurm (Recommended Method to Use Tools)
 
 Suggested machines to use for Vitis development are also setup with Slurm. Slurm is used as a resource manager to allocate compute resources as well as hardware resources. The use of Slurm is required to allocate FPGA hardware and reserve build resources on Triple Crown. It is also recommended to reserve resources when running test builds on Zenith. The best practice is to launch builds on `fpgabuild` with Slurm, then launch bitfile tests with Slurm. The use of Slurm is required to effectively share the FPGAs, and to share build resources with automated CI Runs, and other automated build and test scripts. As part of the Slurm interactive use or batch script, use modules to load the desired version of the tools. The rest of this section details how to use Slurm. See the [Cheat Sheet](../#excl-cheat-sheet) for commonly used Slurm commands. See the [Slurm Quick Start User Guide](https://slurm.schedmd.com/quickstart.html) to learn the basics of using Slurm.
