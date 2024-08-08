@@ -54,3 +54,44 @@ cat ~/.ssh/id_rsa.pub
 4. If you are on an ExCL system and you have not already done so, configure your SSH client to use the login node as a jump proxy. See [Git SSH Access](#git-ssh-access) for more information.
 
 If you use a passphrase with your SSH key (recommended for security), then you should also setup an SSH Agent to load the SSH key. This allows you to enter your passphrase once for the session without needing to enter your passphrase potentially many times for each git command. The VS Code documentation is well written for setting up this SSH Agent on a variety of platforms, see [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent).
+
+## SSH Keys for Authentication
+
+Using SSH keys is the preferred way to authenticate your user and to authenticate with private Git repositories. For security, it is recommended to use an SSH keys encrypted with a passphrase.
+
+### Why not passwords?
+
+ExCL will block your account after 3 failed attempts. Automatic login tools, e.g. VS Code, can easily exceed this limit using a cached password and auto-reconnect.
+For git repos with two-factor authentication, an application token/password must be created, and this password must be stored externally and is more cumbersome to use.
+
+### How to get started?
+
+1. Set up a key pair:
+    - [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_quick-start-using-ssh-keys)
+    - [Generating a new SSH key and adding it to the ssh-agent - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+2. [Add key to Git Hosting Websites.](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov) Add the key to all Git hosting website that you want to use.
+3. [Setup ExCL worker node proxy via login node.](https://docs.excl.ornl.gov/software/git#git-ssh-access)
+
+## SSH-Agent and SSH Forwarding
+
+**SSH-Agents** cache SSH keys with passphrases, allowing them to be reused during the session.
+This is not needed with keys without a passphrase, since they can be used without decrypting.
+
+**SSH Forwarding:** SSH agents can forward SSH keys to a remote system, making the keys available there as well.
+
+### How to get started?
+
+1. [Set up an SSH-Agent](https://code.visualstudio.com/docs/remote/troubleshooting).
+2. Add key to agent
+    - `ssh-add` or `ssh-add [file]` for non-default filenames.
+    - Check loaded keys with `ssh-add –l`.
+3. Setup SSH forwarding in SSH config.  
+```config
+Host *
+    ForwardAgent yes
+```  
+    - Log in and verify key is still available.
+
+{% hint style="info" %}
+**Note:** Do not launch an SSH-agent on the remote system when using SSH Forwarding, as the new agent will hide the forwarded keys.
+{% endhint %}
