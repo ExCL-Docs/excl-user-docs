@@ -572,11 +572,11 @@ build_hw:
 ## Useful Commands
 
 ```bash
-xbutil validate  # Validate installation of the card.
-xbutil scan      # Scan for availible FPGAs.
-xbutil query     # Query detailed information from the FPGA.
-xbutil program   # Download the accelerator program. Good for testing bitfile load.
-xbutil reset     # Reset the FPGA, used when kernel is unresponsive.
+xbutil configure # Device and host configuration
+xbutil examine   # Status of the system and device
+xbutil program   # Download the acceleration program to a given device
+xbutil reset     # Resets the given device
+xbutil validate  # Validates the basic shell acceleration functionality
 
 platforminfo -l # List all installed platforms.
 platforminfo --platform <platform_file> # Get specific FPGA information from the platform.
