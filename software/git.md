@@ -97,6 +97,6 @@ This is not needed with keys without a passphrase, since they can be used withou
     ```  
     - Log in and verify key is still available.
 
-{% hint style="info" %}
-**Note:** Do not launch an SSH-agent on the remote system when using SSH Forwarding, as the new agent will hide the forwarded keys.
+{% hint style="warning" %}
+**Warning:** Do not launch an SSH-agent on the remote system when using SSH Forwarding, as the new agent will hide the forwarded keys.
 {% endhint %}
