@@ -86,15 +86,15 @@ This is not needed with keys without a passphrase, since they can be used withou
     - `ssh-add` or `ssh-add [file]` for non-default filenames.
     - Note: If you're running a mac and want to add an SSH key that's not one of the standard names (`~/.ssh/id_rsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ecdsa_sk, ~/.ssh/id_ed25519, ~/.ssh/id_ed25519_sk, and ~/.ssh/id_dsa`)
       use  
-```
-ssh-add --apple-use-keychain [file]
-```
+    ```
+    ssh-add --apple-use-keychain [file]
+    ```
     - Check loaded keys with `ssh-add –l`.
 3. Setup SSH forwarding in SSH config.  
-```config
-Host *
-    ForwardAgent yes
-```  
+    ```config
+    Host *
+        ForwardAgent yes
+    ```  
     - Log in and verify key is still available.
 
 {% hint style="info" %}
