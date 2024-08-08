@@ -5,64 +5,35 @@ description: Getting started with Vitis FPGA development.
 
 [ExCl](https://docs.excl.ornl.gov) → [User Documentation](../) → [Vitis FPGA Development](vitis.md)
 
-## FPGA Current state
+## FPGA Current State
 
-| FPGA | State                               |
-| ---- | ----------------------------------- |
-| U250 | Attached to Intrepid in Alveo mode. |
-| u55C | On pcie and unused                  |
-| u280 | On pcie and unused                  |
+| FPGA | State                              |
+| ---- | ---------------------------------- |
+| U250 | Attached to `spike` in Alveo mode. |
+| u55C | Attached to `spike` in Alveo mode. |
+| u280 | Aaron’s office                     |
 
 ## Vitis Development Tools
 
-This page covers how to access the Vitis development tools available in ExCL. The available FPGAs are listed in the [FPGAs](vitis.md#fpgas) section. The available systems with the Vitis toolchain installed are listed in section [Systems with the Vitis Toolchain](vitis.md#systems-with-the-vitis-toolchain). See [Quickstart](vitis.md#quickstart) to get started. The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. See section [Accessing ThinLinc](vitis.md#accessing-thinlinc) to get started.
+This page covers how to access the Vitis development tools available in ExCL. The available FPGAs are listed in the [FPGAs](vitis.md#fpgas) section. All Ubuntu 22.04 systems can load the Vitis/Vivado development tools as a module. See [Quickstart](vitis.md#quickstart) to get started. The [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. See section [Accessing ThinLinc](vitis.md#accessing-thinlinc) to get started.
 
-Vitis is also installed as a module for Ubuntu 22.04 systems. You can view available modules with `module avail` and load the most recent version with `module load Vitis`.
+Vitis is now primarily deployed as a module for Ubuntu 22.04 systems. You can view available modules and versions with `module avail` and load the most recent version with `module load Vitis`. These modules should be able to work on any Ubuntu 22.04 system in ExCL.
 
 ### FPGAs
 
-| FPGA                                                                          | Host System |
-| ----------------------------------------------------------------------------- | ----------- |
-| [Alveo U250](https://www.xilinx.com/products/boards-and-kits/alveo/u250.html) | pcie        |
+| FPGA                                                                                             | Host System | Slurm GRES Name |
+| ------------------------------------------------------------------------------------------------ | ----------- | --------------- |
+| [Alveo U250](https://www.amd.com/en/products/accelerators/alveo/u250/a-u250-p64g-pq-g.html)      | Spike       | U250            |
+| [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | Spike       | U55C            |
+| [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    |             | U280            |
 
-### Systems with the Vitis Toolchain
+### Vitis and FPGA Allocation with Slurm (Recommended Method to Use Tools)
 
-#### Physical Systems
-
-| Name   | Tool Chain   | Source File                              | Platform Name |
-| ------ | ------------ | ---------------------------------------- | ------------- |
-| zenith | Vitis 2022.2 | /auto/software/vitis/vitis-2022.2.source |               |
-
-#### Spack based Xilinx build environment on ExCL CentOS systems
-
-All CentOS systems in ExCL cluster are capable to build (only) Xilinx application with Vitis toolchain using Spack environment. Below are the instructions to enable Xilinx development environment in CentOS systems. It is very easy to do this. It enables very fast design space exploration with Slurm support.
-
-```bash
-$ source  /home/nqx/spack_centos_vitis.source 
-```
-
-It has been tested on CentOS systems: affirmed, apachepass, atlanta, excl-us\[00,02-03], justify, kold\[00-03], megatron, newark, oswald, oswald\[00-03], pcie, pharoah, quad\[00-02], secretariat
-
-#### Virtual Systems for Xilinx build and SW and HW emulation run
-
-| Name      | Tool Chain   | Host    | Source File                              | Platform Name                                |
-| --------- | ------------ | ------- | ---------------------------------------- | -------------------------------------------- |
-| tardis    | Vitis 2020.1 | pcie    | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
-| torchwood | Vitis 2020.1 | justify | \~7ry/vitis-tardis.source                | xilinx\_u250\_xdma\_201830\_2                |
-| firefly   | Vitis 2020.2 | pcie    | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
-| serenity  | Vitis 2020.2 | justify | /auto/software/vitis/vitis-2020.2.source | xilinx\_u250\_gen3x16\_xdma\_3\_1\_202020\_1 |
-| aries     | Vitis 2021.1 | pcie    | /auto/software/vitis/vitis-2021.1.source |                                              |
-| intrepid  | Vitis 2021.2 | pcie    | /auto/software/vitis/vitis-2021.2.source |                                              |
-| icarus00  | Vitis 2021.2 | Pharoah | /auto/software/vitis/vitis-2021.2.source |                                              |
-| polarden  | Vitis 2022.1 | mcmurdo | /auto/software/vitis/vitis-2022.1.source |                                              |
-
-### Vitis with Slurm (Recommended Method to use Tools)
-
-The Virtual Machines with Vitis installed are also set up with Slurm. Slurm is used as a resource manager to allocate compute resources as well as hardware resources. The use of Slurm is required to allocate FPGA hardware on Firefly and reserve build resources on Serenity. It is also recommended to reserve resources when running test builds on firefly. The best practice is to launch builds on serenity with Slurm, then launch bitfile tests on Firefly with Slurm. The use of Slurm is required to effectively share the FPGA, and to share build resources with automated CI Runs, and other automated build and test scripts. Slurm will automatically set up the Vitis environment and license so that it is ready to use. The rest of this section details how to use Slurm. See the [Cheat Sheet](../#excl-cheat-sheet) for commonly used Slurm commands. See the [Slurm Quick Start User Guide](https://slurm.schedmd.com/quickstart.html) to learn the basics of using Slurm.
+Suggested machines to use for Vitis development are also setup with Slurm. Slurm is used as a resource manager to allocate compute resources as well as hardware resources. The use of Slurm is required to allocate FPGA hardware and reserve build resources on Triple Crown. It is also recommended to reserve resources when running test builds on Zenith. The best practice is to launch builds on `fpgabuild` with Slurm, then launch bitfile tests with Slurm. The use of Slurm is required to effectively share the FPGAs, and to share build resources with automated CI Runs, and other automated build and test scripts. As part of the Slurm interactive use or batch script, use modules to load the desired version of the tools. The rest of this section details how to use Slurm. See the [Cheat Sheet](../#excl-cheat-sheet) for commonly used Slurm commands. See the [Slurm Quick Start User Guide](https://slurm.schedmd.com/quickstart.html) to learn the basics of using Slurm.
 
 #### Interactive Use: Vitis Build
 
-Allocate a build instance for 1 Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly.
+Allocate a build instance for one Vitis Build. Each Vitis build uses 8 threads by default. If you plan to use more threads, please adjust -c accordingly.
 
 ```bash
 srun -J interactive_build -p fpgabuild -c 8 --pty bash
@@ -98,6 +69,10 @@ srun -J interactive_fpga -p fpgarun --gres="fpga:U250:1" --pty bash
 **Recommended:** `bash` can be replaced with the build or execution command to run the command and get the results back to your terminal. Otherwise, you have to exit the bash shell launched by srun to release the resources.
 {% endhint %}
 
+{% hint style="info" %}
+**Resources:** `"fpga:U250:1"` can be replaced with the FPGA resource that you want to use. Multiple resources can also be reserved at a time. See [FPGAs](vitis.md#fpgas) for a list of available FPGAs.
+{% endhint %}
+
 #### Non-interactive Use: Vitis Build
 
 ```bash
@@ -112,6 +87,10 @@ sbatch -J batch_build -p fpgabuild -c 8 build.sh
 
 {% hint style="info" %}
 **Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
+{% endhint %}
+
+{% hint style="info" %}
+**Template:** See [Slurm Templates · code.ornl.gov](https://code.ornl.gov/7ry/templates/-/tree/master/slurm-templates?ref_type=heads) for Slurm sbatch script templates.
 {% endhint %}
 
 #### Non-interactive Use: Vitis Run
@@ -130,13 +109,18 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 **Recommended:** The Slurm parameters can be stored in `build.sh` with \#SBATCH \<parameter>.
 {% endhint %}
 
+{% hint style="info" %}
+**Template:** See [Slurm Templates · code.ornl.gov](https://code.ornl.gov/7ry/templates/-/tree/master/slurm-templates?ref_type=heads) for Slurm sbatch script templates.
+{% endhint %}
+
 ### Quickstart
 
-1. From the login node run `srun -J interactive_build -p fpgabuild -c 8 --pty bash` to start a bash shell with Vitis ready to go.
+1. From the login node run `srun -J interactive_build -p fpgabuild -c 8 --pty bash` to start a bash shell.
+2. Use `module load vitis` to load the latest version of the vitis toolchain.
 
 ### First Steps
 
-1. Follow the [quickstart](vitis.md#quickstart) to set up the [Setting Up the Vitis Environment](vitis.md#setting-up-the-vitis-environment).
+1. Follow the [quickstart](vitis.md#quickstart) to set up the [Vitis Environment](vitis.md#setting-up-the-vitis-environment).
 2. Go through the [Vitis Getting Started Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Getting\_Started).
 3. Go through the [Vitis Hardware Accelerators Tutorials](https://github.com/Xilinx/Vitis-Tutorials/tree/master/Hardware\_Accelerators).
 4. Go through the [Vitis Accel Examples](https://github.com/Xilinx/Vitis\_Accel\_Examples).
@@ -182,13 +166,13 @@ Board Part:                       xcu250-figd2104-2L-e
 
 See [ThinLinc Quickstart](thinlinc.md).
 
-### Using Vitis with the [Fish Shell](https://fishshell.com)
+{% hint style="info" %}
+**Note:** Fish is not backwards compatible with Bash. See [Fish for bash users (fishshell.com)](https://fishshell.com/docs/current/fish_for_bash_users.html). So in order to load modules and source bash scripts, I have included the bass function. Prepend `bass` before the `source` or `module` commands to use bash features in fish.
+{% endhint %}
+
+### Using Vitis with the [Fish Shell](https://fishshell.com) (Recommended Apporach)
 
 Fish is installed system-wide with a default configuration based on Aaron's fish configuration that includes helpful functions to launch the Xilinx development tools. The next sections goes over the functions that this fish config provides.
-
-#### vitis\_init
-
-The function is used to set up the Vitis and Vivado toolchains. It is generic enough to find the toolchain on any of the systems on ExCL which have Vitis installed.
 
 #### sfpgabuild
 
@@ -196,23 +180,23 @@ The function is used to set up the Vitis and Vivado toolchains. It is generic en
 
 #### sfpgarun-u250
 
-sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U250:1" --pty $argv` . `sfpgarun-u250` setups up an FPGA run environment complete with requesting the FPGA resource.
+sfpgarun is a shortcut to calling `srun -J fpgarun-u250 -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U250:1" --pty $argv` . `sfpgarun-u250` setups up an FPGA run environment complete with requesting the FPGA resource.
 
 #### sfpgarun-u55c
 
-sfpgarun is a shortcut to calling `srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U55C:1" --pty $argv` . `sfpgarun-u55c` setups up an FPGA run environment complete with requesting the FPGA resource.
+sfpgarun is a shortcut to calling `srun -J fpgarun-u55c -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U55C:1" --pty $argv` . `sfpgarun-u55c` setups up an FPGA run environment complete with requesting the FPGA resource.
 
 #### sfpgarun-hw-emu
 
-sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=hw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-hw-emu` setups up an FPGA run environment complete with specifying XCL\_EMULARION\_MODE.
+sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=hw_emu srun -J fpgarun -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-hw-emu` setups up an FPGA run environment complete with specifying XCL\_EMULATION\_MODE.
 
 #### sfpgarun-sw-emu
 
-sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=sw_emu srun -J interactive_fpga -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-sw-emu` setups up an FPGA run environment complete with specifying XCL\_EMULARION\_MODE.
+sfpgarun is a shortcut to calling `XCL_EMULATION_MODE=sw_emu srun -J fpgarun -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . `sfpgarun-sw-emu` setups up an FPGA run environment complete with specifying XCL\_EMULATION\_MODE.
 
 #### viv
 
-After running `vitis_init`, `sfpgabuild`, or `sfpgarun`, `viv` can be used to launch Vivado in the background and is a shortcut to calling `vivado -nolog -nojournal`.
+After running `bass module load vitis`, `sfpgabuild`, or `sfpgarun`, `viv` can be used to launch Vivado in the background and is a shortcut to calling `vivado -nolog -nojournal`.
 
 ### Manually Setting up License
 
@@ -223,6 +207,10 @@ export XILINXD_LICENSE_FILE=2100@license.ftpn.ornl.gov
 ```
 
 The FlexLM server uses ports 2100 and 2101.
+
+{% hint style="info" %}
+**Note:** This step is done automatically by the module load command and manually setting up the license should not be needed.
+{% endhint %}
 
 ## Building and Running FPGA Applications
 
@@ -236,13 +224,17 @@ In general, I recommend using the Vitis compiler via the command line and script
 
 ### Setting up the Vitis Environment
 
-Vitis source scripts are provided for ExCL which are set up for the particular machine. Source corresponding `Source File` in the system table to load the correct Vitis toolchain environment variables. For example using the Bash:
-
+The Vitis environment and tools are setup via the module files. To load the latest version of the Vitis environment use the following command.
+In bash:
 ```bash
-source ~7ry/vitis-2020.2.source
+module load vitis
+```
+In fish:
+```bash
+bass module load vitis
 ```
 
-If you want to use fish instead of bash, then see [Vitis FPGA Development](vitis.md#using-vitis-with-the-fish-shell).
+To see available versions use `module avail`. Then a specific version can be loaded by specifying the version, for example `module load vitis/2020.2`.
 
 **See the** [**Vitis Documentation**](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/settingupvitisenvironment.html#zks1565446519267) **for more details on setting up the Vitis Environment.**
 
