@@ -27,7 +27,7 @@ Vitis is now primarily deployed as a module for Ubuntu 22.04 systems. You can vi
 | [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | Spike       | U55C            |
 | [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    |             | U280            |
 
-![ExCL FPGA Overview](../../assets/ExCL FPGA Overview.png)
+![ExCL FPGA Overview](../assets/ExCL FPGA Overview.png)
 
 ### Vitis and FPGA Allocation with Slurm (Recommended Method to Use Tools)
 
