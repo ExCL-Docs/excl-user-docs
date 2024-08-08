@@ -84,11 +84,7 @@ This is not needed with keys without a passphrase, since they can be used withou
 1. [Set up an SSH-Agent](https://code.visualstudio.com/docs/remote/troubleshooting).
 2. Add key to agent
     - `ssh-add` or `ssh-add [file]` for non-default filenames.
-    - Note: If you're running a mac and want to add an SSH key that's not one of the standard names (`~/.ssh/id_rsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ecdsa_sk, ~/.ssh/id_ed25519, ~/.ssh/id_ed25519_sk, and ~/.ssh/id_dsa`)
-      use  
-    ```
-    ssh-add --apple-use-keychain [file]
-    ```
+    - Note: If you're running a mac and want to add an SSH key that's not one of the standard names (`~/.ssh/id_rsa, ~/.ssh/id_ecdsa, ~/.ssh/id_ecdsa_sk, ~/.ssh/id_ed25519, ~/.ssh/id_ed25519_sk, and ~/.ssh/id_dsa`) use `ssh-add --apple-use-keychain [file]`.
     - Check loaded keys with `ssh-add –l`.
 3. Setup SSH forwarding in SSH config.  
     ```config
