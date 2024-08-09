@@ -77,6 +77,48 @@ coverY: 0
 
 * RTP164 High Performance Oscilloscope
 
+## Primary Usage Notes
+
+### General Interactive Login Use
+
+### Graphical Login use via ThinLinc
+
+- `login` — not for heavy jobs.
+- `zenith`
+- `clark`
+- `lewis`
+- `pcie`
+- `intrepid`
+
+### Slurm for Large Jobs
+
+- Triple Crown — Dedicated Slurm runners.
+    - `affirmed`
+    - `justify`
+    - `secretariat`
+    - `pharaoh`
+- Others — Shared with interactive use.
+    - `milan[0-3]`
+    - `cousteau`
+    - `excl-us03`
+    - `explorer`
+    - `oswald`
+    - `oswald[00, 02-03]`
+
+### Gitlab Runner
+
+### Docker
+
+- `docker`
+
+### Specialized Use
+
+- `dragon` — Siemens EDA Tools.
+
+### Project-based Use
+
+- `lewis` — RISC-V emulation using U250.
+
 ## Infrastructure Systems
 
 | Host Name              | Description                         | OS         |
@@ -88,3 +130,25 @@ coverY: 0
 | quad00                 | Intel 20 Core 96 GB utility server  | Centos 7.9 |
 | quad01                 | Intel 20 Core 96 GB utility server  | Centos 7.9 |
 | quad02                 | Intel 20 Core 96 GB utility server  | Centos 7.9 |
+
+# Test
+
+<html>
+<body>
+
+<style>
+.markmap > svg {
+  width: 100%;
+  height: 300px;
+}
+</style>
+
+<div class="markmap">
+# ExCL
+## Systems
+## Services
+## Quickstart
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/markmap-autoloader"></script>
+</html>
