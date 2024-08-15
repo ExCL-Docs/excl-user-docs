@@ -10,3 +10,15 @@ Once you have access you have a couple of options.
 Notes:
 - Using an SSH key instead of a password to connect to ExCL is highly recommended. SSH keys are more secure than passwords, and you are less likely to accidentally get banned from multiple incorrect login attempts when using SSH Keys to authenticate. If you get blocked, you can send a help ticket to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) with your IP address to get removed from the block list.
 - If you use a passphrase with your SSH key (recommended for security), you should also set up an SSH Agent to load the SSH key. An SSH Agent allows you to enter your passphrase once for the session without needing to enter your passphrase many times. The VS Code documentation is well written for setting up this SSH Agent on a variety of platforms; see [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent).
+
+## Add SSH Public Key to ExCL’s Authorized Keys
+
+You can manually copy the key if already on ExCL. For example
+```bash
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+```
+
+Or you can you `ssh-copy-id` to copy your local systems key to ExCL.
+```bash
+ssh-copy-id login.excl.ornl.gov
+```

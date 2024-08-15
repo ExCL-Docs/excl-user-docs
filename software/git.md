@@ -71,6 +71,7 @@ For git repos with two-factor authentication, an application token/password must
     - [Generating a new SSH key and adding it to the ssh-agent - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 2. [Add key to Git Hosting Websites.](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov) Add the key to all Git hosting website that you want to use.
 3. [Setup ExCL worker node proxy via login node.](https://docs.excl.ornl.gov/software/git#git-ssh-access)
+4. Add the SSH Public Key to ExCL’s Authorized keys.
 
 ## SSH-Agent and SSH Forwarding
 
