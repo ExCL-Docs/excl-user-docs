@@ -78,7 +78,7 @@ Start service and check status.
 ./svc.sh status
 ```
 
-Note: The above install adds the service to auto start on reboot once you log back into the system. If you want to disable or enable this auto starting of the service run.
+Note: The above install adds the service to auto start on reboot. If you want to disable or enable this auto starting of the service run.
 
 ```bash
 systemctl --user disable <service name
