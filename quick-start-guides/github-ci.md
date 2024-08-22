@@ -47,6 +47,20 @@ Apply this patch to modify the directory to use user systemd modules.
 patch -p1 < /auto/software/github-runner/excl-patch.diff
 ```
 
+### Enable linger for your user
+
+Use this command to enable linger for your user.
+
+```bash
+loginctl enable-linger
+```
+
+This allows your user-level systemd services to run when you are not logged into the system and auto-start when the system is rebooted.
+
+Note: Use `loginctl disable-linger` to remove linger and `ls /var/lib/systemd/linger` to view the users with linger set.
+
+See [Automatic start-up of systemd user instances](https://wiki.archlinux.org/title/Systemd/User#Automatic_start-up_of_systemd_user_instances) for more information.
+
 ### Use the `svc.sh` script to install and manage the runner service.
 
 After this patch is applied the `svc.sh` script works as documented in [Configuring the self-hosted runner application as a service - GitHub Docs](https://docs.github.com/en/actions/hosting-your-own-runners/managing-self-hosted-runners/configuring-the-self-hosted-runner-application-as-a-service?platform=linux). However you don’t need to specify a username since it now defaults to the current user. The commands are reproduced below.
@@ -105,7 +119,7 @@ We follow the resulting workflow yaml file in the JACC.jl [repo](https://github.
     > **NOTE**: in GitHub Actions PRs are issues, so the `issue_comment` event is used to trigger the pipeline when a PR comment is made.
     
     
-2. *Verify Actor*:  and "actor" is any user writing a comment on the PR. This step verifies that the actor is an authorized user to trigger the CI pipeline. The following is an example of how to verify the actor in the workflow yaml file. `ACTOR_TOKEN` puts the current "actor" within the delimiter and checks if it is in the list of authorized users. If it is, it triggers the pipeline. If not, it skips all subsequent steps.
+2. *Verify Actor*: and "actor" is any user writing a comment on the PR. This step verifies that the actor is an authorized user to trigger the CI pipeline. The following is an example of how to verify the actor in the workflow yaml file. `ACTOR_TOKEN` puts the current "actor" within the delimiter and checks if it is in the list of authorized users. If it is, it triggers the pipeline. If not, it skips all subsequent steps.
 
     ```yaml
     - name: Verify actor
