@@ -111,7 +111,6 @@ Then use the CI environment variables `APPTAINER_DOCKER_USERNAME` and `APPTAINER
 bind path = /scratch
 bind path = /etc/localtime
 bind path = /etc/hosts
-bind path = /noback
 bind path = /var/opt/thinlinc
 bind path = /auto
 ```
