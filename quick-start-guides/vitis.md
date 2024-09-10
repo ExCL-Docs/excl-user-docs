@@ -119,6 +119,7 @@ sbatch -J batch_run -p fpgarun --gres="fpga:U250:1" run.sh
 
 1. From the login node run `srun -J interactive_build -p fpgabuild -c 8 --pty bash` to start a bash shell.
 2. Use `module load vitis` to load the latest version of the vitis toolchain.
+3. Use `source /opt/xilinx/xrt/setup.sh` to load the Xilinx Runtime (XRT).
 
 ### First Steps
 
