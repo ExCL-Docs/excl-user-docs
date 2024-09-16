@@ -74,6 +74,10 @@ For git repos with two-factor authentication, an application token/password must
 3. [Setup ExCL worker node proxy via login node.](https://docs.excl.ornl.gov/software/git#git-ssh-access)
 4. [Add the SSH Public Key to ExCL’s Authorized keys.](../excl-support/access.md#add-ssh-public-key-to-excls-authorized-keys)
 
+{% hint style="warning" %}
+**SSH Path and Permissions**: For SSH keys to be loadable and usesable, they must have permissions which do not allow groups or others to read them. (i.e. they need permissions of 600). Additionally, there cannot be any `-` characters in the path for filenames.
+{% endhint %}
+
 ## SSH-Agent and SSH Forwarding
 
 **SSH-Agents** cache SSH keys with passphrases, allowing them to be reused during the session.
