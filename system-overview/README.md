@@ -58,6 +58,7 @@ coverY: 0
 | [Groq](../quick-start-guides/groq.md)    | milan\[1-2]              |
 | Nvidia P100 GPU                          | pcie                     |
 | Nvidia V100 GPU                          | equinox, leconte, milan2 |
+| Nvidia H100 GPU                          | hudson                   |
 | Nvidia Jetson                            | xavier                   |
 | [Qualcomm Snapdragon 855](snapdragon.md) | amundsen, mcmurdo        |
 | Intel Stratix 10 FPGA                    | pcie                     |
