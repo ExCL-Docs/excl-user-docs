@@ -10,6 +10,7 @@ Once you have access you have a couple of options.
 Notes:
 - Using an SSH key instead of a password to connect to ExCL is highly recommended. See [How to get start with SSH keys](../software/git.md#ssh-keys-for-authentication). SSH keys are more secure than passwords, and you are less likely to accidentally get banned from multiple incorrect login attempts when using SSH Keys to authenticate. If you get blocked, you can send a help ticket to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) with your IP address to get removed from the block list.
 - If you use a passphrase with your SSH key (recommended for security), you should also set up an SSH Agent to load the SSH key. An SSH Agent allows you to enter your passphrase once for the session without needing to enter your passphrase many times. The VS Code documentation is well written for setting up this SSH Agent on a variety of platforms; see [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_setting-up-the-ssh-agent).
+- It is recommended to use a terminal multiplexer like [tmux](https://github.com/tmux/tmux/wiki) or [screen](https://www.gnu.org/software/screen/). These tools keep your session active and can be reattached to if you loose network connection. They also allow you to open multiple windows or split panels.
 
 ## Add SSH Public Key to ExCL’s Authorized Keys
 
