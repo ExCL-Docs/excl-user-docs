@@ -4,7 +4,6 @@ cover: ../.gitbook/assets/systems-image.jpg
 coverY: 0
 ---
 # System Overview
-
 ## ExCL Server List with Accelerators
 
 | Host Name                                  | Description                                                      | OS                    | Accelerators or other special hardware                                 |
@@ -27,6 +26,7 @@ coverY: 0
 | [milan2](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                             | Ubuntu 22.04 or other | 8 Nvidia Tesla V100-PCIE-32GB GPUs                                     |
 | [milan3](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                             | Ubuntu 22.04 or other | General Use                                                            |
 | [minim1](minim1.md)                        | Apple M1 Desktop                                                 | OSX                   |                                                                        |
+| [oswald](oswald.md)                        | Oswald head node                                                 | Ubuntu 22.04          |                                                                        |
 | [oswald00](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                 | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald02](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                 | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald03](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                 | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
@@ -77,6 +77,115 @@ coverY: 0
 ## Other Equipment
 
 * RTP164 High Performance Oscilloscope
+
+## Primary Usage Notes
+
+### Access Host (Login)
+
+Login is the node use to access ExCL and to proxy into and out of the worker nodes. It is not to be used for computation but for accessing the compute notes. The login node does have ThinLinc installed and can also be used for graphical access and more performance x11 forwarding from an internal node. See [ThinLinc Quickstart](thinlinc.md).
+
+| Host  | Base Resources  | Specialized Resources | Notes                                |
+| ----- | --------------- | --------------------- | ------------------------------------ |
+| login | 4 core 16 Gi vm | -                     | login node - not for computation, TL |
+
+### General Interactive Login Use
+
+These nodes can be access with ssh, and are availible for general interactive use.
+
+| Host        | Base Resources  | Specialized Resources      | Notes                                                           |
+| ----------- | --------------- | -------------------------- | --------------------------------------------------------------- |
+| oswald      | 16 Core 64 Gb   | -                          | Usable, pending rebuilt to Ubuntu                               |
+| oswald00    | 32 core 256 Gi  | NVIDIA P100, FPGA @        |                                                                 |
+| oswald02    | 32 core 256 Gi  | NVIDIA P100, FPGA @        | Not available - rebuilding                                      |
+| oswald03    | 32 core 256 Gi  | NVIDIA P100, FPGA @        | Not available - rebuilding                                      |
+| milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)            | Slurm                                                           |
+| milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)    | Slurm                                                           |
+| milan2      | 128 Core 1 Ti   | NVIDIA A100 (2)            |                                                                 |
+| milan3      | 128 Core 1 Ti   | -                          | Slurm                                                           |
+| excl-us00   | 32 Core 192 Gi  | -                          | Rocky 9                                                         |
+| excl-us01   | 32 Core 192 Gi  | -                          | Not available pending rebuild                                   |
+| excl-us03   | 32 Core 192 Gi  | -                          | CentOS 7 pending rebuild                                        |
+| secretariat | 256 Core 1 Ti   | -                          | Slurm                                                           |
+| affirmed    | 256 Core 1 Ti   | -                          | Slurm                                                           |
+| pharaoh     | 256 Core 1 Ti   | -                          | Slurm                                                           |
+| justify     | 256 Core 1 Ti   | -                          | Slurm                                                           |
+| hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)            |                                                                 |
+| docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with  enhanced image storage  |
+| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accellerators |
+| lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250         | TL                                                              |
+| clark       | 20 Core 48 Gi   | NVIDIA T1000               | TL                                                              |
+| zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @  | TL                                                              |
+| radeon      | 8 Core 64 Gi    | AMD Radeon VII             |                                                                 |
+| equinox     | DG Workstation  | NVIDIA V100 * 4            | rebuilding after ssd failure                                    |
+| explorer    | 256 Core 512 Gi | AMD M60 (2)                |                                                                 |
+| cousteau    | 48 Core 256 Gi  | AMD M100 (2)               |                                                                 |
+| leconte     | 168 Core 602 Gi | NVIDIA V100 * 6            | PowerPC (Summit)                                                |
+| Zenith      | 32 Core 132 Gi  | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p> | TL                                                              |
+| Zenith2     | 32 Core 256 Gi  | Embedded FPGAs             | TL                                                              |
+
+Notes:
+ - All of the general compute resources have hyperthreading enabled unless otherwise stated.. This can be changed on a per request basis.
+ - TL: Thinlinc enabled. Need to use `login` as a jump host for resources other than `login`. See [ThinLinc Quickstart](thinlinc.md)
+ - Slurm: Node is added to a slurm partition and will likely be used for running slurm jobs. Try to make sure your interactive use does not conflict with any active Slurm jobs.
+     - Most of the general compute resources are Slurm-enabled, to allow queuing of larger-scale workloads. `excl-help@ornl.gov` for specialized assistance. Only the systems that are heavily used for running Slurm jobs are marked “Slurm” above.
+
+### Graphical session use via ThinLinc
+
+- `login` — not for heavy computation
+- `zenith`
+- `zenith2`
+- `clark`
+- `lewis`
+- `pcie`
+- `intrepid`
+- `spike`
+
+### Slurm for Large Jobs
+
+- Triple Crown — Dedicated Slurm runners.
+  - `affirmed`
+  - `justify`
+  - `secretariat`
+  - `pharaoh`
+
+- Milan — Additional Slurm Resources with other shared use.
+  - `milan0`
+  - `milan1`
+  - `milan3`
+
+- Others — Shared slurm runners with interactive use.
+  - `milan[0-3]`
+  - `cousteau`
+  - `excl-us03`
+  - `explorer`
+  - `oswald`
+  - `oswald[00, 02-03]`
+
+### Gitlab Runner Speciliazed Nodes
+
+- `slurm-gitlab-runner` — Gitlab Runner for launching slurm jobs.
+- `docker` — for docker runner jobs.
+- `devdoc` — for internal development documentation building and hosting.
+
+Note: any node can be used as a CI runner on request. The above systems have a dedicated or specilized use with CI.
+
+### Docker
+
+- `docker` — Node with docker installed.
+
+### Specialized usage and reservations
+
+| Host | Specilized Usage | Reserved? |
+| --- | --- | --- |
+| dragon (vm) | Siemens EDA Tools | task-reserved |
+| devdocs (vm) | Internal development documentation building and hosting | task-reserved |
+| spike (vm) | `pcie` vm with FPGA and GPU passthrough access | task-reserved |
+| lewis | U250 | RISC-V Emulation using U250 | - |
+| slurm-gitlab-runner | slurm integration wth gitlab-runner | task-reserved |
+| docker | slurm-integration with gitlab runner for containers | reserved for container use |
+
+Notes:
+ - task-reserved: reserved for specialized tasks, not for project
 
 ## Infrastructure Systems
 
