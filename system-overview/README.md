@@ -46,7 +46,6 @@ coverY: 0
 * Achronix FPGA
 * AGX Orin Developer Kits
 * Xilinx U280
-* 2 Ettus x410 high-performance, multi-channel, Zynq US+ RFSoC based software defined radio (SDR)
 
 ## Accelerator Highlights
 
@@ -65,6 +64,7 @@ coverY: 0
 | Xilinx Zynq ZCU 102                      | n/a                      |
 | Xilinx Zynq ZCU 106                      | n/a                      |
 | Xilinx Alveo U250                        | pcie                     |
+| 2 Ettus x410 SDRs                        | marconi                  |
 
 ## Unique Architecture Highlights
 
@@ -100,7 +100,7 @@ These nodes can be access with ssh, and are availible for general interactive us
 | oswald03    | 32 core 256 Gi  | NVIDIA P100, FPGA @        | Not available - rebuilding                                      |
 | milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)            | Slurm                                                           |
 | milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)    | Slurm                                                           |
-| milan2      | 128 Core 1 Ti   | NVIDIA A100 (2)            |                                                                 |
+| milan2      | 128 Core 1 Ti   | NVIDIA V100 (8)            |                                                                 |
 | milan3      | 128 Core 1 Ti   | -                          | Slurm                                                           |
 | excl-us00   | 32 Core 192 Gi  | -                          | Rocky 9                                                         |
 | excl-us01   | 32 Core 192 Gi  | -                          | Not available pending rebuild                                   |
@@ -191,10 +191,4 @@ Notes:
 
 | Host Name              | Description                         | OS         |
 | ---------------------- | ----------------------------------- | ---------- |
-| excl-us00              | Intel 16 Core Utility Server 196 GB |            |
 | excl-us01 (hypervisor) | Intel 16 Core Utility Server 196 GB |            |
-| excl-us03              | Intel 16 Core Utility Server 196 GB |            |
-| oswald                 | Intel 16 Core 128 GB utility server | Centos 7.9 |
-| quad00                 | Intel 20 Core 96 GB utility server  | Centos 7.9 |
-| quad01                 | Intel 20 Core 96 GB utility server  | Centos 7.9 |
-| quad02                 | Intel 20 Core 96 GB utility server  | Centos 7.9 |
