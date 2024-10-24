@@ -167,7 +167,7 @@ Notes:
 - `docker` — for docker runner jobs.
 - `devdoc` — for internal development documentation building and hosting.
 
-Note: any node can be used as a CI runner on request. The above systems have a dedicated or specilized use with CI.
+Note: any node can be used as a CI runner on request. See [GitLab Runner Quickstart](../quick-start-guides/gitlab-ci.md) and [GitHub Runner Quickstart](../quick-start-guides/github-ci.md). The above systems have a dedicated or specilized use with CI.
 
 ### Docker
 
