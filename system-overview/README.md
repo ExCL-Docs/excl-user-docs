@@ -4,6 +4,7 @@ cover: ../.gitbook/assets/systems-image.jpg
 coverY: 0
 ---
 # System Overview
+
 ## ExCL Server List with Accelerators
 
 | Host Name                                  | Description                                                      | OS                    | Accelerators or other special hardware                                 |
@@ -54,7 +55,8 @@ coverY: 0
 | AMD Radeon VII GPU                       | radeon                   |
 | AMD MI60 GPU                             | explorer                 |
 | AMD MI100 GPU                            | cousteau                 |
-| [Groq](../quick-start-guides/groq.md)    | milan\[1-2]              |
+| [Groq](../quick-start-guides/groq.md)    | milan1                   |
+| Nvidia A100 GPU                          | milan0                   |
 | Nvidia P100 GPU                          | pcie                     |
 | Nvidia V100 GPU                          | equinox, leconte, milan2 |
 | Nvidia H100 GPU                          | hudson                   |

@@ -52,6 +52,7 @@
 * [Siemens EDA](quick-start-guides/siemens-eda.md)
 * [Gitlab CI](quick-start-guides/gitlab-ci.md)
 * [GitHub CI](quick-start-guides/github-ci.md)
+* [Ollama](quick-start-guides/ollama.md)
 
 ## Software
 
