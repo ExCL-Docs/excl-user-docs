@@ -3,7 +3,7 @@ description: Getting started with Ollama.
 ---
 # Ollama
 
-![ollama](https://ollama.com/public/ollama.png)
+![](https://ollama.com/public/ollama.png)
 
 [Ollama](https://ollama.com/) is deployed in ExCL as a module. To use ollama, load the module, and then you have access to the `ollama` cli interface.
 
