@@ -53,6 +53,7 @@
 * [Gitlab CI](quick-start-guides/gitlab-ci.md)
 * [GitHub CI](quick-start-guides/github-ci.md)
 * [Ollama](quick-start-guides/ollama.md)
+* [Python](quick-start-guides/python.md)
 
 ## Software
 
