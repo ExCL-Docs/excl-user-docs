@@ -1,7 +1,6 @@
 ---
 description: Getting Started with Python in ExCL with best practice recommendations.
 ---
-
 # Python Quick Start
 
 This page covers a few recommendations and tips for getting started with Python in ExCL following best practices for packaging python projects and using virtual environments. There are many different ways to structure and package python projects and various tools that work with python, so this page is not meant to be comprehensive but to provide a few recommendations for getting started.
@@ -25,6 +24,7 @@ function pvenv --wraps='python3 -m venv --upgrade-deps venv' --description 'Crea
    end
 end
 ```
+
 This `pvenv` function is already configured system wide for fish on ExCL systems.
 
 To create the virtual environment without using the wrapper function is also easy.
@@ -39,6 +39,47 @@ In fish:
 ```fish
 python3 -m venv --upgrade-deps --prompt (basename $PWD) .venv
 source .venv/bin/activate.fish
+```
+
+Here is the usage of venv which explains what the various flags do. From [venv — Creation of virtual environments — Python 3.13.1 documentation](https://docs.python.org/3/library/venv.html).
+
+```txt
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear]
+            [--upgrade] [--without-pip] [--prompt PROMPT] [--upgrade-deps]
+            [--without-scm-ignore-files]
+            ENV_DIR [ENV_DIR ...]
+
+Creates virtual Python environments in one or more target directories.
+
+positional arguments:
+  ENV_DIR               A directory to create the environment in.
+
+options:
+  -h, --help            show this help message and exit
+  --system-site-packages
+                        Give the virtual environment access to the system
+                        site-packages dir.
+  --symlinks            Try to use symlinks rather than copies, when
+                        symlinks are not the default for the platform.
+  --copies              Try to use copies rather than symlinks, even when
+                        symlinks are the default for the platform.
+  --clear               Delete the contents of the environment directory
+                        if it already exists, before environment creation.
+  --upgrade             Upgrade the environment directory to use this
+                        version of Python, assuming Python has been
+                        upgraded in-place.
+  --without-pip         Skips installing or upgrading pip in the virtual
+                        environment (pip is bootstrapped by default)
+  --prompt PROMPT       Provides an alternative prompt prefix for this
+                        environment.
+  --upgrade-deps        Upgrade core dependencies (pip) to the latest
+                        version in PyPI
+  --without-scm-ignore-files
+                        Skips adding SCM ignore files to the environment
+                        directory (Git is supported by default).
+
+Once an environment has been created, you may wish to activate it, e.g. by
+sourcing an activate script in its bin directory.
 ```
 
 ## Creating a Python Project in using the Hatch build system with CI support
