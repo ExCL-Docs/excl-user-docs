@@ -82,6 +82,8 @@ Once an environment has been created, you may wish to activate it, e.g. by
 sourcing an activate script in its bin directory.
 ```
 
+The virtual environment can be exited with `deactivate`.
+
 ## Creating a Python Project in using the Hatch build system with CI support
 
 [Python Project Template](https://code.ornl.gov/7ry/python-project-template) provides a template for creating a python project using the hatch build system with CI support using ORNL's GitLab instance, complete with development documentation, linting, commit hooks, and editor configuration.
