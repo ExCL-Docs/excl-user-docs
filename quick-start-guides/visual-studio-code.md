@@ -136,4 +136,4 @@ After generating a configuration from a template, the main attributes I add or c
 
 ### Julia Language Extension
 
-See [Julia Quickstart](julia.md#Julia-VSCode-Extension-in-ExCL).
+See [Julia Quickstart](julia.md#julia-vscode-extension-in-excl).
