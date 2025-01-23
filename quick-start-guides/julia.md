@@ -7,7 +7,7 @@ See [The Julia Programming Language](https://julialang.org/) to learn more about
 
 Use `module load julia` to load the Julia tooling on an ExCL system.
 
-## Julia VSCode Extension in ExCL.
+## Julia VSCode Extension in ExCL
 
 Since Julia is install and loaded as a module, the [Julia VSCode extension](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia) has trouble finding the Julia executable needed to run properly.
 Therefore to use the extension on ExCL worker nodes via [VSCode](visual-studio-code.md) Remote SSH, you must explicitly set the Julia executable location to the correct path.
