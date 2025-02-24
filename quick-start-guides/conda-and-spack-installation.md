@@ -1,13 +1,14 @@
 ---
 description: The recommended way to install Conda and Spack.
 ---
+
 # Conda and Spack Installation
 
 This guide goes over the recommended way to install [Conda](https://docs.conda.io/en/latest/) and [Spack](https://spack-tutorial.readthedocs.io/en/latest/) in ExCL. If you are already familiar with the Conda and Spack installation process, then these tools can be installed to their default locations. One recommendation is to store the `environment.yml` and `spack.yaml` files in your git repositories to make it easy to recreate the Conda and Spack environments required for that project. The remainder of this page goes over the installation in more detail.
 
 ## Installing Conda
 
-{% hint style=”danger” %}
+{% hint style="danger" %}
 With recent changes to the Conda license, we are unable to use the default conda channel without a paid license. You are still able to use conda/miniconda with the `conda-forge` repository, but you must change it from using the `default` repository. See [Transitioning from defaults | conda-forge | community-driven packaging for conda](https://conda-forge.org/docs/user/transitioning_from_defaults/) and [Saying Goodbye to Anaconda?. Finding a replacement for Conda | by Robert McDermott | Medium](https://robert-mcdermott.medium.com/saying-goodbye-to-anaconda-91c18ddf89bb) for some additional information. The recommend approach is now to use [venv](https://docs.python.org/3/library/venv.html), [uv](https://docs.astral.sh/uv/), or [Pixi](https://pixi.sh/latest/) for managing python environments. These approaches work better and avoid the license issues. See also [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python) for more information on how to get started with Python.
 {% endhint %}
 
@@ -29,7 +30,7 @@ Follow the prompts on the installer screens. Accept the license agreements. **Sp
 
 ### Improving Conda Environment Solver Performance
 
-To improve the performance of the Conda environment solver, you can use the `conda-libmamba-solver` plugin which allows you to use `libmamba`, the same `libsolv`-powered solver used by [mamba](https://mamba.readthedocs.io/en/latest/index.html) and [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html), directly in `conda`.
+To improve the performance of the Conda environment solver, you can use the `conda-libmamba-solver` plugin which allows you to use `libmamba`, the same `libsolv`-powered solver used by [mamba](https://mamba.readthedocs.io/en/latest/index.html) and [micromamba](https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html), directly in `conda`.
 
 The quick start guide is below.
 
