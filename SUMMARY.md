@@ -55,6 +55,7 @@
 * [Ollama](quick-start-guides/ollama.md)
 * [Python](quick-start-guides/python.md)
 * [Julia](quick-start-guides/julia.md)
+* [marimo](2-Areas/ExCL/excl-user-docs/quick-start-guides/marimo.md)
 
 ## Software
 
