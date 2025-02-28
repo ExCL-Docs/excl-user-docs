@@ -128,26 +128,11 @@ These instructions go over how to access a Jupyter notebook running on the quad0
 
     ![Open Port](../.gitbook/assets/visual-code-open.png)
 
-### Using the already installed Anaconda
-
-Anaconda3 is already installed in ExCL as a module and can be used to run Jupyter notebooks. To load the module use `module load anaconda3`. Now you have access to the `jupyter notebook` command.
-
-### Installing Jupyter Notebook with Anaconda
-
-This section is a quick start to installing an anaconda python environment with Jupyter notebook.
-
-1. Follow [Conda and Spack Installation](conda-and-spack-installation.md#installing-conda) to install Conda.
-2. Install Jupyter Notebook.
-
-    ```
-     $ conda install -c conda-forge notebook
-    ```
-
-### Jupyter with conda environments
+### Jupyter with virtutal environments
 
 See [How To Setup Jupyter Notebook In Conda Environment And Install Kernel - Python Engineer (python-engineer.com)](https://www.python-engineer.com/posts/setup-jupyter-notebook-in-conda-environment/).
 
-Create conda environment and activate it. Then install `ipykernel` and then install the kernel for use in Jupyter.
+Create a python virtual environment and activate it. Then install `ipykernel` and then install the kernel for use in Jupyter.
 ```bash
 conda install ipykernel
 ipython kernel install --user --name=<any_name_for_kernel>
