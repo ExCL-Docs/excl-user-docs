@@ -5,7 +5,7 @@ description: Getting started with Ollama.
 
 ![](https://ollama.com/public/ollama.png)
 
-[Ollama](https://ollama.com/) is deployed in ExCL as a module. To use ollama, load the module, and then you have access to the `ollama` cli interface.
+[Ollama](https://ollama.com/) is deployed in ExCL as a module. To use Ollama, load the module, and then you have access to the `ollama` CLI interface.
 
 Load the Ollama module with:
 ```bash
@@ -20,7 +20,7 @@ Ollama has a server component which stores files in its home. This server compon
 When interacting with the Ollama server via the [REST API](https://github.com/ollama/ollama?tab=readme-ov-file#rest-api) in ExCL, you need to unset the `http_proxy` and `https_proxy` environment variables, since you are trying to connect to an internal http server instead of a remote one.
 {% endhint %}
 
-An examples of using the Ollama API can be found at [ollama/examples/python-simplegenerate at main · ollama/ollama](https://github.com/ollama/ollama/tree/main/examples/python-simplegenerate).
+Examples of using the Ollama API can be found at [ollama-python/examples/chat.py](https://github.com/ollama/ollama-python/blob/main/examples/chat.py).
 
 ## Links
 
