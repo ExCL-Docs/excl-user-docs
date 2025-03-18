@@ -128,13 +128,27 @@ These instructions go over how to access a Jupyter notebook running on the quad0
 
     ![Open Port](../.gitbook/assets/visual-code-open.png)
 
-### Jupyter with virtutal environments
+## Installing Jupyter
 
-See [How To Setup Jupyter Notebook In Conda Environment And Install Kernel - Python Engineer (python-engineer.com)](https://www.python-engineer.com/posts/setup-jupyter-notebook-in-conda-environment/).
+Since there are many ways to install Jupyter using various python management tools, I will not reproduce the documentation here. The official documentation for installing Jupyter can be found at [Project Jupyter | Installing Jupyter](https://jupyter.org/install). However, I will point out the methods of using [Jupyter with UV](https://docs.excl.ornl.gov/quick-start-guides/jupyter-quick-start#jupyter-with-uv), running [Jupyter Notebooks in VS Code](https://code.visualstudio.com/docs/datascience/jupyter-notebooks), and alternative to Jupyter notebooks, [Marimo | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/marimo). These methods are all the methods that I typically use when working with python notebooks.
+
+### Jupyter with UV
+
+See the UV documentation, [Using uv with Jupyter | uv](https://docs.astral.sh/uv/guides/integration/jupyter/). This documentation is well written and covers:
+- [Using Jupyter within a project](https://docs.astral.sh/uv/guides/integration/jupyter/#using-jupyter-within-a-project)
+    - [Creating a kernel](https://docs.astral.sh/uv/guides/integration/jupyter/#creating-a-kernel)
+    - [Installing packages without a kernel](https://docs.astral.sh/uv/guides/integration/jupyter/#installing-packages-without-a-kernel)
+- [Using Jupyter as a standalone tool](https://docs.astral.sh/uv/guides/integration/jupyter/#using-jupyter-as-a-standalone-tool)
+- [Using Jupyter with a non-project environment](https://docs.astral.sh/uv/guides/integration/jupyter/#using-jupyter-with-a-non-project-environment)
+- [Using Jupyter from VS Code](https://docs.astral.sh/uv/guides/integration/jupyter/#using-jupyter-from-vs-code)
+
+### Jupyter Kernels using virtual environments
+
+See [How To Setup Jupyter Notebook In Conda Environment And Install Kernel - Python Engineer (python-engineer.com)](https://www.python-engineer.com/posts/setup-jupyter-notebook-in-conda-environment/). Although [I no longer recommend using conda in ExCL](https://docs.excl.ornl.gov/quick-start-guides/conda-and-spack-installation#installing-conda), the following steps are still a good way to manually create and use a kernel from Jupyter.
 
 Create a python virtual environment and activate it. Then install `ipykernel` and then install the kernel for use in Jupyter.
 ```bash
-conda install ipykernel
+pip install ipykernel
 ipython kernel install --user --name=<any_name_for_kernel>
 ```
 
