@@ -14,7 +14,7 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
     2. [Setup Git access to code.ornl.gov | ExCL User Docs](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov)
 3. Setup VS Code Remote Explorer: [Visual Studio Code Remote Explorer | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/visual-studio-code#remote-explorer)
     - Important: Make sure to check the setting Remote.SSH: Lockfiles in Tmp.
-4. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy). This enables access to [ThinLinc | ExCL User Docs](https://docs.excl.ornl.gov/~/revisions/tgK4OWTltCS04RkJelGW/quick-start-guides/thinlinc) as well as any other web services running on ExCL systems.
+4. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy). This enables access to [ThinLinc](https://docs.excl.ornl.gov/~/revisions/tgK4OWTltCS04RkJelGW/quick-start-guides/thinlinc) as well as any other web services running on ExCL systems.
 
 ## Setup FoxyProxy
 
