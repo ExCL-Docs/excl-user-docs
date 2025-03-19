@@ -42,37 +42,36 @@
 ## Quick-Start Guides
 
 * [ExCL Remote Development](quick-start-guides/excl-remote-development.md)
-* [ThinLinc](quick-start-guides/thinlinc.md)
-* [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
-* [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
-* [Vitis FPGA Development](quick-start-guides/vitis.md)
-* [Visual Studio Code](quick-start-guides/visual-studio-code.md)
-* [Groq](quick-start-guides/groq.md)
-* [Devdocs](quick-start-guides/devdocs.md)
 * [Apptainer](quick-start-guides/apptainer.md)
-* [Siemens EDA](quick-start-guides/siemens-eda.md)
-* [Gitlab CI](quick-start-guides/gitlab-ci.md)
+* [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
+* [Devdocs](quick-start-guides/devdocs.md)
 * [GitHub CI](quick-start-guides/github-ci.md)
+* [Gitlab CI](quick-start-guides/gitlab-ci.md)
+* [Groq](quick-start-guides/groq.md)
+* [Julia](quick-start-guides/julia.md)
+* [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
+* [Marimo](quick-start-guides/marimo.md)
 * [Ollama](quick-start-guides/ollama.md)
 * [Python](quick-start-guides/python.md)
-* [Julia](quick-start-guides/julia.md)
-* [Marimo](quick-start-guides/marimo.md)
+* [Siemens EDA](quick-start-guides/siemens-eda.md)
+* [ThinLinc](quick-start-guides/thinlinc.md)
+* [Visual Studio Code](quick-start-guides/visual-studio-code.md)
+* [Vitis FPGA Development](quick-start-guides/vitis.md)
 
 ## Software
 
 * [Compilers](software/compilers.md)
-* [MPI](software/mpi.md)
-* [Git](software/git.md)
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
+* [Git](software/git.md)
+* [MPI](software/mpi.md)
 
 ## Devices
 
 * [BlueField-2](devices/bluefield2.md)
 
-## Git Contributing
+## Contributing via Git
 
 * [Git Basics](git-contributing/git-basics/README.md)
-  * [Git Atom Workflow](git-contributing/git-basics/git-workflow.md)
   * [Git Command Line](git-contributing/git-basics/git-command-line.md)
   * [Git Scenarios](git-contributing/git-basics/git-scenarios.md)
 * [Authoring Guide](git-contributing/authoring-guide.md)
