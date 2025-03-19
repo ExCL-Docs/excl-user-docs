@@ -57,6 +57,7 @@
 * [ThinLinc](quick-start-guides/thinlinc.md)
 * [Visual Studio Code](quick-start-guides/visual-studio-code.md)
 * [Vitis FPGA Development](quick-start-guides/vitis.md)
+* [Open WebUI](quick-start-guides/open-webui.md)
 
 ## Software
 
