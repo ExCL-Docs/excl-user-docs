@@ -1,3 +1,6 @@
+---
+description: Getting Started with Modules.
+---
 # Using Modules in ExCL
 
 ExCL uses **Modules** to manage software environments efficiently. Modules allow users to load, unload, and switch between different software versions without modifying system paths manually. Please let us know if there is a software package you would like us to make available via a module.
