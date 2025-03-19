@@ -9,13 +9,14 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 
 1. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](/software/git#ssh-keys-for-authentication)
 2. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](../software/git#ssh-keys-for-authentication)
+3. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](software/git#ssh-keys-for-authentication)
     - Bonus: [SSH-Agent and SSH Forwarding](https://docs.excl.ornl.gov/software/git#ssh-agent-and-ssh-forwarding)
-3. Setup Git
+4. Setup Git
     1. [Git SSH Access | ExCL User Docs](https://docs.excl.ornl.gov/software/git#git-ssh-access)
     2. [Setup Git access to code.ornl.gov | ExCL User Docs](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov)
-4. Setup VS Code Remote Explorer: [Visual Studio Code Remote Explorer | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/visual-studio-code#remote-explorer)
+5. Setup VS Code Remote Explorer: [Visual Studio Code Remote Explorer | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/visual-studio-code#remote-explorer)
     - Important: Make sure to check the setting Remote.SSH: Lockfiles in Tmp.
-5. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy)
+6. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy)
 
 ## Setup FoxyProxy
 
