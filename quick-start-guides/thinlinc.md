@@ -31,31 +31,13 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 
 {% hint style="info" %}
 The URL will only work once the SOCKS proxy is set up.\
-FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
+[FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) can be used to automatically set up SOCKS proxy forwarding.
 {% endhint %}
 
 ## Accessing ThinLinc through the web interface
 
-1. Launch SOCKS dynamic proxy forwarding to the login node.\
-    On Linux or macOS, for example
-
-    ```
-     $ ssh -D 9090 <Username>@login.excl.ornl.gov
-    ```
-
-    or in the ssh config add
-
-    ```
-    DynamicForward 9090
-    ```
-
-    On windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Setup FoxyProxy\
-    Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
-
-    Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
-   ![proxy foxy settings](/assets/foxyproxy-settings.png)
-3. Connect to the ThinLinc server using the links above.
+1. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) and make sure to have the SOCKS dynamic proxy running.
+2. Connect to the ThinLinc server using the links above.
 
 ## Accessing ThinLinc through ThinLinc Client
 
