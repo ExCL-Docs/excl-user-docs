@@ -7,9 +7,9 @@ description: Getting started with ExCL Remote Development.
 
 If you are new to remote development on ExCL here is a roadmap to follow to set important settings and to get familiar with remote Linux development.
 
-1. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](/software/git#ssh-keys-for-authentication)
-2. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](../software/git#ssh-keys-for-authentication)
-3. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](software/git#ssh-keys-for-authentication)
+1. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](/software/git.md#ssh-keys-for-authentication)
+2. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](../software/git.md#ssh-keys-for-authentication)
+3. Setup SSH: [SSH Keys for Authentication | ExCL User Docs](software/git.md#ssh-keys-for-authentication)
     - Bonus: [SSH-Agent and SSH Forwarding](https://docs.excl.ornl.gov/software/git#ssh-agent-and-ssh-forwarding)
 4. Setup Git
     1. [Git SSH Access | ExCL User Docs](https://docs.excl.ornl.gov/software/git#git-ssh-access)
