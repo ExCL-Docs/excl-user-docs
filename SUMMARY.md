@@ -63,6 +63,7 @@
 * [Compilers](software/compilers.md)
 * [ExCl DevOps: CI/CD](software/excl-devops-ci-cd.md)
 * [Git](software/git.md)
+* [Modules](software/modules.md)
 * [MPI](software/mpi.md)
 
 ## Devices
