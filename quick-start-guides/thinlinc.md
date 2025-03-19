@@ -31,12 +31,12 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 
 {% hint style="info" %}
 The URL will only work once the SOCKS proxy is set up.\
-FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
+[FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) can be used to automatically set up SOCKS proxy forwarding.
 {% endhint %}
 
 ## Accessing ThinLinc through the web interface
 
-1. Setup FoxyProxy and make sure to have the SOCKS dynamic proxy running.
+1. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) and make sure to have the SOCKS dynamic proxy running.
 2. Connect to the ThinLinc server using the links above.
 
 ## Accessing ThinLinc through ThinLinc Client

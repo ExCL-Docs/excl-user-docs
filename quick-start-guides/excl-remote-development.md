@@ -14,24 +14,24 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
     2. [Setup Git access to code.ornl.gov | ExCL User Docs](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov)
 3. Setup VS Code Remote Explorer: [Visual Studio Code Remote Explorer | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/visual-studio-code#remote-explorer)
     - Important: Make sure to check the setting Remote.SSH: Lockfiles in Tmp.
-4. Setup FoxyProxy
+4. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy)
 
 ## Setup FoxyProxy
 
-1. Launch SOCKS dynamic proxy forwarding to the login node.\
-    On Linux or macOS, for example
+1. Launch SOCKS dynamic proxy forwarding to the login node using dynamic forwarding with SSH.\
+    On Linux or macOS, via the SSH flag `-D`
 
     ```
      $ ssh -D 9090 <Username>@login.excl.ornl.gov
     ```
 
-    or in the ssh config add
+    or in the ssh config add the `DynamicForward` option
 
     ```
     DynamicForward 9090
     ```
 
-    On Windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
+    On Windows, use MobaSSHTunnel to set up Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
 2. Setup FoxyProxy\
     Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
 
