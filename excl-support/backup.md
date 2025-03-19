@@ -46,7 +46,7 @@ no longer need your scratch space.
 `/scratch/` is not shared between nodes, not stored in raid, and not backed up in any way. However, this storage does not have any automatic purging policy (unlike `/tmp/`), so the files should persist as long as the storage doesn’t fill up and the drives don’t fail.
 {% endhint %}
 
-# Project Storage
+## Project Storage
 
 Shared storage space for collaborative projects is available upon request. Each project is assigned a dedicated subvolume within the ZFS filesystem, which is accessible via an automounted NFS share. The mount point for each project is located at:
 
