@@ -161,6 +161,5 @@ Sometimes Git repository sites use different terminology, i.e., _merge request_ 
 
 #### Ready to Learn More?
 
-* [Contribute with Git and Atom](git-workflow.md)
 * [Git in the Command Line](git-command-line.md)
 * [Git Scenarios](git-scenarios.md)
