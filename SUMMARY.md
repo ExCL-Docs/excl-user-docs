@@ -52,12 +52,12 @@
 * [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
 * [Marimo](quick-start-guides/marimo.md)
 * [Ollama](quick-start-guides/ollama.md)
+* [Open WebUI](quick-start-guides/open-webui.md)
 * [Python](quick-start-guides/python.md)
 * [Siemens EDA](quick-start-guides/siemens-eda.md)
 * [ThinLinc](quick-start-guides/thinlinc.md)
 * [Visual Studio Code](quick-start-guides/visual-studio-code.md)
 * [Vitis FPGA Development](quick-start-guides/vitis.md)
-* [Open WebUI](quick-start-guides/open-webui.md)
 
 ## Software
 
