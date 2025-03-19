@@ -36,26 +36,8 @@ FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
 
 ## Accessing ThinLinc through the web interface
 
-1. Launch SOCKS dynamic proxy forwarding to the login node.\
-    On Linux or macOS, for example
-
-    ```
-     $ ssh -D 9090 <Username>@login.excl.ornl.gov
-    ```
-
-    or in the ssh config add
-
-    ```
-    DynamicForward 9090
-    ```
-
-    On windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Setup FoxyProxy\
-    Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
-
-    Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
-   ![proxy foxy settings](/assets/foxyproxy-settings.png)
-3. Connect to the ThinLinc server using the links above.
+1. Setup FoxyProxy and make sure to have the SOCKS dynamic proxy running.
+2. Connect to the ThinLinc server using the links above.
 
 ## Accessing ThinLinc through ThinLinc Client
 

@@ -41,6 +41,7 @@
 
 ## Quick-Start Guides
 
+* [ExCL Remote Development](quick-start-guides/excl-remote-development.md)
 * [ThinLinc](quick-start-guides/thinlinc.md)
 * [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
 * [Jupyter Notebook](quick-start-guides/jupyter-quick-start.md)
