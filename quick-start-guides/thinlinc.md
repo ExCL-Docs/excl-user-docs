@@ -28,6 +28,7 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 | [Pcie](https://pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://pcie.ftpn.ornl.gov:300)         |
 | [Aries](https://aries.ftpn.ornl.gov:300)       | [https://Aries.ftpn.ornl.gov:300](https://aries.ftpn.ornl.gov:300)       |
 | [Bonsai](https://bonsai.ftpn.ornl.gov:300)     | [https://Bonsai.ftpn.ornl.gov:300](https://bonsai.ftpn.ornl.gov:300)     |
+| [Hudson](https://hudson.ftpn.ornl.gov:300)     | [https://Hudson.ftpn.ornl.gov:300](https://hudson.ftpn.ornl.gov:300)     |
 
 {% hint style="info" %}
 The URL will only work once the SOCKS proxy is set up.\
