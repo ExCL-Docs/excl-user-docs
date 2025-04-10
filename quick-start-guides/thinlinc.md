@@ -10,6 +10,10 @@ In addition to the login node, multiple systems including the [virtual systems](
 For better keyboard shortcut support and to prevent the browser from triggering the shortcuts, I recommend installing [Open-as-Popup](https://chrome.google.com/webstore/detail/open-as-popup/ncppfjladdkdaemaghochfikpmghbcpc).
 
 {% hint style="warning" %}
+**Reminder**: You will need to re-do step 1 in [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) each time you want to connect to ExCL to form the Dynamic Proxy tunnel via SSH to the ExCL network.
+{% endhint %}
+
+{% hint style="warning" %}
 If you run into a "ThinLinc login failed. (No agent server was available)" error, then login to the node with ssh. This will mount your home directory and resolve the ThinLinc error.\
 ![](../.gitbook/assets/image.png)
 {% endhint %}
@@ -23,6 +27,7 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 | [Tardis](https://tardis.ftpn.ornl.gov:300)     | [https://Tardis.ftpn.ornl.gov:300](https://tardis.ftpn.ornl.gov:300)     |
 | [Polarden](https://polarden.ftpn.ornl.gov:300) | [https://Polarden.ftpn.ornl.gov:300](https://polarden.ftpn.ornl.gov:300) |
 | [Zenith](https://zenith.ftpn.ornl.gov:300)     | [https://Zenith.ftpn.ornl.gov:300](https://zenith.ftpn.ornl.gov:300)     |
+| [Zenith2](https://zenith2.ftpn.ornl.gov:300)     | [https://Zenith2.ftpn.ornl.gov:300](https://zenith2.ftpn.ornl.gov:300)     |
 | [Lewis](https://lewis.ftpn.ornl.gov:300)       | [https://Lewis.ftpn.ornl.gov:300](https://lewis.ftpn.ornl.gov:300)       |
 | [Clark](https://clark.ftpn.ornl.gov:300)       | [https://Clark.ftpn.ornl.gov:300](https://clark.ftpn.ornl.gov:300)       |
 | [Pcie](https://pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://pcie.ftpn.ornl.gov:300)         |
