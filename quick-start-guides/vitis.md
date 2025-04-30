@@ -7,11 +7,11 @@ description: Getting started with Vitis FPGA development.
 
 ## FPGA Current State
 
-| FPGA | State                              |
-| ---- | ---------------------------------- |
-| U250 | Attached to `spike` in Alveo mode. |
-| u55C | Attached to `spike` in Alveo mode. |
-| u280 | Aaron’s office                     |
+| FPGA | State                               |
+| ---- | ----------------------------------- |
+| U250 | Attached to `spike` in Alveo mode.  |
+| u55C | Attached to `spike` in Alveo mode.  |
+| u280 | Attached to `milan3` in Alveo mode. |
 
 ## Vitis Development Tools
 
@@ -23,9 +23,9 @@ Vitis is now primarily deployed as a module for Ubuntu 22.04 systems. You can vi
 
 | FPGA                                                                                             | Host System | Slurm GRES Name |
 | ------------------------------------------------------------------------------------------------ | ----------- | --------------- |
-| [Alveo U250](https://www.amd.com/en/products/accelerators/alveo/u250/a-u250-p64g-pq-g.html)      | Spike       | U250            |
-| [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | Spike       | U55C            |
-| [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    |             | U280            |
+| [Alveo U250](https://www.amd.com/en/products/accelerators/alveo/u250/a-u250-p64g-pq-g.html)      | spike       | U250            |
+| [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | spike       | U55C            |
+| [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    | milan3      | U280            |
 
 ![ExCL FPGA Overview](../assets/ExCL-FPGA-Overview.png)
 
@@ -188,6 +188,10 @@ sfpgarun is a shortcut to calling `srun -J fpgarun-u250 -p fpgarun -c 8 --mem 8G
 #### sfpgarun-u55c
 
 sfpgarun is a shortcut to calling `srun -J fpgarun-u55c -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U55C:1" --pty $argv` . `sfpgarun-u55c` setups up an FPGA run environment complete with requesting the FPGA resource.
+
+#### sfpgarun-u280
+
+sfpgarun is a shortcut to calling `srun -J fpgarun-u280 -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U280:1" --pty $argv` . `sfpgarun-u280` setups up an FPGA run environment complete with requesting the FPGA resource.
 
 #### sfpgarun-hw-emu
 
@@ -419,7 +423,6 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
 3. Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\
 
-
     Use the following syntax to set the environment variable for C shell (csh):
 
     ```
@@ -436,11 +439,9 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
 4. Run the application.\
 
-
     With the runtime initialization file (xrt.ini), emulation configuration file (emconfig.json), and the `XCL_EMULATION_MODE` environment set, run the host executable with the desired command line argument.\
     \
     **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.\
-
 
     For example:
 
@@ -461,6 +462,7 @@ TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware
 {% endhint %}
 
 1. Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
+
     ****
 
     This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/debuggingapplicationskernels.html#hsr1538574456889).\
@@ -475,11 +477,9 @@ TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware
     \
     **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\
 
-
     For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
 
 4. Run your application.\
-
 
     The specific command line to run the application will depend on your host code. A common implementation used in Xilinx tutorials and examples is as follows:
 
