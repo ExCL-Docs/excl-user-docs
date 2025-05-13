@@ -1,0 +1,19 @@
+# faraday
+
+The MI300A system (host name **faraday**) is available for ExCL users.  As usual you have to log in through the login node.
+
+Make sure that you
+
+```bash
+module load rocmmod
+```
+
+to set up all of the environment needed.
+
+A very light test program is available via git at [https://github.com/jungwonkim/amd-toy](https://urldefense.us/v2/url?u=https-3A__github.com_jungwonkim_amd-2Dtoy&d=DwMF-g&c=v4IIwRuZAmwupIjowmMWUmLasxPEgYsgNI-O7C4ViYc&r=RnGksEeP8Hnu8nrJCbLZAjs5T2iFaJmtp2eby7VLkxA&m=knZGfFbGR9xeA5K76rfwtUnSGQIyd5Vxf-49LDTi8CMaJbk9YdUHm1KWP9knXE31&s=S0bot54rkCup-PwSwYOI0XK506fO4ytzprrozV5jc2M&e=).  This is a good way to ensure your environment is set up correctly.
+
+All tests should return `err[0]`.  If they do not, then it is likely that you do not have render group permissions
+
+To check, run the groups command (on faraday) and see if you are in the render group.
+
+If you are not, contact [help@excl.ornl.gov](mailto:help@excl.ornl.gov), and we’ll get you in.

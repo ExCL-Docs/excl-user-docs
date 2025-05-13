@@ -17,6 +17,7 @@ coverY: 0
 | [docker](docker.md) (quad03)               | Intel 20 Core Server 96 GB                                       | Ubuntu 20.04          | Docker development environment                                         |
 | [equinox](equinox.md)                      | DGX Workstation Intel Xeon E5-2698 v4 (Broadwell) 20-core 256 GB | Ubuntu 22.04          | 4 Tesla V100-DGXS 32 GB GPUs                                           |
 | [explorer](explorer.md)                    | AMD EPYC 7702 (Rome) 2x64-core 512 GB                            | Ubuntu 22.04          | 2 AMD MI60 32 GB GPUs                                                  |
+| [faraday](faraday.md)                      |                                                                  | Ubuntu 24.04          | 4 Mi300a                                                               |
 | [hudson](hudson.md)                        | AMD EPYC 9454 (Genoa) 2x48-core 1.5 TB                           | Ubuntu 22.04          | 2 Nvidia H100s                                                         |
 | [justify](triple-crown.md#justify)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                 | Centos 7.9            |                                                                        |
 | [leconte](leconte.md)                      | Summit server POWER9 42 Cores                                    | Centos 8.4            | 6 Tesla V100 16 GB GPUs                                                |
@@ -46,7 +47,6 @@ coverY: 0
 * Intel ARC GPU
 * Achronix FPGA
 * AGX Orin Developer Kits
-* Xilinx U280
 
 ## Accelerator Highlights
 
@@ -66,6 +66,7 @@ coverY: 0
 | Xilinx Zynq ZCU 102                      | n/a                      |
 | Xilinx Zynq ZCU 106                      | n/a                      |
 | Xilinx Alveo U250                        | pcie                     |
+| Xilinx Alveo U280                        | milan3                   |
 | 2 Ettus x410 SDRs                        | marconi                  |
 
 ## Unique Architecture Highlights
@@ -103,7 +104,7 @@ These nodes can be access with ssh, and are availible for general interactive us
 | milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)            | Slurm                                                           |
 | milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)    | Slurm                                                           |
 | milan2      | 128 Core 1 Ti   | NVIDIA V100 (8)            |                                                                 |
-| milan3      | 128 Core 1 Ti   | -                          | Slurm                                                           |
+| milan3      | 128 Core 1 Ti   | Xlinx U280                 | Slurm                                                           |
 | excl-us00   | 32 Core 192 Gi  | -                          | Rocky 9                                                         |
 | excl-us01   | 32 Core 192 Gi  | -                          | Not available pending rebuild                                   |
 | excl-us03   | 32 Core 192 Gi  | -                          | CentOS 7 pending rebuild                                        |
@@ -112,6 +113,7 @@ These nodes can be access with ssh, and are availible for general interactive us
 | pharaoh     | 256 Core 1 Ti   | -                          | Slurm                                                           |
 | justify     | 256 Core 1 Ti   | -                          | Slurm                                                           |
 | hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)            |                                                                 |
+| faraday     |                 | AMD Mi300a (4)             |                                                                 |
 | docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with  enhanced image storage  |
 | pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accellerators |
 | lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250         | TL                                                              |

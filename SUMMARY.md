@@ -12,6 +12,7 @@
   * [equinox](system-overview/equinox.md)
   * [excl-us](system-overview/excl-us.md)
   * [explorer](system-overview/explorer.md)
+  * [faraday](system-overview/faraday.md)
   * [Hudson](system-overview/hudson.md)
   * [leconte](system-overview/leconte.md)
   * [lewis](system-overview/lewis.md)
