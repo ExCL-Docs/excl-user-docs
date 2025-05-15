@@ -17,3 +17,9 @@ All tests should return `err[0]`.  If they do not, then it is likely that you d
 To check, run the groups command (on faraday) and see if you are in the render group.
 
 If you are not, contact [help@excl.ornl.gov](mailto:help@excl.ornl.gov), and we’ll get you in.
+
+## Documentation
+
+- Available models: [https://www.supermicro.com/en/accelerators/amd](https://www.supermicro.com/en/accelerators/amd)
+- Datasheet on Faraday: [https://www.supermicro.com/datasheet/datasheet_H13_QuadAPU.pdf](https://www.supermicro.com/datasheet/datasheet_H13_QuadAPU.pdf)
+- Hardware documentation: [https://www.supermicro.com/manuals/superserver/4U/MNL-2754.pdf](https://www.supermicro.com/manuals/superserver/4U/MNL-2754.pdf)
