@@ -16,7 +16,7 @@ All tests should return `err[0]`.  If they do not, then it is likely that you d
 
 To check, run the groups command (on faraday) and see if you are in the render group.
 
-If you are not, contact [help@excl.ornl.gov](mailto:help@excl.ornl.gov), and we’ll get you in.
+If you are not, contact [excl-help@ornl.gov](mailto:excl-help@ornl.gov), and we’ll get you in.
 
 ## System Information
 
