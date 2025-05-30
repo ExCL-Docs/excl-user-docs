@@ -15,7 +15,7 @@ Each node has:
 
 Each nodelet has:
 
-* 2x Gosamer cores (GC)
+* 2x Gossamer cores (GC)
 * 64 concurrent in-order, single-issue hardware threads
 
 ## Access

@@ -3,7 +3,7 @@
 | Acronym | Meaning                       |
 | ------- | ----------------------------- |
 | ExCL    | Experimental Computing Lab    |
-| CPU     | Central Processing  Unit      |
+| CPU     | Central Processing Unit       |
 | GPU     | Graphics Processing Unit      |
 | FPGA    | Field-programmable Gate Array |
 | DSP     | Digital Signal Processor      |

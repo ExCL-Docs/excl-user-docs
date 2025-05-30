@@ -26,7 +26,7 @@ These servers are generally used for customized VM environments, which are often
 | Node        | VM      | OS           | Status      |
 | ----------- | ------- | ------------ | ----------- |
 | Justify     | All off | Ubuntu 22.04 | Operational |
-| Pharoah     | All off | Ubuntu 22.04 | Operational |
+| Pharaoh     | All off | Ubuntu 22.04 | Operational |
 | Affirmed    | All off | Ubuntu 22.04 | Operational |
 | Secretariat | All off | Ubuntu 22.04 | Operational |
 

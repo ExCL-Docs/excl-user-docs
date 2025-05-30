@@ -33,7 +33,7 @@ coverY: 0
 | [oswald02](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                  | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [oswald03](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                  | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
 | [pcie](pcie.md)                            | Intel Xeon Gold 6130 CPU (Skylake) 32-core 192 GB                 | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
-| [pharoah](triple-crown.md#pharoah)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Centos 7.9            |                                                                        |
+| [pharaoh](triple-crown.md#pharaoh)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Centos 7.9            |                                                                        |
 | [radeon](radeon.md)                        | Intel 4 Core 64 GB                                                | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
 | [secretariat](triple-crown.md#secretariat) | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
 | [thunderx](thunderx.md)                    | ARM Cavium ThunderX2 Server 128 GB                                | Centos Stream 8       |                                                                        |
@@ -93,7 +93,7 @@ Login is the node use to access ExCL and to proxy into and out of the worker nod
 
 ### General Interactive Login Use
 
-These nodes can be access with ssh, and are availible for general interactive use.
+These nodes can be access with ssh, and are available for general interactive use.
 
 | Host        | Base Resources  | Specialized Resources      | Notes                                                           |
 | ----------- | --------------- | -------------------------- | --------------------------------------------------------------- |
@@ -114,8 +114,8 @@ These nodes can be access with ssh, and are availible for general interactive us
 | justify     | 256 Core 1 Ti   | -                          | Slurm                                                           |
 | hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)            |                                                                 |
 | faraday     |                 | AMD Mi300a (4)             |                                                                 |
-| docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with  enhanced image storage  |
-| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accellerators |
+| docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with enhanced image storage   |
+| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accelerators  |
 | lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250         | TL                                                              |
 | clark       | 20 Core 48 Gi   | NVIDIA T1000               | TL                                                              |
 | zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @  | TL                                                              |
@@ -165,13 +165,13 @@ Notes:
   - `oswald`
   - `oswald[00, 02-03]`
 
-### Gitlab Runner Speciliazed Nodes
+### Gitlab Runner Specialized Nodes
 
 - `slurm-gitlab-runner` — Gitlab Runner for launching slurm jobs.
 - `docker` — for docker runner jobs.
 - `devdoc` — for internal development documentation building and hosting.
 
-Note: any node can be used as a CI runner on request. See [GitLab Runner Quickstart](../quick-start-guides/gitlab-ci.md) and [GitHub Runner Quickstart](../quick-start-guides/github-ci.md). The above systems have a dedicated or specilized use with CI.
+Note: any node can be used as a CI runner on request. See [GitLab Runner Quickstart](../quick-start-guides/gitlab-ci.md) and [GitHub Runner Quickstart](../quick-start-guides/github-ci.md). The above systems have a dedicated or specialized use with CI.
 
 ### Docker
 
@@ -179,13 +179,13 @@ Note: any node can be used as a CI runner on request. See [GitLab Runner Quickst
 
 ### Specialized usage and reservations
 
-| Host | Specilized Usage | Reserved? |
+| Host | Specialized Usage | Reserved? |
 | --- | --- | --- |
 | dragon (vm) | Siemens EDA Tools | task-reserved |
 | devdocs (vm) | Internal development documentation building and hosting | task-reserved |
 | spike (vm) | `pcie` vm with FPGA and GPU passthrough access | task-reserved |
 | lewis | U250 | RISC-V Emulation using U250 | - |
-| slurm-gitlab-runner | slurm integration wth gitlab-runner | task-reserved |
+| slurm-gitlab-runner | slurm integration with gitlab-runner | task-reserved |
 | docker | slurm-integration with gitlab runner for containers | reserved for container use |
 
 Notes:

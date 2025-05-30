@@ -39,7 +39,7 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 
     Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
 
-![Foxy  Proxy Settings](/assets/foxyproxy-settings.png)
+![Foxy Proxy Settings](/assets/foxyproxy-settings.png)
 
 {% hint style="warning" %}
 **Reminder**: You will need to re-do step 1 in [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) each time you want to connect to ExCL to form the Dynamic Proxy tunnel via SSH to the ExCL network.

@@ -19,7 +19,7 @@ Accessing this system:
   * $ ssh –Y mcmurdo
 * Setup Android platform tools and development environment
   * $ source /home/nqx/setup_android.source
-* Make sure you have a functining environment 
+* Make sure you have a functioning environment 
   * adb kill-server
   * adb start-server
   * adb root (restart adbd as root)
@@ -47,7 +47,7 @@ Access will be granted per request (as this cannot be used as a shared resource)
 
 1. Android Studio: [https://developer.android.com/studio](https://developer.android.com/studio)
 2. Qualcomm HDK: [https://developer.qualcomm.com/hardware/snapdragon-855-hdk](https://developer.qualcomm.com/hardware/snapdragon-855-hdk)
-3.  Quallcomm Neural Processor SDK: [https://developer.qualcomm.com/software/qualcomm-neural-processing-sdk](https://developer.qualcomm.com/software/qualcomm-neural-processing-sdk)
+3. Qualcomm Neural Processor SDK: [https://developer.qualcomm.com/software/qualcomm-neural-processing-sdk](https://developer.qualcomm.com/software/qualcomm-neural-processing-sdk)
 
     [https://developer.qualcomm.com/docs/snpe/overview.htm](https://developer.qualcomm.com/docs/snpe/overview.htm)
 

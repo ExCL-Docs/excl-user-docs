@@ -173,13 +173,13 @@ See [ThinLinc Quickstart](thinlinc.md).
 **Note:** Fish is not backwards compatible with Bash. See [Fish for bash users (fishshell.com)](https://fishshell.com/docs/current/fish_for_bash_users.html). So in order to load modules and source bash scripts, I have included the bass function. Prepend `bass` before the `source` or `module` commands to use bash features in fish.
 {% endhint %}
 
-### Using Vitis with the [Fish Shell](https://fishshell.com) (Recommended Apporach)
+### Using Vitis with the [Fish Shell](https://fishshell.com) (Recommended Approach)
 
 Fish is installed system-wide with a default configuration based on Aaron's fish configuration that includes helpful functions to launch the Xilinx development tools. The next sections goes over the functions that this fish config provides.
 
 #### sfpgabuild
 
-`sfpgabuild` is a shortcut to calling `srun -J interactive_build -p fpgabuild -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . Essentially it setups a FPGA build environment using slurm using resonable defaults. Each of the defaults can be overriden by spacifying the new parameter when calling `sfpgabuild` . `sfpgabuild` also modifies the prompt to remind you that you are in the fpga build environment.
+`sfpgabuild` is a shortcut to calling `srun -J interactive_build -p fpgabuild -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . Essentially it setups a FPGA build environment using slurm using reasonable defaults. Each of the defaults can be overridden by specifying the new parameter when calling `sfpgabuild` . `sfpgabuild` also modifies the prompt to remind you that you are in the fpga build environment.
 
 #### sfpgarun-u250
 
@@ -207,7 +207,7 @@ After running `bass module load vitis`, `sfpgabuild`, or `sfpgarun`, `viv` can b
 
 ### Manually Setting up License
 
-In order to manually set up the the Xilinx license, set the environment variable `XILINXD_LICENSE_FILE` to `2100@license.ftpn.ornl.gov`.
+In order to manually set up the Xilinx license, set the environment variable `XILINXD_LICENSE_FILE` to `2100@license.ftpn.ornl.gov`.
 
 ```
 export XILINXD_LICENSE_FILE=2100@license.ftpn.ornl.gov
@@ -432,7 +432,7 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
     Bash shell:
 
     ```
-    export  XCL_EMULATION_MODE=sw_emu
+    export XCL_EMULATION_MODE=sw_emu
     ```
 
     **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\
@@ -548,7 +548,7 @@ clean:
 
 Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags.
 
-Here is an example snippet from the [Xilinx Buttom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware\_Accelerators/Design\_Tutorials/05-bottom\_up\_rtl\_kernel/krnl\_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
+Here is an example snippet from the [Xilinx Bottom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware\_Accelerators/Design\_Tutorials/05-bottom\_up\_rtl\_kernel/krnl\_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
 
 ```bash
 NCPUS := $(shell grep -c ^processor /proc/cpuinfo)

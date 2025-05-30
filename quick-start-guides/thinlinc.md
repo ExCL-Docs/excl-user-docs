@@ -18,7 +18,7 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 ![](../.gitbook/assets/image.png)
 {% endhint %}
 
-## Systems Availible
+## Systems Available
 
 | Hostname                                       | URL                                                                      |
 | ---------------------------------------------- | ------------------------------------------------------------------------ |
