@@ -20,6 +20,7 @@ The proxy server has access to the full Oak Ridge network (open research only).
 
 ssh can be used to clone repositories on the login node. In order to clone repositories on the internal nodes, the ssh config needs to be changed to use the login node as a proxy jump. Here is an example ssh config with jump proxies to code.ornl.gov, bitbucket.org, and github.com.
 
+`~/.ssh/config`:
 ```config
 Host code.ornl.gov bitbucket.org github.com
    ProxyJump login
