@@ -1,10 +1,10 @@
 # Git Command Line
 
-[ExCl](https://docs.excl.ornl.gov/) → [User Documentation](../../) → [Contributing](../../excl-support/contributing.md) → [Git in the Command Line](git-command-line.md)
+[ExCL](https://docs.excl.ornl.gov/) → [User Documentation](../../) → [Contributing](../../excl-support/contributing.md) → [Git in the Command Line](git-command-line.md)
 
 ## Git Workflow from the Command Line
 
-There are many reasons one would prefer to work from the command line. Regardless of your reasons, here is how to contribute to the ExCl documentation using only command line tools.
+There are many reasons one would prefer to work from the command line. Regardless of your reasons, here is how to contribute to the ExCL documentation using only command line tools.
 
 _Jump to a Section:_
 

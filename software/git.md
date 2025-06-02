@@ -20,6 +20,7 @@ The proxy server has access to the full Oak Ridge network (open research only).
 
 ssh can be used to clone repositories on the login node. In order to clone repositories on the internal nodes, the ssh config needs to be changed to use the login node as a proxy jump. Here is an example ssh config with jump proxies to code.ornl.gov, bitbucket.org, and github.com.
 
+`~/.ssh/config`:
 ```config
 Host code.ornl.gov bitbucket.org github.com
    ProxyJump login
@@ -67,10 +68,16 @@ For git repos with two-factor authentication, an application token/password must
 ### How to get started?
 
 1. Set up a key pair:
+    - Your ExCL account has an automatically generated SSH key pair created for you on account creation. This key pair allows you to connect to internal nodes from the login node without having to type a password. (If you are having to type a password then this key pair has been messed up.) So one easy option is to copy this private key from ExCL to your local system and then use it to login to ExCL. If you local system does not already have a key pair, then you can copy `login.excl.ornl.gov:~/.ssh/id_rsa` and `login.excl.ornl.gov:~/.ssh/id_rsa.pub` to your local ~/.ssh folder. (if you already have a key pair this will override you previous version so make sure to check before copying.) Make sure you `chmod 600` these files so that the private key has sufficient permission protection to allow openssh to use the keys. You can also upload your public key to Git websites like code.ornl.gov to push and push git repositories. See [Setup Git access to code.ornl.gov](#setup-git-access-to-code.ornl.gov).
     - [Visual Studio Code Remote Development Troubleshooting Tips and Tricks](https://code.visualstudio.com/docs/remote/troubleshooting#_quick-start-using-ssh-keys)
     - [Generating a new SSH key and adding it to the ssh-agent - GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 2. [Add key to Git Hosting Websites.](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov) Add the key to all Git hosting website that you want to use.
 3. [Setup ExCL worker node proxy via login node.](https://docs.excl.ornl.gov/software/git#git-ssh-access)
+4. [Add the SSH Public Key to ExCL’s Authorized keys.](../excl-support/access.md#add-ssh-public-key-to-excls-authorized-keys)
+
+{% hint style="warning" %}
+**SSH Path and Permissions**: For SSH keys to be loadable and usesable, they must have permissions which do not allow groups or others to read them. (i.e. they need permission bits set to 600). Additionally, there cannot be any `-` characters in the path for filenames.
+{% endhint %}
 
 ## SSH-Agent and SSH Forwarding
 

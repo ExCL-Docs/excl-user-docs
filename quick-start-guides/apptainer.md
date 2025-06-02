@@ -65,6 +65,44 @@ NFS filesystems support overlay mounts as a `lowerdir` only, and do not support 
 * [Apptainer—Bind Paths and Mounts](https://apptainer.org/docs/user/main/bind\_paths\_and\_mounts.html)
 * [Apptainer—Definition Files](https://apptainer.org/docs/user/main/definition\_files.html)
 
+## Apptainer with Harbor
+
+See [registry (ornl.gov)](https://devops.sites.ornl.gov/registry.html) for general information for how to use the ORNL Container Repositories. These sites <https://camden.ornl.gov> and <https://savannah.ornl.gov> are the internal and external container repositories running [Harbor](https://goharbor.io/).
+
+These container registry also work with Apptainer images.
+
+Follow the regular instructions to setup Harbor. Then see the commands below for an Apptainer specific reference.
+
+### Login to Camden
+
+```bash
+apptainer registry login -u ${email_address} oras://camden.ornl.gov
+```
+
+### Logout of Camden
+
+```bash
+apptainer registry logout oras://camden.ornl.gov
+```
+
+### Pull image from Camden
+
+```bash
+apptainer pull <myimage>.sif oras://camden.ornl.gov/<myproject>/<myimage>[:<tag>]
+```
+
+### Push image to Camden
+
+```bash
+apptainer push <myimage>.sif oras://camden.ornl.gov/<myproject>/<myimage>[:<tag>]
+```
+
+### CI with Apptainer and Harbor
+
+Create a robot account in Harbor using the regular method.
+
+Then use the CI environment variables `APPTAINER_DOCKER_USERNAME` and `APPTAINER_DOCKER_PASSWORD` to specify the robot username and token. Make sure to deselect _Expand variable reference_ since the username has a ‘$’ in it.
+
 ## System Admin Notes
 
 * It is helpful to add commonly needed bind paths to `/etc/apptainer/apptainer.conf`. I have added the following bind commands to Zenith:
@@ -73,7 +111,6 @@ NFS filesystems support overlay mounts as a `lowerdir` only, and do not support 
 bind path = /scratch
 bind path = /etc/localtime
 bind path = /etc/hosts
-bind path = /noback
 bind path = /var/opt/thinlinc
 bind path = /auto
 ```
