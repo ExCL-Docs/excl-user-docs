@@ -24,7 +24,7 @@ Permission denied, please try again.
 ### Too many login attempts from a given IP address
 
 ExCL limits logins to five consecutive failures within a short period of time.
-After that limit exceeded, login atempts from your IP address will be blocked.
+After that limit exceeded, login attempts from your IP address will be blocked.
 This might look like
 
 ```text
@@ -47,12 +47,12 @@ The recommended approach for accessing git repositories in ExCL is to use the SS
 
 To use the SSH protocol you must first setup SSH keys to the git website (i.e. GitLab, GitHub, and Bitbucket). See [Git - Setup Git access to code.ornl.gov | ExCL User Docs (ornl.gov)](https://docs.excl.ornl.gov/software/git#setup-git-access-to-code.ornl.gov) for details for how to do this for code.ornl.gov. The other Git Clouds have similar methods to add SSH keys to your profile.
 
-Since the worker nodes are behind a proxy. You must setup an SSH jump host in your `.ssh/config` to access Git SSH servers. See [Git - Git SSH Access | ExCL User Docs (ornl.gov)](https://docs.excl.ornl.gov/software/git#git-ssh-access) to verify that you have setup the proper lines in your SSH Config.
+Since the worker nodes are behind a proxy. You must setup an SSH jump host in your `.ssh/config` to access Git SSH servers. See [Git - Git SSH Access | ExCL User Docs (ornl.gov)](https://docs.excl.ornl.gov/software/git#git-ssh-access) to verify that you have set up the proper lines in your SSH Config.
 
 ## I need a newer version of pip
 
-See [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python#python-virtual-environments-with-venv) for instructions on how to setup a Python virtual environment with the latest version of pip.
+See [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python#python-virtual-environments-with-venv) for instructions on how to set up a Python virtual environment with the latest version of pip.
 
 ## I need a newer version of Python
 
-See [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python#using-uv-to-create-a-python-virtual-environment-with-a-specific-version-of-python) for instructions on how to use UV to setup a Python virtual environment with a specific python version.
+See [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python#using-uv-to-create-a-python-virtual-environment-with-a-specific-version-of-python) for instructions on how to use UV to set up a Python virtual environment with a specific python version.

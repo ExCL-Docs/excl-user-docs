@@ -22,7 +22,7 @@ We've assembled here the fundamental authoring guidelines for ExCL user document
 
 Screenshots and images cannot be resized using markdown. Therefore, we embed `.html` that is rendered when we publish the tutorial to the documentation site.
 
-* Images and screenshots should be stored in a folder`assets`. Images and screenshots added from the gitbook interface are stored in `.gitbook/assets`, but issues seem to occure if this folder is modified externally from gitbook.
+* Images and screenshots should be stored in a folder`assets`. Images and screenshots added from the gitbook interface are stored in `.gitbook/assets`, but issues seem to occur if this folder is modified externally from gitbook.
 * Files should be named descriptively. For example, use names such as `adding-IP-address.png` instead of `image03.png`.
 * To remain consistent with other images in tutorials, please use the following `.html` code to resize, add a border, and open in a new browser tab when clicked. Note that you'll need to change the file name twice in the following code.
 
