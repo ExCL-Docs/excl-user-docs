@@ -13,7 +13,7 @@ Notes:
 - It is recommended to use a terminal multiplexer like [tmux](https://github.com/tmux/tmux/wiki) or [screen](https://www.gnu.org/software/screen/). These tools keep your session active and can be reattached to if you loose network connection. They also allow you to open multiple windows or split panels.
 
 {% hint style="success" %}
-**Next Steps** get started with recommended practices by following the [ExCL Remote Development](../quick-start-guides/excl-remote-development.md) quick start guide.
+**Next Steps:** Get started with recommended practices by following the [ExCL Remote Development](../quick-start-guides/excl-remote-development.md) quick start guide.
 {% endhint %}
 
 ## Add SSH Public Key to ExCL’s Authorized Keys
