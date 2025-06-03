@@ -60,3 +60,10 @@ Created using PC Part Picker. The build is available at <https://pcpartpicker.co
 ### Images
 
 ![Zenith2](../assets/zenith2-0.jpeg)
+
+## Arty A7
+
+- [Arty A7 - Start](https://digilent.com/reference/programmable-logic/arty-a7/start)
+- [Arty A7 Reference Manual](https://digilent.com/reference/programmable-logic/arty-a7/reference-manual)
+
+To get started, first install the [digilent board files](https://digilent.com/reference/programmable-logic/guides/installing-vivado-and-vitis#install_digilent_s_board_files). I recommend using the git approach. Once setup you can load the Vitis module and start developing with Vivado. See [Setting up the Vitis FPGA Development Environment](../quick-start-guides/vitis.md#setting-up-the-vitis-environment). To reserve the hardware use Slurm like normal, See [fish helper, slurm launch functions](../quick-start-guides/vitis.md#using-vitis-with-the-fish-shell-recommended-approach).

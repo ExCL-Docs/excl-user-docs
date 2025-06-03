@@ -7,11 +7,14 @@ description: Getting started with Vitis FPGA development.
 
 ## FPGA Current State
 
-| FPGA | State                               |
-| ---- | ----------------------------------- |
-| U250 | Attached to `spike` in Alveo mode.  |
-| u55C | Attached to `spike` in Alveo mode.  |
-| u280 | Attached to `milan3` in Alveo mode. |
+| FPGA          | State                               |
+| ------------- | ----------------------------------- |
+| U250          | Attached to `spike` in Alveo mode.  |
+| u55C          | Attached to `spike` in Alveo mode.  |
+| u280          | Attached to `milan3` in Alveo mode. |
+| Arty-A7       | Attached to `zenith2` via USB.      |
+| Alchitry      | Attached to `zenith2` via USB.      |
+| Polarfire SoC | Attached to `zenith2` via USB.      |
 
 ## Vitis Development Tools
 
