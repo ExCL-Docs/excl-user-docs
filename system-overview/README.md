@@ -7,38 +7,39 @@ coverY: 0
 
 ## ExCL Server List with Accelerators
 
-| Host Name                                  | Description                                                      | OS                    | Accelerators or other special hardware                                 |
-| ------------------------------------------ | ---------------------------------------------------------------- | --------------------- | ---------------------------------------------------------------------- |
-| [affirmed](triple-crown.md#affirmed)       | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                 | Ubuntu 22.04          | <p>Bluefield 2 </p><p>NIC/DPUs</p>                                     |
-| [amundsen](amundsen.md)                    | Desktop embedded system development                              | Ubuntu 20.04          | Snapdragon 855 (desktop retiring)                                      |
-| [apachepass](apachepass.md)                | ApachePass memory system                                         | Centos 7.9            | 375 GB Apachepass memory                                               |
-| [clark](clark.md)                          | Desktop embedded system development                              | Ubuntu 22.04          | Intel A770 Accelerator                                                 |
-| [cousteau](cousteau.md)                    | AMD EPYC 7272 (Rome) 2x12-core 256 GB                            | Ubuntu 22.04          | 2 AMD MI100 32 GB GPUs                                                 |
-| [docker](docker.md) (quad03)               | Intel 20 Core Server 96 GB                                       | Ubuntu 20.04          | Docker development environment                                         |
-| [equinox](equinox.md)                      | DGX Workstation Intel Xeon E5-2698 v4 (Broadwell) 20-core 256 GB | Ubuntu 22.04          | 4 Tesla V100-DGXS 32 GB GPUs                                           |
-| [explorer](explorer.md)                    | AMD EPYC 7702 (Rome) 2x64-core 512 GB                            | Ubuntu 22.04          | 2 AMD MI60 32 GB GPUs                                                  |
-| [hudson](hudson.md)                        | AMD EPYC 9454 (Genoa) 2x48-core 1.5 TB                           | Ubuntu 22.04          | 2 Nvidia H100s                                                         |
-| [justify](triple-crown.md#justify)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                 | Centos 7.9            |                                                                        |
-| [leconte](leconte.md)                      | Summit server POWER9 42 Cores                                    | Centos 8.4            | 6 Tesla V100 16 GB GPUs                                                |
-| [lewis](lewis.md)                          | Desktop embedded system development                              | Ubuntu 22.04          |                                                                        |
-| [mcmurdo](mcmurdo.md)                      | Desktop embedded system development                              | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
-| [milan0](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                             | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
-| [milan1](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                             | Ubuntu 22.04 or other | 2 Groq AI accelerators                                                 |
-| [milan2](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                             | Ubuntu 22.04 or other | 8 Nvidia Tesla V100-PCIE-32GB GPUs                                     |
-| [milan3](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                             | Ubuntu 22.04 or other | General Use                                                            |
-| [minim1](minim1.md)                        | Apple M1 Desktop                                                 | OSX                   |                                                                        |
-| [oswald](oswald.md)                        | Oswald head node                                                 | Ubuntu 22.04          |                                                                        |
-| [oswald00](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                 | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [oswald02](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                 | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [oswald03](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                 | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
-| [pcie](pcie.md)                            | Intel Xeon Gold 6130 CPU (Skylake) 32-core 192 GB                | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
-| [pharoah](triple-crown.md#pharoah)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                 | Centos 7.9            |                                                                        |
-| [radeon](radeon.md)                        | Intel 4 Core 64 GB                                               | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
-| [secretariat](triple-crown.md#secretariat) | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                 | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
-| [thunderx](thunderx.md)                    | ARM Cavium ThunderX2 Server 128 GB                               | Centos Stream 8       |                                                                        |
-| [xavier\[1-3\]](xavier.md)                 | Nvidia Jetson AGX                                                | Ubuntu                | Volta GPU                                                              |
-| [xavier\[4-5\]](xavier.md)                 | Nvidia Jetson AGX Orin                                           | Ubuntu                | Ampere GPU (not deployed)                                              |
-| [zenith](zenith.md)                        | AMD Ryzen Threadripper 3970X (Castle Peak) 32-core 132 GB        | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
+| Host Name                                  | Description                                                       | OS                    | Accelerators or other special hardware                                 |
+| ------------------------------------------ | ----------------------------------------------------------------- | --------------------- | ---------------------------------------------------------------------- |
+| [affirmed](triple-crown.md#affirmed)       | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Ubuntu 22.04          | <p>Bluefield 2 </p><p>NIC/DPUs</p>                                     |
+| [amundsen](amundsen.md)                    | Desktop embedded system development                               | Ubuntu 20.04          | Snapdragon 855 (desktop retiring)                                      |
+| [apachepass](apachepass.md)                | ApachePass memory system                                          | Centos 7.9            | 375 GB Apachepass memory                                               |
+| [clark](clark.md)                          | Desktop embedded system development                               | Ubuntu 22.04          | Intel A770 Accelerator                                                 |
+| [cousteau](cousteau.md)                    | AMD EPYC 7272 (Rome) 2x12-core 256 GB                             | Ubuntu 22.04          | 2 AMD MI100 32 GB GPUs                                                 |
+| [docker](docker.md) (quad03)               | Intel 20 Core Server 96 GB                                        | Ubuntu 20.04          | Docker development environment                                         |
+| [equinox](equinox.md)                      | DGX Workstation Intel Xeon E5-2698 v4 (Broadwell) 20-core 256 GB  | Ubuntu 22.04          | 4 Tesla V100-DGXS 32 GB GPUs                                           |
+| [explorer](explorer.md)                    | AMD EPYC 7702 (Rome) 2x64-core 512 GB                             | Ubuntu 22.04          | 2 AMD MI60 32 GB GPUs                                                  |
+| [faraday](faraday.md)                      | AMP APU 4x24 Zen 4 cores 512 GB unified HBM3 912 CDNA 3 GPU units | Ubuntu 24.04          | 4 Mi300a APUs                                                          |
+| [hudson](hudson.md)                        | AMD EPYC 9454 (Genoa) 2x48-core 1.5 TB                            | Ubuntu 22.04          | 2 Nvidia H100s                                                         |
+| [justify](triple-crown.md#justify)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Centos 7.9            |                                                                        |
+| [leconte](leconte.md)                      | Summit server POWER9 42 Cores                                     | Centos 8.4            | 6 Tesla V100 16 GB GPUs                                                |
+| [lewis](lewis.md)                          | Desktop embedded system development                               | Ubuntu 22.04          |                                                                        |
+| [mcmurdo](mcmurdo.md)                      | Desktop embedded system development                               | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
+| [milan0](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
+| [milan1](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | 2 Groq AI accelerators                                                 |
+| [milan2](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | 8 Nvidia Tesla V100-PCIE-32GB GPUs                                     |
+| [milan3](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | General Use                                                            |
+| [minim1](minim1.md)                        | Apple M1 Desktop                                                  | OSX                   |                                                                        |
+| [oswald](oswald.md)                        | Oswald head node                                                  | Ubuntu 22.04          |                                                                        |
+| [oswald00](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                  | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
+| [oswald02](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                  | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
+| [oswald03](oswald.md)                      | Intel Xeon E5-2683 v4 (Haswell) 2x16-core 256 GB                  | Centos 7.9            | Tesla P100 & Nallatech FPGA                                            |
+| [pcie](pcie.md)                            | Intel Xeon Gold 6130 CPU (Skylake) 32-core 192 GB                 | Ubuntu 22.04          | <p>Xylinx U250<br>Nalllatech Stratix 10<br>Tesla P100<br>Groq Card</p> |
+| [pharaoh](triple-crown.md#pharaoh)         | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Centos 7.9            |                                                                        |
+| [radeon](radeon.md)                        | Intel 4 Core 64 GB                                                | Ubuntu 22.04          | AMD Vega20 Radeon VII GPU                                              |
+| [secretariat](triple-crown.md#secretariat) | Triple Crown AMD EPYC 7742 (Rome) 2x64-core 1 TB                  | Ubuntu 22.04          | Bluefield 2 NIC/DPU                                                    |
+| [thunderx](thunderx.md)                    | ARM Cavium ThunderX2 Server 128 GB                                | Centos Stream 8       |                                                                        |
+| [xavier\[1-3\]](xavier.md)                 | Nvidia Jetson AGX                                                 | Ubuntu                | Volta GPU                                                              |
+| [xavier\[4-5\]](xavier.md)                 | Nvidia Jetson AGX Orin                                            | Ubuntu                | Ampere GPU (not deployed)                                              |
+| [zenith](zenith.md)                        | AMD Ryzen Threadripper 3970X (Castle Peak) 32-core 132 GB         | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
 
 ## New Systems and Devices to be Deployed
 
@@ -46,7 +47,6 @@ coverY: 0
 * Intel ARC GPU
 * Achronix FPGA
 * AGX Orin Developer Kits
-* Xilinx U280
 
 ## Accelerator Highlights
 
@@ -66,6 +66,7 @@ coverY: 0
 | Xilinx Zynq ZCU 102                      | n/a                      |
 | Xilinx Zynq ZCU 106                      | n/a                      |
 | Xilinx Alveo U250                        | pcie                     |
+| Xilinx Alveo U280                        | milan3                   |
 | 2 Ettus x410 SDRs                        | marconi                  |
 
 ## Unique Architecture Highlights
@@ -92,7 +93,7 @@ Login is the node use to access ExCL and to proxy into and out of the worker nod
 
 ### General Interactive Login Use
 
-These nodes can be access with ssh, and are availible for general interactive use.
+These nodes can be access with ssh, and are available for general interactive use.
 
 | Host        | Base Resources  | Specialized Resources      | Notes                                                           |
 | ----------- | --------------- | -------------------------- | --------------------------------------------------------------- |
@@ -103,7 +104,7 @@ These nodes can be access with ssh, and are availible for general interactive us
 | milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)            | Slurm                                                           |
 | milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)    | Slurm                                                           |
 | milan2      | 128 Core 1 Ti   | NVIDIA V100 (8)            |                                                                 |
-| milan3      | 128 Core 1 Ti   | -                          | Slurm                                                           |
+| milan3      | 128 Core 1 Ti   | Xlinx U280                 | Slurm                                                           |
 | excl-us00   | 32 Core 192 Gi  | -                          | Rocky 9                                                         |
 | excl-us01   | 32 Core 192 Gi  | -                          | Not available pending rebuild                                   |
 | excl-us03   | 32 Core 192 Gi  | -                          | CentOS 7 pending rebuild                                        |
@@ -112,8 +113,9 @@ These nodes can be access with ssh, and are availible for general interactive us
 | pharaoh     | 256 Core 1 Ti   | -                          | Slurm                                                           |
 | justify     | 256 Core 1 Ti   | -                          | Slurm                                                           |
 | hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)            |                                                                 |
-| docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with  enhanced image storage  |
-| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accellerators |
+| faraday     |                 | AMD Mi300a (4)             |                                                                 |
+| docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with enhanced image storage   |
+| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accelerators  |
 | lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250         | TL                                                              |
 | clark       | 20 Core 48 Gi   | NVIDIA T1000               | TL                                                              |
 | zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @  | TL                                                              |
@@ -163,13 +165,13 @@ Notes:
   - `oswald`
   - `oswald[00, 02-03]`
 
-### Gitlab Runner Speciliazed Nodes
+### Gitlab Runner Specialized Nodes
 
 - `slurm-gitlab-runner` — Gitlab Runner for launching slurm jobs.
 - `docker` — for docker runner jobs.
 - `devdoc` — for internal development documentation building and hosting.
 
-Note: any node can be used as a CI runner on request. See [GitLab Runner Quickstart](../quick-start-guides/gitlab-ci.md) and [GitHub Runner Quickstart](../quick-start-guides/github-ci.md). The above systems have a dedicated or specilized use with CI.
+Note: any node can be used as a CI runner on request. See [GitLab Runner Quickstart](../quick-start-guides/gitlab-ci.md) and [GitHub Runner Quickstart](../quick-start-guides/github-ci.md). The above systems have a dedicated or specialized use with CI.
 
 ### Docker
 
@@ -177,13 +179,13 @@ Note: any node can be used as a CI runner on request. See [GitLab Runner Quickst
 
 ### Specialized usage and reservations
 
-| Host | Specilized Usage | Reserved? |
+| Host | Specialized Usage | Reserved? |
 | --- | --- | --- |
 | dragon (vm) | Siemens EDA Tools | task-reserved |
 | devdocs (vm) | Internal development documentation building and hosting | task-reserved |
 | spike (vm) | `pcie` vm with FPGA and GPU passthrough access | task-reserved |
 | lewis | U250 | RISC-V Emulation using U250 | - |
-| slurm-gitlab-runner | slurm integration wth gitlab-runner | task-reserved |
+| slurm-gitlab-runner | slurm integration with gitlab-runner | task-reserved |
 | docker | slurm-integration with gitlab runner for containers | reserved for container use |
 
 Notes:

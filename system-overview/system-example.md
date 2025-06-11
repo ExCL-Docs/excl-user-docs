@@ -53,7 +53,7 @@ Flags:                 fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca 
 
 ### Disk
 
-### Acelerators
+### Accelerators
 
 ### Software
 

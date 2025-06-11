@@ -20,6 +20,7 @@ The proxy server has access to the full Oak Ridge network (open research only).
 
 ssh can be used to clone repositories on the login node. In order to clone repositories on the internal nodes, the ssh config needs to be changed to use the login node as a proxy jump. Here is an example ssh config with jump proxies to code.ornl.gov, bitbucket.org, and github.com.
 
+`~/.ssh/config`:
 ```config
 Host code.ornl.gov bitbucket.org github.com
    ProxyJump login
@@ -75,7 +76,7 @@ For git repos with two-factor authentication, an application token/password must
 4. [Add the SSH Public Key to ExCL’s Authorized keys.](../excl-support/access.md#add-ssh-public-key-to-excls-authorized-keys)
 
 {% hint style="warning" %}
-**SSH Path and Permissions**: For SSH keys to be loadable and usesable, they must have permissions which do not allow groups or others to read them. (i.e. they need permission bits set to 600). Additionally, there cannot be any `-` characters in the path for filenames.
+**SSH Path and Permissions**: For SSH keys to be loadable and usable, they must have permissions which do not allow groups or others to read them. (i.e. they need permission bits set to 600). Additionally, there cannot be any `-` characters in the path for filenames.
 {% endhint %}
 
 ## SSH-Agent and SSH Forwarding

@@ -23,3 +23,15 @@ At the time of writing this page, the default version of Julia installed on ExCL
 ```json
 "julia.executablePath": "/auto/software/swtree/ubuntu22.04/x86_64/julia/1.10.4/bin/julia"
 ```
+
+## Using Julia with Jupyter
+
+Within ExCL, the first step is to load the Julia module with `module load julia` to load the Julia tooling into the ExCL system.
+
+The second step is to install Jupyter, see [Jupyter Notebook - Installing Jupyter | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/jupyter-quick-start#installing-jupyter)
+
+The third step is to install ‘IJulia’ using the Julia REPL. Launch the Julia REPL with `julia` then press `]` to open the package management, then run `add IJulia`.
+
+Finally, the last step is to [run the Jupyter notebook](https://docs.excl.ornl.gov/quick-start-guides/jupyter-quick-start#accessing-a-jupyter-notebook-running-on-excl) and select the Julia kernel to use.
+
+See [How to Best Use Julia with Jupyter | Towards Data Science](https://towardsdatascience.com/how-to-best-use-julia-with-jupyter-82678a482677/) for more information.

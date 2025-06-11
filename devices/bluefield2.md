@@ -1,7 +1,7 @@
 
 # Nvidia BlueField 2 DPUs
 
-These card are currently installed on Secretariat and Affirmed, but will eventually be moved to take advange of GPUs installed elsewhere.
+These card are currently installed on Secretariat and Affirmed, but will eventually be moved to take advantage of GPUs installed elsewhere.
 
 ## Software installation
 

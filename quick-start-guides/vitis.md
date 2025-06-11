@@ -7,11 +7,14 @@ description: Getting started with Vitis FPGA development.
 
 ## FPGA Current State
 
-| FPGA | State                              |
-| ---- | ---------------------------------- |
-| U250 | Attached to `spike` in Alveo mode. |
-| u55C | Attached to `spike` in Alveo mode. |
-| u280 | Aaron’s office                     |
+| FPGA          | State                               |
+| ------------- | ----------------------------------- |
+| U250          | Attached to `spike` in Alveo mode.  |
+| u55C          | Attached to `spike` in Alveo mode.  |
+| u280          | Attached to `milan3` in Alveo mode. |
+| Arty-A7       | Attached to `zenith2` via USB.      |
+| Alchitry      | Attached to `zenith2` via USB.      |
+| Polarfire SoC | Attached to `zenith2` via USB.      |
 
 ## Vitis Development Tools
 
@@ -23,9 +26,9 @@ Vitis is now primarily deployed as a module for Ubuntu 22.04 systems. You can vi
 
 | FPGA                                                                                             | Host System | Slurm GRES Name |
 | ------------------------------------------------------------------------------------------------ | ----------- | --------------- |
-| [Alveo U250](https://www.amd.com/en/products/accelerators/alveo/u250/a-u250-p64g-pq-g.html)      | Spike       | U250            |
-| [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | Spike       | U55C            |
-| [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    |             | U280            |
+| [Alveo U250](https://www.amd.com/en/products/accelerators/alveo/u250/a-u250-p64g-pq-g.html)      | spike       | U250            |
+| [Alveo U55C](https://www.amd.com/en/products/accelerators/alveo/u55c/a-u55c-p00g-pq-g.html.html) | spike       | U55C            |
+| [Alveo U280](https://www.xilinx.com/products/boards-and-kits/alveo/u280.html)                    | milan3      | U280            |
 
 ![ExCL FPGA Overview](../assets/ExCL-FPGA-Overview.png)
 
@@ -173,13 +176,13 @@ See [ThinLinc Quickstart](thinlinc.md).
 **Note:** Fish is not backwards compatible with Bash. See [Fish for bash users (fishshell.com)](https://fishshell.com/docs/current/fish_for_bash_users.html). So in order to load modules and source bash scripts, I have included the bass function. Prepend `bass` before the `source` or `module` commands to use bash features in fish.
 {% endhint %}
 
-### Using Vitis with the [Fish Shell](https://fishshell.com) (Recommended Apporach)
+### Using Vitis with the [Fish Shell](https://fishshell.com) (Recommended Approach)
 
 Fish is installed system-wide with a default configuration based on Aaron's fish configuration that includes helpful functions to launch the Xilinx development tools. The next sections goes over the functions that this fish config provides.
 
 #### sfpgabuild
 
-`sfpgabuild` is a shortcut to calling `srun -J interactive_build -p fpgabuild -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . Essentially it setups a FPGA build environment using slurm using resonable defaults. Each of the defaults can be overriden by spacifying the new parameter when calling `sfpgabuild` . `sfpgabuild` also modifies the prompt to remind you that you are in the fpga build environment.
+`sfpgabuild` is a shortcut to calling `srun -J interactive_build -p fpgabuild -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --pty $argv` . Essentially it setups a FPGA build environment using slurm using reasonable defaults. Each of the defaults can be overridden by specifying the new parameter when calling `sfpgabuild` . `sfpgabuild` also modifies the prompt to remind you that you are in the fpga build environment.
 
 #### sfpgarun-u250
 
@@ -188,6 +191,10 @@ sfpgarun is a shortcut to calling `srun -J fpgarun-u250 -p fpgarun -c 8 --mem 8G
 #### sfpgarun-u55c
 
 sfpgarun is a shortcut to calling `srun -J fpgarun-u55c -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U55C:1" --pty $argv` . `sfpgarun-u55c` setups up an FPGA run environment complete with requesting the FPGA resource.
+
+#### sfpgarun-u280
+
+sfpgarun is a shortcut to calling `srun -J fpgarun-u280 -p fpgarun -c 8 --mem 8G --mail-type=END,FAIL --mail-user $user_email --gres="fpga:U280:1" --pty $argv` . `sfpgarun-u280` setups up an FPGA run environment complete with requesting the FPGA resource.
 
 #### sfpgarun-hw-emu
 
@@ -203,7 +210,7 @@ After running `bass module load vitis`, `sfpgabuild`, or `sfpgarun`, `viv` can b
 
 ### Manually Setting up License
 
-In order to manually set up the the Xilinx license, set the environment variable `XILINXD_LICENSE_FILE` to `2100@license.ftpn.ornl.gov`.
+In order to manually set up the Xilinx license, set the environment variable `XILINXD_LICENSE_FILE` to `2100@license.ftpn.ornl.gov`.
 
 ```
 export XILINXD_LICENSE_FILE=2100@license.ftpn.ornl.gov
@@ -419,7 +426,6 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
 
 3. Set the `XCL_EMULATION_MODE` environment variable to `sw_emu` (software emulation) or `hw_emu` (hardware emulation) as appropriate. This changes the application execution to emulation mode.\
 
-
     Use the following syntax to set the environment variable for C shell (csh):
 
     ```
@@ -429,18 +435,16 @@ TLDR: Create an `emconfig.json` file using `emconfigutil` and set `XCL_EMULATION
     Bash shell:
 
     ```
-    export  XCL_EMULATION_MODE=sw_emu
+    export XCL_EMULATION_MODE=sw_emu
     ```
 
     **IMPORTANT:** The emulation targets will not run if the `XCL_EMULATION_MODE` environment variable is not properly set.\
 
 4. Run the application.\
 
-
     With the runtime initialization file (xrt.ini), emulation configuration file (emconfig.json), and the `XCL_EMULATION_MODE` environment set, run the host executable with the desired command line argument.\
     \
     **IMPORTANT:** The INI and JSON files must be in the same directory as the executable.\
-
 
     For example:
 
@@ -461,6 +465,7 @@ TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware
 {% endhint %}
 
 1. Edit the xrt.ini file as described in [xrt.ini File](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/obl1532064985142.html).\
+
     ****
 
     This is optional, but recommended when running on hardware for evaluation purposes. You can configure XRT with the xrt.ini file to capture debugging and profile data as the application is running. To capture event trace data when running the hardware, refer to [Enabling Profiling in Your Application](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/profilingapplication.html#vfc1586356138757). To debug the running hardware, refer to [Debugging During Hardware Execution](https://www.xilinx.com/html\_docs/xilinx2020\_2/vitis\_doc/debuggingapplicationskernels.html#hsr1538574456889).\
@@ -475,11 +480,9 @@ TLDR: Make sure `XCL_EMULATION_MODE` is unset. Use a node with the FPGA hardware
     \
     **TIP:** This step is only required for platforms using Xilinx embedded devices such as Versal ACAP or Zynq UltraScale+ MPSoC.\
 
-
     For an embedded processor platform, copy the contents of the ./sd\_card folder produced by the `v++ --package` command to an SD card as the boot device for your system. Boot your system from the SD card.\
 
 4. Run your application.\
-
 
     The specific command line to run the application will depend on your host code. A common implementation used in Xilinx tutorials and examples is as follows:
 
@@ -548,7 +551,7 @@ clean:
 
 Vitis and Vivado will use 8 threads by default on Linux. Many of the Vivado tools can only utilize 8 threads for a given task. See the Multithreading in the Vivado Tools section from [Vivado Design Suite User Guide Implementation (UG904)](https://www.xilinx.com/support/documentation/sw\_manuals/xilinx2020\_2/ug904-vivado-implementation.pdf). I found from experimenting that the block level synthesis task can leverage more than 8 threads, but will not do so unless you set the vivado.synth.jobs and vivado.impl.jobs flags.
 
-Here is an example snippet from the [Xilinx Buttom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware\_Accelerators/Design\_Tutorials/05-bottom\_up\_rtl\_kernel/krnl\_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
+Here is an example snippet from the [Xilinx Bottom-Up RTL Tutorial](https://github.com/Xilinx/Vitis-Tutorials/blob/2020.2/Hardware\_Accelerators/Design\_Tutorials/05-bottom\_up\_rtl\_kernel/krnl\_cbc/Makefile) which shows one way to query and set the number of CPUs to use.
 
 ```bash
 NCPUS := $(shell grep -c ^processor /proc/cpuinfo)

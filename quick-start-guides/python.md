@@ -90,8 +90,8 @@ The virtual environment can be exited with `deactivate`.
 
 Steps to use the template:
 
-1. [Fork the respository.](https://code.ornl.gov/7ry/python-project-template/-/forks/new)
-2. Run `setup_template.sh` to setup the template for the new project.
+1. [Fork the repository.](https://code.ornl.gov/7ry/python-project-template/-/forks/new)
+2. Run `setup_template.sh` to set up the template for the new project.
 3. Remove `setup_template.sh`
 
 See [Python Project Template Documentation](https://devdocs.ornl.gov/7ry/python-project-template/) for details on the template.

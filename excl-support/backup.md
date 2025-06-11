@@ -45,3 +45,15 @@ no longer need your scratch space.
 {% hint style="danger" %}
 `/scratch/` is not shared between nodes, not stored in raid, and not backed up in any way. However, this storage does not have any automatic purging policy (unlike `/tmp/`), so the files should persist as long as the storage doesn’t fill up and the drives don’t fail.
 {% endhint %}
+
+## Project Storage
+
+Shared storage space for collaborative projects is available upon request. Each project is assigned a dedicated subvolume within the ZFS filesystem, which is accessible via an automounted NFS share. The mount point for each project is located at:
+
+```bash
+/auto/projects/<project_name>
+```
+
+Access to the project directories is restricted for security and organization. Only **execute** permissions are set on the `/auto/projects/` directory, meaning you must know the specific project name to `cd` into it. You will not be able to use `ls` to list all available project directories.
+
+Access Control Lists (ACLs) are used to manage permissions for project directories, allowing for flexible access configurations. By default, all members associated with a project will have **read, write, and execute** permissions for the files within their assigned project directory.

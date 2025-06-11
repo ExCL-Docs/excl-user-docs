@@ -10,11 +10,15 @@ In addition to the login node, multiple systems including the [virtual systems](
 For better keyboard shortcut support and to prevent the browser from triggering the shortcuts, I recommend installing [Open-as-Popup](https://chrome.google.com/webstore/detail/open-as-popup/ncppfjladdkdaemaghochfikpmghbcpc).
 
 {% hint style="warning" %}
+**Reminder**: You will need to re-do step 1 in [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) each time you want to connect to ExCL to form the Dynamic Proxy tunnel via SSH to the ExCL network.
+{% endhint %}
+
+{% hint style="warning" %}
 If you run into a "ThinLinc login failed. (No agent server was available)" error, then login to the node with ssh. This will mount your home directory and resolve the ThinLinc error.\
 ![](../.gitbook/assets/image.png)
 {% endhint %}
 
-## Systems Availible
+## Systems Available
 
 | Hostname                                       | URL                                                                      |
 | ---------------------------------------------- | ------------------------------------------------------------------------ |
@@ -23,39 +27,23 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 | [Tardis](https://tardis.ftpn.ornl.gov:300)     | [https://Tardis.ftpn.ornl.gov:300](https://tardis.ftpn.ornl.gov:300)     |
 | [Polarden](https://polarden.ftpn.ornl.gov:300) | [https://Polarden.ftpn.ornl.gov:300](https://polarden.ftpn.ornl.gov:300) |
 | [Zenith](https://zenith.ftpn.ornl.gov:300)     | [https://Zenith.ftpn.ornl.gov:300](https://zenith.ftpn.ornl.gov:300)     |
+| [Zenith2](https://zenith2.ftpn.ornl.gov:300)     | [https://Zenith2.ftpn.ornl.gov:300](https://zenith2.ftpn.ornl.gov:300)     |
 | [Lewis](https://lewis.ftpn.ornl.gov:300)       | [https://Lewis.ftpn.ornl.gov:300](https://lewis.ftpn.ornl.gov:300)       |
 | [Clark](https://clark.ftpn.ornl.gov:300)       | [https://Clark.ftpn.ornl.gov:300](https://clark.ftpn.ornl.gov:300)       |
 | [Pcie](https://pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://pcie.ftpn.ornl.gov:300)         |
 | [Aries](https://aries.ftpn.ornl.gov:300)       | [https://Aries.ftpn.ornl.gov:300](https://aries.ftpn.ornl.gov:300)       |
 | [Bonsai](https://bonsai.ftpn.ornl.gov:300)     | [https://Bonsai.ftpn.ornl.gov:300](https://bonsai.ftpn.ornl.gov:300)     |
+| [Hudson](https://hudson.ftpn.ornl.gov:300)     | [https://Hudson.ftpn.ornl.gov:300](https://hudson.ftpn.ornl.gov:300)     |
 
 {% hint style="info" %}
 The URL will only work once the SOCKS proxy is set up.\
-FoxyProxy can be used to automatically set up SOCKS proxy forwarding.
+[FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) can be used to automatically set up SOCKS proxy forwarding.
 {% endhint %}
 
 ## Accessing ThinLinc through the web interface
 
-1. Launch SOCKS dynamic proxy forwarding to the login node.\
-    On Linux or macOS, for example
-
-    ```
-     $ ssh -D 9090 <Username>@login.excl.ornl.gov
-    ```
-
-    or in the ssh config add
-
-    ```
-    DynamicForward 9090
-    ```
-
-    On windows use MobaSSHTunnel to setup Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Setup FoxyProxy\
-    Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
-
-    Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
-   ![proxy foxy settings](/assets/foxyproxy-settings.png)
-3. Connect to the ThinLinc server using the links above.
+1. [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) and make sure to have the SOCKS dynamic proxy running.
+2. Connect to the ThinLinc server using the links above.
 
 ## Accessing ThinLinc through ThinLinc Client
 
