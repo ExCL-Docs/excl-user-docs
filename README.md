@@ -22,7 +22,13 @@ See [Access to ExCL](excl-support/access.md) for more details.
 
 ## Getting Assistance
 
-Please send an email request to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) for assistance.  This initiates a service ticket and dispatches it to ExCL staff.
+Please send an email request to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) for assistance.  This initiates a service ticket and dispatches it to ExCL staff.   Please include the following:
+  - System name (i.e. faraday, login).
+  - Software name (if causing problems or if requesting an installation)
+  - Your UID (login name).  Do **not** send a password.
+  - Enough detail so we can replicate the problem.
+
+
 
 ## ExCL Cheat Sheet
 
