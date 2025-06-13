@@ -25,7 +25,7 @@ coverY: 0
 | [mcmurdo](mcmurdo.md)                      | Desktop embedded system development                               | Ubuntu 20.04          | Snapdragon 855 & PolarFire SoC (retiring)                              |
 | [milan0](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04          | 2 \* Nvidia A100                                                       |
 | [milan1](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | 2 Groq AI accelerators                                                 |
-| [milan2](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | 8 Nvidia Tesla V100-PCIE-32GB GPUs                                     |
+| [milan2](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | 8 (7 working) Nvidia Tesla V100-PCIE-32GB GPUs                         |
 | [milan3](milan.md)                         | AMD EPYC 7513 (Milan) 2x32-core 1 TB                              | Ubuntu 22.04 or other | General Use                                                            |
 | [minim1](minim1.md)                        | Apple M1 Desktop                                                  | OSX                   |                                                                        |
 | [oswald](oswald.md)                        | Oswald head node                                                  | Ubuntu 22.04          |                                                                        |
@@ -43,10 +43,10 @@ coverY: 0
 
 ## New Systems and Devices to be Deployed
 
-* 2 Snapdragon HDK & Display
-* Intel ARC GPU
-* Achronix FPGA
-* AGX Orin Developer Kits
+- 2 Snapdragon HDK & Display
+- Intel ARC GPU
+- Achronix FPGA
+- AGX Orin Developer Kits
 
 ## Accelerator Highlights
 
@@ -79,7 +79,7 @@ coverY: 0
 
 ## Other Equipment
 
-* RTP164 High Performance Oscilloscope
+- RTP164 High Performance Oscilloscope
 
 ## Primary Usage Notes
 
@@ -95,37 +95,37 @@ Login is the node use to access ExCL and to proxy into and out of the worker nod
 
 These nodes can be access with ssh, and are available for general interactive use.
 
-| Host        | Base Resources  | Specialized Resources      | Notes                                                           |
-| ----------- | --------------- | -------------------------- | --------------------------------------------------------------- |
-| oswald      | 16 Core 64 Gb   | -                          | Usable, pending rebuilt to Ubuntu                               |
-| oswald00    | 32 core 256 Gi  | NVIDIA P100, FPGA @        |                                                                 |
-| oswald02    | 32 core 256 Gi  | NVIDIA P100, FPGA @        | Not available - rebuilding                                      |
-| oswald03    | 32 core 256 Gi  | NVIDIA P100, FPGA @        | Not available - rebuilding                                      |
-| milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)            | Slurm                                                           |
-| milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)    | Slurm                                                           |
-| milan2      | 128 Core 1 Ti   | NVIDIA V100 (8)            |                                                                 |
-| milan3      | 128 Core 1 Ti   | Xlinx U280                 | Slurm                                                           |
-| excl-us00   | 32 Core 192 Gi  | -                          | Rocky 9                                                         |
-| excl-us01   | 32 Core 192 Gi  | -                          | Not available pending rebuild                                   |
-| excl-us03   | 32 Core 192 Gi  | -                          | CentOS 7 pending rebuild                                        |
-| secretariat | 256 Core 1 Ti   | -                          | Slurm                                                           |
-| affirmed    | 256 Core 1 Ti   | -                          | Slurm                                                           |
-| pharaoh     | 256 Core 1 Ti   | -                          | Slurm                                                           |
-| justify     | 256 Core 1 Ti   | -                          | Slurm                                                           |
-| hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)            |                                                                 |
-| faraday     |                 | AMD Mi300a (4)             |                                                                 |
-| docker      | 20 Core 96 Gi   | -                          | Configured for Docker general use with enhanced image storage   |
-| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @        | TL, No hyperthreading, passthrough hypervisor for accelerators  |
-| lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250         | TL                                                              |
-| clark       | 20 Core 48 Gi   | NVIDIA T1000               | TL                                                              |
-| zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @  | TL                                                              |
-| radeon      | 8 Core 64 Gi    | AMD Radeon VII             |                                                                 |
-| equinox     | DG Workstation  | NVIDIA V100 * 4            | rebuilding after ssd failure                                    |
-| explorer    | 256 Core 512 Gi | AMD M60 (2)                |                                                                 |
-| cousteau    | 48 Core 256 Gi  | AMD M100 (2)               |                                                                 |
-| leconte     | 168 Core 602 Gi | NVIDIA V100 * 6            | PowerPC (Summit)                                                |
-| Zenith      | 32 Core 132 Gi  | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p> | TL                                                              |
-| Zenith2     | 32 Core 256 Gi  | Embedded FPGAs             | TL                                                              |
+| Host        | Base Resources  | Specialized Resources                        | Notes                                                          |
+| ----------- | --------------- | -------------------------------------------- | -------------------------------------------------------------- |
+| oswald      | 16 Core 64 Gb   | -                                            | Usable, pending rebuilt to Ubuntu                              |
+| oswald00    | 32 core 256 Gi  | NVIDIA P100, FPGA @                          |                                                                |
+| oswald02    | 32 core 256 Gi  | NVIDIA P100, FPGA @                          | Not available - rebuilding                                     |
+| oswald03    | 32 core 256 Gi  | NVIDIA P100, FPGA @                          | Not available - rebuilding                                     |
+| milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)                              | Slurm                                                          |
+| milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)                      | Slurm                                                          |
+| milan2      | 128 Core 1 Ti   | NVIDIA V100 (8-1)                            | Only 7 of the GPUs are working.                                |
+| milan3      | 128 Core 1 Ti   | Xlinx U280                                   | Slurm                                                          |
+| excl-us00   | 32 Core 192 Gi  | -                                            | Rocky 9                                                        |
+| excl-us01   | 32 Core 192 Gi  | -                                            | Not available pending rebuild                                  |
+| excl-us03   | 32 Core 192 Gi  | -                                            | CentOS 7 pending rebuild                                       |
+| secretariat | 256 Core 1 Ti   | -                                            | Slurm                                                          |
+| affirmed    | 256 Core 1 Ti   | -                                            | Slurm                                                          |
+| pharaoh     | 256 Core 1 Ti   | -                                            | Slurm                                                          |
+| justify     | 256 Core 1 Ti   | -                                            | Slurm                                                          |
+| hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)                              |                                                                |
+| faraday     |                 | AMD Mi300a (4)                               |                                                                |
+| docker      | 20 Core 96 Gi   | -                                            | Configured for Docker general use with enhanced image storage  |
+| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @                          | TL, No hyperthreading, passthrough hypervisor for accelerators |
+| lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250                           | TL                                                             |
+| clark       | 20 Core 48 Gi   | NVIDIA T1000                                 | TL                                                             |
+| zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @                    | TL                                                             |
+| radeon      | 8 Core 64 Gi    | AMD Radeon VII                               |                                                                |
+| equinox     | DG Workstation  | NVIDIA V100 * 4                              | rebuilding after ssd failure                                   |
+| explorer    | 256 Core 512 Gi | AMD M60 (2)                                  |                                                                |
+| cousteau    | 48 Core 256 Gi  | AMD M100 (2)                                 |                                                                |
+| leconte     | 168 Core 602 Gi | NVIDIA V100 * 6                              | PowerPC (Summit)                                               |
+| Zenith      | 32 Core 132 Gi  | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p> | TL                                                             |
+| Zenith2     | 32 Core 256 Gi  | Embedded FPGAs                               | TL                                                             |
 
 Notes:
  - All of the general compute resources have hyperthreading enabled unless otherwise stated.. This can be changed on a per request basis.
