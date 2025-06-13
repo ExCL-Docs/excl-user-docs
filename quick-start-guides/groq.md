@@ -111,6 +111,6 @@ See [Jupyter Notebook Quickstart](jupyter-quick-start.md) for more information o
 
 ## Useful Groq Commands
 
-* Run regression tests to verify card functionality: `/opt/groq/runtime/site-packages/bin/tsp-regression run`
+* Run regression tests to verify card functionality: `tsp-regression run`
 * Get Groq device status: `/opt/groq/runtime/site-packages/bin/tsp-ctl status`
 * Monitor temperature and power: `/opt/groq/runtime/site-packages/bin/tsp-ctl monitor`
