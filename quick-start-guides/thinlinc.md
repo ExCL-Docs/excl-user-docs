@@ -27,13 +27,14 @@ If you run into a "ThinLinc login failed. (No agent server was available)" error
 | [Tardis](https://tardis.ftpn.ornl.gov:300)     | [https://Tardis.ftpn.ornl.gov:300](https://tardis.ftpn.ornl.gov:300)     |
 | [Polarden](https://polarden.ftpn.ornl.gov:300) | [https://Polarden.ftpn.ornl.gov:300](https://polarden.ftpn.ornl.gov:300) |
 | [Zenith](https://zenith.ftpn.ornl.gov:300)     | [https://Zenith.ftpn.ornl.gov:300](https://zenith.ftpn.ornl.gov:300)     |
-| [Zenith2](https://zenith2.ftpn.ornl.gov:300)     | [https://Zenith2.ftpn.ornl.gov:300](https://zenith2.ftpn.ornl.gov:300)     |
+| [Zenith2](https://zenith2.ftpn.ornl.gov:300)   | [https://Zenith2.ftpn.ornl.gov:300](https://zenith2.ftpn.ornl.gov:300)   |
 | [Lewis](https://lewis.ftpn.ornl.gov:300)       | [https://Lewis.ftpn.ornl.gov:300](https://lewis.ftpn.ornl.gov:300)       |
 | [Clark](https://clark.ftpn.ornl.gov:300)       | [https://Clark.ftpn.ornl.gov:300](https://clark.ftpn.ornl.gov:300)       |
 | [Pcie](https://pcie.ftpn.ornl.gov:300)         | [https://Pcie.ftpn.ornl.gov:300](https://pcie.ftpn.ornl.gov:300)         |
 | [Aries](https://aries.ftpn.ornl.gov:300)       | [https://Aries.ftpn.ornl.gov:300](https://aries.ftpn.ornl.gov:300)       |
 | [Bonsai](https://bonsai.ftpn.ornl.gov:300)     | [https://Bonsai.ftpn.ornl.gov:300](https://bonsai.ftpn.ornl.gov:300)     |
 | [Hudson](https://hudson.ftpn.ornl.gov:300)     | [https://Hudson.ftpn.ornl.gov:300](https://hudson.ftpn.ornl.gov:300)     |
+| [Spike](https://spike.ftpn.ornl.gov:300)       | [https://spike.ftpn.ornl.gov:300](https://spike.ftpn.ornl.gov:300)       |
 
 {% hint style="info" %}
 The URL will only work once the SOCKS proxy is set up.\
