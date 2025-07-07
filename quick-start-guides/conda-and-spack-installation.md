@@ -8,20 +8,20 @@ This guide goes over the recommended way to install [Conda](https://docs.conda.i
 ## Installing Conda
 
 {% hint style="danger" %}
-With recent changes to the Conda license, we are unable to use the default conda channel without a paid license. You are still able to use conda/miniconda with the `conda-forge` repository, but you must change it from using the `default` repository. See [Transitioning from defaults | conda-forge | community-driven packaging for conda](https://conda-forge.org/docs/user/transitioning_from_defaults/) and [Saying Goodbye to Anaconda?. Finding a replacement for Conda | by Robert McDermott | Medium](https://robert-mcdermott.medium.com/saying-goodbye-to-anaconda-91c18ddf89bb) for some additional information. The recommend approach is now to use [venv](https://docs.python.org/3/library/venv.html), [uv](https://docs.astral.sh/uv/), or [Pixi](https://pixi.sh/latest/) for managing python environments. These approaches work better and avoid the license issues. See also [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python) for more information on how to get started with Python.
+With recent changes to the Conda license, we are unable to use the default conda channel without a paid license. You can still use conda/miniconda/miniforge/etc with the `conda-forge` repository, but you must change it from using the `default` repository. See [Transitioning from defaults | conda-forge | community-driven packaging for conda](https://conda-forge.org/docs/user/transitioning_from_defaults/) and [Saying Goodbye to Anaconda?. Finding a replacement for Conda | by Robert McDermott | Medium](https://robert-mcdermott.medium.com/saying-goodbye-to-anaconda-91c18ddf89bb) for some additional information. The recommended approach is now to use [venv](https://docs.python.org/3/library/venv.html), [uv](https://docs.astral.sh/uv/), or [Pixi](https://pixi.sh/latest/) for managing python environments. These approaches work better and avoid the license issues. See also [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python) for more information on how to get started with Python. If you still want to use `conda`, the recommended approach is to install Miniforge from [https://conda-forge.org/](https://conda-forge.org/). To prevent unintentional use of the default conda channel, we block requests to `https://repo.anaconda.com/pkgs`.
 {% endhint %}
 
-See the [Conda Docs](https://docs.conda.io/en/latest/miniconda.html#linux-installers) for the latest installation instructions. I install Miniconda instead of Anaconda since I do not require the 3GB of included packages that come with Anaconda and I will be installing my own packages anyways.
+See [conda-forge | download](https://conda-forge.org/download/) for the latest installation instructions. Miniforge is the recommended version of conda since its a minimal base install which defaults to using conda-forge packages.
 
 ```bash
 # Download the installer
-wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
 
 # Run the installer
-bash Miniconda3-latest-Linux-x86_64.sh
+bash Miniforge3-Linux-x86_64.sh
 ```
 
-Follow the prompts on the installer screens. Accept the license agreements. **Specify `/home/$USER/conda` as the installation location.** Choose if you want the installer to initialize Miniconda.
+Follow the prompts on the installer screens. Accept the license agreements. *(Optional) Specify `/home/$USER/conda` as the installation location.* Choose if you want the installer to initialize Miniforge.
 
 ### Improving Conda Environment Solver Performance
 
