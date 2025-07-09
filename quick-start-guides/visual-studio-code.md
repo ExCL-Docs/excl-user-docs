@@ -7,6 +7,10 @@ description: Getting started with using VSCode and ExCL.
 
 ## Remote Explorer
 
+{% hint style="danger" %}
+**Do not directly connect to login.excl.ornl.gov with VSCode Remote - SSH**. Doing so will launch `vscode-server` on the login node, and the login node does not have enough resources to handle running the VS Code server component. Instead, make sure you use the below instructions to connect directly to the worker node by using the login node as a jump host.
+{% endhint %}
+
 The [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) and [Remote - WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) are both extremely useful to edit code remotely on ExCL or locally in WSL if on a windows machine. Remote - SSH pulls the ssh targets from the users `.ssh/config` file. On Linux or MacOS, this process is straightforward and you likely already have an ssh config file setup. On Windows you have to specify the proxy command to use to proxy into the internal ExCL nodes. Here is an example file for Windows:
 
 ```
