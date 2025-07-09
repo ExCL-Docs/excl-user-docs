@@ -70,7 +70,9 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
 fi
 ```
 
+{% hint style="warning" %}
 **Important:** Since VSCode installs its configuration to your home directory by default and the home directories are stored in NFS, the `Remote.SSH: Lockfiles in Tmp` setting needs to be checked. This setting is easiest to find with the settings search box.
+{% endhint %}
 
 ![Remote.SSH: Lockfiles Setting](../.gitbook/assets/2022-02-18-lockfiles-setting.png)
 
