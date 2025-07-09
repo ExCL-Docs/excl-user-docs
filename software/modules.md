@@ -81,6 +81,6 @@ To clear all loaded modules and reset to the default environment:
 module purge
 ```
 
-## Excl-Utils
+## ExCL-Utils
 
 The `excl-utils` module contains common Rust CLI utilities. Load the module to see an updated list of the installed utilities. Additional Rust CLI utilities can be requested to be included in the module. These utilities are updated to the latest versions nightly.
