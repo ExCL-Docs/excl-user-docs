@@ -56,3 +56,22 @@ See [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/pyth
 ## I need a newer version of Python
 
 See [Python | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/python#using-uv-to-create-a-python-virtual-environment-with-a-specific-version-of-python) for instructions on how to use UV to set up a Python virtual environment with a specific python version.
+
+## I can't access git/web/whatever from within docker.
+
+Docker does not pick up user environment variables when a container is storted, nor does it pick up variables from the docker daemon.   These environment variables are required for Docker to access services outside of the ExCL environment (via a squid proxy).
+
+This can be done by creating ~/.docker/config.json with the contents:
+
+```json
+{
+ "proxies": {
+   "default": {
+     "httpProxy": "http://proxy.ftpn.ornl.gov:3128",
+     "httpsProxy": "https://proxy.ftpn.ornl.gov:3128"
+   }
+ }
+}
+```
+
+
