@@ -18,8 +18,8 @@ Host excl
     HostName login.excl.ornl.gov
     IdentityFile ~/.ssh/id_rsa
 
-Host quad00
-    HostName quad00
+Host oswald
+    HostName oswald
     ProxyCommand c:/Windows\System32\OpenSSH/ssh.exe -W %h:%p excl
     IdentityFile ~/.ssh/id_rsa
 
@@ -36,8 +36,8 @@ Host excl
     HostName login.excl.ornl.gov
     IdentityFile ~/.ssh/id_rsa
 
-Host quad00
-    HostName quad00
+Host oswald
+    HostName oswald
     ProxyJump excl
     IdentityFile ~/.ssh/id_rsa
 
@@ -49,7 +49,7 @@ Host *
 
 The main difference between the files is that the Windows config has `ProxyCommand` with the windows `ssh.exe` and Linux and MacOS has `ProxyJump`, both commands set up the login node as a relay to the internal node.
 
-Replace `<Username>` with your username. Other internal system can be added by copying the quad00 entry and modifying the name of the config and the HostName. It is highly recommended to use a passphrase protected ssh key as the login method. If you used a different name for the ssh key file, then replace `~/.ssh/id_rsa` with your private key file. On Windows, this config file is located at `%USERPROFILE%\.ssh\config`. On Linux and MacOS, this config file is located at `~/.ssh/config`. The config file doesn’t have an extension, but it is a text file that can be edited with vscode.
+Replace `<Username>` with your username. Other internal system can be added by copying the oswald entry and modifying the name of the config and the HostName. It is highly recommended to use a passphrase protected ssh key as the login method. If you used a different name for the ssh key file, then replace `~/.ssh/id_rsa` with your private key file. On Windows, this config file is located at `%USERPROFILE%\.ssh\config`. On Linux and MacOS, this config file is located at `~/.ssh/config`. The config file doesn’t have an extension, but it is a text file that can be edited with vscode.
 
 To avoid typing your ssh passphrase multiple times per login, use an SSH Agent to store the ssh credentials. See [Setting up the SSH Agent](https://code.visualstudio.com/docs/remote/troubleshooting#\_setting-up-the-ssh-agent) for details. On Windows, to enable SSH Agent automatically, start a local Administrator PowerShell and run the following commands:
 
