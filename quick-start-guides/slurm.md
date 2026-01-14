@@ -215,7 +215,7 @@ sacct -j <jobid> --format=JobID,State,Reason,Elapsed
 
 ### Key takeaways
 
-✔ `nvidia-long` jobs **can be interrupted**
-✔ **Always use `--requeue`** if you want your job restarted
-✔ Handle `SIGTERM` and checkpoint frequently
-✔ Expect jobs to restart multiple times
+* ✔ `nvidia-long` jobs **can be interrupted**
+* ✔ **Always use `--requeue`** if you want your job restarted
+* ✔ Handle `SIGTERM` and checkpoint frequently
+* ✔ Expect jobs to restart multiple times
