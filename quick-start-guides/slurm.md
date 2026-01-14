@@ -5,6 +5,8 @@ description: Getting Started with Slurm in ExCL with best practice recommendatio
 
 For general Slurm use, see [Job Submission with Slurm - CADES User Documentation](https://docs.cades.ornl.gov/condos/how-to-use/execute-a-slurm-job/) and the cheat sheet at [Cheat Sheet | ExCL User Docs](https://docs.excl.ornl.gov/#excl-cheat-sheet).
 
+## sbatch Template
+
 Here is a recommended Slurm sbatch script template:
 
 ```bash
