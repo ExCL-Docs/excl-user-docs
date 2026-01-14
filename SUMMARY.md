@@ -56,6 +56,7 @@
 * [Open WebUI](quick-start-guides/open-webui.md)
 * [Python](quick-start-guides/python.md)
 * [Siemens EDA](quick-start-guides/siemens-eda.md)
+* [Slurm](quick-start-guides/slurm.md)
 * [ThinLinc](quick-start-guides/thinlinc.md)
 * [Visual Studio Code](quick-start-guides/visual-studio-code.md)
 * [Vitis FPGA Development](quick-start-guides/vitis.md)
