@@ -3,7 +3,7 @@ description: Getting Started with Slurm in ExCL with best practice recommendatio
 ---
 # Getting Started with Slurm
 
-For general Slurm use, see [Job Submission with Slurm - CADES User Documentation](https://docs.cades.ornl.gov/condos/how-to-use/execute-a-slurm-job/) and the cheat sheet at [Cheat Sheet | ExCL User Docs](https://docs.excl.ornl.gov/#excl-cheat-sheet).
+For general Slurm use and reference, see [Job Submission with Slurm - CADES User Documentation](https://docs.cades.ornl.gov/condos/how-to-use/execute-a-slurm-job/), [CADES Cheat Sheet](https://docs.cades.ornl.gov/cheatsheet/cades_cheatsheet.pdf), and [Cheat Sheet | ExCL User Docs](https://docs.excl.ornl.gov/#excl-cheat-sheet).
 
 ## sbatch Template
 
