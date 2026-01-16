@@ -4,6 +4,15 @@ description: Getting started with Groq.
 
 # Groq Getting Started Guide
 
+**At this time the Groq cards are not available pending software
+update and interest.**
+
+**If you have interest in using thse, please let excl-help@ornl.gov know.**
+
+
+<span style="color: lightgrey;">
+
+
 ## Groq Links
 
 * [Groq API](https://github.com/Groq/GroqAPI)
