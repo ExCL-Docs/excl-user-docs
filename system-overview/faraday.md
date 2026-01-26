@@ -29,7 +29,7 @@ If you are not, contact [excl-help@ornl.gov](mailto:excl-help@ornl.gov), and we�
 - Supermicro designed and built system (we have 4U air cooled, also available as 2U liquid cooled)
     - Rather than the normal PCIe 5.0 slots, riser cards that connect into specialized backplane connectors are used (but they are PCIe 5.0).
         - To add hardware we will need to purchase riser cards, and lots of heads up time
-- Ubuntu 24.04 LTS;  ROCM 6.4.0
+- Ubuntu 24.04 LTS;  ROCM 7.0.1
 
 ## Documentation
 
