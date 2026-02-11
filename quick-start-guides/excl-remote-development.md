@@ -44,3 +44,7 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 {% hint style="warning" %}
 **Reminder**: You will need to re-do step 1 in [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) each time you want to connect to ExCL to form the Dynamic Proxy tunnel via SSH to the ExCL network.
 {% endhint %}
+
+{% hint style="warning" %}
+**Note**: If you are on a Mac system, you will need to check on the proxy DNS setting for the ExCL proxy config.  ![Foxy Proxy Proxy DNS Settings for Mac](/assets/foxyproxy-settings-mac.png)
+{% endhint %}
