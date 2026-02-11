@@ -46,5 +46,7 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 {% endhint %}
 
 {% hint style="warning" %}
-**Note**: If you are on a Mac system, you will need to check on the proxy DNS setting for the ExCL proxy config.  ![Foxy Proxy Proxy DNS Settings for Mac](/assets/foxyproxy-settings-mac.png)
+**Note**: If you are on a Mac system, you will need to check on the proxy DNS setting for the ExCL proxy config.
+
+![Foxy Proxy Proxy DNS Settings for Mac](/assets/foxyproxy-settings-mac.png)
 {% endhint %}
