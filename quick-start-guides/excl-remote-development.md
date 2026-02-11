@@ -37,7 +37,7 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 2. Setup FoxyProxy\
     Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
 
-    Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov` to forward ThinLinc traffic to ExCL.
+    Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov.*` to forward ThinLinc traffic to ExCL.
 
 ![Foxy Proxy Settings](/assets/foxyproxy-settings.png)
 
