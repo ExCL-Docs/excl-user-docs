@@ -5,6 +5,57 @@ description: Getting Started with Python in ExCL with best practice recommendati
 
 This page covers a few recommendations and tips for getting started with Python in ExCL following best practices for packaging python projects and using virtual environments. There are many different ways to structure and package python projects and various tools that work with python, so this page is not meant to be comprehensive but to provide a few recommendations for getting started.
 
+## Python Virtual Environments Using [uv](https://docs.astral.sh/uv/)
+
+Aaron recommends using [uv](https://docs.astral.sh/uv/) to manage your Python virtual environments. This approach works best to avoid edge cases found with heterogeneous clusters like ExCL. That is because UV installs in your home directory without any special privileges, and it allows you to install and create Python virtual environments very efficiently (think 10-100x faster) using any version of Python.
+
+Here is how I use it…
+
+I use a fish function that I wrote and provide as part of the default fish shell config on ExCL. This function is `pvenv` which stands for Python virtual environment. This function updates `uv`—something that I would otherwise forget to do—and then it either sources an existing `.venv` environment or creates a new Python environment stored in `.venv` and activates it. Once the environment is active, you can then use `uv pip` to install new packages.
+
+If you are not on ExCL, here is the fish function for reference.
+
+pvenv.fish:
+```fish
+function pvenv --wraps='uv venv --seed' --description 'Create and activate a python virtual environment in .venv with updated pip and prompt set to the folder\'s name'
+   uv self update
+   if test -e .venv/bin/activate.fish
+      echo Using existing `.venv`.
+      source .venv/bin/activate.fish
+   else
+      echo Creating new `.venv`.
+      # python3 -m venv --upgrade-deps --prompt (basename $PWD) .venv $argv; and source .venv/bin/activate.fish;
+      uv venv --seed $argv; and source .venv/bin/activate.fish;
+   end
+end
+```
+
+### How to Install uv
+
+Follow the installation guide at [Installation | uv](https://docs.astral.sh/uv/getting-started/installation/#__tabbed_1_1).
+
+### Using UV to create a python virtual environment with a specific version of python.
+
+When a specific version of python is required, [uv](https://github.com/astral-sh/uv) can be used to create a virtual environment with the specific version of python.
+
+```shell
+uv venv --python <version>
+```
+
+For example:
+
+```shell
+uv venv --python 3.11
+```
+
+Use the command below to see the available python versions.
+
+```shell
+uv python list
+```
+
+See [astral-sh/uv - python management](https://github.com/astral-sh/uv?tab=readme-ov-file#python-management) and [uv docs - installing a specific version](https://docs.astral.sh/uv/guides/install-python/#installing-a-specific-version) for details.
+
 ## Python Virtual Environments with venv
 
 Using virtual environments is the recommended way to isolate Python dependencies and ensure compatibility across different projects. Virtual environments prevent conflicts between packages required by different projects and simplify dependency management. The goal with isolated, project specific python environments is to avoid the situation found in <https://xkcd.com/1987/>.
@@ -95,25 +146,3 @@ Steps to use the template:
 3. Remove `setup_template.sh`
 
 See [Python Project Template Documentation](https://devdocs.ornl.gov/7ry/python-project-template/) for details on the template.
-
-## Using UV to create a python virtual environment with a specific version of python.
-
-When a specific version of python is required, [uv](https://github.com/astral-sh/uv) can be used to create a virtual environment with the specific version of python.
-
-```shell
-uv venv --python <version>
-```
-
-For example:
-
-```shell
-uv venv --python 3.11
-```
-
-Use the command below to see the available python versions.
-
-```shell
-uv python list
-```
-
-See [astral-sh/uv - python management](https://github.com/astral-sh/uv?tab=readme-ov-file#python-management) and [uv docs - installing a specific version](https://docs.astral.sh/uv/guides/install-python/#installing-a-specific-version) for details.
