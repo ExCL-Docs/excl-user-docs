@@ -10,7 +10,7 @@ A Marimo server running on a worker node can be accessed either with VS Code’s
 
 ## Quick Start
 
-Very quick start using [uv](https://docs.astral.sh/uv/) and [FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy).
+Very quick start using [uv](https://docs.excl.ornl.gov/quick-start-guides/python#python-virtual-environments-using-uv) and [FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy).
 
 ```bash
 uv tool run marimo edit test.py --host $hostname
