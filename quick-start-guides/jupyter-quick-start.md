@@ -43,6 +43,16 @@ jupyter kernelspec uninstall <unwanted-kernel>
 
 A Jupyter notebook server running on ExCL can be accessed via a local web browser through port forwarding the Jupyter notebook's port. By default, this is port 8888 (or the next available port). This port might be in use if someone else is using running a notebook. You can specify the port with the `--port` flag when launching the Jupyter notebook. To use a different port just replace 8888 with the desired port number. In order to port forward from an internal node, you have to port forward twice, once from your machine to login.excl.ornl.gov and once again from the login node to the internal node (i.e. pcie).
 
+### Using FoxyProxy (Recommended)
+
+You can use [FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) directly connect to the server running on a worker node. If I’m running a Jupyter Notebook on zenith2 with the command `jupyter notebook`, I can connect  to the notebook directly using the printed message:
+```txt
+[I 2026-02-18 16:50:15.204 ServerApp] Jupyter Server 2.17.0 is running at:
+[I 2026-02-18 16:50:15.204 ServerApp] http://zenith2.ftpn.ornl.gov:8888/tree
+[I 2026-02-18 16:50:15.204 ServerApp]     http://127.0.0.1:8888/tree
+```
+I hold control on Windows/Linux and click the URL to open it in my local browser.
+
 ### Detailed instructions for Linux/Mac
 
 These instructions go over how to access a Jupyter notebook running on the pcie node in the ExCL Cluster. If you want to access a different system, then replace `pcie` with the system you intend to access.
