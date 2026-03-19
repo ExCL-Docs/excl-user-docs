@@ -46,6 +46,7 @@
 * [Apptainer](quick-start-guides/apptainer.md)
 * [Conda and Spack Installation](quick-start-guides/conda-and-spack-installation.md)
 * [Devdocs](quick-start-guides/devdocs.md)
+* [DVC](quick-start-guides/dvc.md)
 * [GitHub CI](quick-start-guides/github-ci.md)
 * [Gitlab CI](quick-start-guides/gitlab-ci.md)
 * [Groq](quick-start-guides/groq.md)

@@ -103,6 +103,10 @@ Create a robot account in Harbor using the regular method.
 
 Then use the CI environment variables `APPTAINER_DOCKER_USERNAME` and `APPTAINER_DOCKER_PASSWORD` to specify the robot username and token. Make sure to deselect _Expand variable reference_ since the username has a ‘$’ in it.
 
+## Apptainer Project Storage on ExCL
+
+There is also shared project storage at `/auto/projects/apptainer` for storing large, shared, general-purpose Apptainer images with other users in ExCL. Reach out to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) if you would like write access to this space to add your own images.
+
 ## System Admin Notes
 
 * It is helpful to add commonly needed bind paths to `/etc/apptainer/apptainer.conf`. I have added the following bind commands to Zenith:
