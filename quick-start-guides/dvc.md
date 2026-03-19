@@ -55,7 +55,7 @@ dvc config cache.type symlink
 ```
 
 {% hint style="warning" %}
-This can also skipped and done instead at the instance level to better support using the repo on non-ExCL systems. See _______.
+This can also be skipped and done instead at the instance level to better support using the repo on non-ExCL systems. See [Post Clone Steps on ExCL | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/dvc#on-excl-shared-cache).
 {% endhint %}
 
 ---
@@ -125,7 +125,7 @@ dvc checkout
 ```
 
 {% hint style="info" %}
-💡 With ExCL’s shared cache, `dvc push` and `dvc pull` are not needed, only `dvc checkout` and `dvc checkout --relink`.
+With ExCL’s shared cache, `dvc push` and `dvc pull` are not needed, only `dvc checkout` and `dvc checkout --relink`.
 {% endhint %}
 
 ---
@@ -149,7 +149,7 @@ dvc pull
 ```
 
 {% hint style="info" %}
-💡 For systems outside of ExCL’s, treat ExCL as a dvc remote and use `dvc push` and `dvc pull` to synchronize files to and from your local cache.
+For systems outside of ExCL’s, treat ExCL as a DVC remote and use `dvc push` and `dvc pull` to synchronize files to and from your local cache.
 {% endhint %}
 
 ---
@@ -163,7 +163,7 @@ dvc pull
 
 ---
 
-## ⚠️ Best Practices on ExCL
+## 🗒️ Best Practices on ExCL
 
 * Use a **shared project cache** (`/auto/project/…`)
 * Always run `dvc checkout` after cloning
@@ -173,7 +173,7 @@ dvc pull
 
 ---
 
-## 📊 When to Use DVC vs \<Insert Existing Workflow\>
+## 📊 When to Use DVC vs. \<Insert Existing Workflow\>
 
 ### Use DVC when:
 
@@ -184,7 +184,7 @@ dvc pull
 ### Use existing workflow when:
 
 * You have **large exploratory runs (e.g., DEFFE)**
-* Data is **expensive to recompute** and you have bespoke processes.
+* Data is **expensive to recompute**, or you have bespoke processes.
 * You prefer **manual control and simpler tooling**
 
 ---
@@ -217,13 +217,13 @@ dvc gc
 ```
 
 {% hint style="warning" %}
-⚠️ Only run with care in shared environments (can remove needed data)
+Only run with care in shared environments (can remove needed data)
 {% endhint %}
 
 {% hint style="warning" %}
-⚠️ Note that enabling soft/hard links causes DVC to protect the linked data because editing them in-place would corrupt the cache. See [`dvc unprotect`](https://doc.dvc.org/command-reference/unprotect).
+Note that enabling soft/hard links causes DVC to protect the linked data because editing them in-place would corrupt the cache. See [`dvc unprotect`](https://doc.dvc.org/command-reference/unprotect).
 {% endhint %}
 
 {% hint style="warning" %}
-⚠️ Using [`dvc gc`](https://doc.dvc.org/command-reference/gc) with a shared cache may delete data needed in another project! See more info about [cleaning a shared cache](https://doc.dvc.org/command-reference/gc#cleaning-shared-cache-or-remote) safely.
+Using [`dvc gc`](https://doc.dvc.org/command-reference/gc) with a shared cache may delete data needed in another project! See more info about [cleaning a shared cache](https://doc.dvc.org/command-reference/gc#cleaning-shared-cache-or-remote) safely.
 {% endhint %}
