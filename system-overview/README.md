@@ -39,7 +39,8 @@ coverY: 0
 | [thunderx](thunderx.md)                    | ARM Cavium ThunderX2 Server 128 GB                                | Centos Stream 8       |                                                                        |
 | [xavier\[1-3\]](xavier.md)                 | Nvidia Jetson AGX                                                 | Ubuntu                | Volta GPU                                                              |
 | [xavier\[4-5\]](xavier.md)                 | Nvidia Jetson AGX Orin                                            | Ubuntu                | Ampere GPU (not deployed)                                              |
-| [zenith](zenith.md)                        | AMD Ryzen Threadripper 3970X (Castle Peak) 32-core 132 GB         | Ubuntu 22.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
+| [zenith](zenith.md)                        | AMD Ryzen Threadripper 3970X (Castle Peak) 32-core 132 GB         | Ubuntu 24.04          | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>                           |
+| [zenith2](zenith.md)                       | AMD Ryzen Threadripper 3970X (Castle Peak) 32-core 132 GB         | Ubuntu 24.04          | <p>Nvidia GTX 5090<br>Various Embedded FPGA devboards</p>              |
 
 ## New Systems and Devices to be Deployed
 
@@ -68,6 +69,7 @@ coverY: 0
 | Xilinx Alveo U250                        | pcie                     |
 | Xilinx Alveo U280                        | milan3                   |
 | 2 Ettus x410 SDRs                        | marconi                  |
+| Nvidia Geforce RTX 5090 GPU              | zenith2                  |
 
 ## Unique Architecture Highlights
 
@@ -125,7 +127,7 @@ These nodes can be access with ssh, and are available for general interactive us
 | cousteau    | 48 Core 256 Gi  | AMD M100 (2)                                 |                                                                |
 | leconte     | 168 Core 602 Gi | NVIDIA V100 * 6                              | PowerPC (Summit)                                               |
 | Zenith      | 32 Core 132 Gi  | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p> | TL                                                             |
-| Zenith2     | 32 Core 256 Gi  | Embedded FPGAs                               | TL                                                             |
+| Zenith2     | 32 Core 256 Gi  | <p>Nvidia GTX 5090<br>Various Embedded FPGA devboards</p> | TL                                                             |
 
 Notes:
  - All of the general compute resources have hyperthreading enabled unless otherwise stated.. This can be changed on a per request basis.
