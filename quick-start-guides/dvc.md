@@ -24,7 +24,7 @@ DVC works well with ExCL. On ExCL, data can be stored in a shared cache in the p
 ### 1. Install DVC
 
 ```bash
-uv tool install dvc[ssh]
+uv tool install dvc[ssh,s3]
 ```
 
 ---
