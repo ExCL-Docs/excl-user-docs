@@ -65,8 +65,11 @@ This can also be skipped and done instead at the instance level to better suppor
 ```bash
 dvc add data/my-dataset
 
-git add data/my-dataset.dvc .gitignore
+git add data/my-dataset.dvc .gitignore # Not needed if autostage is true.
 git commit -m "Track dataset with DVC"
+
+dvc push
+git push
 ```
 
 ---
