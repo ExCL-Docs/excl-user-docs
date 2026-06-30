@@ -4,8 +4,8 @@ To become authorized to access ExCL facilities, please apply at [https://www.exc
 
 Once you have access you have a couple of options.
 
-* login.excl.ornl.gov runs an SSH Server and you can connect to the login node with `ssh login.excl.ornl.gov`.
-* There is a limited number of [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) licenses available. Thinlinc (Xfce Desktop) can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300) for HTML5 services, and ThinLinc clients can use login.excl.ornl.gov as their destination. ThinLinc clients can be downloaded without cost from [https://www.cendio.com/thinlinc/download](https://www.cendio.com/thinlinc/download). ThinLinc provides much better performance than tunneling X over SSH. A common strategy is to access login.excl.ornl.gov via ThinLinc and then use X11 forwarding to access GUIs running on other nodes.
+- login.excl.ornl.gov runs an SSH Server and you can connect to the login node with `ssh <username>@login.excl.ornl.gov`.
+- There is a limited number of [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) licenses available. Thinlinc (Xfce Desktop) can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300) for HTML5 services, and ThinLinc clients can use login.excl.ornl.gov as their destination. ThinLinc clients can be downloaded without cost from [https://www.cendio.com/thinlinc/download](https://www.cendio.com/thinlinc/download). ThinLinc provides much better performance than tunneling X over SSH. A common strategy is to access login.excl.ornl.gov via ThinLinc and then use X11 forwarding to access GUIs running on other nodes.
 
 Notes:
 - Using an SSH key instead of a password to connect to ExCL is highly recommended. See [How to get start with SSH keys](../software/git.md#ssh-keys-for-authentication). SSH keys are more secure than passwords, and you are less likely to accidentally get banned from multiple incorrect login attempts when using SSH Keys to authenticate. If you get blocked, you can send a help ticket to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) with your IP address to get removed from the block list.
