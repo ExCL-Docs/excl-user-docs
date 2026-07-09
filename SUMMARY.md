@@ -18,7 +18,7 @@
   * [lewis](system-overview/lewis.md)
   * [maxwell](system-overview/maxwell.md)
   * [mcmurdo](system-overview/mcmurdo.md)
-  * [Milan](system-overview/milan.md)
+  * [milan](system-overview/milan.md)
   * [minim1](system-overview/minim1.md)
   * [minim3](system-overview/minim3.md)
   * [oswald](system-overview/oswald.md)
