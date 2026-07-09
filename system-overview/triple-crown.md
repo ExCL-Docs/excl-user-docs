@@ -25,16 +25,14 @@ These servers are generally used for customized VM environments, which are often
 
 | Node        | VM      | OS           | Status      |
 | ----------- | ------- | ------------ | ----------- |
-| Justify     | All off | Ubuntu 22.04 | Operational |
-| Pharaoh     | All off | Ubuntu 22.04 | Operational |
-| Affirmed    | All off | Ubuntu 22.04 | Operational |
-| Secretariat | All off | Ubuntu 22.04 | Operational |
+| Justify     | All off | Ubuntu 24.04 | Operational |
+| Pharaoh     | All off | Ubuntu 24.04 | Operational |
+| Affirmed    | All off | Ubuntu 24.04 | Operational |
+| Secretariat | All off | Ubuntu 24.04 | Operational |
 
 ## Affirmed
 
 Affirmed is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
-
-It currently runs Ubuntu 22.04.
 
 #### Specialized hardware
 
@@ -50,8 +48,6 @@ These servers are generally used for customized VM environments, which are often
 
 Justify is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
 
-It currently runs Centos 7.9.
-
 #### Usage
 
 These servers are generally used for customized VM environments, which are often scheduled via SLURM.
@@ -59,8 +55,6 @@ These servers are generally used for customized VM environments, which are often
 ## Pharaoh
 
 Pharaoh is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
-
-It currently runs Centos 7.9.
 
 #### Usage
 
@@ -70,7 +64,6 @@ These servers are generally used for customized VM environments, which are often
 
 Secretariat is one of our triple crown servers (named after Triple Crown winners). These are highly capable large memory servers
 
-It currently runs Ubuntu 22.04.
 
 #### Specialized hardware
 
