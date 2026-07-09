@@ -196,7 +196,9 @@ Notes:
 
 ## Infrastructure Systems
 
-| Host Name               | Description               | OS         |
-| ----------------------- | ------------------------- | ---------- |
-| hyp00 (hypervisor only) | AMD 96 Core 384 Gi Memory | Rocky 10   |
-| hyp01 (hypervisor only) | AMD 96 Core 384 Gi Memory | Rocky 10   |
+| Host Name               | Description                  | OS         |
+| ----------------------- | ---------------------------- | ---------- |
+| hyp00 (hypervisor only) | AMD 96 Core 384 Gi Memory    | Rocky 10   |
+| hyp01 (hypervisor only) | AMD 96 Core 384 Gi Memory    | Rocky 10   |
+| fs01 NFS file server    | Intel 5317 48 Core 512 Gi    | RHEL 9     | 
+| fs00 NFS HA file server | Intel E5-2864 56 Core 128 Gi | Rocky 9    |

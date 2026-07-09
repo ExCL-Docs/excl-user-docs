@@ -13,13 +13,15 @@
   * [excl-us](system-overview/excl-us.md)
   * [explorer](system-overview/explorer.md)
   * [faraday](system-overview/faraday.md)
-  * [Hudson](system-overview/hudson.md)
+  * [hudson](system-overview/hudson.md)
   * [leconte](system-overview/leconte.md)
   * [lewis](system-overview/lewis.md)
+  * [maxwell](system-overview/maxwell.md)
   * [mcmurdo](system-overview/mcmurdo.md)
   * [Milan](system-overview/milan.md)
   * [minim1](system-overview/minim1.md)
-  * [Oswald](system-overview/oswald.md)
+  * [minim3](system-overview/minim3.md)
+  * [oswald](system-overview/oswald.md)
   * [pcie](system-overview/pcie.md)
   * [quad](system-overview/quad.md)
   * [radeon](system-overview/radeon.md)
@@ -28,6 +30,7 @@
   * [Triple Crown](system-overview/triple-crown.md)
   * [Xavier](system-overview/xavier.md)
   * [zenith](system-overview/zenith.md)
+  * [zenith2](system-overview/zenith2.md)
 
 ## ExCl Support
 
