@@ -1,6 +1,7 @@
 ---
 description: Getting started with ThinLinc.
 ---
+
 # ThinLinc
 
 The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300). Since this node is public facing, it is the easiest to access with ThinLinc.
@@ -54,15 +55,16 @@ If the system is directly accessible (for example login.excl.ornl.gov), then you
 
 If the system is an internal node, then local port forwarding must be used. The steps to setting this up are as follows.
 
-1. Forward port 22 from the remote system to your local system through login. On Linux or macOS
+1.  Forward port 22 from the remote system to your local system through login. On Linux or macOS
 
     ```
      $ ssh -L <localport>:<hostname>:22 <Username>@login.excl.ornl.gov
     ```
 
     On windows use ssh via powershell, MobaSSHTunnel, Visual Studio Code, or putty to forward port 22. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
-2. Add alias in hosts file for the remote node. This is needed because of how ThinLinc establishes the remote connected. On Linux this host file is `/etc/hosts`. On windows the file is `C:\Windows\System32\drivers\etc\hosts`.
-   Host file:
+2.  Add alias in hosts file for the remote node. This is needed because of how ThinLinc establishes the remote connected. On Linux this host file is `/etc/hosts`. On windows the file is `C:\Windows\System32\drivers\etc\hosts`.\
+    Host file:
+
     ```
     127.0.0.1 <hostname>
     ::1       <hostname>
