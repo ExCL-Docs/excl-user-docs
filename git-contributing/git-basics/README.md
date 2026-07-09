@@ -4,11 +4,11 @@
 
 ## Git Basics
 
-**Git**, like other version control (VC) software/system ([see a Wikipedia list](https://en.wikipedia.org/wiki/List_of_version_control_software)), tracks changes to a file system over time. It is typically used in software development but can be used to monitor changes in any file.
+**Git**, like other version control (VC) software/system ([see a Wikipedia list](https://en.wikipedia.org/wiki/List\_of\_version\_control\_software)), tracks changes to a file system over time. It is typically used in software development but can be used to monitor changes in any file.
 
 > **Git** - a version control system that records the changes to a file or files which allows you to return to a previous version
 
-📝 **Note:** This tutorial uses only the command line. After you have learned the basics of Git, you can explore a Git workflow [in the command line](git-command-line.md), or [with the Atom text editor](https://github.com/ExCL-Docs/excl-user-docs/blob/master/git-contributing/git-basics/git-workflow.md), and also, common [Git scenarios](git-scenarios.md).
+📝 **Note:** This tutorial uses only the command line. After you have learned the basics of Git, you can explore a Git workflow [in the command line](git-command-line.md), or [with the Atom text editor](git-workflow.md), and also, common [Git scenarios](git-scenarios.md).
 
 ### ORNL Git Resources
 

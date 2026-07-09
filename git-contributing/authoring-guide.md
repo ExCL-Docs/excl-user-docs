@@ -24,7 +24,7 @@ Screenshots and images cannot be resized using markdown. Therefore, we embed `.h
 
 * Images and screenshots should be stored in a folder`assets`. Images and screenshots added from the gitbook interface are stored in `.gitbook/assets`, but issues seem to occur if this folder is modified externally from gitbook.
 * Files should be named descriptively. For example, use names such as `adding-IP-address.png` instead of `image03.png`.
-*   To remain consistent with other images in tutorials, please use the following `.html` code to resize, add a border, and open in a new browser tab when clicked. Note that you'll need to change the file name twice in the following code.
+* To remain consistent with other images in tutorials, please use the following `.html` code to resize, add a border, and open in a new browser tab when clicked. Note that you'll need to change the file name twice in the following code.
 
     ```html
     <a target="_new" href="/.gitbook/assets/ssh_import_pub_key.png"><img src="screenshots/ssh_import_pub_key.png" style="border-style:ridge;border-color:#bfbfbf;border-width:1px;width:550px;" /></a>
@@ -38,4 +38,4 @@ Screenshots and images cannot be resized using markdown. Therefore, we embed `.h
 
 ### Related Topics
 
-* Using a [Git Workflow](https://github.com/ExCL-Docs/excl-user-docs/blob/master/git-contributing/git-basics/git-workflow.md) for creating user content.
+* Using a [Git Workflow](git-basics/git-workflow.md) for creating user content.
