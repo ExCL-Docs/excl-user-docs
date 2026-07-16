@@ -24,7 +24,7 @@ claude-hpc .
 ```
 
 {% hint style="info" %}
-To use Slurm commands (`squeue`, `sbatch`, etc.) or Lmod modules inside Claude, switch to the `slurm` branch before building:
+To use an Ubuntu 24.04 base image, Slurm commands (`squeue`, `sbatch`, etc.), and/or Lmod modules inside Claude, switch to the `slurm` branch before building:
 ```bash
 git checkout slurm
 ```
