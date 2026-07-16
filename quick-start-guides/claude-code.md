@@ -4,7 +4,7 @@ Claude Code is an agentic coding assistant that can read, edit, test, and debug 
 
 The ExCL Claude Code sandbox is available at:
 
-> **Repository:** https://code.ornl.gov/7ry/claude-hpc
+> **Repository:** [https://code.ornl.gov/7ry/claude-hpc](https://code.ornl.gov/7ry/claude-hpc)
 
 ## Quickstart
 
