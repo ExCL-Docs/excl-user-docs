@@ -57,3 +57,7 @@ if [ -f "/home/$USER/spack/share/spack/setup-env.sh" ]; then
 fi
 EOL
 ```
+
+### Spack Shared Buildcaches and Environments
+
+See [spack-configs - excl - README.md](https://github.com/sethrj/spack-configs/blob/main/excl/README.md) for documentation on how to set up shared buildcaches and environments on ExCL.
