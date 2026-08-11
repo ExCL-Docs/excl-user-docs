@@ -3,7 +3,7 @@ description: Getting started with ThinLinc.
 ---
 # ThinLinc
 
-The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300). Since this node is public facing, it is the easiest to access with ThinLinc.
+The login node has [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) install and can be accessed at [https://login-excl.ornl.gov:300](https://login-excl.ornl.gov:300). Since this node is public facing, it is the easiest to access with ThinLinc.
 
 In addition to the login node, multiple systems including the [virtual systems](vitis.md#virtual-systems) have [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) installed, which makes it easier to run graphical applications. To access ThinLinc you need to use as socks proxy to forward traffic to the ExCL network or port forwarding of port 22 to use the ThinLinc client.
 
