@@ -4,10 +4,10 @@ See the [Cheat Sheet for a quick summary](https://docs.excl.ornl.gov/#excl-cheat
 
 ## Backup
 
-User files (home directories) are stored on an ZFS-based NFS server, and are generally available to all ExCL systems (there are exceptions for operational and security reasons; if you trip over something please let [excl-help@ornl.gov](mailto:excl-help@ornl.gov) know). The `/noback/<user>` facility is no longer supported and is not being created for new users accounts. Files already in the `/noback` hierarchy will not be affected; if you would like assistance in moving these files to your home directory please let [excl-help@ornl.gov](mailto:excl-help@ornl.gov) know. Space available to /noback is limited.
+User files (home directories) are stored on an ZFS-based NFS server, and are generally available to all ExCL systems (there are exceptions for operational and security reasons; if you trip over something please [open a support request](https://www.excl.ornl.gov/support-request/)). The `/noback/<user>` facility is no longer supported and is not being created for new users accounts. Files already in the `/noback` hierarchy will not be affected; if you would like assistance in moving these files to your home directory please [open a support request](https://www.excl.ornl.gov/support-request/). Space available to /noback is limited.
 
 {% hint style="danger" %}
-While our file server, backup file server, and ORNL-provided tape backup are quite robust, ExCL does not have formally supported backups. Please store important files in source control, for example using git with gitlab or github. Important data (if any) should be duplicated elsewhere; contact excl-help@ornl.gov for assistance.
+While our file server, backup file server, and ORNL-provided tape backup are quite robust, ExCL does not have formally supported backups. Please store important files in source control, for example using git with gitlab or github. Important data (if any) should be duplicated elsewhere; [open a support request](https://www.excl.ornl.gov/support-request/) for assistance.
 {% endhint %}
 
 ExCL uses ZFS with snapshots. Zrepl (<https://zrepl.github.io/>) handles both automated snapshot generation and file system replication. Snapshots are taken hourly, and ExCL file systems are replicated to the back up (old FS00) fileserver.
@@ -23,7 +23,7 @@ Refquotas are applied to the ZFS filesystems to avoid runaway storage usage.
 A refquota limit applies only to your files, not to snapshot storage.
 ZFS stores data in a (very fast) compressed format, so disk usage may appear to be
 less than you expect.
-Home and project subvolumes start with a refquota of 512G. Users can request higher quotas via [excl-help@ornl.gov](mailto:excl-help@ornl.gov).
+Home and project subvolumes start with a refquota of 512G. Users can request higher quotas via a [support request](https://www.excl.ornl.gov/support-request/).
 We can also help diagnose the cause of large storage use by providing a breakdown of file usage and helping clean up unneeded large files and snapshots.
 
 ## Local Storage
@@ -35,8 +35,7 @@ have `/scratch2` in addition. A working space can be created with
 This storage location is good for caching files on local host storage,
 for speeding up tasks which are storage IO bound, and performing tasks
 which fail on NFS storage (for example, Apptainer and embedded Linux builds).
-If you require more scratch storage than is available contact
-[excl-help@ornl.gov](mailto:excl-help@ornl.gov) as on newer systems there is
+If you require more scratch storage than is available [open a support request](https://www.excl.ornl.gov/support-request/) as on newer systems there is
 often additional storage available that has not been allocated.
 Similarly contact us if there is no /scratch or /scratch2 directory.
 Since there is (currently) no purging policy, please clean up after you

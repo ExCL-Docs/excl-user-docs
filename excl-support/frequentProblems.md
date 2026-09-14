@@ -32,7 +32,7 @@ $ ssh login.excl.ornl.gov
 ssh: connect to host login.excl.ornl.gov port 22: Operation timed out
 ```
 
-To have this addressed, report your IP address to `excl-help@ornl.gov`.
+To have this addressed, report your IP address to the [support request form](https://www.excl.ornl.gov/support-request/).
 If you are on an ORNL network, you can use the usual native tools on
 your system to find your IP address. If you are at home and on a network
 using NAT (as most home networks do) use

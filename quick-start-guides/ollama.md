@@ -12,7 +12,7 @@ Load the Ollama module with:
 module load ollama
 ```
 
-Ollama has a server component which stores files in its home. This server component should be launched using a service account by ExCL admin, since it provides ollama for the entire system. Ollama is already running on some of the workers in ExCL. See the output from the model load for an up-to-date list. Contact [excl-help@ornl.gov](mailto:excl-help@ornl.gov) if you would like ollama to be available on a specific system.
+Ollama has a server component which stores files in its home. This server component should be launched using a service account by ExCL admin, since it provides ollama for the entire system. Ollama is already running on some of the workers in ExCL. See the output from the model load for an up-to-date list. Contact us via the [support request form](https://www.excl.ornl.gov/support-request/) if you would like ollama to be available on a specific system.
 
 ## Ollama API
 

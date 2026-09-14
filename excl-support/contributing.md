@@ -10,5 +10,5 @@ Documentation published to ExCL users is available in our [GitHub repo](https://
 
 Would you like to make things better? There are a few ways you can contribute to improving our documentation and adding user-created tutorials or content.
 
-1. Email your suggestions to the team [excl-help@ornl.gov](mailto:excl-help@ornl.gov)
+1. Send your suggestions to the team via the [support request form](https://www.excl.ornl.gov/support-request/).
 2. Want to change things? Feeling adventurous? Comfortable with git? See [instructions for our Git workflow](../git-contributing/git-basics/git-workflow.md) to branch our documentation repository and hack away. You got this.

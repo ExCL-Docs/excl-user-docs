@@ -11,7 +11,7 @@ This system is generally identical to the nodes (AC922 model 8335\_GTW) in the O
 
 ## Contact
 
-* excl-help@ornl.gov
+* [Support request form](https://www.excl.ornl.gov/support-request/).
 
 ## Usage
 
@@ -19,7 +19,7 @@ As currently configured this system is usable using conventional ssh logins (fro
 
 The software is as delivered by the vendor, and may not be satisfactory in all respects as of this writing. The intent is to provision a system that is as similar in all respects to Summit, but some progress is required to get there. This is to be considered an early access machine.
 
-Please send assistance requests to excl-help@ornl.gov.
+Please send assistance requests using the [support request form](https://www.excl.ornl.gov/support-request/).
 
 ## Installed Compilers
 
@@ -37,7 +37,7 @@ GPU performance information can be viewed at
 
 [https://graphite.ornl.gov:3000/d/000000058/leconte-gpu-statistics?refresh=30s\&orgId=1](https://graphite.ornl.gov:3000/d/000000058/leconte-gpu-statistics?refresh=30s\&orgId=1)
 
-Request access by emailing excl-help@ornl.gov.
+Request access via the [support request form](https://www.excl.ornl.gov/support-request/).
 
 ## Other Resources
 

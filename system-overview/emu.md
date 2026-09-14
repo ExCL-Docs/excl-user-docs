@@ -37,4 +37,4 @@ This document will be updated with additional documentation references and user 
 
 ## Contact
 
-Please send assistance requests to excl-help@ornl.gov.
+Please send assistance requests via the [support request form](https://www.excl.ornl.gov/support-request/).

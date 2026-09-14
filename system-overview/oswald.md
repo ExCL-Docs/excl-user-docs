@@ -24,7 +24,7 @@ There is not currently special access permissions. System is available to ExCL u
 
 ### Contact
 
-Please send assistance requests to excl-help@ornl.gov.
+Please send assistance requests via the [support request form](https://www.excl.ornl.gov/support-request/).
 
 ## oswald01
 
@@ -61,7 +61,7 @@ There is not currently special access permissions. The system is available to Ex
 
 ### Contact
 
-Please send assistance requests to excl-help@ornl.gov.
+Please send assistance requests via the [support request form](https://www.excl.ornl.gov/support-request/).
 
 ## oswald02
 
@@ -89,7 +89,7 @@ There is not currently special access permissions. The system is available to Ex
 
 ### Contact
 
-Please send assistance requests to excl-help@ornl.gov.
+Please send assistance requests via the [support request form](https://www.excl.ornl.gov/support-request/).
 
 ## oswald03
 
@@ -117,4 +117,4 @@ There is not currently special access permissions. The system is available to Ex
 
 ### Contact
 
-Please send assistance requests to excl-help@ornl.gov.
+Please send assistance requests via the [support request form](https://www.excl.ornl.gov/support-request/).

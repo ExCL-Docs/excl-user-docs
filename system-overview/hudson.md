@@ -10,4 +10,4 @@ Basic validation has been done via running the nvidia samples nbody program on b
 = 54760.284 single-precision GFLOP/s at 20 flops per interaction
 ```
 
-The GPUs are available to the same UIDs as are using the A100s on milan0. If nvidia-smi does not work for you, you don't have the proper group memberships -- please send email to excl-help@ornl.gov and we will fix it. `nvhpc` is installed as a module as it is on other systems.
+The GPUs are available to the same UIDs as are using the A100s on milan0. If nvidia-smi does not work for you, you don't have the proper group memberships -- please contact us via the [support request form](https://www.excl.ornl.gov/support-request/) and we will fix it. `nvhpc` is installed as a module as it is on other systems.

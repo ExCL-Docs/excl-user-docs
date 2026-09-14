@@ -7,7 +7,7 @@ description: Getting started with Groq.
 {% hint style="warning" %}
 **At this time the Groq cards are not available pending software update and interest.**
 
-**If you have interest in using these, please let excl-help@ornl.gov know.**
+**If you have interest in using these, please let us know via the [support request form](https://www.excl.ornl.gov/support-request/)**
 {% endhint %}
 
 ## Groq Links

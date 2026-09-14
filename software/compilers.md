@@ -27,6 +27,6 @@ If you do not load a module, you will get the default compiler as delivered by t
 
 Some compilers (notably xlc and the nvhpc tool chain) cannot be installed on nfs, so if they are available they will show up in a different module directory. The same module commands are used.
 
-Additional compilers can be installed on request to [excl-help@ornl.gov](mailto:excl-help@ornl.gov). Maintaining multiple Gnu suites is straightforward, less so for other tool suites.
+Additional compilers can be installed on request via the [support request form](https://www.excl.ornl.gov/support-request/). Maintaining multiple Gnu suites is straightforward, less so for other tool suites.
 
 Additional compilers and tools can also be installed using [Spack](https://spack.readthedocs.io/en/latest/).

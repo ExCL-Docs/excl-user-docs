@@ -134,7 +134,7 @@ Notes:
  - All of the general compute resources have hyperthreading enabled unless otherwise stated.. This can be changed on a per request basis.
  - TL: Thinlinc enabled. Need to use `login` as a jump host for resources other than `login`. See [ThinLinc Quickstart](../quick-start-guides/thinlinc.md)
  - Slurm: Node is added to a slurm partition and will likely be used for running slurm jobs. Try to make sure your interactive use does not conflict with any active Slurm jobs.
-     - Most of the general compute resources are Slurm-enabled, to allow queuing of larger-scale workloads. `excl-help@ornl.gov` for specialized assistance. Only the systems that are heavily used for running Slurm jobs are marked “Slurm” above.
+     - Most of the general compute resources are Slurm-enabled, to allow queuing of larger-scale workloads. [Open a support request](https://www.excl.ornl.gov/support-request/) for specialized assistance. Only the systems that are heavily used for running Slurm jobs are marked “Slurm” above.
 
 ### Graphical session use via ThinLinc
 

@@ -19,7 +19,7 @@ All tests should return `err[0]`.  If they do not, then it is likely that you d
 
 To check, run the groups command (on maxwell) and see if you are in the render group.
 
-If you are not, contact [excl-help@ornl.gov](mailto:excl-help@ornl.gov), and we’ll get you in.
+If you are not, contact us via the [support request form](https://www.excl.ornl.gov/support-request/), and we’ll get you in.
 
 ### Images
 

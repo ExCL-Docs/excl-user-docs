@@ -105,7 +105,7 @@ Then use the CI environment variables `APPTAINER_DOCKER_USERNAME` and `APPTAINER
 
 ## Apptainer Project Storage on ExCL
 
-There is also shared project storage at `/auto/projects/apptainer` for storing large, shared, general-purpose Apptainer images with other users in ExCL. Reach out to [excl-help@ornl.gov](mailto:excl-help@ornl.gov) if you would like write access to this space to add your own images.
+There is also shared project storage at `/auto/projects/apptainer` for storing large, shared, general-purpose Apptainer images with other users in ExCL. Use the [support request form](https://www.excl.ornl.gov/support-request/) if you would like write access to this space to add your own images.
 
 ## System Admin Notes
 
