@@ -147,26 +147,39 @@ Notes:
 - `intrepid`
 - `spike`
 
+### Systems great for non-accelerator applications.
+
+- Oswalds — Older underutilized systems.
+    - `oswald` — Head node for oswalds with different config.
+    - `oswald00`
+    - `oswald02`
+    - `oswald03`
+- Triple Crown — Large CPU and memory systems for shared use.
+    - `affirmed`
+    - `justify`
+    - `secretariat`
+    - `pharaoh`
+
 ### Slurm for Large Jobs
 
 - Triple Crown — Large CPU and memory systems for shared use.
-  - `affirmed`
-  - `justify`
-  - `secretariat`
-  - `pharaoh`
+    - `affirmed`
+    - `justify`
+    - `secretariat`
+    - `pharaoh`
 
 - Milan — Additional Slurm Resources with other shared use.
-  - `milan0`
-  - `milan1`
-  - `milan3`
+    - `milan0`
+    - `milan1`
+    - `milan3`
 
 - Others — Shared slurm runners with interactive use.
-  - `milan[0-3]`
-  - `cousteau`
-  - `excl-us03`
-  - `explorer`
-  - `oswald`
-  - `oswald[00, 02-03]`
+    - `milan[0-3]`
+    - `cousteau`
+    - `excl-us03`
+    - `explorer`
+    - `oswald`
+    - `oswald[00, 02-03]`
 
 ### Gitlab Runner Specialized Nodes
 
