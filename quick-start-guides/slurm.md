@@ -302,6 +302,13 @@ Specific, high demand systems will be made Slurm Exclusive. Which means that use
 
 On these systems, the [pam_slurm_adopt](https://slurm.schedmd.com/pam_slurm_adopt.html) module will be used to limit SSH access to users who have a Slurm allocation on the node. Additionally, the SSH session will be constrained to the same resources as were allocated. We hope that this policy will help will resource sharing without getting in the way of the work. To help with running on these systems some example commands are provided.
 
+On systems that require a Slurm allocation, you will see this error message when you try to SSH in to the system.
+
+```bash
+Access denied by pam_slurm_adopt: you have no active jobs on this node
+Connection closed by 10.40.10.116 port 22
+```
+
 ## Run on a specific GPU interactively
 
 Request two P100 GPUs with 128 GiB of memory and 16 CPU cores.
@@ -316,7 +323,7 @@ Running this command opens a bash shell on the system with the requested resourc
 
 Request exclusive access to Hudson.
 
-```
+```bash
 srun -p nvidia -w hudson --exclusive --pty bash
 ```
 
