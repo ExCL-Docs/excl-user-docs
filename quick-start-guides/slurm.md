@@ -21,7 +21,7 @@ See [Custom `sinfo` to show GRES and GRES Used](https://docs.excl.ornl.gov/quick
 
 ### Partitions are created on request
 
-Partitions are created on request or based on project needs. If you want a new partition created please reach out with a [Support request](https://www.excl.ornl.gov/support-request/). Like-wise reach out if a node is missing or misconfigured for your use-case. Use `sinfo` to get a list of partitions and systems. As mentioned before, based on each nodes specialization, you you will likely be specifying partition with `-p` or `--partition` and the desired node with `-w` or `--nodelist` to run on a particular system with the configuration you want.
+Partitions are created on request or based on project needs. If you want a new partition created, please reach out with a [Support request](https://www.excl.ornl.gov/support-request/). Likewise, reach out if a node is missing or misconfigured for your use case. Use `sinfo` to get a list of partitions and systems. As mentioned before, based on each nodes specialization, you you will likely be specifying partition with `-p` or `--partition` and the desired node with `-w` or `--nodelist` to run on a particular system with the configuration you want.
 
 ## ExCL’s Slurm Policy Q&A
 
@@ -45,7 +45,7 @@ The preference is to use Slurm anytime a job is using a known resource amount, i
 
 ### How is ExCL’s Slurm instance configured to count CPUs/Threads/Hyperthreading?
 
-Slurm is currently configured to allocate each core as a CPU (as opposed to each hyperthread as CPU) as well as allocating the memory and accelerators. Slurm is NUMA-aware, so that can also be requested, but I have less experience with it. By default the systems are shared and requested resources are allocated. `--exclusive` can be used if you want the full system allocated. (Of course, Slurm only schedules work that is submitted via Slurm, which is why Slurm use is recommended for sharing of resources. Slurm has no way of accounting for work started outside Slurm. Since Slurm is not required, `htop`, [availability@excl.groups.io](https://excl.groups.io/g/availability/messages), and Slack are used to check and request use. And we do have restricted access reservation requests, but if the system can be shared with Slurm or Slack, then that is less work for us and allows for tighter sharing.
+Slurm is currently configured to allocate each core as a CPU (as opposed to each hyperthread as a CPU) as well as allocating the memory and accelerators. Slurm is NUMA-aware, so that can also be requested, but I have less experience with it. By default the systems are shared and requested resources are allocated. `--exclusive` can be used if you want the full system allocated. (Of course, Slurm only schedules work that is submitted via Slurm, which is why Slurm use is recommended for sharing of resources. Slurm has no way of accounting for work started outside Slurm. Since Slurm is not required, `htop`, [availability@excl.groups.io](https://excl.groups.io/g/availability/messages), and Slack are used to check and request use. And we do have restricted access reservation requests, but if the system can be shared with Slurm or Slack, then that is less work for us and allows for tighter sharing.
 
 ### Should I use `srun` or `salloc`?
 
@@ -162,7 +162,7 @@ $
 
 ## Tips and Tricks
 
-### More useful `sinfo` with more information:
+### `sinfo` with additional information:
 
 ```bash
 sinfo --Node --long
@@ -241,6 +241,18 @@ sinfo -h -N -p nvidia -o "%n %m %t %c %C" | while read -l node mem state cpus cp
 end
 ```
 
+```
+NODELIST     AVAIL_GiB    MEM_GiB STATE            CPUS   CPUS(A/I/O/T)
+hudson          1336.8     1464.8 mix-              192    16/176/0/192
+milan0           877.9     1005.9 mix-              128    16/112/0/128
+milan2           877.9     1005.9 mix               128    16/112/0/128
+oswald00         251.6      251.6 idle               32       0/32/0/32
+oswald02         251.6      251.6 idle               32       0/32/0/32
+oswald03         251.6      251.6 idle               32       0/32/0/32
+spike             72.6       72.6 idle               24       0/24/0/24
+zenith2          244.1      244.1 idle               64       0/64/0/64
+```
+
 ### Custom `sinfo` to show GRES and GRES Used.
 
 ```bash
@@ -272,7 +284,7 @@ groq                milan[1-2]                                                  
 
 ```
 
-### Finding max RAM used by a completed job.
+### Finding the max RAM used by a completed job.
 
 You can also use `sacct` to see the MAXRSS to see the max memory used by a job. This is helpful when figuring out how much memory jobs like it will need.  
   
