@@ -98,36 +98,36 @@ Login is the node use to access ExCL and to proxy into and out of the worker nod
 
 These nodes can be access with ssh, and are available for general interactive use.
 
-| Host        | Base Resources  | Specialized Resources                        | Notes                                                          |
-| ----------- | --------------- | -------------------------------------------- | -------------------------------------------------------------- |
-| oswald      | 16 Core 64 Gb   | -                                            |                                                                |
-| oswald00    | 32 core 256 Gi  | NVIDIA P100, FPGA @                          |                                                                |
-| oswald02    | 32 core 256 Gi  | NVIDIA P100, FPGA @                          |                                                                |
-| oswald03    | 32 core 256 Gi  | NVIDIA P100, FPGA @                          |                                                                |
-| maxwell     | 256 Core 1 Ti   | NVIDIA A100 (4), AMD MI100 (4)               | Will occasionally be single user for performance analysis      |
-| milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)                              | Slurm                                                          |
-| milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)                      | Slurm                                                          |
-| milan2      | 128 Core 1 Ti   | NVIDIA V100 (8-1)                            | Only 7 of the GPUs are working.                                |
-| milan3      | 128 Core 1 Ti   | Xlinx U280                                   | Slurm                                                          |
-| excl-us00   | 32 Core 192 Gi  | -                                            | Not available pending disposition                              |
-| excl-us01   | 32 Core 192 Gi  | -                                            | Not available pending disposition                              |
-| excl-us03   | 32 Core 192 Gi  | -                                            | Not available pending disposition                              |
-| secretariat | 256 Core 1 Ti   | -                                            | Slurm                                                          |
-| affirmed    | 256 Core 1 Ti   | -                                            | Slurm                                                          |
-| pharaoh     | 256 Core 1 Ti   | -                                            | Slurm                                                          |
-| justify     | 256 Core 1 Ti   | -                                            | Slurm                                                          |
-| hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)                              | Will occasionally be single user for performance analysis      |
-| faraday     |                 | AMD Mi300a (4)                               | Will occasionally be single user for performance analysis      |
-| docker      | 20 Core 96 Gi   | -                                            | Configured for Docker general use with enhanced image storage  |
-| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @                          | TL, No hyperthreading, passthrough hypervisor for accelerators |
-| lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250                           | TL                                                             |
-| clark       | 20 Core 48 Gi   | NVIDIA T1000                                 | TL                                                             |
-| zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @                    | TL                                                             |
-| radeon      | 8 Core 64 Gi    | AMD Radeon VII                               |                                                                |
-| explorer    | 256 Core 512 Gi | AMD M60 (2)                                  |                                                                |
-| cousteau    | 48 Core 256 Gi  | AMD M100 (2)                                 |                                                                |
-| leconte     | 168 Core 602 Gi | NVIDIA V100 * 6                              | PowerPC (Summit)                                               |
-| Zenith      | 32 Core 132 Gi  | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p> | TL                                                             |
+| Host        | Base Resources  | Specialized Resources                                     | Notes                                                          |
+| ----------- | --------------- | --------------------------------------------------------- | -------------------------------------------------------------- |
+| oswald      | 16 Core 64 Gb   | -                                                         | Good for general use. Including Agentic AI and VS Code.        |
+| oswald00    | 32 core 256 Gi  | NVIDIA P100, FPGA @                                       | Good for general use. Including Agentic AI and VS Code.        |
+| oswald02    | 32 core 256 Gi  | NVIDIA P100, FPGA @                                       | Good for general use. Including Agentic AI and VS Code.        |
+| oswald03    | 32 core 256 Gi  | NVIDIA P100, FPGA @                                       | Good for general use. Including Agentic AI and VS Code.        |
+| maxwell     | 256 Core 1 Ti   | NVIDIA A100 (4), AMD MI100 (4)                            | Will occasionally be single user for performance analysis      |
+| milan0      | 128 Core 1 Ti   | NVIDIA A100 (2)                                           | Slurm                                                          |
+| milan1      | 128 Core 1 Ti   | Groq AI Accelerator (2)                                   | Slurm                                                          |
+| milan2      | 128 Core 1 Ti   | NVIDIA V100 (8-1)                                         | Only 7 of the GPUs are working.                                |
+| milan3      | 128 Core 1 Ti   | Xlinx U280                                                | Slurm                                                          |
+| excl-us00   | 32 Core 192 Gi  | -                                                         | Not available pending disposition                              |
+| excl-us01   | 32 Core 192 Gi  | -                                                         | Not available pending disposition                              |
+| excl-us03   | 32 Core 192 Gi  | -                                                         | Not available pending disposition                              |
+| secretariat | 256 Core 1 Ti   | -                                                         | Slurm                                                          |
+| affirmed    | 256 Core 1 Ti   | -                                                         | Slurm                                                          |
+| pharaoh     | 256 Core 1 Ti   | -                                                         | Slurm                                                          |
+| justify     | 256 Core 1 Ti   | -                                                         | Slurm                                                          |
+| hudson      | 192 Core 1.5 Ti | NVIDIA H100 (2)                                           | Will occasionally be single user for performance analysis      |
+| faraday     |                 | AMD Mi300a (4)                                            | Will occasionally be single user for performance analysis      |
+| docker      | 20 Core 96 Gi   | -                                                         | Configured for Docker general use with enhanced image storage  |
+| pcie        | 32 Core 196 Gi  | NVIDIA P100, FPGA @                                       | TL, No hyperthreading, passthrough hypervisor for accelerators |
+| lewis       | 20 Core 48 Gi   | NVIDIA T1000, U250                                        | TL                                                             |
+| clark       | 20 Core 48 Gi   | NVIDIA T1000                                              | TL                                                             |
+| zenith      | 64 core 128 Gi  | NVIDIA GeForce RTX 3090 @                                 | TL                                                             |
+| radeon      | 8 Core 64 Gi    | AMD Radeon VII                                            |                                                                |
+| explorer    | 256 Core 512 Gi | AMD M60 (2)                                               |                                                                |
+| cousteau    | 48 Core 256 Gi  | AMD M100 (2)                                              |                                                                |
+| leconte     | 168 Core 602 Gi | NVIDIA V100 * 6                                           | PowerPC (Summit)                                               |
+| Zenith      | 32 Core 132 Gi  | <p>Nvidia GTX 3090<br>AMD Radeon RX 6800</p>              | TL                                                             |
 | Zenith2     | 32 Core 256 Gi  | <p>Nvidia GTX 5090<br>Various Embedded FPGA devboards</p> | TL                                                             |
 
 Notes:
@@ -149,7 +149,7 @@ Notes:
 
 ### Slurm for Large Jobs
 
-- Triple Crown — Dedicated Slurm runners.
+- Triple Crown — Large CPU and memory systems for shared use.
   - `affirmed`
   - `justify`
   - `secretariat`
@@ -200,5 +200,5 @@ Notes:
 | ----------------------- | ---------------------------- | ---------- |
 | hyp00 (hypervisor only) | AMD 96 Core 384 Gi Memory    | Rocky 10   |
 | hyp01 (hypervisor only) | AMD 96 Core 384 Gi Memory    | Rocky 10   |
-| fs01 NFS file server    | Intel 5317 48 Core 512 Gi    | RHEL 9     | 
+| fs01 NFS file server    | Intel 5317 48 Core 512 Gi    | RHEL 9     |
 | fs00 NFS HA file server | Intel E5-2864 56 Core 128 Gi | Rocky 9    |
