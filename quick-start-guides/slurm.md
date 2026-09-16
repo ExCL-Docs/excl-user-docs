@@ -17,7 +17,7 @@ The Slurm deployment on ExCL does not implement project/user quotas, priority qu
 
 Apart from a few exceptions (primarily the Triple Crown Systems), all of the system on ExCL have a different configuration. This makes single node use of Slurm more common and adds additional challenges when running jobs that span multiple systems. MPI is being deployed and tested to support multiple nodes with different accelerators. Use of Slurm’s [Heterogeneous Job Support](https://slurm.schedmd.com/heterogeneous_jobs.html) is also recommended as needed. If you run into specific challenges please reach out with a [Support request](https://www.excl.ornl.gov/support-request/). Also because of this specialization is it likely that most jobs will want to specify the partition with `-p` or `--partition` and the desired node with `-w` or `--nodelist`.
 
-See [[#Custom `sinfo` to show GRES and GRES Used.]] for how to list the specific accelerators for each system.
+See [Custom `sinfo` to show GRES and GRES Used](https://docs.excl.ornl.gov/quick-start-guides/slurm#custom-sinfo-to-show-gres-and-gres-used) for how to list the specific accelerators for each system.
 
 ### Partitions are created on request
 
@@ -29,7 +29,7 @@ Partitions are created on request or based on project needs. If you want a new p
 
 Direct SSH, Slurm batch submissions, and Slurm interactive jobs are all supported on the compute nodes. As a preference, if your job doesn't need interaction, then use `sbatch`. If it is a heavier job or the systems are under heavy use, then `srun` for interactive use is preferred to help with coordination. If the system is lightly used or the job is low-resource using and interactive, then direct `ssh` is fine.
 
-An exception to this are nodes in high demand, that we have decided to set up as an Slurm exclusive system. See [[Slurm Exclusive Systems]].
+An exception to this are nodes in high demand, that we have decided to set up as an Slurm exclusive system. See [Slurm Exclusive Systems](https://docs.excl.ornl.gov/quick-start-guides/slurm#slurm-exclusive-systems).
 
 ### Should Slurm be used from the login node only or locally from the worker node?
 
