@@ -27,3 +27,21 @@ Or you can you `ssh-copy-id` to copy your local systems key to ExCL.
 ```bash
 ssh-copy-id login.excl.ornl.gov
 ```
+
+# Login Server Quotas
+
+The ExCL Login Server has per-user resource limits to prevent individual sessions or processes from consuming too many GPU or memory resources, that could negatively impact others.
+
+Each user is now limited to the following aggregate resources across all processes running under their login sessions:
+
+- **CPU:** 1 CPU core worth of aggregate CPU time
+- **Maximum memory:** 1.5 GiB
+- **Maximum swap:** 512 MiB
+
+This new limit does mean that a VS Code server with extensions will no longer be able to run on the login node. For information on how to directly connect to a worker node using VS Code, see [Visual Studio Code | ExCL User Docs](https://docs.excl.ornl.gov/quick-start-guides/visual-studio-code).
+
+Users can check their current resource usage and the counts of the number of times they have exceeded their RAM resource limit with:
+
+```bash
+login-quota-check
+```
