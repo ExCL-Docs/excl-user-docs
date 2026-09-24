@@ -19,7 +19,7 @@ This QR code does not render properly if you try logging in via ThinLinc or VS C
 **Caution:** The QR code will only be shown once. If you miss it, you will need to [reach out](https://www.excl.ornl.gov/support-request/) for a reset, which goes in a separate ticketing system and could have delays.
 {% endhint %}
 
-{% hint style="danger" %}
+{% hint style="warning" %}
 There are known issues with the QR code generation and various methods of logging in. Please use a regular SSH terminal session to log in so that the QR code is rendered correctly. The suggestion is to use a Linux terminal, cmd line, powershell, or WSL from Windows, or the mac terminal or iTerm.o
 {% endhint %}
 
