@@ -2,7 +2,38 @@
 
 To become authorized to access ExCL facilities, please apply at [https://www.excl.ornl.gov/accessing-excl/](https://www.excl.ornl.gov/accessing-excl/). You have the option of using your ORNL (ucams) account if you have one, or creating an xcams (external user) account if you wish.
 
-Once you have access you have a couple of options.
+{% hint style="danger" %}
+**New Initial MFA Setup Step**: MFA is now required for our systems when connecting from external networks. There is a new first-time setup step to set up a one-time password (OTP) generator using a QR code. See _____. This QR code does not render properly if you try logging in via ThinLinc or VS Code, so the first external login to set this up, should be done with standard SSH via a standard terminal.
+{% endhint %}
+
+## One-time multi-factor authentication setup
+
+1. Access login.excl.ornl.gov via ssh.
+2. Receive a QR prompt.
+3. Configure your favorite multi-factor authenticator (Google/Microsoft/Duo/2FAS Auth/FreeOTP) using the QR prompt.
+4. Use the authenticator-generated single-use time-limited key as your OTP into ExCL after completing the password prompt.
+
+{% hint style="warning" %}
+**Caution:** The QR code will only be shown once. If you miss it, you will need to [reach out](https://www.excl.ornl.gov/support-request/) for a reset, which goes in a separate ticketing system and could have delays.
+{% endhint %}
+
+{% hint style="danger" %}
+There are known issues with the QR code generation and various methods of logging in. Please use a regular SSH terminal session to log in so that the QR code is rendered correctly. The suggestion is to use a Linux terminal, cmd line, powershell, or WSL from Windows, or the mac terminal or iTerm.o
+{% endhint %}
+
+{% hint style="info" %}
+If you have SSH keys set up already, you will not see the QR code but will connect like normal. So, to get to the password and QR prompt run:  
+
+```bash
+ssh -o PubkeyAuthentication=no -o PreferredAuthentications=keyboard-interactive [<username>@login-excl.ornl.gov](mailto:7ry@login-excl.ornl.gov)  
+```
+  
+replacing `<username>` with your correct ExCL username.
+{% endhint %}
+
+## Regular access
+
+Once you have access, you have a couple of options.
 
 - login.excl.ornl.gov runs an SSH Server and you can connect to the login node with `ssh <username>@login.excl.ornl.gov`.
 - There is a limited number of [ThinLinc](https://www.cendio.com/thinlinc/what-is-thinlinc) licenses available. Thinlinc (Xfce Desktop) can be accessed at [https://login.excl.ornl.gov:300](https://login.excl.ornl.gov:300) for HTML5 services, and ThinLinc clients can use login.excl.ornl.gov as their destination. ThinLinc clients can be downloaded without cost from [https://www.cendio.com/thinlinc/download](https://www.cendio.com/thinlinc/download). ThinLinc provides much better performance than tunneling X over SSH. A common strategy is to access login.excl.ornl.gov via ThinLinc and then use X11 forwarding to access GUIs running on other nodes.
