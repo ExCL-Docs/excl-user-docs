@@ -27,7 +27,7 @@ There are known issues with the QR code generation and various methods of loggin
 If you have SSH keys set up already, you will not see the QR code but will connect like normal. So, to get to the password and QR prompt run:  
 
 ```bash
-ssh -o PubkeyAuthentication=no -o PreferredAuthentications=keyboard-interactive [<username>@login-excl.ornl.gov](mailto:7ry@login-excl.ornl.gov)  
+ssh -o PubkeyAuthentication=no -o PreferredAuthentications=keyboard-interactive <username>@login-excl.ornl.gov
 ```
   
 replacing `<username>` with your correct ExCL username.
