@@ -3,7 +3,9 @@
 To become authorized to access ExCL facilities, please apply at [https://www.excl.ornl.gov/accessing-excl/](https://www.excl.ornl.gov/accessing-excl/). You have the option of using your ORNL (ucams) account if you have one, or creating an xcams (external user) account if you wish.
 
 {% hint style="danger" %}
-**New Initial MFA Setup Step**: MFA is now required for our systems when connecting from external networks. There is a new first-time setup step to set up a one-time password (OTP) generator using a QR code. See _____. This QR code does not render properly if you try logging in via ThinLinc or VS Code, so the first external login to set this up, should be done with standard SSH via a standard terminal.
+**New Initial MFA Setup Step**: MFA is now required for our systems when connecting from external networks. There is a new first-time setup step to set up a one-time password (OTP) generator using a QR code. See [one-time multi-factor authentication setup](https://docs.excl.ornl.gov/excl-support/access#one-time-multi-factor-authentication-setup).
+
+This QR code does not render properly if you try logging in via ThinLinc or VS Code, so the first external login to set this up, should be done with standard SSH via a standard terminal.
 {% endhint %}
 
 ## One-time multi-factor authentication setup
