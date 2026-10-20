@@ -17,11 +17,11 @@ The Slurm deployment on ExCL does not implement project/user quotas, priority qu
 
 Apart from a few exceptions (primarily the Triple Crown Systems), all of the system on ExCL have a different configuration. This makes single node use of Slurm more common and adds additional challenges when running jobs that span multiple systems. MPI is being deployed and tested to support multiple nodes with different accelerators. Use of Slurm’s [Heterogeneous Job Support](https://slurm.schedmd.com/heterogeneous_jobs.html) is also recommended as needed. If you run into specific challenges please reach out with a [Support request](https://www.excl.ornl.gov/support-request/). Also because of this specialization is it likely that most jobs will want to specify the partition with `-p` or `--partition` and the desired node with `-w` or `--nodelist`.
 
-See [Custom `sinfo` to show GRES and GRES Used](https://docs.excl.ornl.gov/quick-start-guides/slurm#custom-sinfo-to-show-gres-and-gres-used) for how to list the specific accelerators for each system.
+Use [`savail`](https://docs.excl.ornl.gov/quick-start-guides/slurm#check-available-resources-with-savail) to list each system's CPUs, memory, and accelerators, and how much of each is free. [Custom `sinfo` to show GRES and GRES Used](https://docs.excl.ornl.gov/quick-start-guides/slurm#custom-sinfo-to-show-gres-and-gres-used) shows how to get the same accelerator information with `sinfo`.
 
 ### Partitions are created on request
 
-Partitions are created on request or based on project needs. If you want a new partition created, please reach out with a [Support request](https://www.excl.ornl.gov/support-request/). Likewise, reach out if a node is missing or misconfigured for your use case. Use `sinfo` to get a list of partitions and systems. As mentioned before, based on each nodes specialization, you you will likely be specifying partition with `-p` or `--partition` and the desired node with `-w` or `--nodelist` to run on a particular system with the configuration you want.
+Partitions are created on request or based on project needs. If you want a new partition created, please reach out with a [Support request](https://www.excl.ornl.gov/support-request/). Likewise, reach out if a node is missing or misconfigured for your use case. Use `sinfo` to get a list of partitions and systems, and [`savail <partition>`](https://docs.excl.ornl.gov/quick-start-guides/slurm#check-available-resources-with-savail) to see what is free on each system in a partition. As mentioned before, based on each nodes specialization, you you will likely be specifying partition with `-p` or `--partition` and the desired node with `-w` or `--nodelist` to run on a particular system with the configuration you want.
 
 ## ExCL’s Slurm Policy Q&A
 
@@ -87,6 +87,7 @@ This selected documentation is useful when learning Slurm or to use as a referen
 | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [sacct](https://slurm.schedmd.com/sacct.html)       | Displays accounting data for all jobs and job steps in the Slurm job accounting log or Slurm database. (Useful to view completed job info.)                        |
 | [salloc](https://slurm.schedmd.com/salloc.html)     | Obtain a Slurm job allocation (a set of nodes), execute a command, and then release the allocation when the command is finished. (Command runs on current system.) |
+| [savail](#check-available-resources-with-savail)    | ExCL utility, not part of Slurm. Shows the available and maximum CPU, memory, and GRES for each node. (Run `module load excl-utils` first.)                        |
 | [sbatch](https://slurm.schedmd.com/sbatch.html)     | Submit a batch script to Slurm. (Non-interactive job submission.)                                                                                                  |
 | [scancel](https://slurm.schedmd.com/scancel.html)   | Used to signal jobs or job steps that are under the control of Slurm.                                                                                              |
 | [scontrol](https://slurm.schedmd.com/scontrol.html) | View or modify Slurm configuration and state. (Useful to see detailed job or node state.)                                                                          |
@@ -161,6 +162,60 @@ $
 ```
 
 ## Tips and Tricks
+
+### Check available resources with `savail`
+
+`savail` is an ExCL utility that shows the available and maximum CPUs, memory, and GRES (GPUs, FPGAs, and other accelerators) for each node. It is not part of Slurm. It's in the `excl-utils` module:
+
+```bash
+module load excl-utils
+savail
+```
+
+By default, `savail` lists every node that can run jobs and still has free CPUs and memory. Give partition or node names to see only those nodes, including ones that are busy or down:
+
+```bash
+savail nvidia               # every node in the nvidia partition
+savail maxwell faraday      # specific nodes (partition and node names can be mixed)
+savail --gres gpu           # only nodes with a free GPU of any type
+savail -g gpu:A100          # only nodes with a free A100 (not case-sensitive)
+savail --all                # every node, including down or fully allocated ones
+savail --no-partitions      # hide the PARTITIONS column
+savail --json               # machine-readable output (memory in MiB)
+```
+
+```text
+$ savail nvidia
+NODE      STATE                PARTITIONS                                   CPU avail/max  MEM avail/max (GiB)  GRES avail/max
+hudson    ALLOCATED            nvidia,nvidia-long,hudson,hudson-long        0/192          0/1464               gpu:H100 0/2
+milan0    MIXED                compute,milan,milan-long,nvidia,nvidia-long  116/128        941/1005             gpu:A100 1/2
+milan2    IDLE                 compute,nvidia,nvidia-long                   128/128        1005/1005            gpu:P100 7/7
+oswald00  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:p100 1/1
+oswald02  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:p100 1/1
+oswald03  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:p100 1/1
+spike     IDLE                 fpgarun,nvidia,nvidia-long                   24/24          72/72                gpu:p100 1/1, fpga:U250 1/1, fpga:U55C 1/1
+zenith2   DOWN+NOT_RESPONDING  fpgarun,zenith,nvidia,nvidia-long            64/64          244/244              gpu:RTX5090 1/1, fpga:arty-a7 1/1, fpga:alchitry 1/1, fpga:icebox 1/1
+```
+
+How to read the columns:
+
+- **CPU avail/max**: CPUs not allocated to Slurm jobs, out of the total. Slurm counts each core as a CPU, not each hyperthread (see the hyperthreading question in *ExCL’s Slurm Policy Q&A* above).
+- **MEM avail/max**: memory not yet allocated to Slurm jobs, out of the node's configured memory. This is how much you can still request with `--mem`. It is not the free memory the operating system reports (`FREE_MEM` in `sinfo`), which is also reduced by memory used outside of Slurm and by the page cache.
+- **GRES avail/max**: free and total count for each accelerator type. For example, `gpu:A100 1/2` means one of two A100s is free. Request it with `--gres gpu:A100:1`.
+- **STATE**: a node whose state includes `DOWN`, `DRAIN`, or `NOT_RESPONDING` can't run jobs, even if its resources show as free.
+
+Use `savail` to choose the partition, node, and resources for a job. For example, to find a free A100 and then open a shell on that node:
+
+```bash
+savail -g gpu:A100
+srun -p nvidia -w milan0 --gres gpu:A100:1 -c 16 --mem 64G --pty bash
+```
+
+Run `savail --help` for all options.
+
+{% hint style="info" %}
+The `sinfo` and `scontrol` commands in the rest of this section show how to get the same information directly from Slurm. This is useful in scripts or when the `excl-utils` module isn't loaded.
+{% endhint %}
 
 ### `sinfo` with additional information:
 
@@ -311,10 +366,18 @@ Connection closed by 10.40.10.116 port 22
 
 ## Run on a specific GPU interactively
 
+To find nodes with free GPUs of the type you need, use [`savail`](https://docs.excl.ornl.gov/quick-start-guides/slurm#check-available-resources-with-savail), for example `savail -g gpu:P100`.
+
 Request two P100 GPUs with 128 GiB of memory and 16 CPU cores.
 
 ```bash
 srun -p nvidia --gres gpu:P100:2 --mem 128G -c 16 --pty bash
+```
+
+Request maxwell with two A100's, two MI100's, 128 GiB of memory 16 cores for 4 hours.
+
+```bash
+srun -p maxwell -w maxwell --gres gpu:A100:2,gpu:MI100:2 --mem 128G -c 16 -t 4:00:00 --pty bash
 ```
 
 Running this command opens a bash shell on the system with the requested resources. Future `ssh` sessions to this system will fall under the same allocation.
@@ -324,7 +387,7 @@ Running this command opens a bash shell on the system with the requested resourc
 Request exclusive access to Hudson.
 
 ```bash
-srun -p nvidia -w hudson --exclusive --pty bash
+srun -p hudson -w hudson --exclusive --pty bash
 ```
 
 Now you can also SSH into Hudson.
