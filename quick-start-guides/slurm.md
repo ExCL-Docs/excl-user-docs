@@ -351,6 +351,12 @@ sacct -j <jobid> --format JobID,JobName,MaxRSS
 **Note** that Slurm specifies and reports KB and GB, but means KiB and GiB. See [Add information about GB vs GiB when configuring memory by guillaumeeb · Pull Request #269 · dask/dask-jobqueue (github.com)](https://github.com/dask/dask-jobqueue/pull/269/files).
 {% endhint %}
 
+### Receive an email when an interactive job is allocated.
+
+Use `--mail-type=BEGIN --mail-user=<email>` with Slurm commands to get emailed when your allocation is granted.
+
+Use `scontrol update jobid=<jobid> MailType=BEGIN MailUser=<email>` to adjust an existing job.
+
 # Slurm Exclusive Systems
 
 Specific, high demand systems will be made Slurm Exclusive. Which means that use of the systems requires a Slurm allocation. This will help with coordinating sharing of the resources of that system.
