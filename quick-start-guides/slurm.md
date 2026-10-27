@@ -45,7 +45,7 @@ The preference is to use Slurm anytime a job is using a known resource amount, i
 
 ### How is ExCL’s Slurm instance configured to count CPUs/Threads/Hyperthreading?
 
-Slurm is currently configured to allocate each core as a CPU (as opposed to each hyperthread as a CPU) as well as allocating the memory and accelerators. Slurm is NUMA-aware, so that can also be requested, but I have less experience with it. By default the systems are shared and requested resources are allocated. `--exclusive` can be used if you want the full system allocated. (Of course, Slurm only schedules work that is submitted via Slurm, which is why Slurm use is recommended for sharing of resources. Slurm has no way of accounting for work started outside Slurm. Since Slurm is not required, `htop`, [availability@excl.groups.io](https://excl.groups.io/g/availability/messages), and Slack are used to check and request use. And we do have restricted access reservation requests, but if the system can be shared with Slurm or Slack, then that is less work for us and allows for tighter sharing.
+Slurm is currently configured to allocate each core as a CPU (as opposed to each hyperthread as a CPU) as well as allocating the memory and accelerators. Slurm is NUMA-aware, so that can also be requested, but I have less experience with it. By default the systems are shared and requested resources are allocated. `--exclusive` can be used if you want the full system allocated; add `--mem=0` with it to also get all of the memory (see [Request exclusive access on the node](https://docs.excl.ornl.gov/quick-start-guides/slurm#request-exclusive-access-on-the-node)). (Of course, Slurm only schedules work that is submitted via Slurm, which is why Slurm use is recommended for sharing of resources. Slurm has no way of accounting for work started outside Slurm. Since Slurm is not required, `htop`, [availability@excl.groups.io](https://excl.groups.io/g/availability/messages), and Slack are used to check and request use. And we do have restricted access reservation requests, but if the system can be shared with Slurm or Slack, then that is less work for us and allows for tighter sharing.
 
 ### Should I use `srun` or `salloc`?
 
@@ -393,10 +393,30 @@ Running this command opens a bash shell on the system with the requested resourc
 Request exclusive access to Hudson.
 
 ```bash
-srun -p hudson -w hudson --exclusive --pty bash
+srun -p hudson -w hudson --exclusive --mem=0 --pty bash
 ```
 
 Now you can also SSH into Hudson.
+
+{% hint style="warning" %}
+**Add `--mem=0` when you use `--exclusive`.** `--exclusive` gives you all of a node's CPUs, but memory is still the partition's default per CPU multiplied by the number of CPUs. On several nodes that adds up to more memory than the node has, so the job is rejected with:
+
+```
+Requested node configuration is not available
+```
+
+`--mem=0` asks for all of the node's memory instead, which is usually what you want with `--exclusive`. You can also give an explicit amount, e.g. `--mem=500G`.
+
+This currently affects whole-node jobs on these nodes, in these partitions:
+
+| Partition | Nodes |
+|---|---|
+| `compute` | oswald, secretariat, affirmed, justify, pharaoh, explorer |
+| `milan`, `milan-long` | milan0, milan1, milan3 |
+| `maxwell`, `maxwell-long` | maxwell |
+| `fpgarun` | spike, zenith2, milan3 |
+| `nvidia`, `nvidia-long` | spike, zenith2 |
+{% endhint %}
 
 # Using the Preemptable GPU Queue (`nvidia-long`)
 
@@ -481,34 +501,75 @@ To allow your job to be restarted after preemption, **you must include**:
 
 ## Handling Preemption Gracefully (Strongly Recommended)
 
-When a job is preempted, Slurm sends a **SIGTERM** signal before stopping it.
+When a job is preempted, it gets **5 minutes' warning** before it is stopped. This applies to every `-long` partition (`nvidia-long`, `hudson-long`, `maxwell-long`, `faraday-long`, `milan-long`, `neurorad-long`). Who gets the warning depends on whether your job sets `--signal`:
 
-You should:
+| Time | No `--signal`: programs started with `srun` | No `--signal`: the batch script | With `--signal=B:TERM@<sec>`: the batch script |
+|---|---|---|---|
+| Preempted | SIGTERM | nothing | SIGTERM |
+| +5 minutes | SIGTERM again | SIGTERM | SIGTERM again |
+| +5½ minutes | SIGKILL (stopped) | SIGKILL (stopped) | SIGKILL (stopped) |
 
-- Catch the signal
-- Save checkpoints
-- Exit cleanly
+Pick one of these two ways to get the 5 minutes:
+
+- **Start your workload with `srun`** and have the program catch SIGTERM, save a checkpoint and exit (example below). Don't set `--signal`. If you do, your `--signal` replaces the immediate SIGTERM to `srun` programs.
+- **Or catch the signal in the batch script:** add `#SBATCH --signal=B:TERM@60` and a `trap` (example further below). On preemption, Slurm sends your `--signal` straight away, whatever number you give after `@`. The number still applies as usual before your job's own time limit.
+
+Without either, a `trap` in the batch script only gets about 30 seconds of warning.
 
 ### Example with signal handling
+
+Job script:
 
 ```bash
 #!/bin/bash
 #SBATCH -p nvidia-long
 #SBATCH --requeue
-#SBATCH --signal=B:TERM@60   # 60 seconds warning
+#SBATCH --gres=gpu:1
 
-checkpoint() {
-    echo "Preempted – saving state..."
-    ./save_checkpoint.sh
-    exit 0
-}
-
-trap checkpoint SIGTERM
-
-./run_my_workload.sh
+srun python train.py   # srun: gets SIGTERM as soon as the job is preempted
 ```
 
-This gives your job **60 seconds** to checkpoint before requeue.
+`train.py`:
+
+```python
+import signal, sys
+
+def on_preempt(signum, frame):
+    print("Preempted - saving state...", flush=True)
+    save_checkpoint()   # must finish within 5 minutes
+    sys.exit(0)
+
+signal.signal(signal.SIGTERM, on_preempt)
+
+load_checkpoint_if_present()   # so a requeued job continues where it stopped
+train()
+```
+
+With `--requeue`, the job then goes back into the queue and starts again from its checkpoint. Checkpointing regularly as well is still a good idea, in case a checkpoint takes longer than 5 minutes.
+
+### Example with a trap in the batch script
+
+Use this when the checkpoint is done by a separate command, not by the program itself:
+
+```bash
+#!/bin/bash
+#SBATCH -p nvidia-long
+#SBATCH --requeue
+#SBATCH --gres=gpu:1
+#SBATCH --signal=B:TERM@60   # sent at once on preemption; 60s before the time limit otherwise
+
+checkpoint() {
+    echo "Preempted - saving state..."
+    ./save_checkpoint.sh        # must finish within 5 minutes
+    exit 0
+}
+trap checkpoint TERM
+
+./run_my_workload.sh &   # run in the background so the trap runs as soon as the signal arrives
+wait $!
+```
+
+Run the workload in the background and `wait` for it. Bash only runs a trap once the foreground command finishes, so with a foreground workload the checkpoint wouldn't start until the workload ended.
 
 ---
 
