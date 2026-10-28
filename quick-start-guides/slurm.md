@@ -9,9 +9,73 @@ Our [Cheat Sheet | ExCL User Docs](https://docs.excl.ornl.gov/#excl-cheat-sheet)
 
 ## Details specific to Slurm on ExCL
 
-### No usage limits or project accounts
+### Accounts are set up for you
 
-The Slurm deployment on ExCL does not implement project/user quotas, priority queues, or quality of service guarantees. However, we reserved the right to ask users to share the machines more fairly if multiple people are wanting the same resource.
+Every ExCL user gets a Slurm account automatically: `ornl-users` for ORNL staff and `ext-users` for external collaborators. You don't need to pass `-A`/`--account`; your default account is used. A job with an `-A` you don't belong to, or from a user without an account, is rejected with:
+
+```
+Invalid account or account/partition combination specified
+```
+
+If you see this and haven't set `-A`, please send a [Support request](https://www.excl.ornl.gov/support-request/).
+
+### Fair-share priority
+
+There are no quotas or per-user caps. When several jobs wait for the same resources, **users with less recent usage go first** (fair share). Usage counts half as much after one week, a quarter after two, and so on. Time spent waiting also raises a job's priority slowly, so nothing waits forever. Priority only orders *waiting* jobs: it never stops a running job (except preemption in the `-long` partitions, below). We still reserve the right to ask users to share a machine more fairly if several people need it.
+
+Check your standing with `sshare -U` (your usage and fair-share factor, from 0 to 1, higher is better) and `sprio -u $USER` (the priority of your jobs waiting to start; it shows nothing if none are waiting). A user with no recent usage has a factor of 1.0. Each heavier user ranks one step lower.
+
+### How usage is counted
+
+Each job is charged per hour for the **largest** of its CPUs, memory and accelerators on each node, not the sum:
+
+| Resource | Cost per hour |
+|---|---|
+| 1 CPU | 1 |
+| 8 GB of memory | 1 |
+| H100 | 96 |
+| A100 | 64 |
+| MI300A, RTX5090 | 48 |
+| MI100 | 32 |
+| V100, RTX3090, FPGA (any), groq card | 24 |
+| P100, MI60, RD6900, Radeon VII | 16 |
+
+- **hudson, maxwell and faraday cost 4×**: they are the most requested systems. For example, 1 H100 on hudson costs 384 per hour, and the whole node 768.
+- **`-long` partitions cost half**, because jobs there can be preempted.
+- `--gpus=1` without a type is charged for the GPU type the job actually gets.
+
+So asking for only what you need, and using the `-long` partitions for long or flexible work, keeps your priority high.
+
+### How are back-to-back jobs counted?
+
+Each job is charged by what it asks for (the table above), whatever you ran before, so your tenth identical job costs exactly what your first did. What grows is your **recent usage**, and that lowers the priority of your *next* waiting jobs:
+
+- Usage builds up only while a job runs, by its hourly cost × the time it actually runs. Pending jobs add nothing, and a job that ends early counts only the time it ran, not its time limit.
+- As your usage grows, you move down the fair-share ranking. Waiting jobs are re-ranked every few minutes, so your queued jobs drop in priority as your earlier ones run.
+- Example: a 4-hour job with 1 H100 on hudson costs 384 per hour, adding 1536 to your usage. Three in a row add 4608, and each is still charged 384 per hour. Running the same three at the same time adds the same total.
+
+In practice:
+
+- **If nobody else is waiting** for the same resources, your next job starts right away. Priority only orders waiting jobs; it never holds a job back on an idle system.
+- **If others are waiting**, users with less recent usage go ahead of your next job. Waiting time slowly raises its priority (about one place a day), so it still runs.
+- **Running jobs are never stopped by fair share.** Only preemption in the `-long` partitions does that.
+- Your usage counts half as much after a week, so your priority recovers on its own when you run less.
+
+### Default CPUs and memory for GPU jobs
+
+A GPU job that doesn't set `-c`/`--cpus-per-task` or `--cpus-per-gpu` gets a share of the node's CPUs per GPU, and memory to match (CPUs × the partition's default memory per CPU):
+
+| Partition | CPUs per GPU | Memory per GPU |
+|---|---|---|
+| `hudson`, `hudson-long` | 32 | 224 GB |
+| `faraday`, `faraday-long` | 48 | 96 GB |
+| `maxwell`, `maxwell-long` | 16 | 64 GB |
+| `leconte` | 24 | 70 GB |
+| `gpu`, `zenith` | 16 | 32 GB |
+| `nvidia`, `nvidia-long`, `compute` | 8 | 32 GB |
+| `milan`, `milan-long`, `fpgarun` | 8 | 64 GB |
+
+Asking for all of a node's GPUs this way always fits. Set `-c`, `--cpus-per-gpu` or `--mem` to change it. While the job is pending, `squeue` and `scontrol show job` still show 1 CPU; the default CPUs and memory are added when it starts. The default CPUs never cost more than the GPU, so they don't increase your usage.
 
 ### Specialized accelerators with heterogeneous nodes
 
@@ -187,13 +251,12 @@ savail --json               # machine-readable output (memory in MiB)
 ```text
 $ savail nvidia
 NODE      STATE                PARTITIONS                                   CPU avail/max  MEM avail/max (GiB)  GRES avail/max
-hudson    ALLOCATED            nvidia,nvidia-long,hudson,hudson-long        0/192          0/1464               gpu:H100 0/2
 milan0    MIXED                compute,milan,milan-long,nvidia,nvidia-long  116/128        941/1005             gpu:A100 1/2
 milan2    IDLE                 compute,nvidia,nvidia-long                   128/128        1005/1005            gpu:P100 7/7
-oswald00  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:p100 1/1
-oswald02  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:p100 1/1
-oswald03  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:p100 1/1
-spike     IDLE                 fpgarun,nvidia,nvidia-long                   24/24          72/72                gpu:p100 1/1, fpga:U250 1/1, fpga:U55C 1/1
+oswald00  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:P100 1/1
+oswald02  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:P100 1/1
+oswald03  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:P100 1/1
+spike     IDLE                 fpgarun,nvidia,nvidia-long                   24/24          72/72                gpu:P100 1/1, fpga:U250 1/1, fpga:U55C 1/1
 zenith2   DOWN+NOT_RESPONDING  fpgarun,zenith,nvidia,nvidia-long            64/64          244/244              gpu:RTX5090 1/1, fpga:arty-a7 1/1, fpga:alchitry 1/1, fpga:icebox 1/1
 ```
 
@@ -373,6 +436,8 @@ Connection closed by 10.40.10.116 port 22
 ## Run on a specific GPU interactively
 
 To find nodes with free GPUs of the type you need, use [`savail`](https://docs.excl.ornl.gov/quick-start-guides/slurm#check-available-resources-with-savail), for example `savail -g gpu:P100`.
+
+hudson (2× H100) is only in the `hudson` and `hudson-long` partitions, not `nvidia`. To take whichever NVIDIA GPU is free first, list both partitions: `-p nvidia,hudson`. That job is charged hudson's 4× rate if it lands there.
 
 Request two P100 GPUs with 128 GiB of memory and 16 CPU cores.
 
