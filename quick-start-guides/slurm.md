@@ -70,7 +70,6 @@ A GPU job that doesn't set `-c`/`--cpus-per-task` or `--cpus-per-gpu` gets a sha
 | `hudson`, `hudson-long` | 32 | 224 GB |
 | `faraday`, `faraday-long` | 48 | 96 GB |
 | `maxwell`, `maxwell-long` | 16 | 64 GB |
-| `leconte` | 24 | 70 GB |
 | `gpu`, `zenith` | 16 | 32 GB |
 | `nvidia`, `nvidia-long`, `compute` | 8 | 32 GB |
 | `milan`, `milan-long`, `fpgarun` | 8 | 64 GB |
@@ -385,7 +384,6 @@ compute             milan0                                                      
 compute             oswald[00,02-03]                                                                gpu:p100:1                              gpu:p100:0(IDX:N/A),fpga:0,groq:0
 compute             radeon                                                                          gpu:Radeon-V7:1                         gpu:Radeon-V7:0(IDX:N/A),fpga:0,groq:0
 compute             milan[1-2]                                                                      groq:card:1                             gpu:0,fpga:0,groq:card:0
-leconte             leconte                                                                         gpu:V100:6(S:0-87)                      gpu:V100:0(IDX:N/A),fpga:0,groq:0
 thunderx            thunderx                                                                        (null)                                  gpu:0,fpga:0,groq:0
 milan               milan0                                                                          gpu:A100:2(S:0)                         gpu:A100:0(IDX:N/A),fpga:0,groq:0
 milan               milan3                                                                          (null)                                  gpu:0,fpga:0,groq:0
