@@ -20,6 +20,10 @@ This QR code does not render properly if you try logging in via ThinLinc or VS C
 {% endhint %}
 
 {% hint style="warning" %}
+**Warning:** If your password is wrong, you will not get a clear bad password error; instead, you will get a “The user has no tokens assigned” error.
+{% endhint %}
+
+{% hint style="warning" %}
 There are known issues with the QR code generation and various methods of logging in. Please use a regular SSH terminal session to log in so that the QR code is rendered correctly. The suggestion is to use a Linux terminal, cmd line, powershell, or WSL from Windows, or the mac terminal or iTerm.
 {% endhint %}
 
