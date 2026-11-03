@@ -251,7 +251,7 @@ savail --json               # machine-readable output (memory in MiB)
 $ savail nvidia
 NODE      STATE                PARTITIONS                                   CPU avail/max  MEM avail/max (GiB)  GRES avail/max
 milan0    MIXED                compute,milan,milan-long,nvidia,nvidia-long  116/128        941/1005             gpu:A100 1/2
-milan2    IDLE                 compute,nvidia,nvidia-long                   128/128        1005/1005            gpu:P100 7/7
+milan2    IDLE                 compute,nvidia,nvidia-long                   128/128        1005/1005            gpu:V100 7/7
 oswald00  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:P100 1/1
 oswald02  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:P100 1/1
 oswald03  IDLE                 compute,nvidia,nvidia-long                   32/32          251/251              gpu:P100 1/1
@@ -437,10 +437,10 @@ To find nodes with free GPUs of the type you need, use [`savail`](https://docs.e
 
 hudson (2× H100) is only in the `hudson` and `hudson-long` partitions, not `nvidia`. To take whichever NVIDIA GPU is free first, list both partitions: `-p nvidia,hudson`. That job is charged hudson's 4× rate if it lands there.
 
-Request two P100 GPUs with 128 GiB of memory and 16 CPU cores.
+Request two V100 GPUs with 128 GiB of memory and 16 CPU cores.
 
 ```bash
-srun -p nvidia --gres gpu:P100:2 --mem 128G -c 16 --pty bash
+srun -p nvidia --gres gpu:V100:2 --mem 128G -c 16 --pty bash
 ```
 
 Request maxwell with two A100's, two MI100's, 128 GiB of memory 16 cores for 4 hours.
