@@ -400,6 +400,30 @@ groq                milan[1-2]                                                  
 
 ```
 
+### Show information about a job.
+
+Use `scontrol show job` to see the details of a job, such as its state, resources, time limit and start time.
+
+```
+scontrol show job <jobid>
+```
+
+### See when pending jobs are expected to start.
+
+Use `squeue --start` to see a job's estimated start time.
+
+```
+squeue --start -j <jobid>
+```
+
+If you leave out the job ID, it prints the start time for all pending jobs.
+
+```
+squeue --start
+```
+
+These times are estimates. They will be inaccurate if a job finishes early or a higher-priority job comes along.
+
 ### Finding the max RAM used by a completed job.
 
 You can also use `sacct` to see the MAXRSS to see the max memory used by a job. This is helpful when figuring out how much memory jobs like it will need.  
