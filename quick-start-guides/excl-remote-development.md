@@ -21,7 +21,7 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 ## Setup FoxyProxy
 
 1. Launch SOCKS dynamic proxy forwarding to the login node using dynamic forwarding with SSH.\
-    On Linux or macOS, via the SSH flag `-D`
+    On Linux, macOS, or Windows, via the SSH flag `-D`
 
     ```
      $ ssh -D 9090 <Username>@login.excl.ornl.gov
@@ -33,13 +33,17 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
     DynamicForward 9090
     ```
 
-    On Windows, use MobaSSHTunnel to set up Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in windows.
+    An alternative approach on Windows is to use MobaSSHTunnel to set up Dynamic Forwarding. See [Jupyter Quickstart](jupyter-quick-start.md) for more information on port forwarding in Windows. This approach is nice, since it can be configured to auto-start with MobaXTerm.
 2. Setup FoxyProxy\
     Install the FoxyProxy [Chrome extension](https://chrome.google.com/webstore/detail/foxyproxy-standard/gcknhkkoolaabfmlnjonogaaifnjlfnp) or [Firefox extension](https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/).
 
     Setup FoxyProxy by adding a new proxy for localhost on port 9090. Then add the regular expression URL pattern `.*\.ftpn\.ornl\.gov.*` to forward ThinLinc traffic to ExCL. When available, make sure to check on the Proxy DNS option.
+3. Turn FoxyProxy on\
+    FoxyProxy does nothing until you pick a mode. Click the FoxyProxy icon in the browser toolbar \(pin it from the extensions menu if hidden\) and select **Proxy by Patterns**. Importing settings or reinstalling resets this to off.
 
 ![Foxy Proxy Settings](/assets/foxyproxy-settings.png)
+
+![FoxyProxy popup with Proxy by Patterns selected](/assets/enable-foxyproxy.png)
 
 {% hint style="warning" %}
 **Reminder**: You will need to re-do step 1 in [Setup FoxyProxy](https://docs.excl.ornl.gov/quick-start-guides/excl-remote-development#setup-foxyproxy) each time you want to connect to ExCL to form the Dynamic Proxy tunnel via SSH to the ExCL network.
@@ -50,3 +54,13 @@ If you are new to remote development on ExCL here is a roadmap to follow to set 
 
 ![Foxy Proxy Proxy DNS Settings for Mac](/assets/foxyproxy-settings-mac.png)
 {% endhint %}
+
+{% hint style="warning" %}
+**Warning**: Do not try running the Dynamic Proxy in WSL. It's harder to set up and has performance issues.
+{% endhint %}
+
+### Troubleshooting “This site can’t be reached”
+
+1. **Is the tunnel up?** See step 1.
+2. **Is FoxyProxy active?** See step 3.
+3. **Is FoxyProxy Configured Correctly?** See step 2.
