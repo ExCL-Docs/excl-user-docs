@@ -26,6 +26,8 @@ Apptainer also has great support with Docker images.
 
 ## Systems with Apptainer installed
 
+Developer systems will have Apptainer installed as part of provisioning. This includes:
+
 - clark, docker, explorer, faraday, hudson, maxwell, mcmurdo, spike
 - affirmed, justify, pharaoh, secretariat
 - milan0, milan1, milan2, milan3
