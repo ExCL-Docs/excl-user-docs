@@ -146,6 +146,9 @@ Notes:
 - `pcie`
 - `intrepid`
 - `spike`
+- `oswald00`
+- `oswald02`
+- `oswald03`
 
 ### Systems great for non-accelerator applications.
 
