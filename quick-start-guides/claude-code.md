@@ -129,6 +129,9 @@ The repository provides several convenience targets:
 | `make install-uv-claude` | Install `uv` into the persistent Claude home                   |
 | `make show-home-claude`  | Print the path to the persistent Claude home                   |
 | `make clean-home-claude` | Delete the persistent Claude home (reset authentication and settings) |
+| `make show-scratch`      | Print the host dirs mounted at `/tmp` in the containers        |
+| `make prune-scratch`     | Delete temp files older than 30 days now (`AGENT_TMP_MAX_AGE_DAYS`) |
+| `make clean-scratch`     | Delete the node-local scratch dir (temp files only)            |
 
 Every target above also has a bare form with no `-claude`/`-codex` suffix. For `build`, `install`, `install-uv`, `install-rust`, `show-home`, and `clean-home`, the bare form runs the operation for **both** tools (Make only rebuilds the shared `base.sif` once). `run`, `danger`, and `shell` stay single-tool when unsuffixed — running two interactive sessions at once isn't practical — and default to Claude Code for backward compatibility (`run` is an alias for `run-claude`, etc.); use the explicit `-codex` form for Codex CLI.
 
@@ -369,6 +372,8 @@ The container never holds a copy of the munge key or runs its own `munged`; it a
 These binds are present for both tools — Codex CLI's launchers and `make *-codex` targets bind-mount the same three paths, so Slurm commands and `module load` work identically inside a Codex CLI container.
 
 ## Notes
+
+Inside both containers, `/tmp` (and `TMPDIR`, plus `CLAUDE_CODE_TMPDIR` for Claude Code) is node-local scratch: the launchers and `make` targets bind-mount `/scratch/$USER/agent-tmp` there, one directory (mode `700`) shared by Claude Code and Codex CLI. Set `AGENT_SCRATCH=/some/dir` to use a different location. On hosts where that directory can't be created or written, they fall back to `tmp/` inside the tool's persistent home. Because scratch is local to the machine, temp files (including Claude Code's session scratchpad) are not visible from other nodes or from Slurm jobs, so put anything a job needs under the bound work directory. Files left untouched for 30 days are deleted automatically: each launch prunes them in the background (by modification time; empty directories must be equally old). Set `AGENT_TMP_MAX_AGE_DAYS` to change the age, or `0` to disable pruning. `make show-scratch` prints the directories in use, `make prune-scratch` runs the prune immediately, and `make clean-scratch` deletes the whole scratch directory.
 
 Claude Code's permission system and the Apptainer sandbox serve different purposes:
 
