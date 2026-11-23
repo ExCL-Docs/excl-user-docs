@@ -529,8 +529,8 @@ How well the lock works depends on the GPU. These results are from a compute-bou
 
 | GPU | Nodes | `lockclocks` (maximum) | `lockclocks=<MHz>` |
 |---|---|---|---|
-| A100 | maxwell, milan0 | Holds 1410 MHz, idle and under load | Holds the requested clock |
-| V100 | milan2 | Holds 1380 MHz, idle and under load | Not tested |
+| A100 | maxwell, milan0 | Holds 1410 MHz, idle and under load | Holds the requested clock, idle and under load (1095 MHz tested) |
+| V100 | milan2 | Holds 1380 MHz, idle and under load | Holds the requested clock, idle and under load (1095 MHz tested) |
 | RTX 3090 | zenith | **Not held:** 1935 MHz falling to 1905 MHz as the GPU hit its power and temperature limits | Holds the requested clock (1500 MHz tested) |
 | RTX 5090 | zenith2 | **Not held:** 2910 of 3135 MHz | Holds a clock near the requested one (2400 → 2392 MHz) |
 | P100 | spike | **No effect.** The clock is not locked, and the job runs at normal clocks. | **No effect** (1000 MHz requested, ran at 1328 MHz) |
