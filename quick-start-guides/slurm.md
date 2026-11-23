@@ -505,6 +505,56 @@ This currently affects whole-node jobs on these nodes, in these partitions:
 | `nvidia`, `nvidia-long` | spike, zenith2 |
 {% endhint %}
 
+## Lock GPU clocks for benchmarking
+
+NVIDIA GPUs change their clock speed with load and temperature, so the same benchmark can give different timings from run to run. To get stable, comparable timings, an exclusive job can ask Slurm to lock the clocks of every NVIDIA GPU on its node for as long as the job runs. Add `--comment=lockclocks` to an `--exclusive` job:
+
+```bash
+# Lock each GPU at its maximum supported clock
+sbatch -p maxwell --exclusive --mem=0 --comment=lockclocks job.sh
+
+# Lock every GPU at a specific clock, in MHz
+sbatch -p maxwell --exclusive --mem=0 --comment=lockclocks=1095 job.sh
+```
+
+The same options work with `srun` and `salloc`. When the job ends, the clocks go back to their defaults.
+
+- **`--exclusive` is required.** A job that shares its node with other jobs can't lock the clocks, because that would change the speed of the other jobs' GPUs too. Without `--exclusive`, the job still runs, at default clocks.
+- **The request applies to every GPU on the node.** You can't lock some GPUs and not others. If you give a clock in MHz that any GPU on the node can't run at (for example `lockclocks=99999`), none are locked and the job runs at default clocks. `lockclocks` with no number uses each GPU's own maximum clock.
+- **The GPU runs at a supported clock near the one you ask for.** GPUs only run at fixed steps (15 MHz apart on the A100), and a value between two steps is moved to one of them, not always the closest. On an A100, `lockclocks=1096` ran at 1110 MHz; on an RTX 5090, `lockclocks=2400` ran at 2392 MHz. Pick a value from the supported list (below) to get exactly what you asked for.
+- **Only NVIDIA GPUs are affected.** On maxwell, the A100s are locked and the MI100s are left alone. On nodes without NVIDIA GPUs, such as cousteau, the option is ignored.
+- **The job is never held or failed because of this option.** If the clocks can't be locked, the job just runs at default clocks.
+
+How well the lock works depends on the GPU. These results are from a compute-bound test kernel on every GPU of each node:
+
+| GPU | Nodes | `lockclocks` (maximum) | `lockclocks=<MHz>` |
+|---|---|---|---|
+| A100 | maxwell, milan0 | Holds 1410 MHz, idle and under load | Holds the requested clock |
+| V100 | milan2 | Holds 1380 MHz, idle and under load | Not tested |
+| RTX 3090 | zenith | **Not held:** 1935 MHz falling to 1905 MHz as the GPU hit its power and temperature limits | Holds the requested clock (1500 MHz tested) |
+| RTX 5090 | zenith2 | **Not held:** 2910 of 3135 MHz | Holds a clock near the requested one (2400 → 2392 MHz) |
+| P100 | spike | **No effect.** The clock is not locked, and the job runs at normal clocks. | **No effect** (1000 MHz requested, ran at 1328 MHz) |
+
+On the GeForce cards (RTX 3090 and RTX 5090), use a clock in MHz well below the maximum, because the maximum can't be held under load. Other NVIDIA GPUs, including the H100s on hudson, haven't been tested yet, so check your job's output as described below.
+
+To see which clocks a GPU supports, run this in a job on that node:
+
+```bash
+nvidia-smi --query-supported-clocks=graphics --format=csv
+```
+
+{% hint style="info" %}
+**Record the clock your job actually ran at.** The job runs either way, so check that the lock worked before you trust the timings. Add this to your job script while your workload is running (for example, start it in the background just after your program starts) and keep its output with your results:
+
+```bash
+nvidia-smi --query-gpu=index,name,clocks.sm,clocks.max.sm,clocks_event_reasons.active --format=csv
+```
+
+`clocks.sm` should match the clock you requested, or `clocks.max.sm` if you didn't give one. A `clocks_event_reasons.active` value other than `0x0000000000000000` means the GPU is being slowed down, usually by its power or temperature limit, and the clock is not what you asked for.
+
+Check while the GPU is busy. An idle GPU doesn't always show the locked clock. The A100 and V100 do, but an idle P100 stays at 405 MHz, and an idle RTX 3090 or RTX 5090 starts at about 200 MHz and takes several seconds to rise.
+{% endhint %}
+
 # Using the Preemptable GPU Queue (`nvidia-long`)
 
 The **`nvidia-long`** queue provides **opportunistic GPU access** for long-running or flexible workloads.
